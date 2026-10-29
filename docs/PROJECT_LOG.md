@@ -22,3 +22,14 @@
 - Acesso: a primeira revisão automática de liberação de rede expirou; a repetição permitida foi aceita e os downloads foram concluídos. Nenhum bloqueio de acesso permanece nesta etapa.
 - Custo: downloads de ferramentas públicas, sem chamadas pagas a modelos ou contratação de infraestrutura.
 - Próxima unidade: S1.3 — metadados, manifesto e políticas de dados; corpus e avaliação ainda pendentes. Sprint 1 em andamento.
+
+## Sprint 1 — S1.3: contratos e políticas de dados — 2026-10-29
+
+- Entrega: contrato versão 1 de documentos e manifesto em DATA.md; configs/corpus_manifest.json vazio em draft; regras de origem, licença, revisão, atualização, caminhos, tamanho, retenção e exclusão. README e plano refletem a etapa; nenhum procedimento ou gabarito foi criado.
+- Decisões: metadados centralizados no JSON, procedimentos em Markdown com IDs de seção explícitos. Evitar dependência de parser de front matter. Hash calculado sobre bytes finais, fora do documento. O manifesto só poderá ser aprovado com licença definida e revisão humana em todas as entradas; rascunhos não autorizam ingestão nem chamadas externas.
+- Conceito: document_id identifica o procedimento; version identifica sua revisão editorial; SHA-256 detecta alterações nos bytes; section_id localiza uma seção. corpus_version identifica o snapshot completo. Integridade do arquivo não comprova qualidade ou autorização.
+- Verificações executadas: JSON do manifesto e do molde lidos com biblioteca padrão e detecção de chaves duplicadas; versão do contrato, campos, estado draft e contagem zero conferidos; molde sem arquivo existente, hash ou aprovação inventada. Demonstração com arquivo fictício temporário confirmou SHA-256 estável para bytes idênticos e diferente após alteração; arquivo temporário removido ao fim. Revisão cruzada de DATA, README e PLAN; git diff --check sem erros.
+- Limites: não há validador de ingestão ou testes de segurança implementados; regras de caminhos, tamanhos e autorização são requisitos para a Sprint 2, não controles em execução. Prazos de retenção são política de demonstração a implementar e verificar nas etapas de persistência e operação.
+- Git: preferência do usuário por commits ao concluir unidades registrada no plano. Ambiente e documentação das etapas anteriores foram revisados e registrados em commits locais separados antes da S1.3. AGENTS.md existente incluído sem edição. Nenhum push ou merge realizado.
+- Métricas e custo: zero documentos e nenhuma fonte autorizada; sem avaliação de modelos, rede ou chamadas pagas nesta etapa.
+- Pendências: decisão de licença antes de aprovar/publicar materiais; revisão humana do piloto na S1.6; aplicação das políticas de retenção nas sprints correspondentes. Próxima unidade: S1.4 — redigir três procedimentos fictícios e preencher entradas reais no manifesto draft. Sprint 1 permanece em andamento.

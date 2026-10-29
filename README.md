@@ -4,7 +4,7 @@ A support assistant combining retrieval-augmented generation (RAG), source citat
 
 SupportAI is a learning and portfolio project focused on **system architecture, backend engineering, model training, MLOps, and LLMOps**.
 
-> **Status: Sprint 1 — domain and minimal Python environment (S1.1–S1.2).** This README describes the intended system. Application code, a knowledge corpus, annotated evaluation data, trained models, benchmarks, CI, and deployment are not available yet.
+> **Status: Sprint 1 — domain, Python environment, and data contracts (S1.1–S1.3).** This README describes the intended system. Application code, a knowledge corpus, annotated evaluation data, trained models, benchmarks, CI, and deployment are not available yet.
 
 ## Support domain
 
@@ -160,7 +160,13 @@ Python 3.12 is a supported series in its security-maintenance phase; see the [Py
 
 The project is configured with `package = false`: it manages an environment without building an empty application package. pytest will support behavioral tests as code arrives; Ruff will check and format Python. No artificial test or empty module is needed to demonstrate that the tools are installed.
 
-The next unit is data contracts and policies (S1.3), followed by the document-and-question pilot. Database migrations, ingestion, training, and application commands will be documented when implemented and verified. Do not expect a running application yet.
+### Knowledge source contract (S1.3)
+
+[The data documentation](docs/DATA.md) defines document IDs, versions, sections, checksums, provenance, license and human review, along with retention and deletion policies. Metadata lives in JSON; procedures will live in Markdown. A checksum detects content changes; it does not establish correctness or permission to use a source.
+
+The [corpus manifest](configs/corpus_manifest.json) currently contains zero documents and has `status: draft`. It authorizes no ingestion. A future approved snapshot must list each allowed Markdown file explicitly, with a verified hash, approved license and recorded human review. The ingestion validator will be implemented in Sprint 2; these contracts are not an existing security mechanism.
+
+The next unit is the three-document pilot (S1.4), keeping sources in draft until review. Database migrations, ingestion, training, and application commands will be documented when implemented and verified. Do not expect a running application yet.
 
 ## Planned documentation
 

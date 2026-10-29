@@ -2,13 +2,13 @@
 
 Data: 28/10/2026. Referência: AGENTS.md v2.0, lido integralmente.
 
-**Status: plano aprovado; Sprint 1 em andamento.** S1.1 e S1.2 concluídas: domínio documentado e ambiente mínimo reproduzível verificado. S1.3–S1.9 pendentes. Nenhum sistema, corpus, conjunto de avaliação ou modelo está pronto. Execução de uma unidade por vez, conforme solicitado.
+**Status: plano aprovado; Sprint 1 em andamento.** S1.1–S1.3 concluídas: domínio, ambiente mínimo e contratos/políticas de dados definidos. Manifesto vazio em draft; nenhuma fonte autorizada para ingestão. S1.4–S1.9 pendentes. Nenhum sistema, corpus, conjunto de avaliação ou modelo está pronto. Execução de uma unidade por vez, conforme solicitado.
 
 ## 1. Objetivo e ponto de partida
 
 Construir um assistente de suporte que recupera procedimentos, sugere respostas com fontes e exige revisão humana. Em um segundo marco obrigatório, treinar e operar um classificador de categoria de chamados. Aprender a justificar a arquitetura, avaliar resultados e reproduzir versões faz parte da entrega.
 
-O repositório contém README.md, .gitignore e AGENTS.md; não há aplicação ou ambiente de dependências. Na inspeção, a branch era `main`, com um commit inicial; AGENTS.md estava não rastreado pelo Git. Preservar esse arquivo e as alterações existentes. Este planejamento não cria branches, commits ou publicações.
+Na inspeção inicial, o repositório continha README.md, .gitignore e AGENTS.md, sem aplicação ou ambiente de dependências. A branch era `main`, com um commit inicial; AGENTS.md estava não rastreado pelo Git. Esse estado foi preservado durante o planejamento. Após aprovação, o trabalho passou à branch da sprint, e em 29/10/2026 os arquivos das etapas anteriores foram registrados em commits locais, incluindo o AGENTS.md existente sem alteração.
 
 ## 2. Conceitos para acompanhar as decisões
 
@@ -79,7 +79,7 @@ Branch da Sprint 1: `feature/s1-knowledge-foundation`, criada no início da exec
 
 ### 4.2 Tarefas pequenas, em ordem
 
-**S1.1 e S1.2 concluídas em 28/10/2026; S1.3–S1.9 pendentes.** Dependências indicam o que deve ser revisado antes de avançar.
+**S1.1 e S1.2 concluídas em 28/10/2026; S1.3 concluída em 29/10/2026; S1.4–S1.9 pendentes.** Dependências indicam o que deve ser revisado antes de avançar.
 
 | ID | Problema e ação proposta | Entrega prevista | Como verificar |
 | --- | --- | --- | --- |
@@ -93,7 +93,7 @@ Branch da Sprint 1: `feature/s1-knowledge-foundation`, criada no início da exec
 | S1.8 | Completar a avaliação: ampliar as perguntas em lotes de 5–10 e separar grupos antes de atribuir partições. | Cerca de 50 perguntas revisadas; manifestos de desenvolvimento/teste com IDs, grupos, versões e checksums. | Nenhum grupo em ambas as partições; perguntas respondíveis e sem resposta nas duas; evidências localizáveis. As 8 perguntas já usadas no piloto ficam em desenvolvimento. Depende de S1.7. |
 | S1.9 | Registrar limites e preparar o próximo passo: auditar os dados e explicar o que ficou pronto. | README atualizado, entrada em docs/PROJECT_LOG.md e status neste plano. | Apresentar contagens, pendências, orçamento e exercício manual; encerrar a sprint apenas com todos os critérios atendidos. Depende de S1.8 e S1.2. |
 
-Após cada unidade, explicar o que mudou, por que foi escolhido, o conceito aprendido, como foi verificado e o resultado observado. Revisar o piloto antes da expansão e fazer checkpoint no fim da sprint. A próxima unidade é S1.3.
+Após cada unidade, explicar o que mudou, por que foi escolhido, o conceito aprendido, como foi verificado e o resultado observado. Revisar o piloto antes da expansão e fazer checkpoint no fim da sprint. A próxima unidade é S1.4. Preferência do usuário registrada em 29/10/2026: concluir cada unidade coesa com verificações e commit local em inglês no formato Conventional Commits; não deixar entregas sem commit. Push e merge continuam dependentes de autorização específica.
 
 ### 4.3 Contratos de dados propostos
 
@@ -118,14 +118,14 @@ docs/PLAN.md                 # criado nesta sessão
 docs/DATA.md                 # política e contratos dos dados
 docs/PROJECT_LOG.md          # decisões, aprendizado e verificações
 knowledge/                   # procedimentos públicos/fictícios autorizados
-configs/corpus_manifest.json # proposta de manifesto de ingestão
+configs/corpus_manifest.json # manifesto vazio em draft; contrato definido
 evaluation/                  # perguntas e evidências; nunca indexar
 pyproject.toml               # dependências e configuração mínima
 uv.lock                      # único lock de dependências
 .python-version              # CPython 3.12.16
 ```
 
-A árvore representa a estrutura incremental. PLAN.md, DATA.md, PROJECT_LOG.md, pyproject.toml, uv.lock e .python-version já existem; corpus, avaliação e manifesto ainda não foram criados. Usar caminhos relativos ao repositório nos manifestos para permitir reprodução em outra máquina. Criar módulos de aplicação apenas quando tiverem responsabilidade executável nas próximas sprints.
+A árvore representa a estrutura incremental. PLAN.md, DATA.md, PROJECT_LOG.md, pyproject.toml, uv.lock, .python-version e o manifesto vazio já existem; corpus e avaliação ainda não foram criados. Usar caminhos relativos ao repositório nos manifestos para permitir reprodução em outra máquina. Criar módulos de aplicação apenas quando tiverem responsabilidade executável nas próximas sprints.
 
 ### 4.5 Critérios de aceite da Sprint 1
 
@@ -147,7 +147,7 @@ As metas de qualidade do AGENTS.md serão medidas nas sprints de avaliação: re
 
 | Sprint | Entrega e aprendizado central | Estado |
 | --- | --- | --- |
-| 1 — Domínio, corpus e avaliação | Dados autorizados, perguntas revisadas, evidências e ambiente mínimo. | Em andamento; S1.1 e S1.2 concluídas |
+| 1 — Domínio, corpus e avaliação | Dados autorizados, perguntas revisadas, evidências e ambiente mínimo. | Em andamento; S1.1–S1.3 concluídas |
 | 2 — Ingestão e busca | PostgreSQL/pgvector, migrations, chunking, coleção idempotente e publicação atômica; comparar busca textual e vetorial no desenvolvimento, com MLflow inicial. | Não iniciada |
 | 3 — Geração e API RAG | LLM, contexto limitado, fontes validadas, abstenção, persistência, autenticação e health checks. | Não iniciada |
 | 4 — Revisão e avaliação | Histórico autenticado e concorrência, avaliação humana, segurança, tracing sanitizado, tokens e custo. | Não iniciada |
@@ -167,4 +167,5 @@ O projeto completo exige os dois marcos. Resultados insuficientes devem ser publ
 - Implementação e testes de aplicação: não realizados; esta entrega é documental.
 - Atualização após aprovação: S1.1 executada; DATA.md e PROJECT_LOG.md criados, README e status deste plano atualizados. A aplicação não foi implementada.
 - Atualização S1.2: Python e uv fixados, dependências mínimas com lock, exclusões de arquivos locais e instruções verificadas no README. Um segundo ambiente vazio foi criado offline com versões idênticas, sem modificar uv.lock. Não há testes de aplicação a executar.
-- Próxima unidade: S1.3 — metadados, manifesto autorizado e política de dados.
+- Atualização S1.3: contrato de metadados e manifesto versão 1, formato de seções Markdown, regras de autorização e caminhos, atualização e retenção/exclusão documentados em DATA.md. Manifesto criado em draft com zero documentos; validação de ingestão fica para Sprint 2. Licença dos materiais e revisão humana permanecem pendentes.
+- Próxima unidade: S1.4 — três procedimentos fictícios e entradas reais no manifesto draft.

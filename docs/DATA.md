@@ -1,8 +1,8 @@
 # SupportAI — Domínio e dados
 
-Data: 28/10/2026. Etapa: S1.1 — delimitação do domínio.
+Atualizado em: 29/10/2026. Etapas: S1.1 — domínio; S1.3 — contratos e políticas de dados.
 
-O plano foi aprovado pelo usuário. Este documento concretiza o domínio proposto; não contém procedimentos operacionais nem gabaritos. Corpus e perguntas ainda não foram criados. Contratos de metadados, manifesto e políticas detalhadas serão definidos na S1.3.
+O plano foi aprovado pelo usuário. Este documento define o domínio, os contratos e as políticas de dados; não contém procedimentos operacionais nem gabaritos. O manifesto existe vazio e em estado draft. Corpus e perguntas ainda não foram criados. As validações de ingestão descritas abaixo são requisitos para a Sprint 2, ainda sem implementação.
 
 ## Produto e público
 
@@ -49,7 +49,136 @@ Falta de evidência e falha técnica serão tratadas separadamente na API futura
 - Chamados supervisionados terão conjunto próprio na Sprint 7; perguntas RAG não substituem exemplos rotulados de classificação.
 - Não coletar dados reais de clientes, credenciais ou documentos privados nesta etapa. Nenhum conteúdo será enviado a fornecedores externos na Sprint 1.
 - Licenças de código e materiais autorais permanecem pendentes. Não atribuir licença por suposição nem tratar ficção como permissão automática de redistribuição.
-- Política de atualização, retenção/exclusão, metadados e checksum ficam para S1.3. Não há dados operacionais armazenados neste momento.
+- Metadados, atualização e retenção/exclusão estão definidos abaixo. Não há dados operacionais armazenados neste momento.
+
+## Contrato dos documentos — versão 1
+
+Escolha inicial: manter os metadados no manifesto JSON e o procedimento em Markdown UTF-8. Isso evita adicionar um parser de front matter e duplicar versões/licenças em dois lugares. O manifesto é a autoridade dos metadados; o título e as seções declarados devem corresponder ao Markdown. JSON é lido pela biblioteca padrão do Python.
+
+| Campo de cada entrada em documents | Regra |
+| --- | --- |
+| `document_id` | String estável, única no snapshot, como `nd-access-001`. Não muda quando o conteúdo é revisado e não é reutilizada para outro procedimento. |
+| `title` | Título não vazio, igual ao único título principal `#` do arquivo. |
+| `version` | Versão editorial no formato `MAJOR.MINOR.PATCH`, como `1.0.0`. Qualquer alteração nos bytes exige nova versão; mudança no procedimento ou suas condições exige revisão humana novamente. |
+| `path` | Caminho relativo ao repositório, dentro de `knowledge/`, para um único arquivo `.md`. Nenhum glob, diretório ou URL. |
+| `sha256` | Hash dos bytes do arquivo final: 64 caracteres hexadecimais minúsculos. Pode ser null apenas em um rascunho; nunca em uma entrada autorizada. Não fica dentro do arquivo que identifica. |
+| `language` | `pt-BR` nesta versão do corpus. |
+| `source` | Objeto com `kind`, `reference` e `obtained_on`. Nesta sprint, kind é `fictional`; reference é o caminho local de origem, sem download; obtained_on é a data real de incorporação, `YYYY-MM-DD`. |
+| `author` | Autoria declarada do material: pessoa ou identificação do projeto, sem atribuir a uma pessoa uma revisão que ela não fez. |
+| `creation_method` | `human_authored` ou `llm_assisted`. Texto redigido pelo agente é llm_assisted, mesmo após correções humanas. |
+| `license` | Objeto com `status`, `identifier` e `reference`. Status `pending` ou `approved`; identifier/reference podem ser null enquanto pendentes. Aprovação exige identificar os termos e onde estão registrados. |
+| `updated_on` | Data real de atualização do documento, `YYYY-MM-DD`. Não inventar datas passadas de um produto fictício. |
+| `review` | Objeto com `status`, `reviewed_by` e `reviewed_at`. Status `pending` ou `approved`; autoria da revisão humana e timestamp UTC com timezone são obrigatórios para aprovação. Enquanto pendente, ambos são null. |
+| `sections` | Lista não vazia de objetos com `section_id` e `title`, correspondentes às seções `##` do Markdown. IDs únicos dentro do documento e estáveis enquanto a seção conservar sua identidade. |
+
+Formato das seções: `## recovery-request — Solicitar recuperação`. O prefixo `recovery-request` é o section_id; o restante é o título. Usar IDs ASCII em minúsculas, com números e hífens; todo conteúdo de procedimento deve estar sob uma seção `##`. No piloto, não usar subtítulos mais profundos: listas e parágrafos bastam para preservar os passos.
+
+Trechos futuros referenciarão documento, versão, section_id, posição no texto e configuração de chunking. As perguntas de avaliação apontarão para passagens no documento original, de modo que mudar o chunking não destrua o gabarito. A convenção de offsets será `[start, end)` por caracteres Unicode do texto UTF-8 decodificado, sem normalização de acentos ou quebras de linha; registrar a passagem literal para conferência.
+
+### Modelo de entrada, sem autorização de ingestão
+
+O exemplo é um molde de preenchimento para a S1.4; não representa um documento já existente. Não copiá-lo para um manifesto aprovado sem escrever, calcular e revisar o material.
+
+```json
+{
+  "document_id": "nd-access-001",
+  "title": "Recuperação de acesso após perda do autenticador",
+  "version": "1.0.0",
+  "path": "knowledge/nd-access-001.md",
+  "sha256": null,
+  "language": "pt-BR",
+  "source": {
+    "kind": "fictional",
+    "reference": "knowledge/nd-access-001.md",
+    "obtained_on": null
+  },
+  "author": "SupportAI project",
+  "creation_method": "llm_assisted",
+  "license": {
+    "status": "pending",
+    "identifier": null,
+    "reference": null
+  },
+  "updated_on": null,
+  "review": {
+    "status": "pending",
+    "reviewed_by": null,
+    "reviewed_at": null
+  },
+  "sections": [
+    {"section_id": "recovery-request", "title": "Solicitar recuperação"}
+  ]
+}
+```
+
+Datas null são permitidas somente no molde documental acima; ao incluir uma entrada real, preencher source.obtained_on e updated_on. Licença e revisão podem continuar pendentes em um manifesto draft. Ter checksum válido comprova integridade, não correção do procedimento, licença ou aprovação humana.
+
+## Manifesto autorizado — versão 1
+
+Arquivo: `configs/corpus_manifest.json`. Ele lista explicitamente os arquivos candidatos; não se deve varrer o repositório nem inferir autorização pela presença em `knowledge/`.
+
+| Campo | Regra |
+| --- | --- |
+| `schema_version` | Inteiro `1`; versão do contrato. Rejeitar versões desconhecidas. |
+| `corpus_version` | Identificador do snapshot, como `0.1.0-draft` em elaboração e `0.1.0` após aprovação. Não confundir com versão individual de documento ou de coleção vetorial. |
+| `status` | `draft` ou `approved`. Draft permite preparar material, mas não autoriza ingestão, embeddings ou publicação. Approved exige cumprir todas as regras abaixo. |
+| `language` | `pt-BR`. |
+| `document_count` | Inteiro igual ao tamanho de documents. Snapshot aprovado tem entre 1 e 40 entradas; o piloto pode ter 3, mas o aceite final da Sprint 1 continua exigindo 20–40. |
+| `documents` | Lista de entradas com o contrato acima. Snapshot vazio é permitido apenas como draft. |
+
+**Estado atual:** 0 documentos, status draft, nenhuma fonte autorizada para ingestão. Não é uma coleção pronta e não satisfaz readiness da API. A revisão do corpus é distinta dos estados building/ready da coleção futura.
+
+### Requisitos de validação para a ingestão futura
+
+1. Ler apenas o manifesto selecionado pelo comando administrativo local. Limite inicial: 2 MiB de JSON; rejeitar chaves duplicadas, campos desconhecidos, tipos inválidos e contagens divergentes em vez de adivinhar o formato.
+2. Exigir status approved, pelo menos um documento, licença aprovada e revisão humana registrada em todas as entradas. Não pular entradas inválidas silenciosamente; não iniciar chamadas externas antes da validação local completa.
+3. Aceitar caminhos POSIX sob `knowledge/`, com extensão `.md` e componentes em ASCII minúsculo com letras, números, hífen ou sublinhado. Rejeitar caminhos absolutos, `..`, `.`, componentes vazios, barras invertidas, URLs e globs. Rejeitar symlinks, inclusive na pasta raiz e em componentes intermediários; verificar o caminho real dentro da raiz permitida, sem seguir atalhos para fora dela.
+4. Exigir arquivos regulares, UTF-8 válidos, não vazios e até 128 KiB cada. Conferir SHA-256 dos bytes antes de normalizar ou dividir o texto. Rejeitar IDs, caminhos e hashes de conteúdo duplicados; revisar duplicatas semânticas manualmente.
+5. Conferir título, seções e metadados; rejeitar conflitos e documentos sem passos/condições suficientes na revisão humana. Não usar o agente como substituto do revisor humano.
+6. Excluir sempre `evaluation/`, `docs/`, `data/`, saídas de testes e feedback não curado. Nem um caminho listado no manifesto pode escapar dessas restrições.
+7. Registrar versão e SHA-256 do manifesto final em cada ingestão/experimento. Esse hash é calculado externamente, sem autorreferência no próprio JSON. Aprovação não significa executar ingestão automaticamente.
+
+O limite por arquivo é uma proteção de entrada; não define tamanho de chunk ou orçamento de tokens. Esses limites serão medidos e configurados separadamente na Sprint 2.
+
+### Como conferir um checksum quando o piloto existir
+
+Executar na raiz do repositório, depois que a S1.4 criar o arquivo:
+
+```bash
+sha256sum knowledge/nd-access-001.md
+```
+
+O resultado esperado é o hash real de 64 caracteres para registrar na entrada correspondente. O comando ainda não se aplica ao repositório atual, porque o arquivo não existe. A verificação desta etapa usou somente bytes fictícios temporários e JSON; não há ingestão implementada.
+
+## Atualização, revisão e licença
+
+- Origem autorizada inicialmente: somente documentos fictícios elaborados para o projeto, em português, com autoria e assistência de LLM declaradas. Documentos públicos de terceiros exigirão curadoria e compatibilidade de licença antes de inclusão; não haverá scraping aberto.
+- Revisar condições, passos, exceções e coerência entre procedimentos antes de aprovar cada versão. Não preencher reviewed_by ou reviewed_at automaticamente como se o usuário tivesse revisado.
+- Enquanto a licença de materiais autorais estiver pendente, os documentos podem ser preparados localmente em draft, mas não promovidos a approved nem publicados. Não escolher uma licença para o usuário por suposição. A decisão sobre licença fica explícita no checkpoint do piloto e precede qualquer promoção.
+- Snapshot aprovado é imutável. Alterar documento, metadados ou seleção de fontes gera outra corpus_version e outro hash de manifesto; conteúdo alterado também exige nova versão e checksum do documento. Recalcular checksums depois de finalizar o arquivo, não antes.
+- Documento removido deixa de aparecer no próximo snapshot. A Sprint 2 deverá criar outra coleção, validar e só depois trocar a referência ativa; falha parcial mantém a anterior. Não reaproveitar chunks obsoletos na coleção nova.
+- Mudanças de regras invalidam as anotações afetadas: revisar passagens e respostas esperadas. Se uma decisão for influenciada pelo teste reservado, registrar a exposição; não reaproveitá-lo como se continuasse intocado.
+- Feedback de atendentes não altera corpus, gabaritos ou treino automaticamente. Curadoria e anonimização vêm antes da incorporação; deduplicar contra grupos reservados.
+
+## Privacidade, retenção e exclusão
+
+Política inicial de demonstração, a implementar nas sprints responsáveis. Os prazos são máximos de retenção e escolhas reversíveis do projeto; não representam garantias de exclusão já disponíveis.
+
+| Material | Retenção proposta | Exclusão e restrições |
+| --- | --- | --- |
+| Corpus e avaliação fictícios revisados, manifestos e metadados seguros | Versionados no Git enquanto o projeto for mantido. | Somente conteúdo sem dados pessoais e com termos de uso registrados. Licença pendente impede publicação. |
+| Coleções inativas e snapshots usados como fontes históricas | Até 30 dias após desativação. | Manter ao menos a versão anterior dentro dessa janela para rollback; após expiração, informar fonte histórica indisponível em vez de apontar para conteúdo novo. |
+| Perguntas, respostas, classificações e revisões operacionais | Até 30 dias após criação da consulta/classificação. Revisão não reinicia a janela. | Remover conteúdo e relações dependentes; não manter originais pessoais indefinidamente sob justificativa de auditoria. Expor indisponibilidade após expiração. |
+| Logs e traces sanitizados | Até 14 dias após emissão. | Sem perguntas, respostas, textos de chamados ou contextos completos por padrão; sem credenciais. Usar IDs e códigos de erro sanitizados. |
+| Backups locais de dados operacionais | Até 30 dias após criação do backup. | Acesso restrito, fora do Git; aplicar exclusões pendentes antes de disponibilizar qualquer restauração. Não alegar remoção imediata de cópias offline. |
+| Chamados brutos privados | Não coletados no escopo inicial. | Não copiar para o repositório ou fornecedores. Reavaliar origem, acesso e retenção antes de usar outra fonte na Sprint 7. |
+| Dados supervisionados fictícios curados e artefatos aprovados | Manifestos seguros no Git; artefatos fora do Git. Política específica antes do treino na Sprint 7. | Verificar ausência de dados pessoais e origem controlada; checksum antes de carregar o modelo. Não reter material privado por esta regra de dados fictícios. |
+
+Se surgir conteúdo pessoal ou segredo: interromper o processamento e envio externo, retirar da lista autorizada e da coleção ativa, identificar cópias/derivados e registrar a exclusão sem repetir o conteúdo no log. Revogar credenciais expostas. A exclusão de traces, chunks, backups e eventual histórico publicado exige tratamento próprio; um novo commit que remove um arquivo não apaga suas versões anteriores. Não publicar material suspeito.
+
+Antes do demo, implementar expiração e exclusão no banco, armazenamento e tracking; verificar limpeza e restauração sem reintroduzir conteúdo excluído. Manter registro mínimo protegido dos IDs e prazo de expurgo necessários para aplicar exclusões em backups, sem guardar o texto removido. Exclusão de dados pessoais prevalece sobre rollback e preservação de fontes históricas.
+
+O uso inicial permanece sem dados reais e sem envio a fornecedores na Sprint 1. Nas sprints de integração, revisar política do fornecedor e orçamento antes de enviar conteúdo. Os dois conjuntos de avaliação e os dados de treino continuam separados; publicar contagens e limitações de dados sintéticos.
 
 ## Orçamento e limitações
 
@@ -61,4 +190,8 @@ O corpus fictício permite avaliar se o sistema segue procedimentos controlados;
 
 Revisão documental realizada: os três casos cobertos correspondem às áreas declaradas; os três casos fora da cobertura têm motivos explícitos. Não foram definidos passos de recuperação, permissões concretas ou regras de cobrança sem documentos. O corpus, o conjunto de avaliação e a aplicação continuam inexistentes.
 
-Após a S1.1, o ambiente mínimo foi preparado na S1.2. Próxima unidade: S1.3 — definir metadados, manifesto autorizado e políticas de dados.
+## Verificação da S1.3
+
+Contrato, molde e manifesto vazio definidos; validação de JSON, contagem e estado draft conferida. A identificação do documento combina ID estável, versão, SHA-256 e section_id. Licença e revisão pendentes bloqueiam autorização; não foram inventadas aprovações ou hashes de documentos inexistentes.
+
+Próxima unidade: S1.4 — escrever três procedimentos fictícios, com entradas reais no manifesto draft, checksums e revisão pendente. A revisão humana do piloto permanece na S1.6. Nenhum corpus está aprovado para ingestão nesta etapa.
