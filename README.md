@@ -4,7 +4,15 @@ A support assistant combining retrieval-augmented generation (RAG), source citat
 
 SupportAI is a learning and portfolio project focused on **system architecture, backend engineering, model training, MLOps, and LLMOps**.
 
-> **Status: planning.** This README describes the intended system. Application code, trained models, benchmarks, CI, and deployment are not available yet. Setup instructions will be added and verified as each milestone is implemented.
+> **Status: Sprint 1 — domain and minimal Python environment (S1.1–S1.2).** This README describes the intended system. Application code, a knowledge corpus, annotated evaluation data, trained models, benchmarks, CI, and deployment are not available yet.
+
+## Support domain
+
+The initial scenario is **NexoDesk**, a fictional SaaS product for organizing support tickets in a workspace. SupportAI will assist a Portuguese-speaking support agent in one organization with documented account and access procedures, basic use and known issues, billing guidance, and service requests. It will produce drafts for human review.
+
+The knowledge base will use fictional Markdown procedures. It will not establish policies for real products, determine individual contractual exceptions, confirm live service status, or execute account and billing changes. A question within the domain still requires supporting evidence before it can be answered.
+
+See [the domain and data scope](docs/DATA.md) for examples and limitations, and [the approved development plan](docs/PLAN.md) for the next steps. Classifier labels will be defined separately from these documentation areas during the supervised data pilot.
 
 ## What it does
 
@@ -56,7 +64,7 @@ The classifier and RAG pipeline share the backend but remain independent capabil
 
 | Area | Tools |
 | --- | --- |
-| Language | Python |
+| Language | CPython 3.12.16 |
 | API | FastAPI, Pydantic |
 | Persistence | PostgreSQL, SQLAlchemy, Alembic |
 | Retrieval | PostgreSQL full-text search and pgvector |
@@ -64,10 +72,11 @@ The classifier and RAG pipeline share the backend but remain independent capabil
 | Supervised learning | scikit-learn, TF-IDF, logistic regression |
 | Experiment tracking and tracing | MLflow |
 | Testing and code quality | pytest, Ruff |
+| Dependency management | uv 0.13.6, pyproject.toml, uv.lock |
 | Local environment | Docker, Docker Compose |
 | Continuous integration | GitHub Actions |
 
-Model providers, dependency versions, and deployment infrastructure will be selected during implementation. Fine-tuning an LLM is outside the initial scope.
+Only the development tools pytest and Ruff are installed at this stage. Application libraries, model providers, and deployment infrastructure will be selected and added when needed. Fine-tuning an LLM is outside the initial scope.
 
 ## Learning objectives
 
@@ -118,9 +127,40 @@ Prompt-injection controls and human review reduce risk but do not guarantee corr
 
 ## Getting started
 
-Implementation has not started. Installation, environment variables, database migrations, ingestion, training, testing, and run commands will be documented here as they become available and are verified.
+### Minimal environment (S1.2)
 
-The initial task is to define a narrow support domain, prepare a small document-and-question pilot, and record the first sprint plan. Do not expect a running application from this repository yet.
+Run the commands below from the repository root on Linux. Bootstrap prerequisites: an existing Python 3 with `venv`, pip, and HTTPS access to PyPI and GitHub. On the development machine, the bootstrap interpreter is the system Python 3.12.3; the project uses a separate CPython 3.12.16. The system interpreter is not replaced.
+
+```bash
+python3 -m venv .venv-tools
+.venv-tools/bin/python -m pip install --index-url https://pypi.org/simple uv==0.13.6
+export UV_PYTHON_INSTALL_DIR="$PWD/.cache/uv-python"
+.venv-tools/bin/uv python install 3.12.16 --no-bin
+.venv-tools/bin/uv sync --locked
+```
+
+The first installation downloads Python and packages. Set `UV_PYTHON_INSTALL_DIR` again when opening a new terminal; it keeps the managed interpreter inside this repository's ignored cache. `.venv-tools` isolates uv itself; `.venv` holds the project dependencies. Neither directory is committed.
+
+Verify the installation:
+
+```bash
+export UV_PYTHON_INSTALL_DIR="$PWD/.cache/uv-python"
+.venv-tools/bin/uv lock --check --offline
+.venv-tools/bin/uv run --locked python --version
+.venv-tools/bin/uv run --locked pytest --version
+.venv-tools/bin/uv run --locked ruff --version
+.venv-tools/bin/uv pip check --python .venv/bin/python
+```
+
+Expected versions for this lock: Python 3.12.16, pytest 9.2.0, Ruff 0.17.3. Lock validation and dependency compatibility checks must succeed. There is no test suite or application source yet: displaying pytest's version is an installation check, not a passing test run.
+
+`pyproject.toml` declares direct dependencies and the supported Python series (`>=3.12,<3.13`). `.python-version` selects the exact interpreter. `uv.lock` is the single dependency lockfile, recording exact direct/transitive versions, package sources, hashes and platform markers. `uv sync --locked` installs those versions and refuses an outdated lock instead of silently updating it. See the [uv locking documentation](https://docs.astral.sh/uv/concepts/projects/sync/).
+
+Python 3.12 is a supported series in its security-maintenance phase; see the [Python version status](https://devguide.python.org/versions/). The patch pin is an explicit reproducibility choice and should be reviewed when updating Python. It does not guarantee compatibility with application libraries that have not been added yet.
+
+The project is configured with `package = false`: it manages an environment without building an empty application package. pytest will support behavioral tests as code arrives; Ruff will check and format Python. No artificial test or empty module is needed to demonstrate that the tools are installed.
+
+The next unit is data contracts and policies (S1.3), followed by the document-and-question pilot. Database migrations, ingestion, training, and application commands will be documented when implemented and verified. Do not expect a running application yet.
 
 ## Planned documentation
 
