@@ -1,8 +1,8 @@
 # SupportAI — Domínio e dados
 
-Atualizado em: 29/10/2026. Etapas: S1.1 — domínio; S1.3 — contratos e políticas de dados.
+Atualizado em: 30/10/2026. Etapas: S1.1 — domínio; S1.3 — contratos; S1.4 — piloto documental.
 
-O plano foi aprovado pelo usuário. Este documento define o domínio, os contratos e as políticas de dados; não contém procedimentos operacionais nem gabaritos. O manifesto existe vazio e em estado draft. Corpus e perguntas ainda não foram criados. As validações de ingestão descritas abaixo são requisitos para a Sprint 2, ainda sem implementação.
+O plano foi aprovado pelo usuário. Este documento define o domínio, os contratos e as políticas de dados; não contém procedimentos operacionais nem gabaritos. O corpus piloto tem três procedimentos fictícios em knowledge/, listados no manifesto 0.1.1-draft com checksums reais. Licença e revisão humana permanecem pendentes; nenhuma fonte está autorizada para ingestão. As perguntas ainda não foram criadas. As validações de ingestão descritas abaixo são requisitos para a Sprint 2, ainda sem implementação.
 
 ## Produto e público
 
@@ -42,8 +42,8 @@ Falta de evidência e falha técnica serão tratadas separadamente na API futura
 
 ## Fontes e separação dos dados
 
-- Corpus planejado: 24 documentos autorais fictícios, dentro da faixa de 20–40; começar com 3 para revisão do piloto.
-- Origem planejada: elaboração para este projeto. Identificar assistência de LLM e revisão humana quando ocorrerem; nenhum texto gerado está automaticamente aprovado.
+- Corpus atual: 3 documentos fictícios do piloto; meta final de 24, dentro da faixa de 20–40. Não expandir antes da revisão do piloto na S1.6.
+- Origem do piloto: redação assistida por LLM para este projeto em 30/10/2026, sem fontes externas ou dados de clientes. Autoria declarada como SupportAI project; revisão humana pendente. Nenhum texto gerado está automaticamente aprovado.
 - Avaliação planejada: cerca de 50 perguntas revisadas, aproximadamente 35 de desenvolvimento e 15 de teste, com grupos de paráfrases preservados. As 8 perguntas do piloto ficarão em desenvolvimento.
 - `knowledge/` conterá procedimentos; `evaluation/`, perguntas e gabaritos. Somente documentos autorizados por manifesto poderão ser indexados. Este documento de escopo também não é fonte de procedimentos para ingestão.
 - Chamados supervisionados terão conjunto próprio na Sprint 7; perguntas RAG não substituem exemplos rotulados de classificação.
@@ -77,7 +77,7 @@ Trechos futuros referenciarão documento, versão, section_id, posição no text
 
 ### Modelo de entrada, sem autorização de ingestão
 
-O exemplo é um molde de preenchimento para a S1.4; não representa um documento já existente. Não copiá-lo para um manifesto aprovado sem escrever, calcular e revisar o material.
+O exemplo é um molde de preenchimento, com datas e checksum omitidos. O arquivo nd-access-001 agora existe no piloto; sua entrada real e seu checksum estão no manifesto. Não usar este molde no lugar da entrada real nem copiá-lo para um manifesto aprovado sem revisão.
 
 ```json
 {
@@ -126,7 +126,7 @@ Arquivo: `configs/corpus_manifest.json`. Ele lista explicitamente os arquivos ca
 | `document_count` | Inteiro igual ao tamanho de documents. Snapshot aprovado tem entre 1 e 40 entradas; o piloto pode ter 3, mas o aceite final da Sprint 1 continua exigindo 20–40. |
 | `documents` | Lista de entradas com o contrato acima. Snapshot vazio é permitido apenas como draft. |
 
-**Estado atual:** 0 documentos, status draft, nenhuma fonte autorizada para ingestão. Não é uma coleção pronta e não satisfaz readiness da API. A revisão do corpus é distinta dos estados building/ready da coleção futura.
+**Estado atual:** 3 documentos em 0.1.1-draft, status draft, licença e revisão pendentes, nenhuma fonte autorizada para ingestão. O snapshot vazio anterior era 0.1.0-draft, preservado no histórico do Git. Não é uma coleção pronta e não satisfaz readiness da API. A revisão do corpus é distinta dos estados building/ready da coleção futura.
 
 ### Requisitos de validação para a ingestão futura
 
@@ -140,15 +140,31 @@ Arquivo: `configs/corpus_manifest.json`. Ele lista explicitamente os arquivos ca
 
 O limite por arquivo é uma proteção de entrada; não define tamanho de chunk ou orçamento de tokens. Esses limites serão medidos e configurados separadamente na Sprint 2.
 
-### Como conferir um checksum quando o piloto existir
+### Como conferir um checksum do piloto
 
-Executar na raiz do repositório, depois que a S1.4 criar o arquivo:
+Executar na raiz do repositório:
 
 ```bash
 sha256sum knowledge/nd-access-001.md
 ```
 
-O resultado esperado é o hash real de 64 caracteres para registrar na entrada correspondente. O comando ainda não se aplica ao repositório atual, porque o arquivo não existe. A verificação desta etapa usou somente bytes fictícios temporários e JSON; não há ingestão implementada.
+O resultado deve coincidir com sha256 na entrada nd-access-001 do manifesto. Na S1.4, os três hashes foram calculados dos bytes finais e conferidos novamente de forma independente. Não há ingestão implementada.
+
+## Piloto documental — S1.4
+
+| Documento e versão | Escopo e evidências disponíveis | Ausências intencionais |
+| --- | --- | --- |
+| nd-access-001, 1.0.0 | Solicitação de recuperação após perda de 2FA pela tela de entrada, dados mínimos, protocolo e exceções. | Critérios internos de identidade, prazo de conclusão e acompanhamento sem autenticação. |
+| nd-billing-001, 1.0.0 | Consulta e download de fatura por administrador do espaço; ausência de fatura, permissões e divergência. | Regras de reembolso, descontos, pagamento, prazo de análise e dados financeiros atuais. |
+| nd-tickets-001, 1.0.0 | Consulta dos próprios chamados após login, interpretação de quatro situações e resposta ao histórico. | Busca interna por atendentes, consulta pública por protocolo, prazos e reabertura. |
+
+Escolhas fictícias reversíveis: conta com autenticador; espaço de trabalho selecionado; faturas restritas ao perfil Administrador do espaço de trabalho; lista Meus chamados limitada à conta solicitante. Essas são regras do cenário documental, não permissões já implementadas na API do SupportAI.
+
+Revisão de coerência pelo agente: recuperação começa sem login, mas acompanhamento exige autenticação; não há consulta pública por protocolo. Um protocolo confirma registro, não aprovação. Faturas não aparecem para qualquer atendente; situação Concluído não implica concessão do pedido. O chamado de divergência de cobrança usa o mesmo menu Ajuda do documento de acompanhamento. Nenhum documento promete prazo ou reembolso.
+
+Os três rascunhos têm passos ordenados, condições e exceções, com 11 seções estáveis no total. Não usam referências a procedimentos inexistentes; os IDs citados entre documentos pertencem ao próprio piloto. Isso é uma revisão editorial do agente, sem substituir a revisão humana da S1.6 ou uma avaliação do sistema.
+
+As lacunas são úteis para preparar perguntas sem resposta na S1.5. Elas não autorizam completar regras com conhecimento externo. Ainda não há perguntas anotadas, métricas de recuperação, embeddings ou chamadas a modelos de geração no fluxo do produto.
 
 ## Atualização, revisão e licença
 
@@ -188,10 +204,14 @@ O corpus fictício permite avaliar se o sistema segue procedimentos controlados;
 
 ## Verificação da S1.1
 
-Revisão documental realizada: os três casos cobertos correspondem às áreas declaradas; os três casos fora da cobertura têm motivos explícitos. Não foram definidos passos de recuperação, permissões concretas ou regras de cobrança sem documentos. O corpus, o conjunto de avaliação e a aplicação continuam inexistentes.
+Na conclusão da S1.1, os três casos cobertos correspondiam às áreas declaradas e os três casos fora da cobertura tinham motivos explícitos. Naquele momento, o corpus, o conjunto de avaliação e a aplicação ainda não existiam. O piloto documental foi criado depois, na S1.4.
 
 ## Verificação da S1.3
 
 Contrato, molde e manifesto vazio definidos; validação de JSON, contagem e estado draft conferida. A identificação do documento combina ID estável, versão, SHA-256 e section_id. Licença e revisão pendentes bloqueiam autorização; não foram inventadas aprovações ou hashes de documentos inexistentes.
 
-Próxima unidade: S1.4 — escrever três procedimentos fictícios, com entradas reais no manifesto draft, checksums e revisão pendente. A revisão humana do piloto permanece na S1.6. Nenhum corpus está aprovado para ingestão nesta etapa.
+## Verificação da S1.4
+
+Três procedimentos fictícios redigidos; manifesto com contagem 3, caminhos reais, IDs e hashes únicos, metadados, datas reais de criação e 11 seções correspondentes ao Markdown. SHA-256 conferido sobre os bytes finais de cada arquivo; nenhum hash inserido no próprio documento. Licença pending, revisão pending e campos de revisor/timestamp nulos em todas as entradas.
+
+Próxima unidade: S1.5 — preparar oito perguntas de desenvolvimento com evidências ou motivo de abstenção. A revisão humana do piloto permanece na S1.6. Nenhum corpus está aprovado para ingestão nesta etapa.

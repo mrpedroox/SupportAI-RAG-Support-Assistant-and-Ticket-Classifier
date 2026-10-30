@@ -4,7 +4,7 @@ A support assistant combining retrieval-augmented generation (RAG), source citat
 
 SupportAI is a learning and portfolio project focused on **system architecture, backend engineering, model training, MLOps, and LLMOps**.
 
-> **Status: Sprint 1 — domain, Python environment, and data contracts (S1.1–S1.3).** This README describes the intended system. Application code, a knowledge corpus, annotated evaluation data, trained models, benchmarks, CI, and deployment are not available yet.
+> **Status: Sprint 1 — three-document pilot drafted (S1.1–S1.4).** Fictional procedures and their metadata are available for review. Application code, an approved corpus, annotated evaluation data, trained models, benchmarks, CI, and deployment are not available yet.
 
 ## Support domain
 
@@ -162,11 +162,19 @@ The project is configured with `package = false`: it manages an environment with
 
 ### Knowledge source contract (S1.3)
 
-[The data documentation](docs/DATA.md) defines document IDs, versions, sections, checksums, provenance, license and human review, along with retention and deletion policies. Metadata lives in JSON; procedures will live in Markdown. A checksum detects content changes; it does not establish correctness or permission to use a source.
+[The data documentation](docs/DATA.md) defines document IDs, versions, sections, checksums, provenance, license and human review, along with retention and deletion policies. Metadata lives in JSON; procedures live in Markdown. A checksum detects content changes; it does not establish correctness or permission to use a source.
 
-The [corpus manifest](configs/corpus_manifest.json) currently contains zero documents and has `status: draft`. It authorizes no ingestion. A future approved snapshot must list each allowed Markdown file explicitly, with a verified hash, approved license and recorded human review. The ingestion validator will be implemented in Sprint 2; these contracts are not an existing security mechanism.
+The [corpus manifest](configs/corpus_manifest.json) contains three documents in snapshot `0.1.1-draft`, with actual SHA-256 checksums and `status: draft`. License and human review remain pending; it authorizes no ingestion. A future approved snapshot must have an approved license and recorded human review for every listed source. The ingestion validator will be implemented in Sprint 2; these contracts are not an existing security mechanism.
 
-The next unit is the three-document pilot (S1.4), keeping sources in draft until review. Database migrations, ingestion, training, and application commands will be documented when implemented and verified. Do not expect a running application yet.
+### Fictional document pilot (S1.4)
+
+- [Access recovery after losing an authenticator](knowledge/nd-access-001.md): request steps, prerequisites and exceptions; no recovery guarantee or public status lookup.
+- [Workspace invoice lookup](knowledge/nd-billing-001.md): administrator access, lookup, download and discrepancies; no refund or discount rules.
+- [Tracking your own support tickets](knowledge/nd-tickets-001.md): authenticated lookup, four documented statuses and missing-ticket exceptions; no completion-time promises.
+
+All three documents are in Portuguese and marked as fictional drafts. Their 11 sections have stable IDs. Editorial consistency checks by the agent do not replace the human pilot review planned for S1.6.
+
+The next unit is eight development questions with evidence or abstention reasons (S1.5). Database migrations, ingestion, training, and application commands will be documented when implemented and verified. Do not expect a running application yet.
 
 ## Planned documentation
 

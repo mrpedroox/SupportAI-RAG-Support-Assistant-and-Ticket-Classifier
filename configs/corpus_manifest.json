@@ -1,8 +1,137 @@
 {
   "schema_version": 1,
-  "corpus_version": "0.1.0-draft",
+  "corpus_version": "0.1.1-draft",
   "status": "draft",
   "language": "pt-BR",
-  "document_count": 0,
-  "documents": []
+  "document_count": 3,
+  "documents": [
+    {
+      "document_id": "nd-access-001",
+      "title": "Recuperação de acesso após perda do autenticador",
+      "version": "1.0.0",
+      "path": "knowledge/nd-access-001.md",
+      "sha256": "04105f6d6267e2ce49eaf65cef127855809592e547680a9174c4b66e8aaa0937",
+      "language": "pt-BR",
+      "source": {
+        "kind": "fictional",
+        "reference": "knowledge/nd-access-001.md",
+        "obtained_on": "2026-10-30"
+      },
+      "author": "SupportAI project",
+      "creation_method": "llm_assisted",
+      "license": {
+        "status": "pending",
+        "identifier": null,
+        "reference": null
+      },
+      "updated_on": "2026-10-30",
+      "review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "sections": [
+        {
+          "section_id": "scope",
+          "title": "Escopo e condições"
+        },
+        {
+          "section_id": "recovery-request",
+          "title": "Solicitar recuperação"
+        },
+        {
+          "section_id": "exceptions",
+          "title": "Exceções e limites"
+        }
+      ]
+    },
+    {
+      "document_id": "nd-billing-001",
+      "title": "Consulta de faturas do espaço de trabalho",
+      "version": "1.0.0",
+      "path": "knowledge/nd-billing-001.md",
+      "sha256": "14d2dd7482cf2619b27bbd0233040aea3ff6abdaf23c0ba208f1b99991ab03b8",
+      "language": "pt-BR",
+      "source": {
+        "kind": "fictional",
+        "reference": "knowledge/nd-billing-001.md",
+        "obtained_on": "2026-10-30"
+      },
+      "author": "SupportAI project",
+      "creation_method": "llm_assisted",
+      "license": {
+        "status": "pending",
+        "identifier": null,
+        "reference": null
+      },
+      "updated_on": "2026-10-30",
+      "review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "sections": [
+        {
+          "section_id": "scope",
+          "title": "Escopo e condições"
+        },
+        {
+          "section_id": "invoice-lookup",
+          "title": "Localizar e consultar uma fatura"
+        },
+        {
+          "section_id": "exceptions",
+          "title": "Permissão, ausência de fatura e divergências"
+        },
+        {
+          "section_id": "limits",
+          "title": "O que este procedimento não decide"
+        }
+      ]
+    },
+    {
+      "document_id": "nd-tickets-001",
+      "title": "Acompanhamento de chamados pelo solicitante",
+      "version": "1.0.0",
+      "path": "knowledge/nd-tickets-001.md",
+      "sha256": "98f5cb7568a754f5b27631dc02e4d241bbd573a8cb531bc46c3515490db6a47e",
+      "language": "pt-BR",
+      "source": {
+        "kind": "fictional",
+        "reference": "knowledge/nd-tickets-001.md",
+        "obtained_on": "2026-10-30"
+      },
+      "author": "SupportAI project",
+      "creation_method": "llm_assisted",
+      "license": {
+        "status": "pending",
+        "identifier": null,
+        "reference": null
+      },
+      "updated_on": "2026-10-30",
+      "review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "sections": [
+        {
+          "section_id": "scope",
+          "title": "Escopo e condições"
+        },
+        {
+          "section_id": "ticket-tracking",
+          "title": "Consultar o andamento"
+        },
+        {
+          "section_id": "ticket-statuses",
+          "title": "Significado das situações"
+        },
+        {
+          "section_id": "exceptions",
+          "title": "Chamado ausente ou sem acesso"
+        }
+      ]
+    }
+  ]
 }
