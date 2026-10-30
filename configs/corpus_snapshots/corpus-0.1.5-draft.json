@@ -1,0 +1,1061 @@
+{
+  "schema_version": 1,
+  "corpus_version": "0.1.5-draft",
+  "status": "draft",
+  "language": "pt-BR",
+  "document_count": 24,
+  "documents": [
+    {
+      "document_id": "nd-access-001",
+      "title": "Recuperação de acesso após perda do autenticador",
+      "version": "1.0.0",
+      "path": "knowledge/nd-access-001.md",
+      "sha256": "04105f6d6267e2ce49eaf65cef127855809592e547680a9174c4b66e8aaa0937",
+      "language": "pt-BR",
+      "source": {
+        "kind": "fictional",
+        "reference": "knowledge/nd-access-001.md",
+        "obtained_on": "2026-10-30"
+      },
+      "author": "SupportAI project",
+      "creation_method": "llm_assisted",
+      "license": {
+        "status": "pending",
+        "identifier": null,
+        "reference": null
+      },
+      "updated_on": "2026-10-30",
+      "review": {
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T15:53:10Z"
+      },
+      "sections": [
+        {
+          "section_id": "scope",
+          "title": "Escopo e condições"
+        },
+        {
+          "section_id": "recovery-request",
+          "title": "Solicitar recuperação"
+        },
+        {
+          "section_id": "exceptions",
+          "title": "Exceções e limites"
+        }
+      ]
+    },
+    {
+      "document_id": "nd-billing-001",
+      "title": "Consulta de faturas do espaço de trabalho",
+      "version": "1.0.0",
+      "path": "knowledge/nd-billing-001.md",
+      "sha256": "14d2dd7482cf2619b27bbd0233040aea3ff6abdaf23c0ba208f1b99991ab03b8",
+      "language": "pt-BR",
+      "source": {
+        "kind": "fictional",
+        "reference": "knowledge/nd-billing-001.md",
+        "obtained_on": "2026-10-30"
+      },
+      "author": "SupportAI project",
+      "creation_method": "llm_assisted",
+      "license": {
+        "status": "pending",
+        "identifier": null,
+        "reference": null
+      },
+      "updated_on": "2026-10-30",
+      "review": {
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T15:53:10Z"
+      },
+      "sections": [
+        {
+          "section_id": "scope",
+          "title": "Escopo e condições"
+        },
+        {
+          "section_id": "invoice-lookup",
+          "title": "Localizar e consultar uma fatura"
+        },
+        {
+          "section_id": "exceptions",
+          "title": "Permissão, ausência de fatura e divergências"
+        },
+        {
+          "section_id": "limits",
+          "title": "O que este procedimento não decide"
+        }
+      ]
+    },
+    {
+      "document_id": "nd-tickets-001",
+      "title": "Acompanhamento de chamados pelo solicitante",
+      "version": "1.0.0",
+      "path": "knowledge/nd-tickets-001.md",
+      "sha256": "98f5cb7568a754f5b27631dc02e4d241bbd573a8cb531bc46c3515490db6a47e",
+      "language": "pt-BR",
+      "source": {
+        "kind": "fictional",
+        "reference": "knowledge/nd-tickets-001.md",
+        "obtained_on": "2026-10-30"
+      },
+      "author": "SupportAI project",
+      "creation_method": "llm_assisted",
+      "license": {
+        "status": "pending",
+        "identifier": null,
+        "reference": null
+      },
+      "updated_on": "2026-10-30",
+      "review": {
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T15:53:10Z"
+      },
+      "sections": [
+        {
+          "section_id": "scope",
+          "title": "Escopo e condições"
+        },
+        {
+          "section_id": "ticket-tracking",
+          "title": "Consultar o andamento"
+        },
+        {
+          "section_id": "ticket-statuses",
+          "title": "Significado das situações"
+        },
+        {
+          "section_id": "exceptions",
+          "title": "Chamado ausente ou sem acesso"
+        }
+      ]
+    },
+    {
+      "document_id": "nd-tickets-002",
+      "title": "Abertura de chamado pelo solicitante",
+      "version": "1.0.0",
+      "path": "knowledge/nd-tickets-002.md",
+      "sha256": "4256792faf41a9956d75f0494d2b2345bca5cdbd074b69201f074b291b26243d",
+      "language": "pt-BR",
+      "source": {
+        "kind": "fictional",
+        "reference": "knowledge/nd-tickets-002.md",
+        "obtained_on": "2026-10-30"
+      },
+      "author": "SupportAI project",
+      "creation_method": "llm_assisted",
+      "license": {
+        "status": "pending",
+        "identifier": null,
+        "reference": null
+      },
+      "updated_on": "2026-10-30",
+      "review": {
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
+      },
+      "sections": [
+        {
+          "section_id": "scope",
+          "title": "Escopo e condições"
+        },
+        {
+          "section_id": "ticket-creation",
+          "title": "Registrar a solicitação"
+        },
+        {
+          "section_id": "exceptions",
+          "title": "Falha ou confirmação ausente"
+        },
+        {
+          "section_id": "limits",
+          "title": "Limites do registro"
+        }
+      ]
+    },
+    {
+      "document_id": "nd-tickets-003",
+      "title": "Resposta a pedido de informação em chamado aberto",
+      "version": "1.0.0",
+      "path": "knowledge/nd-tickets-003.md",
+      "sha256": "c8e94b617d0b8d77a33203d48efc5bbe4d1828e8f69f7934d6f3abc92fc5c015",
+      "language": "pt-BR",
+      "source": {
+        "kind": "fictional",
+        "reference": "knowledge/nd-tickets-003.md",
+        "obtained_on": "2026-10-30"
+      },
+      "author": "SupportAI project",
+      "creation_method": "llm_assisted",
+      "license": {
+        "status": "pending",
+        "identifier": null,
+        "reference": null
+      },
+      "updated_on": "2026-10-30",
+      "review": {
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
+      },
+      "sections": [
+        {
+          "section_id": "scope",
+          "title": "Escopo e condições"
+        },
+        {
+          "section_id": "information-response",
+          "title": "Acrescentar a informação solicitada"
+        },
+        {
+          "section_id": "exceptions",
+          "title": "Informação indisponível ou envio incerto"
+        },
+        {
+          "section_id": "limits",
+          "title": "Situação e encerramento"
+        }
+      ]
+    },
+    {
+      "document_id": "nd-tickets-004",
+      "title": "Uso de filtros na lista dos próprios chamados",
+      "version": "1.0.0",
+      "path": "knowledge/nd-tickets-004.md",
+      "sha256": "2137faff5f0eedea48b4452ea56e7f33388d6238fd0e3aeeaacb3b8c045d485f",
+      "language": "pt-BR",
+      "source": {
+        "kind": "fictional",
+        "reference": "knowledge/nd-tickets-004.md",
+        "obtained_on": "2026-10-30"
+      },
+      "author": "SupportAI project",
+      "creation_method": "llm_assisted",
+      "license": {
+        "status": "pending",
+        "identifier": null,
+        "reference": null
+      },
+      "updated_on": "2026-10-30",
+      "review": {
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
+      },
+      "sections": [
+        {
+          "section_id": "scope",
+          "title": "Escopo e condições"
+        },
+        {
+          "section_id": "status-filter",
+          "title": "Filtrar por situação"
+        },
+        {
+          "section_id": "exceptions",
+          "title": "Lista vazia ou controles ausentes"
+        },
+        {
+          "section_id": "limits",
+          "title": "Limites da consulta"
+        }
+      ]
+    },
+    {
+      "document_id": "nd-access-002",
+      "title": "Redefinição de senha com e-mail disponível",
+      "version": "1.0.0",
+      "path": "knowledge/nd-access-002.md",
+      "sha256": "928f46e70ab01f093a5bbb62d67bfea0e428f6410ab28b6e821180ca8c763cab",
+      "language": "pt-BR",
+      "source": {
+        "kind": "fictional",
+        "reference": "knowledge/nd-access-002.md",
+        "obtained_on": "2026-10-30"
+      },
+      "author": "SupportAI project",
+      "creation_method": "llm_assisted",
+      "license": {
+        "status": "pending",
+        "identifier": null,
+        "reference": null
+      },
+      "updated_on": "2026-10-30",
+      "review": {
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
+      },
+      "sections": [
+        {
+          "section_id": "scope",
+          "title": "Escopo e condições"
+        },
+        {
+          "section_id": "password-reset",
+          "title": "Solicitar nova senha"
+        },
+        {
+          "section_id": "exceptions",
+          "title": "Exceções e encaminhamento"
+        },
+        {
+          "section_id": "limits",
+          "title": "Limites do procedimento"
+        }
+      ]
+    },
+    {
+      "document_id": "nd-access-003",
+      "title": "Aceite de convite para espaço de trabalho",
+      "version": "1.0.0",
+      "path": "knowledge/nd-access-003.md",
+      "sha256": "6fe55da438a01e09d491be4c4b654daa571eae9f36afe4953accbf7a7cd943db",
+      "language": "pt-BR",
+      "source": {
+        "kind": "fictional",
+        "reference": "knowledge/nd-access-003.md",
+        "obtained_on": "2026-10-30"
+      },
+      "author": "SupportAI project",
+      "creation_method": "llm_assisted",
+      "license": {
+        "status": "pending",
+        "identifier": null,
+        "reference": null
+      },
+      "updated_on": "2026-10-30",
+      "review": {
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
+      },
+      "sections": [
+        {
+          "section_id": "scope",
+          "title": "Escopo e condições"
+        },
+        {
+          "section_id": "invitation-acceptance",
+          "title": "Conferir e aceitar o convite"
+        },
+        {
+          "section_id": "exceptions",
+          "title": "Exceções e encaminhamento"
+        },
+        {
+          "section_id": "limits",
+          "title": "Limites do procedimento"
+        }
+      ]
+    },
+    {
+      "document_id": "nd-access-004",
+      "title": "Envio e consulta de convites pelo administrador",
+      "version": "1.0.0",
+      "path": "knowledge/nd-access-004.md",
+      "sha256": "e8781c633a2622e9273a83ccd6b964c3b8ed6de927ce3b3408d936db53c0f6fc",
+      "language": "pt-BR",
+      "source": {
+        "kind": "fictional",
+        "reference": "knowledge/nd-access-004.md",
+        "obtained_on": "2026-10-30"
+      },
+      "author": "SupportAI project",
+      "creation_method": "llm_assisted",
+      "license": {
+        "status": "pending",
+        "identifier": null,
+        "reference": null
+      },
+      "updated_on": "2026-10-30",
+      "review": {
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
+      },
+      "sections": [
+        {
+          "section_id": "scope",
+          "title": "Escopo e condições"
+        },
+        {
+          "section_id": "workspace-invitation",
+          "title": "Convidar uma pessoa"
+        },
+        {
+          "section_id": "exceptions",
+          "title": "Exceções e encaminhamento"
+        },
+        {
+          "section_id": "limits",
+          "title": "Limites do procedimento"
+        }
+      ]
+    },
+    {
+      "document_id": "nd-access-005",
+      "title": "Consulta do próprio perfil e pedido de permissão",
+      "version": "1.0.0",
+      "path": "knowledge/nd-access-005.md",
+      "sha256": "e2ddd2003631ec0438187d25278a8e9a8a5b2b5cdb0e8b906c7c251c295f1d61",
+      "language": "pt-BR",
+      "source": {
+        "kind": "fictional",
+        "reference": "knowledge/nd-access-005.md",
+        "obtained_on": "2026-10-30"
+      },
+      "author": "SupportAI project",
+      "creation_method": "llm_assisted",
+      "license": {
+        "status": "pending",
+        "identifier": null,
+        "reference": null
+      },
+      "updated_on": "2026-10-30",
+      "review": {
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
+      },
+      "sections": [
+        {
+          "section_id": "scope",
+          "title": "Escopo e condições"
+        },
+        {
+          "section_id": "permission-request",
+          "title": "Conferir e solicitar acesso"
+        },
+        {
+          "section_id": "exceptions",
+          "title": "Exceções e encaminhamento"
+        },
+        {
+          "section_id": "limits",
+          "title": "Limites do procedimento"
+        }
+      ]
+    },
+    {
+      "document_id": "nd-access-006",
+      "title": "Saída da conta em sessão autenticada",
+      "version": "1.0.0",
+      "path": "knowledge/nd-access-006.md",
+      "sha256": "dc06cd7c1512c1f013b294624485df12751497e53efd044ba96f6d0e4608c624",
+      "language": "pt-BR",
+      "source": {
+        "kind": "fictional",
+        "reference": "knowledge/nd-access-006.md",
+        "obtained_on": "2026-10-30"
+      },
+      "author": "SupportAI project",
+      "creation_method": "llm_assisted",
+      "license": {
+        "status": "pending",
+        "identifier": null,
+        "reference": null
+      },
+      "updated_on": "2026-10-30",
+      "review": {
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
+      },
+      "sections": [
+        {
+          "section_id": "scope",
+          "title": "Escopo e condições"
+        },
+        {
+          "section_id": "session-signout",
+          "title": "Encerrar a sessão atual"
+        },
+        {
+          "section_id": "exceptions",
+          "title": "Exceções e encaminhamento"
+        },
+        {
+          "section_id": "limits",
+          "title": "Limites do procedimento"
+        }
+      ]
+    },
+    {
+      "document_id": "nd-billing-002",
+      "title": "Leitura dos campos de uma fatura",
+      "version": "1.0.0",
+      "path": "knowledge/nd-billing-002.md",
+      "sha256": "1c7f3f9dd73ce276b8b8461831969591548902ef065eb685c4db7526a175c674",
+      "language": "pt-BR",
+      "source": {
+        "kind": "fictional",
+        "reference": "knowledge/nd-billing-002.md",
+        "obtained_on": "2026-10-30"
+      },
+      "author": "SupportAI project",
+      "creation_method": "llm_assisted",
+      "license": {
+        "status": "pending",
+        "identifier": null,
+        "reference": null
+      },
+      "updated_on": "2026-10-30",
+      "review": {
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
+      },
+      "sections": [
+        {
+          "section_id": "scope",
+          "title": "Escopo e condições"
+        },
+        {
+          "section_id": "invoice-fields",
+          "title": "Interpretar o registro exibido"
+        },
+        {
+          "section_id": "exceptions",
+          "title": "Exceções e encaminhamento"
+        },
+        {
+          "section_id": "limits",
+          "title": "Limites do procedimento"
+        }
+      ]
+    },
+    {
+      "document_id": "nd-billing-003",
+      "title": "Pedido de alteração do contato de cobrança",
+      "version": "1.0.0",
+      "path": "knowledge/nd-billing-003.md",
+      "sha256": "1f56b9d5ed273a245865f1d15387ad0e22d26450dd9e0a2f14e31fc4a881dc70",
+      "language": "pt-BR",
+      "source": {
+        "kind": "fictional",
+        "reference": "knowledge/nd-billing-003.md",
+        "obtained_on": "2026-10-30"
+      },
+      "author": "SupportAI project",
+      "creation_method": "llm_assisted",
+      "license": {
+        "status": "pending",
+        "identifier": null,
+        "reference": null
+      },
+      "updated_on": "2026-10-30",
+      "review": {
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
+      },
+      "sections": [
+        {
+          "section_id": "scope",
+          "title": "Escopo e condições"
+        },
+        {
+          "section_id": "billing-contact-request",
+          "title": "Solicitar revisão do contato"
+        },
+        {
+          "section_id": "exceptions",
+          "title": "Exceções e encaminhamento"
+        },
+        {
+          "section_id": "limits",
+          "title": "Limites do procedimento"
+        }
+      ]
+    },
+    {
+      "document_id": "nd-billing-004",
+      "title": "Falha ao baixar uma fatura já localizada",
+      "version": "1.0.0",
+      "path": "knowledge/nd-billing-004.md",
+      "sha256": "66d3bce73da804baba9a69c65ce890698d8c37a1cc321666d1b6d59950e27891",
+      "language": "pt-BR",
+      "source": {
+        "kind": "fictional",
+        "reference": "knowledge/nd-billing-004.md",
+        "obtained_on": "2026-10-30"
+      },
+      "author": "SupportAI project",
+      "creation_method": "llm_assisted",
+      "license": {
+        "status": "pending",
+        "identifier": null,
+        "reference": null
+      },
+      "updated_on": "2026-10-30",
+      "review": {
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
+      },
+      "sections": [
+        {
+          "section_id": "scope",
+          "title": "Escopo e condições"
+        },
+        {
+          "section_id": "invoice-download-failure",
+          "title": "Conferir e relatar a falha"
+        },
+        {
+          "section_id": "exceptions",
+          "title": "Exceções e encaminhamento"
+        },
+        {
+          "section_id": "limits",
+          "title": "Limites do procedimento"
+        }
+      ]
+    },
+    {
+      "document_id": "nd-service-001",
+      "title": "Solicitação de alteração de plano",
+      "version": "1.0.0",
+      "path": "knowledge/nd-service-001.md",
+      "sha256": "261dece59babb87adb64d823a534114dfe50c570b3a4cd2fad83b89181a425d6",
+      "language": "pt-BR",
+      "source": {
+        "kind": "fictional",
+        "reference": "knowledge/nd-service-001.md",
+        "obtained_on": "2026-10-30"
+      },
+      "author": "SupportAI project",
+      "creation_method": "llm_assisted",
+      "license": {
+        "status": "pending",
+        "identifier": null,
+        "reference": null
+      },
+      "updated_on": "2026-10-30",
+      "review": {
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
+      },
+      "sections": [
+        {
+          "section_id": "scope",
+          "title": "Escopo e condições"
+        },
+        {
+          "section_id": "plan-change-request",
+          "title": "Registrar o pedido de mudança"
+        },
+        {
+          "section_id": "exceptions",
+          "title": "Exceções e encaminhamento"
+        },
+        {
+          "section_id": "limits",
+          "title": "Limites do procedimento"
+        }
+      ]
+    },
+    {
+      "document_id": "nd-service-002",
+      "title": "Alteração do nome exibido do espaço de trabalho",
+      "version": "1.0.0",
+      "path": "knowledge/nd-service-002.md",
+      "sha256": "f7827f9f936c8420e305346e267010fcffce7651ce6cee891479210f2e3ef591",
+      "language": "pt-BR",
+      "source": {
+        "kind": "fictional",
+        "reference": "knowledge/nd-service-002.md",
+        "obtained_on": "2026-10-30"
+      },
+      "author": "SupportAI project",
+      "creation_method": "llm_assisted",
+      "license": {
+        "status": "pending",
+        "identifier": null,
+        "reference": null
+      },
+      "updated_on": "2026-10-30",
+      "review": {
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
+      },
+      "sections": [
+        {
+          "section_id": "scope",
+          "title": "Escopo e condições"
+        },
+        {
+          "section_id": "workspace-name-change",
+          "title": "Editar o nome do espaço"
+        },
+        {
+          "section_id": "exceptions",
+          "title": "Exceções e encaminhamento"
+        },
+        {
+          "section_id": "limits",
+          "title": "Limites do procedimento"
+        }
+      ]
+    },
+    {
+      "document_id": "nd-service-003",
+      "title": "Preferência pessoal de avisos por e-mail",
+      "version": "1.0.0",
+      "path": "knowledge/nd-service-003.md",
+      "sha256": "664d00c373be02ca64628e7d03c6b0765b6e980bf8684fa3009b5825d92b6336",
+      "language": "pt-BR",
+      "source": {
+        "kind": "fictional",
+        "reference": "knowledge/nd-service-003.md",
+        "obtained_on": "2026-10-30"
+      },
+      "author": "SupportAI project",
+      "creation_method": "llm_assisted",
+      "license": {
+        "status": "pending",
+        "identifier": null,
+        "reference": null
+      },
+      "updated_on": "2026-10-30",
+      "review": {
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
+      },
+      "sections": [
+        {
+          "section_id": "scope",
+          "title": "Escopo e condições"
+        },
+        {
+          "section_id": "email-notification-preference",
+          "title": "Configurar avisos de chamados"
+        },
+        {
+          "section_id": "exceptions",
+          "title": "Exceções e encaminhamento"
+        },
+        {
+          "section_id": "limits",
+          "title": "Limites do procedimento"
+        }
+      ]
+    },
+    {
+      "document_id": "nd-service-004",
+      "title": "Alteração do nome de exibição da própria conta",
+      "version": "1.0.0",
+      "path": "knowledge/nd-service-004.md",
+      "sha256": "9ec9e633073e84653186eb78d151641bc12db7040e3929c23335d574bbf06120",
+      "language": "pt-BR",
+      "source": {
+        "kind": "fictional",
+        "reference": "knowledge/nd-service-004.md",
+        "obtained_on": "2026-10-30"
+      },
+      "author": "SupportAI project",
+      "creation_method": "llm_assisted",
+      "license": {
+        "status": "pending",
+        "identifier": null,
+        "reference": null
+      },
+      "updated_on": "2026-10-30",
+      "review": {
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
+      },
+      "sections": [
+        {
+          "section_id": "scope",
+          "title": "Escopo e condições"
+        },
+        {
+          "section_id": "account-display-name",
+          "title": "Editar o nome do perfil"
+        },
+        {
+          "section_id": "exceptions",
+          "title": "Exceções e encaminhamento"
+        },
+        {
+          "section_id": "limits",
+          "title": "Limites do procedimento"
+        }
+      ]
+    },
+    {
+      "document_id": "nd-service-005",
+      "title": "Pedido de saída de um espaço de trabalho",
+      "version": "1.0.0",
+      "path": "knowledge/nd-service-005.md",
+      "sha256": "9d2def2e23d905a1f0060cbfca48c9e06f0ad0c5b1229f71e37eb4d1657d8650",
+      "language": "pt-BR",
+      "source": {
+        "kind": "fictional",
+        "reference": "knowledge/nd-service-005.md",
+        "obtained_on": "2026-10-30"
+      },
+      "author": "SupportAI project",
+      "creation_method": "llm_assisted",
+      "license": {
+        "status": "pending",
+        "identifier": null,
+        "reference": null
+      },
+      "updated_on": "2026-10-30",
+      "review": {
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
+      },
+      "sections": [
+        {
+          "section_id": "scope",
+          "title": "Escopo e condições"
+        },
+        {
+          "section_id": "workspace-leave-request",
+          "title": "Solicitar análise de desligamento"
+        },
+        {
+          "section_id": "exceptions",
+          "title": "Exceções e encaminhamento"
+        },
+        {
+          "section_id": "limits",
+          "title": "Limites do procedimento"
+        }
+      ]
+    },
+    {
+      "document_id": "nd-issues-001",
+      "title": "Página do NexoDesk sem carregar",
+      "version": "1.0.0",
+      "path": "knowledge/nd-issues-001.md",
+      "sha256": "6309e9a47ee9a473c84401dc3f6ffc6a6399cef3d9e86255b06e5250d0693a4c",
+      "language": "pt-BR",
+      "source": {
+        "kind": "fictional",
+        "reference": "knowledge/nd-issues-001.md",
+        "obtained_on": "2026-10-30"
+      },
+      "author": "SupportAI project",
+      "creation_method": "llm_assisted",
+      "license": {
+        "status": "pending",
+        "identifier": null,
+        "reference": null
+      },
+      "updated_on": "2026-10-30",
+      "review": {
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
+      },
+      "sections": [
+        {
+          "section_id": "scope",
+          "title": "Escopo e condições"
+        },
+        {
+          "section_id": "page-load-troubleshooting",
+          "title": "Conferir uma falha de carregamento"
+        },
+        {
+          "section_id": "exceptions",
+          "title": "Exceções e encaminhamento"
+        },
+        {
+          "section_id": "limits",
+          "title": "Limites do procedimento"
+        }
+      ]
+    },
+    {
+      "document_id": "nd-issues-002",
+      "title": "Sessão expirada durante o uso",
+      "version": "1.0.0",
+      "path": "knowledge/nd-issues-002.md",
+      "sha256": "26b69a2573ec7eecd62e7536d2d0e83edfd698cbb2787058e375cf9689b1cc92",
+      "language": "pt-BR",
+      "source": {
+        "kind": "fictional",
+        "reference": "knowledge/nd-issues-002.md",
+        "obtained_on": "2026-10-30"
+      },
+      "author": "SupportAI project",
+      "creation_method": "llm_assisted",
+      "license": {
+        "status": "pending",
+        "identifier": null,
+        "reference": null
+      },
+      "updated_on": "2026-10-30",
+      "review": {
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
+      },
+      "sections": [
+        {
+          "section_id": "scope",
+          "title": "Escopo e condições"
+        },
+        {
+          "section_id": "expired-session",
+          "title": "Retomar após nova autenticação"
+        },
+        {
+          "section_id": "exceptions",
+          "title": "Exceções e encaminhamento"
+        },
+        {
+          "section_id": "limits",
+          "title": "Limites do procedimento"
+        }
+      ]
+    },
+    {
+      "document_id": "nd-issues-003",
+      "title": "Botão de envio indisponível no formulário de chamado",
+      "version": "1.0.0",
+      "path": "knowledge/nd-issues-003.md",
+      "sha256": "3ef2daf95e5a9aa29f0e9609aad1e46c4101f6710151e341df17ed90e27e75ea",
+      "language": "pt-BR",
+      "source": {
+        "kind": "fictional",
+        "reference": "knowledge/nd-issues-003.md",
+        "obtained_on": "2026-10-30"
+      },
+      "author": "SupportAI project",
+      "creation_method": "llm_assisted",
+      "license": {
+        "status": "pending",
+        "identifier": null,
+        "reference": null
+      },
+      "updated_on": "2026-10-30",
+      "review": {
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
+      },
+      "sections": [
+        {
+          "section_id": "scope",
+          "title": "Escopo e condições"
+        },
+        {
+          "section_id": "ticket-form-validation",
+          "title": "Conferir campos obrigatórios"
+        },
+        {
+          "section_id": "exceptions",
+          "title": "Exceções e encaminhamento"
+        },
+        {
+          "section_id": "limits",
+          "title": "Limites do procedimento"
+        }
+      ]
+    },
+    {
+      "document_id": "nd-issues-004",
+      "title": "Controles da interface fora da área visível",
+      "version": "1.0.0",
+      "path": "knowledge/nd-issues-004.md",
+      "sha256": "c48a220eee90d882807f53d35bc55700cb345a5e58cc59ee573783d64268a27c",
+      "language": "pt-BR",
+      "source": {
+        "kind": "fictional",
+        "reference": "knowledge/nd-issues-004.md",
+        "obtained_on": "2026-10-30"
+      },
+      "author": "SupportAI project",
+      "creation_method": "llm_assisted",
+      "license": {
+        "status": "pending",
+        "identifier": null,
+        "reference": null
+      },
+      "updated_on": "2026-10-30",
+      "review": {
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
+      },
+      "sections": [
+        {
+          "section_id": "scope",
+          "title": "Escopo e condições"
+        },
+        {
+          "section_id": "interface-visibility",
+          "title": "Conferir zoom e área da janela"
+        },
+        {
+          "section_id": "exceptions",
+          "title": "Exceções e encaminhamento"
+        },
+        {
+          "section_id": "limits",
+          "title": "Limites do procedimento"
+        }
+      ]
+    },
+    {
+      "document_id": "nd-issues-005",
+      "title": "Aviso de chamado não recebido por e-mail",
+      "version": "1.0.0",
+      "path": "knowledge/nd-issues-005.md",
+      "sha256": "3fe15aa235450d56bfd44344096910ffc48089c1d90816a11f1c445e09bb90da",
+      "language": "pt-BR",
+      "source": {
+        "kind": "fictional",
+        "reference": "knowledge/nd-issues-005.md",
+        "obtained_on": "2026-10-30"
+      },
+      "author": "SupportAI project",
+      "creation_method": "llm_assisted",
+      "license": {
+        "status": "pending",
+        "identifier": null,
+        "reference": null
+      },
+      "updated_on": "2026-10-30",
+      "review": {
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
+      },
+      "sections": [
+        {
+          "section_id": "scope",
+          "title": "Escopo e condições"
+        },
+        {
+          "section_id": "missing-ticket-notification",
+          "title": "Conferir preferência e histórico"
+        },
+        {
+          "section_id": "exceptions",
+          "title": "Exceções e encaminhamento"
+        },
+        {
+          "section_id": "limits",
+          "title": "Limites do procedimento"
+        }
+      ]
+    }
+  ]
+}

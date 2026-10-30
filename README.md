@@ -4,7 +4,7 @@ A support assistant combining retrieval-augmented generation (RAG), source citat
 
 SupportAI is a learning and portfolio project focused on **system architecture, backend engineering, model training, MLOps, and LLMOps**.
 
-> **Status: Sprint 1 — S1.9 audit and explanation completed; sprint closure pending.** All 50 annotations have content approval: 35 development and 15 frozen test cases, evaluation `0.2.1-draft`. The user authorized the agent to review and approve the 42 remaining annotations; no independent human review is claimed. The 24-document corpus remains unchanged. Licensing remains pending, with zero sources authorized for ingestion; the learner comprehension checkpoint is also open. See the [S1.9 audit](docs/S1_9_CHECKPOINT.md). Application code, trained models, benchmarks, CI, and deployment are not available yet.
+> **Status: Sprint 1 — S1.9 audit and explanation completed; sprint closure pending.** All 50 annotations have content approval: 35 development and 15 frozen test cases, evaluation `0.2.1-draft`. The user authorized the agent to review and approve the 42 remaining annotations; no independent human review is claimed. The 24 document texts remain unchanged. Corpus `0.1.6` is approved for future administrative ingestion with CC BY 4.0 licensing; ingestion has not run. The learner comprehension checkpoint remains open. See the [S1.9 audit](docs/S1_9_CHECKPOINT.md). Application code, trained models, benchmarks, CI, and deployment are not available yet.
 
 ## Support domain
 
@@ -206,14 +206,18 @@ Documentation will be added incrementally:
 
 ## License
 
-A project license has not been selected yet. A `LICENSE` file will be added once that decision is made. Third-party documents, datasets, and models remain subject to their own licenses.
+Project source code and operational configuration are licensed under [MIT](LICENSE). Documentation, fictional knowledge documents, evaluation annotations, and corpus metadata are licensed under [CC BY 4.0](LICENSE-CONTENT.md); embedded code examples use MIT. See the content notice for scope, attribution, and links to the legal terms. Third-party materials retain their own licenses.
+
+SupportAI is an educational and portfolio project, experimental and without a claim of production readiness. This purpose adds no noncommercial restriction to the licenses.
+
+The user approved this choice on 2026-10-30. Corpus `0.1.6` is approved in the [current manifest](configs/corpus_manifest.json). The [data release binding](configs/rag_data_release.json) links it to the unchanged evaluation and its historical [source corpus snapshot](configs/corpus_snapshots/corpus-0.1.5-draft.json). Licensing approval does not execute ingestion or publish the project.
 
 ### S1.8 approved annotations and frozen test
 
-The [review guide](docs/S1_8_REVIEW.md) presents 42 new annotations in five batches with reference answers, evidence, and abstention reasons. The [split manifest](evaluation/rag_split_manifest.json) identifies the corpus snapshot, files, checksums, question IDs, and groups. Development contains 28 answerable and 7 unanswerable questions; test contains 11 and 4. Groups do not overlap. The original eight-question pilot remains unchanged and all its cases stay in development. All annotations have content approval; the 42 new cases were reviewed by the agent under explicit user authorization. The manifest records this decision, its timestamp, prior test exposure, and the frozen test checksum. No independent human review or retrieval/generation results are claimed. Use development for system choices and reserve test for the final candidate. The `draft` suffix reflects pending licensing; it does not permit editing the frozen test snapshot.
+The [review guide](docs/S1_8_REVIEW.md) presents 42 new annotations in five batches with reference answers, evidence, and abstention reasons. The [split manifest](evaluation/rag_split_manifest.json) identifies the corpus snapshot, files, checksums, question IDs, and groups. Development contains 28 answerable and 7 unanswerable questions; test contains 11 and 4. Groups do not overlap. The original eight-question pilot remains unchanged and all its cases stay in development. All annotations have content approval; the 42 new cases were reviewed by the agent under explicit user authorization. The manifest records this decision, its timestamp, prior test exposure, and the frozen test checksum. No independent human review or retrieval/generation results are claimed. Use development for system choices and reserve test for the final candidate. The `draft` suffix is historical: licensing was later approved through the data release binding without rewriting the frozen evaluation snapshot.
 
 ### S1.9 foundation checkpoint
 
 The [audit and learning checkpoint](docs/S1_9_CHECKPOINT.md) records verified counts, snapshot checksums, environment checks, remaining acceptance criteria, and a manual exercise using development cases only. The audit confirmed 24 documents, 95 sections, 44 internal references, 50 annotations, 73 literal evidence spans, and 33 groups with no overlap between partitions. Data snapshots and the frozen test remain unchanged.
 
-The local environment matches the pinned versions; offline lock and installed-dependency checks passed. No application tests or model benchmarks were run. The Sprint 1 budget for APIs and hosting is R$0; no paid API calls or hosting purchases were made in the recorded steps. Sprint 1 remains open until the ingestion manifest is authorized after an explicit licensing decision and the learner demonstrates understanding. Sprint 2 has not started.
+The local environment matches the pinned versions; offline lock and installed-dependency checks passed. No application tests or model benchmarks were run. The Sprint 1 budget for APIs and hosting is R$0; no paid API calls or hosting purchases were made in the recorded steps. The licensing decision and manifest authorization are now recorded. Sprint 1 remains open for the learner comprehension checkpoint. Sprint 2 has not started.

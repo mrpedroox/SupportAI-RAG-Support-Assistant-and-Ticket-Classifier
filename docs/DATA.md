@@ -1,8 +1,8 @@
 # SupportAI — Domínio e dados
 
-Atualizado em: 30/10/2026. S1.1–S1.8 concluídas; auditoria e explicação da S1.9 concluídas. Sprint 1 aberta por autorização do manifesto (licença pendente) e demonstração de compreensão. [Checkpoint S1.9](S1_9_CHECKPOINT.md).
+Atualizado em: 30/10/2026. S1.1–S1.8 concluídas; auditoria e explicação da S1.9 concluídas. Sprint 1 aberta pela demonstração de compreensão; licença e autorização do manifesto resolvidas por decisão explícita do usuário. [Checkpoint S1.9](S1_9_CHECKPOINT.md).
 
-O plano foi aprovado pelo usuário. O corpus atual tem 24 procedimentos fictícios em knowledge/, listados no manifesto 0.1.5-draft, todos com conteúdo aprovado por decisão explícita do usuário. A licença permanece pendente; nenhuma fonte está autorizada para ingestão. A avaliação 0.2.1-draft tem 50 anotações aprovadas: 35 desenvolvimento e 15 teste congelado; as 42 novas foram revisadas/aprovadas pelo agente por autorização do usuário, sem revisão humana independente. O piloto histórico está preservado em evaluation/rag_dev_pilot.json. Os novos arquivos e o manifesto de partições estão em evaluation/; nunca devem ser indexados. As validações de ingestão descritas abaixo são requisitos para a Sprint 2, ainda sem implementação.
+O plano foi aprovado pelo usuário. O corpus atual tem 24 procedimentos fictícios em knowledge/, listados no manifesto 0.1.6, todos com conteúdo e licença CC BY 4.0 aprovados por decisão explícita do usuário. Os 24 são fontes autorizadas para futura ingestão administrativa, ainda não executada. A avaliação 0.2.1-draft tem 50 anotações aprovadas: 35 desenvolvimento e 15 teste congelado; as 42 novas foram revisadas/aprovadas pelo agente por autorização do usuário, sem revisão humana independente. O piloto histórico está preservado em evaluation/rag_dev_pilot.json. Os novos arquivos e o manifesto de partições estão em evaluation/; nunca devem ser indexados. As validações de ingestão descritas abaixo são requisitos para a Sprint 2, ainda sem implementação.
 
 ## Produto e público
 
@@ -48,7 +48,7 @@ Falta de evidência e falha técnica serão tratadas separadamente na API futura
 - `knowledge/` conterá procedimentos; `evaluation/`, perguntas e gabaritos. Somente documentos autorizados por manifesto poderão ser indexados. Este documento de escopo também não é fonte de procedimentos para ingestão.
 - Chamados supervisionados terão conjunto próprio na Sprint 7; perguntas RAG não substituem exemplos rotulados de classificação.
 - Não coletar dados reais de clientes, credenciais ou documentos privados nesta etapa. Nenhum conteúdo será enviado a fornecedores externos na Sprint 1.
-- Licenças de código e materiais autorais permanecem pendentes. Não atribuir licença por suposição nem tratar ficção como permissão automática de redistribuição.
+- Licenças aprovadas pelo usuário em 30/10/2026: MIT para código/configuração operacional; CC BY 4.0 para documentação, corpus, anotações e metadados do corpus. Escopo e atribuição em LICENSE-CONTENT.md. Materiais de terceiros mantêm seus próprios termos.
 - Metadados, atualização e retenção/exclusão estão definidos abaixo. Não há dados operacionais armazenados neste momento.
 
 ## Contrato dos documentos — versão 1
@@ -126,7 +126,7 @@ Arquivo: `configs/corpus_manifest.json`. Ele lista explicitamente os arquivos ca
 | `document_count` | Inteiro igual ao tamanho de documents. Snapshot aprovado tem entre 1 e 40 entradas; o piloto pode ter 3, mas o aceite final da Sprint 1 continua exigindo 20–40. |
 | `documents` | Lista de entradas com o contrato acima. Snapshot vazio é permitido apenas como draft. |
 
-**Estado atual:** 24 documentos em 0.1.5-draft, status draft, 24 revisões aprovadas, todas as licenças pendentes, nenhuma fonte autorizada para ingestão. O snapshot vazio anterior era 0.1.0-draft, preservado no histórico do Git. Não é uma coleção pronta e não satisfaz readiness da API. A revisão do corpus é distinta dos estados building/ready da coleção futura.
+**Estado atual:** 24 documentos em 0.1.6, status approved, 24 revisões e licenças CC-BY-4.0 aprovadas; fontes autorizadas para futura ingestão administrativa. Nenhuma ingestão executada. O snapshot 0.1.5-draft está preservado em configs/corpus_snapshots/corpus-0.1.5-draft.json, para resolver o vínculo original da avaliação congelada. O snapshot vazio anterior era 0.1.0-draft, preservado no histórico do Git. Não é uma coleção pronta e não satisfaz readiness da API. A revisão do corpus é distinta dos estados building/ready da coleção futura.
 
 ### Requisitos de validação para a ingestão futura
 
@@ -288,3 +288,15 @@ As oito anotações do piloto permanecem intactas em desenvolvimento, inclusive 
 A divisão é manual por grupos de intenção, sem sorteio/seed e sem grupos compartilhados. Compartilhar documentos é permitido na avaliação sobre base fixa. O manifesto tem `human_review_status=approved` e `test_frozen=true`. O objeto `approval` registra responsável, data, modalidade delegada, instrução, executor, ausência de revisão humana independente e os 42 IDs novos. `test_freeze` registra data, responsável, versão, caminho, checksum, exposição anterior e política de uso. Seu checksum deve coincidir com a partição test. Congelamento identifica os bytes exatos após o aceite, sem transformar a amostra em teste intocado: o agente leu para anotação/revisão, sem avaliação de modelo ou ajuste de configurações. A partir deste registro, usar apenas desenvolvimento para escolher retrieval, prompts, chunking, top-k e limiares. Se exposição futura influenciar decisões, registrá-la e reavaliar a reserva; alterações exigem novo snapshot explícito, preservando o congelado.
 
 A versão e o status continuam `draft` por licença pendente; aprovação de conteúdo e congelamento não autorizam ingestão ou publicação. Passagens usam caracteres Unicode `[start, end)`. Conferência local confirmou 73 ocorrências de evidência literal dentro das seções, checksums dos 24 documentos, 50 IDs/textos únicos, contratos de abstenção/revisão e preservação do piloto. Os denominadores de recuperação são 28 e 11 perguntas respondíveis; não há métricas calculadas. A correspondência com chunks fica para a Sprint 2. Dados fictícios, amostra pequena e ausência de revisão independente limitam a interpretação futura. S1.8 concluída; auditoria S1.9 registrada no [checkpoint](S1_9_CHECKPOINT.md).
+
+## Decisão de licença e promoção documental — 30/10/2026
+
+O usuário concordou explicitamente com MIT para código e CC BY 4.0 para documentação e anotações fictícias. Registro `project-user`, `2026-10-30T20:29:37Z`. Textos/avisos e escopo em [LICENSE](../LICENSE) e [LICENSE-CONTENT.md](../LICENSE-CONTENT.md). Finalidade didática e de portfólio declarada, sem acrescentar restrição de uso comercial. A referência ao responsável usa a identificação coletiva já adotada, SupportAI project contributors, sem inventar nome civil.
+
+Corpus promovido para `0.1.6`, status `approved`, 24 licenças com identifier `CC-BY-4.0` e reference `LICENSE-CONTENT.md`. Conteúdos, versões, checksums, seções e revisões dos documentos permanecem iguais. Revisão e licença são estados separados. Não há coleção building/ready ou ingestão executada.
+
+O contrato adicional de [configs/rag_data_release.json](../configs/rag_data_release.json) registra schema/release, responsável/data/fundamento do aceite, licenças, caminho/versão/hash do corpus aprovado, manifesto de avaliação e seu hash, snapshot de origem da avaliação e seu hash, justificativa de compatibilidade e caminho/hash do teste. Essa vinculação é válida porque somente metadados de licença e estado do corpus mudaram. Não substitui revisão de respondibilidade quando fontes ou procedimentos mudarem.
+
+A avaliação `0.2.1-draft` e seu manifesto permanecem imutáveis, inclusive seu vínculo interno com corpus `0.1.5-draft`. O arquivo original desse corpus foi preservado byte a byte em [configs/corpus_snapshots/corpus-0.1.5-draft.json](../configs/corpus_snapshots/corpus-0.1.5-draft.json). O release vincula explicitamente os mesmos conteúdos ao corpus licenciado, sem reescrever o teste. Os registros anteriores de licença pendente são históricos; a concessão atual alcança os materiais autorais preservados, conforme LICENSE-CONTENT.md.
+
+Licença dos documentos e verificação dos dados não medem desempenho nem autorizam gastos. Sem chamadas pagas, ingestão, push ou publicação nesta etapa. A Sprint 1 ainda aguarda a demonstração de compreensão registrada no plano.

@@ -1,5 +1,7 @@
 # SupportAI — S1.9: auditoria e checkpoint da Sprint 1
 
+> **Atualização posterior à auditoria:** o usuário aprovou MIT para código e CC BY 4.0 para documentação/dados fictícios. Corpus 0.1.6 aprovado; o vínculo com a avaliação imutável está em [rag_data_release.json](../configs/rag_data_release.json). A pendência de licença abaixo é histórica. Resta o critério de compreensão para encerrar a Sprint 1.
+
 Data: 30/10/2026. Snapshot auditado: dados registrados até o commit `de9931a`; a S1.9 altera somente documentação. Auditoria local e explicação concluídas. **Sprint 1 permanece aberta:** licença pendente impede autorizar o manifesto de ingestão; a compreensão do usuário ainda precisa ser demonstrada. Não há aplicação ou modelo avaliado.
 
 ## O que ficou pronto

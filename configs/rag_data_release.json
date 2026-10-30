@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "release_version": "0.1.0",
+  "approved_by": "project-user",
+  "approved_at": "2026-10-30T20:29:37Z",
+  "approval_basis": "User explicitly agreed to MIT for code and CC BY 4.0 for documentation and fictional annotations.",
+  "code_license": "MIT",
+  "content_license": "CC-BY-4.0",
+  "content_license_reference": "LICENSE-CONTENT.md",
+  "corpus_version": "0.1.6",
+  "corpus_manifest_path": "configs/corpus_manifest.json",
+  "corpus_manifest_sha256": "c9efd516fb74ac50919bc39894a7ccd308ac8b007eadfdb37f8d1ca2494e860b",
+  "evaluation_version": "0.2.1-draft",
+  "evaluation_manifest_path": "evaluation/rag_split_manifest.json",
+  "evaluation_manifest_sha256": "33ffd7531ce939e05c53ac7f08072fed8e3c4749ca7a36233934d6c8c1fd672d",
+  "evaluation_source_corpus": {
+    "version": "0.1.5-draft",
+    "manifest_path": "configs/corpus_snapshots/corpus-0.1.5-draft.json",
+    "manifest_sha256": "ee49671201906bdcb9210587739cfca0fe167ed710dd6af36d798e03fea13389"
+  },
+  "compatibility_basis": "Only corpus version, manifest status and license metadata changed. All document IDs, versions, paths, checksums, sections and content are identical. Evaluation and frozen test bytes remain unchanged.",
+  "test_path": "evaluation/rag_test.json",
+  "test_sha256": "7586e2c45c3d681b938f23a331846c5b15cf71b0c5eb3bfcacd23b67a7eb662c",
+  "ingestion_executed": false
+}

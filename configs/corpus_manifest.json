@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "corpus_version": "0.1.5-draft",
-  "status": "draft",
+  "corpus_version": "0.1.6",
+  "status": "approved",
   "language": "pt-BR",
   "document_count": 24,
   "documents": [
@@ -20,9 +20,9 @@
       "author": "SupportAI project",
       "creation_method": "llm_assisted",
       "license": {
-        "status": "pending",
-        "identifier": null,
-        "reference": null
+        "status": "approved",
+        "identifier": "CC-BY-4.0",
+        "reference": "LICENSE-CONTENT.md"
       },
       "updated_on": "2026-10-30",
       "review": {
@@ -60,9 +60,9 @@
       "author": "SupportAI project",
       "creation_method": "llm_assisted",
       "license": {
-        "status": "pending",
-        "identifier": null,
-        "reference": null
+        "status": "approved",
+        "identifier": "CC-BY-4.0",
+        "reference": "LICENSE-CONTENT.md"
       },
       "updated_on": "2026-10-30",
       "review": {
@@ -104,9 +104,9 @@
       "author": "SupportAI project",
       "creation_method": "llm_assisted",
       "license": {
-        "status": "pending",
-        "identifier": null,
-        "reference": null
+        "status": "approved",
+        "identifier": "CC-BY-4.0",
+        "reference": "LICENSE-CONTENT.md"
       },
       "updated_on": "2026-10-30",
       "review": {
@@ -148,9 +148,9 @@
       "author": "SupportAI project",
       "creation_method": "llm_assisted",
       "license": {
-        "status": "pending",
-        "identifier": null,
-        "reference": null
+        "status": "approved",
+        "identifier": "CC-BY-4.0",
+        "reference": "LICENSE-CONTENT.md"
       },
       "updated_on": "2026-10-30",
       "review": {
@@ -192,9 +192,9 @@
       "author": "SupportAI project",
       "creation_method": "llm_assisted",
       "license": {
-        "status": "pending",
-        "identifier": null,
-        "reference": null
+        "status": "approved",
+        "identifier": "CC-BY-4.0",
+        "reference": "LICENSE-CONTENT.md"
       },
       "updated_on": "2026-10-30",
       "review": {
@@ -236,9 +236,9 @@
       "author": "SupportAI project",
       "creation_method": "llm_assisted",
       "license": {
-        "status": "pending",
-        "identifier": null,
-        "reference": null
+        "status": "approved",
+        "identifier": "CC-BY-4.0",
+        "reference": "LICENSE-CONTENT.md"
       },
       "updated_on": "2026-10-30",
       "review": {
@@ -280,9 +280,9 @@
       "author": "SupportAI project",
       "creation_method": "llm_assisted",
       "license": {
-        "status": "pending",
-        "identifier": null,
-        "reference": null
+        "status": "approved",
+        "identifier": "CC-BY-4.0",
+        "reference": "LICENSE-CONTENT.md"
       },
       "updated_on": "2026-10-30",
       "review": {
@@ -324,9 +324,9 @@
       "author": "SupportAI project",
       "creation_method": "llm_assisted",
       "license": {
-        "status": "pending",
-        "identifier": null,
-        "reference": null
+        "status": "approved",
+        "identifier": "CC-BY-4.0",
+        "reference": "LICENSE-CONTENT.md"
       },
       "updated_on": "2026-10-30",
       "review": {
@@ -368,9 +368,9 @@
       "author": "SupportAI project",
       "creation_method": "llm_assisted",
       "license": {
-        "status": "pending",
-        "identifier": null,
-        "reference": null
+        "status": "approved",
+        "identifier": "CC-BY-4.0",
+        "reference": "LICENSE-CONTENT.md"
       },
       "updated_on": "2026-10-30",
       "review": {
@@ -412,9 +412,9 @@
       "author": "SupportAI project",
       "creation_method": "llm_assisted",
       "license": {
-        "status": "pending",
-        "identifier": null,
-        "reference": null
+        "status": "approved",
+        "identifier": "CC-BY-4.0",
+        "reference": "LICENSE-CONTENT.md"
       },
       "updated_on": "2026-10-30",
       "review": {
@@ -456,9 +456,9 @@
       "author": "SupportAI project",
       "creation_method": "llm_assisted",
       "license": {
-        "status": "pending",
-        "identifier": null,
-        "reference": null
+        "status": "approved",
+        "identifier": "CC-BY-4.0",
+        "reference": "LICENSE-CONTENT.md"
       },
       "updated_on": "2026-10-30",
       "review": {
@@ -500,9 +500,9 @@
       "author": "SupportAI project",
       "creation_method": "llm_assisted",
       "license": {
-        "status": "pending",
-        "identifier": null,
-        "reference": null
+        "status": "approved",
+        "identifier": "CC-BY-4.0",
+        "reference": "LICENSE-CONTENT.md"
       },
       "updated_on": "2026-10-30",
       "review": {
@@ -544,9 +544,9 @@
       "author": "SupportAI project",
       "creation_method": "llm_assisted",
       "license": {
-        "status": "pending",
-        "identifier": null,
-        "reference": null
+        "status": "approved",
+        "identifier": "CC-BY-4.0",
+        "reference": "LICENSE-CONTENT.md"
       },
       "updated_on": "2026-10-30",
       "review": {
@@ -588,9 +588,9 @@
       "author": "SupportAI project",
       "creation_method": "llm_assisted",
       "license": {
-        "status": "pending",
-        "identifier": null,
-        "reference": null
+        "status": "approved",
+        "identifier": "CC-BY-4.0",
+        "reference": "LICENSE-CONTENT.md"
       },
       "updated_on": "2026-10-30",
       "review": {
@@ -632,9 +632,9 @@
       "author": "SupportAI project",
       "creation_method": "llm_assisted",
       "license": {
-        "status": "pending",
-        "identifier": null,
-        "reference": null
+        "status": "approved",
+        "identifier": "CC-BY-4.0",
+        "reference": "LICENSE-CONTENT.md"
       },
       "updated_on": "2026-10-30",
       "review": {
@@ -676,9 +676,9 @@
       "author": "SupportAI project",
       "creation_method": "llm_assisted",
       "license": {
-        "status": "pending",
-        "identifier": null,
-        "reference": null
+        "status": "approved",
+        "identifier": "CC-BY-4.0",
+        "reference": "LICENSE-CONTENT.md"
       },
       "updated_on": "2026-10-30",
       "review": {
@@ -720,9 +720,9 @@
       "author": "SupportAI project",
       "creation_method": "llm_assisted",
       "license": {
-        "status": "pending",
-        "identifier": null,
-        "reference": null
+        "status": "approved",
+        "identifier": "CC-BY-4.0",
+        "reference": "LICENSE-CONTENT.md"
       },
       "updated_on": "2026-10-30",
       "review": {
@@ -764,9 +764,9 @@
       "author": "SupportAI project",
       "creation_method": "llm_assisted",
       "license": {
-        "status": "pending",
-        "identifier": null,
-        "reference": null
+        "status": "approved",
+        "identifier": "CC-BY-4.0",
+        "reference": "LICENSE-CONTENT.md"
       },
       "updated_on": "2026-10-30",
       "review": {
@@ -808,9 +808,9 @@
       "author": "SupportAI project",
       "creation_method": "llm_assisted",
       "license": {
-        "status": "pending",
-        "identifier": null,
-        "reference": null
+        "status": "approved",
+        "identifier": "CC-BY-4.0",
+        "reference": "LICENSE-CONTENT.md"
       },
       "updated_on": "2026-10-30",
       "review": {
@@ -852,9 +852,9 @@
       "author": "SupportAI project",
       "creation_method": "llm_assisted",
       "license": {
-        "status": "pending",
-        "identifier": null,
-        "reference": null
+        "status": "approved",
+        "identifier": "CC-BY-4.0",
+        "reference": "LICENSE-CONTENT.md"
       },
       "updated_on": "2026-10-30",
       "review": {
@@ -896,9 +896,9 @@
       "author": "SupportAI project",
       "creation_method": "llm_assisted",
       "license": {
-        "status": "pending",
-        "identifier": null,
-        "reference": null
+        "status": "approved",
+        "identifier": "CC-BY-4.0",
+        "reference": "LICENSE-CONTENT.md"
       },
       "updated_on": "2026-10-30",
       "review": {
@@ -940,9 +940,9 @@
       "author": "SupportAI project",
       "creation_method": "llm_assisted",
       "license": {
-        "status": "pending",
-        "identifier": null,
-        "reference": null
+        "status": "approved",
+        "identifier": "CC-BY-4.0",
+        "reference": "LICENSE-CONTENT.md"
       },
       "updated_on": "2026-10-30",
       "review": {
@@ -984,9 +984,9 @@
       "author": "SupportAI project",
       "creation_method": "llm_assisted",
       "license": {
-        "status": "pending",
-        "identifier": null,
-        "reference": null
+        "status": "approved",
+        "identifier": "CC-BY-4.0",
+        "reference": "LICENSE-CONTENT.md"
       },
       "updated_on": "2026-10-30",
       "review": {
@@ -1028,9 +1028,9 @@
       "author": "SupportAI project",
       "creation_method": "llm_assisted",
       "license": {
-        "status": "pending",
-        "identifier": null,
-        "reference": null
+        "status": "approved",
+        "identifier": "CC-BY-4.0",
+        "reference": "LICENSE-CONTENT.md"
       },
       "updated_on": "2026-10-30",
       "review": {
