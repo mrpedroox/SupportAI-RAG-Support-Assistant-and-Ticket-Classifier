@@ -34,6 +34,44 @@
 - Métricas e custo: zero documentos e nenhuma fonte autorizada; sem avaliação de modelos, rede ou chamadas pagas nesta etapa.
 - Pendências: decisão de licença antes de aprovar/publicar materiais; revisão humana do piloto na S1.6; aplicação das políticas de retenção nas sprints correspondentes. Próxima unidade: S1.4 — redigir três procedimentos fictícios e preencher entradas reais no manifesto draft. Sprint 1 permanece em andamento.
 
+### Explicação da S1.3 — o que foi feito e por quê
+
+O problema desta etapa era definir como reconhecer um documento, localizar suas evidências e determinar se ele pode entrar na base. Sem esse contrato, uma ingestão poderia misturar versões, incluir gabaritos ou usar material sem revisão. A solução foi documentar o formato dos dados e criar um manifesto inicial vazio. O processamento desses dados ainda não foi implementado.
+
+**1. DATA.md passou a definir o contrato dos documentos.** Um contrato estabelece campos, tipos e condições que o código futuro deverá verificar. Cada entrada terá identidade, título, caminho, versão, idioma, origem, autoria, método de criação, licença, revisão humana e seções. Os metadados ficam no JSON; o procedimento fica no Markdown. Assim, não precisamos adicionar um parser de front matter nem repetir os mesmos metadados nos dois arquivos.
+
+Exemplo ilustrativo, ainda sem documento criado:
+
+| Identificador | Exemplo | Pergunta que responde |
+| --- | --- | --- |
+| document_id | nd-access-001 | Qual procedimento é este? O ID permanece ao revisar o mesmo procedimento. |
+| version | 1.0.0 | Qual revisão editorial do procedimento estamos usando? |
+| sha256 | Calculado sobre os bytes finais do arquivo. | O conteúdo é exatamente o mesmo que foi registrado? |
+| section_id | recovery-request | Qual seção contém a passagem? |
+| corpus_version | 0.1.0-draft | Qual snapshot do conjunto de documentos estamos preparando? |
+
+Versão é uma identificação atribuída pelo projeto; checksum é calculado a partir do conteúdo. Alterar os bytes exige recalcular o checksum e, pelo contrato adotado, atualizar a versão do documento. Um checksum correto não prova que o procedimento esteja certo, revisado ou autorizado: apenas permite conferir a integridade dos bytes.
+
+**2. configs/corpus_manifest.json foi criado como lista explícita de fontes candidatas.** Manifesto significa um inventário estruturado. O arquivo atual declara schema_version=1, corpus_version=0.1.0-draft, status=draft, language=pt-BR, document_count=0 e documents=[]. O schema_version identifica o formato do contrato; corpus_version identifica o snapshot dos dados. Um pode mudar sem que seja necessário mudar o outro.
+
+O manifesto está vazio porque os três procedimentos só serão escritos na S1.4. Não foram inventados caminhos existentes, hashes ou aprovações. A presença de um arquivo em knowledge/ não bastará para autorizar ingestão; ele precisará estar listado e satisfazer as regras. O status draft permite preparação local; approved exigirá licença definida e revisão humana registrada. Isso também é diferente de building/ready, que serão estados da coleção produzida pela ingestão.
+
+**3. Foram especificadas as verificações que antecederão a ingestão.** A Sprint 2 deverá rejeitar JSON inválido, chaves duplicadas, campos desconhecidos e divergência de contagem. O manifesto terá limite de 2 MiB; documentos serão arquivos regulares Markdown UTF-8 não vazios, até 128 KiB, sob knowledge/. Caminhos absolutos, URLs, globs, componentes de escape e links simbólicos serão rejeitados. Evaluation, docs, dados brutos e feedback não curado ficam fora da indexação. A validação local completa deverá ocorrer antes de qualquer chamada externa.
+
+Esses limites de bytes protegem a entrada. Eles não definem o tamanho dos chunks nem o orçamento de tokens do LLM. Esses três limites têm finalidades diferentes e serão tratados separadamente.
+
+**4. Foram definidas regras para atualização e rastreabilidade.** Um snapshot aprovado será imutável. Alterar conteúdo, metadados ou seleção de fontes exigirá outro snapshot; alterações de conteúdo também exigirão nova versão do documento e checksum. A ingestão futura deverá construir e validar outra coleção antes de ativá-la. Isso permitirá reconstruir quais evidências sustentaram uma resposta e evitar que uma citação histórica passe a apontar silenciosamente para um texto novo.
+
+As evidências da avaliação apontarão para passagens do documento original, com seção, trecho literal e posições de caracteres no intervalo [start, end), incluindo start e excluindo end. Assim, poderemos mudar o chunking e remapear as evidências, preservando a referência ao texto de origem.
+
+**5. Foram documentadas políticas iniciais de privacidade e retenção.** Para a demonstração, dados operacionais terão retenção máxima proposta de 30 dias; logs e traces sanitizados, 14 dias; backups operacionais e coleções desativadas, até 30 dias conforme suas respectivas datas de referência. Corpus fictício seguro poderá ficar versionado enquanto o projeto for mantido, respeitando os termos de uso. Essas são decisões de projeto a implementar e verificar, não rotinas de limpeza já funcionando. Exclusão de dados pessoais prevalecerá sobre preservação histórica e rollback.
+
+**6. README e PLAN foram atualizados para refletir a entrega.** O diário registra decisões, aprendizado e verificações; DATA.md permanece como referência completa dos contratos. A S1.3 foi registrada no commit local 2272b83 (docs: define corpus metadata and data governance contracts). Esta explicação acrescenta contexto didático, sem alterar o contrato nem iniciar a S1.4.
+
+**Como a etapa foi verificada:** o registro original documenta a leitura do manifesto e do molde JSON com detecção de chaves duplicadas, a conferência dos campos e do estado draft e uma demonstração temporária de SHA-256: mesmos bytes produziram o mesmo hash; bytes alterados produziram outro. Também houve revisão cruzada da documentação e git diff --check. Essas verificações não equivalem a testes de um validador de ingestão, que ainda não existe.
+
+**Resultado e pendências:** temos o contrato e um manifesto vazio, com zero fontes autorizadas e nenhuma chamada paga nesta etapa. Ainda faltam os documentos do piloto, a definição da licença, a revisão humana e a implementação dos controles. A próxima unidade continua sendo S1.4.
+
 ## Sprint 1 — S1.4: três procedimentos fictícios do piloto — 2026-10-30
 
 - Entrega: nd-access-001 (recuperação após perda do autenticador), nd-billing-001 (consulta de faturas) e nd-tickets-001 (acompanhamento dos próprios chamados), todos em português, versão 1.0.0, com caráter fictício e revisão pendente explícitos. Manifesto atualizado para 0.1.1-draft, com três entradas reais, SHA-256 e datas de criação de 30/10/2026.
