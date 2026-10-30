@@ -4,7 +4,7 @@ A support assistant combining retrieval-augmented generation (RAG), source citat
 
 SupportAI is a learning and portfolio project focused on **system architecture, backend engineering, model training, MLOps, and LLMOps**.
 
-> **Status: Sprint 1 — S1.8 completed; S1.9 pending.** All 50 annotations have content approval: 35 development and 15 frozen test cases, evaluation `0.2.1-draft`. The user authorized the agent to review and approve the 42 remaining annotations; no independent human review is claimed. The 24-document corpus remains unchanged. Licensing remains pending. Application code, trained models, benchmarks, CI, and deployment are not available yet.
+> **Status: Sprint 1 — S1.9 audit and explanation completed; sprint closure pending.** All 50 annotations have content approval: 35 development and 15 frozen test cases, evaluation `0.2.1-draft`. The user authorized the agent to review and approve the 42 remaining annotations; no independent human review is claimed. The 24-document corpus remains unchanged. Licensing remains pending, with zero sources authorized for ingestion; the learner comprehension checkpoint is also open. See the [S1.9 audit](docs/S1_9_CHECKPOINT.md). Application code, trained models, benchmarks, CI, and deployment are not available yet.
 
 ## Support domain
 
@@ -211,3 +211,9 @@ A project license has not been selected yet. A `LICENSE` file will be added once
 ### S1.8 approved annotations and frozen test
 
 The [review guide](docs/S1_8_REVIEW.md) presents 42 new annotations in five batches with reference answers, evidence, and abstention reasons. The [split manifest](evaluation/rag_split_manifest.json) identifies the corpus snapshot, files, checksums, question IDs, and groups. Development contains 28 answerable and 7 unanswerable questions; test contains 11 and 4. Groups do not overlap. The original eight-question pilot remains unchanged and all its cases stay in development. All annotations have content approval; the 42 new cases were reviewed by the agent under explicit user authorization. The manifest records this decision, its timestamp, prior test exposure, and the frozen test checksum. No independent human review or retrieval/generation results are claimed. Use development for system choices and reserve test for the final candidate. The `draft` suffix reflects pending licensing; it does not permit editing the frozen test snapshot.
+
+### S1.9 foundation checkpoint
+
+The [audit and learning checkpoint](docs/S1_9_CHECKPOINT.md) records verified counts, snapshot checksums, environment checks, remaining acceptance criteria, and a manual exercise using development cases only. The audit confirmed 24 documents, 95 sections, 44 internal references, 50 annotations, 73 literal evidence spans, and 33 groups with no overlap between partitions. Data snapshots and the frozen test remain unchanged.
+
+The local environment matches the pinned versions; offline lock and installed-dependency checks passed. No application tests or model benchmarks were run. The Sprint 1 budget for APIs and hosting is R$0; no paid API calls or hosting purchases were made in the recorded steps. Sprint 1 remains open until the ingestion manifest is authorized after an explicit licensing decision and the learner demonstrates understanding. Sprint 2 has not started.

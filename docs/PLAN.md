@@ -2,7 +2,7 @@
 
 Data: 28/10/2026. Referência: AGENTS.md v2.0, lido integralmente.
 
-**Status: plano aprovado; Sprint 1 em andamento.** S1.1–S1.8 concluídas. Corpus com 24 documentos aprovados; licença pendente, manifesto draft. Avaliação 0.2.1-draft: 50 anotações aprovadas (42 por revisão e aceite delegados ao agente pelo usuário), 35 desenvolvimento/15 teste congelado. Sem revisão humana independente. S1.9 não iniciada; sem aplicação ou modelo treinado.
+**Status: plano aprovado; Sprint 1 em andamento.** S1.1–S1.8 concluídas. Corpus com 24 documentos aprovados; licença pendente, manifesto draft. Avaliação 0.2.1-draft: 50 anotações aprovadas (42 por revisão e aceite delegados ao agente pelo usuário), 35 desenvolvimento/15 teste congelado. Sem revisão humana independente. S1.9: auditoria e explicação concluídas; fechamento da Sprint 1 depende da autorização do manifesto (licença pendente) e demonstração de compreensão. Sem aplicação ou modelo treinado.
 
 ## 1. Objetivo e ponto de partida
 
@@ -79,7 +79,7 @@ Branch da Sprint 1: `feature/s1-knowledge-foundation`, criada no início da exec
 
 ### 4.2 Tarefas pequenas, em ordem
 
-**S1.1 e S1.2 concluídas em 28/10/2026; S1.3 em 29/10/2026; S1.4 e S1.5 em 30/10/2026. S1.6 concluída por aprovação explícita do usuário em 30/10/2026, licença mantida pendente; S1.7: 24/24 documentos aprovados por decisão explícita do usuário; S1.8 concluída por revisão e aprovação delegadas pelo usuário; S1.9 não iniciada.** Dependências indicam o que deve ser revisado antes de avançar.
+**S1.1 e S1.2 concluídas em 28/10/2026; S1.3 em 29/10/2026; S1.4 e S1.5 em 30/10/2026. S1.6 concluída por aprovação explícita do usuário em 30/10/2026, licença mantida pendente; S1.7: 24/24 documentos aprovados por decisão explícita do usuário; S1.8 concluída por revisão e aprovação delegadas pelo usuário; S1.9 com auditoria/explicação concluídas e pendências de fechamento registradas.** Dependências indicam o que deve ser revisado antes de avançar.
 
 | ID | Problema e ação proposta | Entrega prevista | Como verificar |
 | --- | --- | --- | --- |
@@ -91,9 +91,9 @@ Branch da Sprint 1: `feature/s1-knowledge-foundation`, criada no início da exec
 | S1.6 | Corrigir ambiguidades do próprio conjunto: revisar documentos e perguntas com o usuário. Concluída: aprovação explícita do usuário registrada em docs/PILOT_REVIEW.md; licença pendente. | Piloto revisado e decisões registradas. | Percorrer manualmente pergunta, documento/versão, passagem e resposta. Material gerado por LLM permanece pendente até revisão humana. Depende de S1.5. |
 | S1.7 | Expansão concluída: 24 documentos; conferência editorial por lotes, índice em docs/S1_7_REVIEW.md. Aceite explícito dos 21 novos documentos registrado em 30/10/2026. | Meta de 24 documentos; manifesto com caminhos e checksums, versão do corpus e contagens. | Todos com metadados completos, sem duplicatas contraditórias; manter entre 20 e 40. Depende do aceite do piloto S1.6. |
 | S1.8 | Concluída: 50 anotações aprovadas (35 desenvolvimento/15 teste), 42 por aceite delegado pelo usuário após revisão do agente. Teste congelado em 0.2.1-draft, com checksum e exposição registrados. Roteiro em docs/S1_8_REVIEW.md. | Cerca de 50 perguntas revisadas; manifestos de desenvolvimento/teste com IDs, grupos, versões e checksums. | Nenhum grupo em ambas as partições; perguntas respondíveis e sem resposta nas duas; evidências localizáveis. As 8 perguntas já usadas no piloto ficam em desenvolvimento. Depende de S1.7. |
-| S1.9 | Registrar limites e preparar o próximo passo: auditar os dados e explicar o que ficou pronto. | README atualizado, entrada em docs/PROJECT_LOG.md e status neste plano. | Apresentar contagens, pendências, orçamento e exercício manual; encerrar a sprint apenas com todos os critérios atendidos. Depende de S1.8 e S1.2. |
+| S1.9 | Auditoria e explicação concluídas em docs/S1_9_CHECKPOINT.md: dados/ambiente conferidos, contagens, orçamento e exercício publicados. Sprint aberta por licença/autorização do manifesto e compreensão ainda não demonstrada. | README atualizado, entrada em docs/PROJECT_LOG.md e status neste plano. | Apresentar contagens, pendências, orçamento e exercício manual; encerrar a sprint apenas com todos os critérios atendidos. Depende de S1.8 e S1.2. |
 
-Após cada unidade, explicar o que mudou, por que foi escolhido, o conceito aprendido, como foi verificado e o resultado observado. Revisar o piloto antes da expansão e fazer checkpoint no fim da sprint. Aceite da S1.8 registrado; próximo checkpoint: auditoria e explicação final da S1.9. Preferência do usuário registrada em 29/10/2026: concluir cada unidade coesa com verificações e commit local em inglês no formato Conventional Commits; não deixar entregas sem commit. Push e merge continuam dependentes de autorização específica.
+Após cada unidade, explicar o que mudou, por que foi escolhido, o conceito aprendido, como foi verificado e o resultado observado. Revisar o piloto antes da expansão e fazer checkpoint no fim da sprint. Aceite da S1.8 registrado; checkpoint S1.9 realizado; faltam autorização do manifesto e resposta ao exercício para encerrar a sprint. Preferência do usuário registrada em 29/10/2026: concluir cada unidade coesa com verificações e commit local em inglês no formato Conventional Commits; não deixar entregas sem commit. Push e merge continuam dependentes de autorização específica.
 
 ### 4.3 Contratos de dados propostos
 
@@ -145,7 +145,7 @@ A árvore representa a estrutura incremental. Documentação, ambiente, manifest
 - [x] Toda resposta de referência é sustentada por passagens localizáveis; abstenções têm motivo. Revisão editorial do agente, sem métricas de modelo.
 - [x] Nenhum grupo compartilhado entre partições propostas; gabaritos separados do corpus e excluídos do manifesto de ingestão.
 - [x] Teste congelado após anotação e aceite; uso prévio, revisão delegada e ausência de anotador independente declarados.
-- [ ] README e diário descrevem apenas verificações realizadas e pendências reais.
+- [x] README e diário descrevem verificações realizadas e pendências reais; auditoria S1.9 e limitações registradas.
 - [ ] Usuário consegue explicar corpus versus avaliação, retrieval versus geração e RAG versus treinamento supervisionado usando o piloto.
 
 As metas de qualidade do AGENTS.md serão medidas nas sprints de avaliação: referências iniciais de 80% para Hit@5, respostas sem afirmações relevantes não sustentadas e abstenção em perguntas sem resposta, sempre com denominadores. Não são resultados desta sprint. Teto de latência e custo operacional será definido após medições do fornecedor escolhido, antes do teste final.
@@ -154,7 +154,7 @@ As metas de qualidade do AGENTS.md serão medidas nas sprints de avaliação: re
 
 | Sprint | Entrega e aprendizado central | Estado |
 | --- | --- | --- |
-| 1 — Domínio, corpus e avaliação | Dados autorizados, perguntas revisadas, evidências e ambiente mínimo. | S1.1–S1.5 concluídas; S1.6 aprovada; S1.7 concluída, 24/24 conteúdos aprovados; S1.8 concluída, teste congelado; S1.9 pendente |
+| 1 — Domínio, corpus e avaliação | Dados autorizados, perguntas revisadas, evidências e ambiente mínimo. | S1.1–S1.5 concluídas; S1.6 aprovada; S1.7 concluída, 24/24 conteúdos aprovados; S1.8 concluída, teste congelado; S1.9 auditada; fechamento pendente por licença/autorização do manifesto e compreensão |
 | 2 — Ingestão e busca | PostgreSQL/pgvector, migrations, chunking, coleção idempotente e publicação atômica; comparar busca textual e vetorial no desenvolvimento, com MLflow inicial. | Não iniciada |
 | 3 — Geração e API RAG | LLM, contexto limitado, fontes validadas, abstenção, persistência, autenticação e health checks. | Não iniciada |
 | 4 — Revisão e avaliação | Histórico autenticado e concorrência, avaliação humana, segurança, tracing sanitizado, tokens e custo. | Não iniciada |
@@ -199,3 +199,7 @@ Aceite explícito do usuário para os 21 novos documentos registrado em project-
 ## Conclusão S1.8 — 30/10/2026
 
 O usuário autorizou “termine a s1.8, revisando e aprovando o que resta ainda”. Revisão do agente sem correções necessárias; 42 novas anotações aprovadas sob responsabilidade project-user em 2026-10-30T20:21:57Z. Não se atribui leitura pessoal ao usuário nem revisão humana independente. As oito originais e o corpus permanecem intactos. Avaliação 0.2.1-draft com 50 aprovações; teste congelado com SHA-256 e exposição de anotação/revisão registrados no manifesto. Nenhuma execução de modelo ou ajuste de configuração. Licença pendente, sem ingestão/publicação; S1.9 não iniciada e Sprint 1 ainda em andamento. Os registros anteriores de preparação são históricos.
+
+## Checkpoint S1.9 — 30/10/2026
+
+Auditoria e explicação concluídas em [S1_9_CHECKPOINT.md](S1_9_CHECKPOINT.md). Conferidos 24 documentos/95 seções/44 referências, 50 anotações/73 passagens/33 grupos, congelamento e integridade dos snapshots. Ambiente e lock verificados offline; sem executar suíte de aplicação ou modelo. Corrigidos resumos desatualizados de DATA.md. Orçamento de APIs/hospedagem R$ 0; próximos gastos ainda não autorizados. A entrega documental da S1.9 está concluída, mas a Sprint 1 permanece aberta: licença pendente mantém zero fontes autorizadas no manifesto; exercício de compreensão enviado ao usuário, sem resposta atribuída. Sprint 2 não iniciada.
