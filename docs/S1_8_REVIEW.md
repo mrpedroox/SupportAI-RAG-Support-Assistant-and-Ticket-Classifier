@@ -28,7 +28,7 @@ Leia pergunta, gabarito e passagens em conjunto. Para respondíveis, confira se 
 **Evidência:** [nd-access-002, v1.0.0, seção scope](../knowledge/nd-access-002.md), caracteres [77, 487).
 
 > Procedimento fictício do NexoDesk, criado para o SupportAI. Rascunho sem revisão humana; não descreve um serviço real. A versão, a origem e a situação de licença constam no manifesto do corpus.
-> 
+>
 > Aplica-se à pessoa que esqueceu a senha, conhece o e-mail cadastrado e ainda consegue ler esse e-mail. Redefinir a senha não remove a exigência do autenticador. Para perda do segundo fator, consulte `nd-access-001`.
 
 **Evidência:** [nd-access-002, v1.0.0, seção password-reset](../knowledge/nd-access-002.md), caracteres [531, 1274).
@@ -50,7 +50,7 @@ Revisão humana: **pending**.
 **Evidência:** [nd-access-002, v1.0.0, seção scope](../knowledge/nd-access-002.md), caracteres [77, 487).
 
 > Procedimento fictício do NexoDesk, criado para o SupportAI. Rascunho sem revisão humana; não descreve um serviço real. A versão, a origem e a situação de licença constam no manifesto do corpus.
-> 
+>
 > Aplica-se à pessoa que esqueceu a senha, conhece o e-mail cadastrado e ainda consegue ler esse e-mail. Redefinir a senha não remove a exigência do autenticador. Para perda do segundo fator, consulte `nd-access-001`.
 
 **Evidência:** [nd-access-002, v1.0.0, seção password-reset](../knowledge/nd-access-002.md), caracteres [531, 1274).
@@ -108,7 +108,7 @@ Revisão humana: **pending**.
 **Evidência:** [nd-access-003, v1.0.0, seção scope](../knowledge/nd-access-003.md), caracteres [76, 463).
 
 > Procedimento fictício do NexoDesk, criado para o SupportAI. Rascunho sem revisão humana; não descreve um serviço real. A versão, a origem e a situação de licença constam no manifesto do corpus.
-> 
+>
 > Aplica-se à pessoa que recebeu um convite esperado para um espaço do NexoDesk. O convite destina-se ao endereço informado pelo administrador; não deve ser encaminhado para uso por outra conta.
 
 **Evidência:** [nd-access-003, v1.0.0, seção invitation-acceptance](../knowledge/nd-access-003.md), caracteres [522, 1242).
@@ -134,7 +134,7 @@ Revisão humana: **pending**.
 **Evidência:** [nd-access-004, v1.0.0, seção scope](../knowledge/nd-access-004.md), caracteres [82, 499).
 
 > Procedimento fictício do NexoDesk, criado para o SupportAI. Rascunho sem revisão humana; não descreve um serviço real. A versão, a origem e a situação de licença constam no manifesto do corpus.
-> 
+>
 > Exige conta autenticada com perfil Administrador do espaço de trabalho selecionado. Convidar uma pessoa não autoriza compartilhar credenciais. Este fluxo permite convite de membro comum, sem conceder perfil administrativo.
 
 **Evidência:** [nd-access-004, v1.0.0, seção workspace-invitation](../knowledge/nd-access-004.md), caracteres [548, 1237).
@@ -184,7 +184,7 @@ Revisão humana: **pending**.
 **Evidência:** [nd-tickets-002, v1.0.0, seção scope](../knowledge/nd-tickets-002.md), caracteres [71, 557).
 
 > Procedimento fictício do NexoDesk, criado para o SupportAI. Rascunho sem revisão humana; não descreve um serviço real. A versão, a origem e a situação de licença constam no manifesto do corpus.
-> 
+>
 > Aplica-se à abertura de um chamado comum por uma pessoa autenticada no espaço de trabalho correto. Não substitui a solicitação de recuperação de acesso de `nd-access-001`, que começa na tela de entrada sem login. O assistente pode explicar os passos, mas não envia a solicitação pela pessoa.
 
 **Evidência:** [nd-tickets-002, v1.0.0, seção ticket-creation](../knowledge/nd-tickets-002.md), caracteres [605, 1682).
@@ -194,7 +194,7 @@ Revisão humana: **pending**.
 > 3. Preencha **Assunto** com um resumo e **Descrição** com o que tentou fazer, o que aconteceu e o que esperava. Inclua a mensagem de erro, se houver, após remover dados pessoais e segredos. Não envie senhas, códigos de autenticação, dados de cartão ou dados de outras pessoas.
 > 4. Confira o espaço de trabalho e o texto e selecione **Enviar** uma única vez. Aguarde a confirmação antes de tentar novamente.
 > 5. Se a confirmação exibir um protocolo, guarde-o. Ele comprova o registro do chamado; não representa aprovação do pedido nem prazo de atendimento. Acompanhe a situação pelo procedimento `nd-tickets-001`, com a mesma conta solicitante e no mesmo espaço.
-> 
+>
 > O registro de uma divergência de fatura segue esse caminho. Nesse caso, informe o identificador da fatura e a divergência, conforme `nd-billing-001`; não inclua comprovantes com dados pessoais.
 
 Revisão humana: **pending**.
@@ -210,7 +210,7 @@ Revisão humana: **pending**.
 **Evidência:** [nd-tickets-002, v1.0.0, seção scope](../knowledge/nd-tickets-002.md), caracteres [71, 557).
 
 > Procedimento fictício do NexoDesk, criado para o SupportAI. Rascunho sem revisão humana; não descreve um serviço real. A versão, a origem e a situação de licença constam no manifesto do corpus.
-> 
+>
 > Aplica-se à abertura de um chamado comum por uma pessoa autenticada no espaço de trabalho correto. Não substitui a solicitação de recuperação de acesso de `nd-access-001`, que começa na tela de entrada sem login. O assistente pode explicar os passos, mas não envia a solicitação pela pessoa.
 
 **Evidência:** [nd-tickets-002, v1.0.0, seção ticket-creation](../knowledge/nd-tickets-002.md), caracteres [605, 1682).
@@ -220,7 +220,7 @@ Revisão humana: **pending**.
 > 3. Preencha **Assunto** com um resumo e **Descrição** com o que tentou fazer, o que aconteceu e o que esperava. Inclua a mensagem de erro, se houver, após remover dados pessoais e segredos. Não envie senhas, códigos de autenticação, dados de cartão ou dados de outras pessoas.
 > 4. Confira o espaço de trabalho e o texto e selecione **Enviar** uma única vez. Aguarde a confirmação antes de tentar novamente.
 > 5. Se a confirmação exibir um protocolo, guarde-o. Ele comprova o registro do chamado; não representa aprovação do pedido nem prazo de atendimento. Acompanhe a situação pelo procedimento `nd-tickets-001`, com a mesma conta solicitante e no mesmo espaço.
-> 
+>
 > O registro de uma divergência de fatura segue esse caminho. Nesse caso, informe o identificador da fatura e a divergência, conforme `nd-billing-001`; não inclua comprovantes com dados pessoais.
 
 Revisão humana: **pending**.
@@ -234,7 +234,7 @@ Revisão humana: **pending**.
 **Evidência:** [nd-tickets-002, v1.0.0, seção exceptions](../knowledge/nd-tickets-002.md), caracteres [1730, 2343).
 
 > Se **Novo chamado** não aparecer, confira se está autenticado e no espaço esperado. Se continuar ausente, registre a limitação para revisão humana; não use a conta de outra pessoa. Este procedimento não documenta alteração de permissões.
-> 
+>
 > Se ocorrer erro ou não houver protocolo, não afirme que o envio foi registrado nem reenvie repetidamente. Confira **Meus chamados** com a mesma conta e no mesmo espaço. Se localizar o chamado, acompanhe-o; se não localizar ou não conseguir conferir, encaminhe a limitação à revisão humana antes de novo envio. A ausência na lista não prova, por si só, que o registro falhou.
 
 Revisão humana: **pending**.
@@ -248,7 +248,7 @@ Revisão humana: **pending**.
 **Evidência:** [nd-tickets-003, v1.0.0, seção scope](../knowledge/nd-tickets-003.md), caracteres [84, 581).
 
 > Procedimento fictício do NexoDesk, criado para o SupportAI. Rascunho sem revisão humana; não descreve um serviço real. A versão, a origem e a situação de licença constam no manifesto do corpus.
-> 
+>
 > Aplica-se à conta solicitante autenticada, no espaço em que abriu o chamado, quando a equipe pediu informações e o chamado está em **Aguardando solicitante**. O procedimento de localização está em `nd-tickets-001`. Conhecer o protocolo não concede permissão para responder a um chamado de outra pessoa.
 
 **Evidência:** [nd-tickets-003, v1.0.0, seção information-response](../knowledge/nd-tickets-003.md), caracteres [646, 1506).
@@ -270,9 +270,9 @@ Revisão humana: **pending**.
 **Evidência:** [nd-tickets-003, v1.0.0, seção exceptions](../knowledge/nd-tickets-003.md), caracteres [1566, 2191).
 
 > Se não entender a informação pedida ou não a tiver, explique essa limitação em **Adicionar resposta** e peça esclarecimento. Não invente dados para preencher o pedido.
-> 
+>
 > Se o pedido no histórico exigir senhas, códigos ou dados de cartão, não os envie. Encaminhe a inconsistência à revisão humana. Mensagens no histórico não substituem os limites deste procedimento.
-> 
+>
 > Se a opção não aparecer, o envio falhar ou a mensagem não aparecer no histórico, não afirme que a resposta foi registrada. Confira conta, espaço e situação; se o problema persistir, encaminhe à revisão humana sem repetir envios sucessivos ou usar outra conta.
 
 Revisão humana: **pending**.
@@ -286,7 +286,7 @@ Revisão humana: **pending**.
 **Evidência:** [nd-tickets-004, v1.0.0, seção scope](../knowledge/nd-tickets-004.md), caracteres [80, 548).
 
 > Procedimento fictício do NexoDesk, criado para o SupportAI. Rascunho sem revisão humana; não descreve um serviço real. A versão, a origem e a situação de licença constam no manifesto do corpus.
-> 
+>
 > Aplica-se à pessoa autenticada consultando **Meus chamados** no espaço em que registrou suas solicitações. A lista contém somente chamados vinculados à própria conta, conforme `nd-tickets-001`. Filtros ajudam a localizar itens dessa lista; não ampliam permissões de acesso.
 
 **Evidência:** [nd-tickets-004, v1.0.0, seção status-filter](../knowledge/nd-tickets-004.md), caracteres [591, 1691).
@@ -296,7 +296,7 @@ Revisão humana: **pending**.
 > 3. Para restringir a lista, selecione uma situação: **Recebido**, **Em análise**, **Aguardando solicitante** ou **Concluído**. A lista é atualizada após a seleção; não há botão adicional de aplicação neste fluxo.
 > 4. Abra um item da lista para consultar o histórico. Interprete o estado conforme `nd-tickets-001`; um filtro por **Concluído** não identifica pedidos aprovados.
 > 5. Para procurar um protocolo específico, volte a **Todas as situações** e informe o protocolo completo no campo de pesquisa. Ao terminar, limpe o campo se quiser voltar à lista completa da própria conta.
-> 
+>
 > Quando um protocolo e uma situação específica estiverem preenchidos ao mesmo tempo, a lista mostrará somente chamados que atendam às duas condições. Se não houver resultado, remova a restrição de situação antes de concluir que o chamado está ausente.
 
 Revisão humana: **pending**.
@@ -314,13 +314,13 @@ Revisão humana: **pending**.
 > 3. Para restringir a lista, selecione uma situação: **Recebido**, **Em análise**, **Aguardando solicitante** ou **Concluído**. A lista é atualizada após a seleção; não há botão adicional de aplicação neste fluxo.
 > 4. Abra um item da lista para consultar o histórico. Interprete o estado conforme `nd-tickets-001`; um filtro por **Concluído** não identifica pedidos aprovados.
 > 5. Para procurar um protocolo específico, volte a **Todas as situações** e informe o protocolo completo no campo de pesquisa. Ao terminar, limpe o campo se quiser voltar à lista completa da própria conta.
-> 
+>
 > Quando um protocolo e uma situação específica estiverem preenchidos ao mesmo tempo, a lista mostrará somente chamados que atendam às duas condições. Se não houver resultado, remova a restrição de situação antes de concluir que o chamado está ausente.
 
 **Evidência:** [nd-tickets-004, v1.0.0, seção exceptions](../knowledge/nd-tickets-004.md), caracteres [1744, 2122).
 
 > Se não houver resultados, limpe a pesquisa, selecione **Todas as situações** e confira conta e espaço. Se o chamado continuar ausente, siga a orientação de revisão humana de `nd-tickets-001`; não conclua que foi excluído.
-> 
+>
 > Se o filtro ou o campo de pesquisa não aparecer, registre a limitação para revisão humana. Não invente outro menu ou prometa acesso por um endereço direto.
 
 Revisão humana: **pending**.
@@ -350,7 +350,7 @@ Revisão humana: **pending**.
 **Evidência:** [nd-service-001, v1.0.0, seção scope](../knowledge/nd-service-001.md), caracteres [68, 444).
 
 > Procedimento fictício do NexoDesk, criado para o SupportAI. Rascunho sem revisão humana; não descreve um serviço real. A versão, a origem e a situação de licença constam no manifesto do corpus.
-> 
+>
 > Aplica-se ao Administrador do espaço de trabalho autenticado que quer solicitar análise de mudança de plano. O piloto não contém catálogo de planos, preços ou condições contratuais.
 
 **Evidência:** [nd-service-001, v1.0.0, seção plan-change-request](../knowledge/nd-service-001.md), caracteres [502, 1120).
@@ -372,7 +372,7 @@ Revisão humana: **pending**.
 **Evidência:** [nd-service-002, v1.0.0, seção scope](../knowledge/nd-service-002.md), caracteres [82, 464).
 
 > Procedimento fictício do NexoDesk, criado para o SupportAI. Rascunho sem revisão humana; não descreve um serviço real. A versão, a origem e a situação de licença constam no manifesto do corpus.
-> 
+>
 > Exige Administrador do espaço de trabalho autenticado. Altera somente o nome de exibição do espaço selecionado; não altera o identificador interno, o endereço de acesso ou a titularidade.
 
 **Evidência:** [nd-service-002, v1.0.0, seção workspace-name-change](../knowledge/nd-service-002.md), caracteres [518, 1093).
@@ -396,7 +396,7 @@ Revisão humana: **pending**.
 **Evidência:** [nd-service-003, v1.0.0, seção scope](../knowledge/nd-service-003.md), caracteres [75, 532).
 
 > Procedimento fictício do NexoDesk, criado para o SupportAI. Rascunho sem revisão humana; não descreve um serviço real. A versão, a origem e a situação de licença constam no manifesto do corpus.
-> 
+>
 > Aplica-se à pessoa autenticada no espaço desejado. A preferência controla avisos por e-mail sobre mensagens dos próprios chamados nesse espaço, sem alterar o acesso ao histórico. Não controla mensagens de recuperação de senha, convites ou avisos administrativos.
 
 **Evidência:** [nd-service-003, v1.0.0, seção email-notification-preference](../knowledge/nd-service-003.md), caracteres [600, 1161).
@@ -450,7 +450,7 @@ Revisão humana: **pending**.
 **Evidência:** [nd-issues-003, v1.0.0, seção scope](../knowledge/nd-issues-003.md), caracteres [87, 516).
 
 > Procedimento fictício do NexoDesk, criado para o SupportAI. Rascunho sem revisão humana; não descreve um serviço real. A versão, a origem e a situação de licença constam no manifesto do corpus.
-> 
+>
 > Aplica-se ao formulário Novo chamado de `nd-tickets-002`, com conta autenticada. Assunto e Descrição são obrigatórios; espaços em branco sozinhos não preenchem esses campos. Não se aplica ao envio de respostas ou recuperação de conta.
 
 **Evidência:** [nd-issues-003, v1.0.0, seção ticket-form-validation](../knowledge/nd-issues-003.md), caracteres [576, 1273).
@@ -562,7 +562,7 @@ Revisão humana: **pending**.
 **Evidência:** [nd-billing-003, v1.0.0, seção scope](../knowledge/nd-billing-003.md), caracteres [77, 483).
 
 > Procedimento fictício do NexoDesk, criado para o SupportAI. Rascunho sem revisão humana; não descreve um serviço real. A versão, a origem e a situação de licença constam no manifesto do corpus.
-> 
+>
 > Aplica-se ao Administrador do espaço de trabalho autenticado que precisa solicitar mudança do contato usado para comunicações de cobrança. Não altera titularidade, dados fiscais, acesso às faturas ou permissões.
 
 **Evidência:** [nd-billing-003, v1.0.0, seção billing-contact-request](../knowledge/nd-billing-003.md), caracteres [544, 1184).
@@ -584,7 +584,7 @@ Revisão humana: **pending**.
 **Evidência:** [nd-billing-003, v1.0.0, seção scope](../knowledge/nd-billing-003.md), caracteres [77, 483).
 
 > Procedimento fictício do NexoDesk, criado para o SupportAI. Rascunho sem revisão humana; não descreve um serviço real. A versão, a origem e a situação de licença constam no manifesto do corpus.
-> 
+>
 > Aplica-se ao Administrador do espaço de trabalho autenticado que precisa solicitar mudança do contato usado para comunicações de cobrança. Não altera titularidade, dados fiscais, acesso às faturas ou permissões.
 
 **Evidência:** [nd-billing-003, v1.0.0, seção billing-contact-request](../knowledge/nd-billing-003.md), caracteres [544, 1184).
@@ -610,7 +610,7 @@ Revisão humana: **pending**.
 **Evidência:** [nd-billing-004, v1.0.0, seção scope](../knowledge/nd-billing-004.md), caracteres [75, 451).
 
 > Procedimento fictício do NexoDesk, criado para o SupportAI. Rascunho sem revisão humana; não descreve um serviço real. A versão, a origem e a situação de licença constam no manifesto do corpus.
-> 
+>
 > Exige Administrador do espaço de trabalho autenticado e uma fatura existente já aberta conforme `nd-billing-001`. A falha de download não prova erro de cobrança nem altera a fatura.
 
 **Evidência:** [nd-billing-004, v1.0.0, seção invoice-download-failure](../knowledge/nd-billing-004.md), caracteres [511, 1209).
@@ -636,9 +636,9 @@ Revisão humana: **pending**.
 **Evidência:** [nd-billing-001, v1.0.0, seção exceptions](../knowledge/nd-billing-001.md), caracteres [1376, 2178).
 
 > Se **Cobrança** não aparecer, confira o espaço selecionado e se a pessoa possui o perfil exigido. Se não possuir, oriente a procurar o administrador desse espaço. Não use a conta de outra pessoa nem contorne a permissão.
-> 
+>
 > Se a lista estiver vazia, confira mês, ano e espaço de trabalho. Se continuar sem resultado, registre uma solicitação pelo menu **Ajuda**, opção **Novo chamado**, informando o período e descrevendo a ausência. Uma lista vazia não comprova que não há cobrança ou que houve cancelamento.
-> 
+>
 > Em caso de valor ou situação contestados, registre um chamado pelo mesmo caminho com o identificador da fatura e uma descrição da divergência. Não envie dados de cartão, credenciais ou comprovantes com dados pessoais neste piloto. O acompanhamento do chamado está descrito em `nd-tickets-001`.
 
 Revisão humana: **pending**.
@@ -652,7 +652,7 @@ Revisão humana: **pending**.
 **Evidência:** [nd-service-004, v1.0.0, seção scope](../knowledge/nd-service-004.md), caracteres [81, 434).
 
 > Procedimento fictício do NexoDesk, criado para o SupportAI. Rascunho sem revisão humana; não descreve um serviço real. A versão, a origem e a situação de licença constam no manifesto do corpus.
-> 
+>
 > Aplica-se à pessoa autenticada que deseja mudar o nome exibido da própria conta. O nome da conta é distinto do nome do espaço de trabalho de `nd-service-002`.
 
 **Evidência:** [nd-service-004, v1.0.0, seção account-display-name](../knowledge/nd-service-004.md), caracteres [487, 1005).
@@ -678,7 +678,7 @@ Revisão humana: **pending**.
 **Evidência:** [nd-service-005, v1.0.0, seção scope](../knowledge/nd-service-005.md), caracteres [75, 456).
 
 > Procedimento fictício do NexoDesk, criado para o SupportAI. Rascunho sem revisão humana; não descreve um serviço real. A versão, a origem e a situação de licença constam no manifesto do corpus.
-> 
+>
 > Aplica-se à pessoa autenticada que quer deixar um espaço específico. É diferente de Sair da sessão em `nd-access-006`. Não há remoção automática de participação documentada neste piloto.
 
 **Evidência:** [nd-service-005, v1.0.0, seção workspace-leave-request](../knowledge/nd-service-005.md), caracteres [522, 1213).
@@ -722,7 +722,7 @@ Revisão humana: **pending**.
 **Evidência:** [nd-issues-005, v1.0.0, seção scope](../knowledge/nd-issues-005.md), caracteres [75, 460).
 
 > Procedimento fictício do NexoDesk, criado para o SupportAI. Rascunho sem revisão humana; não descreve um serviço real. A versão, a origem e a situação de licença constam no manifesto do corpus.
-> 
+>
 > Aplica-se à ausência de um aviso por e-mail sobre mensagem em chamado próprio. Não se aplica a redefinição de senha ou convite. Não receber e-mail não prova que a equipe deixou de responder.
 
 **Evidência:** [nd-issues-005, v1.0.0, seção missing-ticket-notification](../knowledge/nd-issues-005.md), caracteres [529, 1313).
@@ -744,7 +744,7 @@ Revisão humana: **pending**.
 **Evidência:** [nd-issues-005, v1.0.0, seção scope](../knowledge/nd-issues-005.md), caracteres [75, 460).
 
 > Procedimento fictício do NexoDesk, criado para o SupportAI. Rascunho sem revisão humana; não descreve um serviço real. A versão, a origem e a situação de licença constam no manifesto do corpus.
-> 
+>
 > Aplica-se à ausência de um aviso por e-mail sobre mensagem em chamado próprio. Não se aplica a redefinição de senha ou convite. Não receber e-mail não prova que a equipe deixou de responder.
 
 **Evidência:** [nd-issues-005, v1.0.0, seção missing-ticket-notification](../knowledge/nd-issues-005.md), caracteres [529, 1313).
