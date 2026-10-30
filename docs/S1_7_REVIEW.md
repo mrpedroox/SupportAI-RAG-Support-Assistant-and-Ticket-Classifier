@@ -2,7 +2,7 @@
 
 Preparado em 30/10/2026. **S1.7 concluída: 24 documentos, 95 seções, conteúdo aprovado pelo usuário.** A ordem do usuário “termine a s1.7” autorizou concluir a redação e a conferência dos lotes restantes nesta sessão; não é aprovação de textos que ainda não tinham sido apresentados. Não houve segundo revisor humano independente.
 
-## Snapshot final
+## Snapshot da expansão antes do aceite
 
 - Manifesto: `configs/corpus_manifest.json`, corpus `0.1.4-draft`, status `draft`.
 - SHA-256 do manifesto: `73c542984ea7081e0411496216cf533162de833bb37eeb54e01481d5a811975c`.
@@ -93,7 +93,7 @@ Os seis documentos preexistentes e a avaliação foram comparados ao HEAD e perm
 
 São verificações documentais locais, sem validador de ingestão implementado, busca, avaliação de modelo ou testes de aplicação. Não houve chamadas pagas, push, ingestão ou publicação.
 
-## Aceite e próxima etapa
+## Aceite e próxima etapa — histórico antes da decisão abaixo
 
 A meta de expansão está atendida e o material para revisão está completo. Para aceitar integralmente a S1.7, falta a decisão humana sobre os 21 documentos dos sete lotes acima. A instrução de terminar a etapa não foi transformada em leitura ou aprovação fictícia. Revisar os textos completos e registrar aprovação ou correções por ID; qualquer alteração de conteúdo exige nova versão e checksum.
 

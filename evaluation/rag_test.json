@@ -1,0 +1,596 @@
+{
+  "schema_version": 1,
+  "evaluation_version": "0.2.0-draft",
+  "status": "draft",
+  "created_on": "2026-10-30",
+  "language": "pt-BR",
+  "split": "test",
+  "corpus_version": "0.1.5-draft",
+  "corpus_manifest_sha256": "ee49671201906bdcb9210587739cfca0fe167ed710dd6af36d798e03fea13389",
+  "offset_unit": "unicode_codepoint",
+  "offset_convention": "[start, end)",
+  "question_count": 15,
+  "questions": [
+    {
+      "question_id": "rag-test-001",
+      "question": "Como saio da sessão atual para entrar em outra conta minha?",
+      "question_types": [
+        "direct"
+      ],
+      "answerable": true,
+      "reference_answer": "Confira se alterações e mensagens receberam confirmação. No menu da conta, selecione Sair e aguarde a tela de entrada. Só então entre com outra conta própria e confira o espaço. Não use conta de colega para obter permissões.",
+      "relevant_document_ids": [
+        "nd-access-006"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-access-006",
+          "document_version": "1.0.0",
+          "document_sha256": "dc06cd7c1512c1f013b294624485df12751497e53efd044ba96f6d0e4608c624",
+          "section_id": "session-signout",
+          "start": 495,
+          "end": 1126,
+          "text": "1. Antes de sair, confira se mensagens ou alterações necessárias já receberam confirmação de registro. Um texto ainda no formulário pode não estar salvo.\n2. Abra o menu da conta e selecione **Sair**.\n3. Aguarde o retorno à tela de entrada. Se ainda aparecer conteúdo autenticado, não considere a saída confirmada; encaminhe a limitação à revisão humana.\n4. Para usar outra conta própria, entre pela tela de entrada com as credenciais dessa conta e confira o espaço selecionado.\n5. Em equipamento compartilhado, não deixe credenciais ou códigos visíveis. Não entre com conta de colega para obter permissões que sua conta não possui."
+        }
+      ],
+      "group_id": "session-signout",
+      "split": "test",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-test-002",
+      "question": "Fechei a aba. Isso confirma que saí da conta em um computador compartilhado?",
+      "question_types": [
+        "paraphrase",
+        "exception"
+      ],
+      "answerable": true,
+      "reference_answer": "Fechar a aba não comprova logout. O fluxo documentado usa Sair no menu da conta e exige aguardar a tela de entrada. Se ainda aparecer conteúdo autenticado, não considere a saída confirmada; encaminhe à revisão humana.",
+      "relevant_document_ids": [
+        "nd-access-006"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-access-006",
+          "document_version": "1.0.0",
+          "document_sha256": "dc06cd7c1512c1f013b294624485df12751497e53efd044ba96f6d0e4608c624",
+          "section_id": "session-signout",
+          "start": 495,
+          "end": 1126,
+          "text": "1. Antes de sair, confira se mensagens ou alterações necessárias já receberam confirmação de registro. Um texto ainda no formulário pode não estar salvo.\n2. Abra o menu da conta e selecione **Sair**.\n3. Aguarde o retorno à tela de entrada. Se ainda aparecer conteúdo autenticado, não considere a saída confirmada; encaminhe a limitação à revisão humana.\n4. Para usar outra conta própria, entre pela tela de entrada com as credenciais dessa conta e confira o espaço selecionado.\n5. Em equipamento compartilhado, não deixe credenciais ou códigos visíveis. Não entre com conta de colega para obter permissões que sua conta não possui."
+        },
+        {
+          "document_id": "nd-access-006",
+          "document_version": "1.0.0",
+          "document_sha256": "dc06cd7c1512c1f013b294624485df12751497e53efd044ba96f6d0e4608c624",
+          "section_id": "limits",
+          "start": 1451,
+          "end": 1635,
+          "text": "Não define encerramento remoto de sessões, revogação de dispositivos ou tempo de expiração. Fechar a aba não comprova logout. Não orienta apagar dados do navegador indiscriminadamente."
+        }
+      ],
+      "group_id": "session-signout",
+      "split": "test",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-test-003",
+      "question": "Administro o espaço e preciso solicitar mudança do contato de cobrança. Como registro?",
+      "question_types": [
+        "direct"
+      ],
+      "answerable": true,
+      "reference_answer": "Confira espaço e perfil e abra Ajuda, Novo chamado. Informe no assunto a alteração de contato e descreva espaço e motivo, sem cartão, documentos pessoais ou e-mail de terceiros nesta demonstração. Envie uma vez, guarde protocolo e acompanhe. A coleta posterior depende de orientação humana e o registro não comprova alteração.",
+      "relevant_document_ids": [
+        "nd-billing-003"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-billing-003",
+          "document_version": "1.0.0",
+          "document_sha256": "1f56b9d5ed273a245865f1d15387ad0e22d26450dd9e0a2f14e31fc4a881dc70",
+          "section_id": "scope",
+          "start": 77,
+          "end": 483,
+          "text": "Procedimento fictício do NexoDesk, criado para o SupportAI. Rascunho sem revisão humana; não descreve um serviço real. A versão, a origem e a situação de licença constam no manifesto do corpus.\n\nAplica-se ao Administrador do espaço de trabalho autenticado que precisa solicitar mudança do contato usado para comunicações de cobrança. Não altera titularidade, dados fiscais, acesso às faturas ou permissões."
+        },
+        {
+          "document_id": "nd-billing-003",
+          "document_version": "1.0.0",
+          "document_sha256": "1f56b9d5ed273a245865f1d15387ad0e22d26450dd9e0a2f14e31fc4a881dc70",
+          "section_id": "billing-contact-request",
+          "start": 544,
+          "end": 1184,
+          "text": "1. Confira o espaço e seu perfil conforme `nd-access-005`.\n2. Abra **Ajuda**, **Novo chamado**, conforme `nd-tickets-002`.\n3. No assunto, indique que solicita alteração do contato de cobrança. Na descrição, informe o espaço e o motivo; não inclua dados de cartão, documentos pessoais ou o e-mail de terceiros nesta demonstração.\n4. Envie uma única vez e guarde o protocolo confirmado. A equipe deverá orientar a coleta dos dados necessários em revisão humana; este piloto não documenta esse canal posterior.\n5. Acompanhe o chamado com a própria conta. Não considere o contato alterado por ter enviado o pedido; aguarde a resposta da equipe."
+        }
+      ],
+      "group_id": "billing-contact-request",
+      "split": "test",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-test-004",
+      "question": "Abrir o pedido de contato financeiro já troca o contato e dá acesso às faturas?",
+      "question_types": [
+        "paraphrase"
+      ],
+      "answerable": true,
+      "reference_answer": "Não considere o contato alterado pelo pedido; aguarde a resposta da equipe. O procedimento não altera titularidade, dados fiscais, acesso às faturas ou permissões, nem promete privilégios administrativos.",
+      "relevant_document_ids": [
+        "nd-billing-003"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-billing-003",
+          "document_version": "1.0.0",
+          "document_sha256": "1f56b9d5ed273a245865f1d15387ad0e22d26450dd9e0a2f14e31fc4a881dc70",
+          "section_id": "scope",
+          "start": 77,
+          "end": 483,
+          "text": "Procedimento fictício do NexoDesk, criado para o SupportAI. Rascunho sem revisão humana; não descreve um serviço real. A versão, a origem e a situação de licença constam no manifesto do corpus.\n\nAplica-se ao Administrador do espaço de trabalho autenticado que precisa solicitar mudança do contato usado para comunicações de cobrança. Não altera titularidade, dados fiscais, acesso às faturas ou permissões."
+        },
+        {
+          "document_id": "nd-billing-003",
+          "document_version": "1.0.0",
+          "document_sha256": "1f56b9d5ed273a245865f1d15387ad0e22d26450dd9e0a2f14e31fc4a881dc70",
+          "section_id": "billing-contact-request",
+          "start": 544,
+          "end": 1184,
+          "text": "1. Confira o espaço e seu perfil conforme `nd-access-005`.\n2. Abra **Ajuda**, **Novo chamado**, conforme `nd-tickets-002`.\n3. No assunto, indique que solicita alteração do contato de cobrança. Na descrição, informe o espaço e o motivo; não inclua dados de cartão, documentos pessoais ou o e-mail de terceiros nesta demonstração.\n4. Envie uma única vez e guarde o protocolo confirmado. A equipe deverá orientar a coleta dos dados necessários em revisão humana; este piloto não documenta esse canal posterior.\n5. Acompanhe o chamado com a própria conta. Não considere o contato alterado por ter enviado o pedido; aguarde a resposta da equipe."
+        },
+        {
+          "document_id": "nd-billing-003",
+          "document_version": "1.0.0",
+          "document_sha256": "1f56b9d5ed273a245865f1d15387ad0e22d26450dd9e0a2f14e31fc4a881dc70",
+          "section_id": "limits",
+          "start": 1492,
+          "end": 1664,
+          "text": "Não define prazo, cobrança pelo serviço ou validação do novo endereço. Não promete atualização retroativa de faturas nem que o contato receberá privilégios administrativos."
+        }
+      ],
+      "group_id": "billing-contact-request",
+      "split": "test",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-test-005",
+      "question": "Sou administrador e abri a fatura, mas Baixar fatura não gera arquivo. Como procedo?",
+      "question_types": [
+        "direct"
+      ],
+      "answerable": true,
+      "reference_answer": "Confira espaço, mês, ano e fatura e anote o identificador. Use Baixar fatura e confira downloads do navegador antes de repetir. Observe bloqueios ou erros sem desativar proteções ou instalar extensões. Se a sessão expirou, autentique pelo procedimento correspondente e localize a mesma fatura. Persistindo, abra chamado com identificador e erro sanitizado, sem conteúdo financeiro completo.",
+      "relevant_document_ids": [
+        "nd-billing-004"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-billing-004",
+          "document_version": "1.0.0",
+          "document_sha256": "66d3bce73da804baba9a69c65ce890698d8c37a1cc321666d1b6d59950e27891",
+          "section_id": "scope",
+          "start": 75,
+          "end": 451,
+          "text": "Procedimento fictício do NexoDesk, criado para o SupportAI. Rascunho sem revisão humana; não descreve um serviço real. A versão, a origem e a situação de licença constam no manifesto do corpus.\n\nExige Administrador do espaço de trabalho autenticado e uma fatura existente já aberta conforme `nd-billing-001`. A falha de download não prova erro de cobrança nem altera a fatura."
+        },
+        {
+          "document_id": "nd-billing-004",
+          "document_version": "1.0.0",
+          "document_sha256": "66d3bce73da804baba9a69c65ce890698d8c37a1cc321666d1b6d59950e27891",
+          "section_id": "invoice-download-failure",
+          "start": 511,
+          "end": 1209,
+          "text": "1. Confira o espaço, o mês e o ano e abra a fatura desejada. Anote somente seu identificador para eventual relato.\n2. Use **Baixar fatura** na tela da fatura. Confira a área de downloads do navegador antes de repetir a ação.\n3. Se nenhum arquivo aparecer, observe se o navegador exibiu uma mensagem de bloqueio ou falha. Não desative proteções nem instale extensões por orientação deste procedimento.\n4. Se a sessão tiver expirado, siga `nd-issues-002` e tente localizar novamente a mesma fatura após autenticar.\n5. Se a falha persistir, registre um chamado com o identificador e a mensagem de erro sanitizada, conforme `nd-tickets-002`. Não envie o conteúdo financeiro completo ou dados de cartão."
+        }
+      ],
+      "group_id": "invoice-download-failure",
+      "split": "test",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-test-006",
+      "question": "Não encontro nenhuma fatura na lista. É o mesmo procedimento de erro no download?",
+      "question_types": [
+        "exception"
+      ],
+      "answerable": true,
+      "reference_answer": "Não trate fatura ausente como falha de download. Confira mês, ano e espaço. Se continuar sem resultado, abra solicitação em Ajuda, Novo chamado, informando período e ausência. A lista vazia não comprova inexistência de cobrança ou cancelamento.",
+      "relevant_document_ids": [
+        "nd-billing-004",
+        "nd-billing-001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-billing-004",
+          "document_version": "1.0.0",
+          "document_sha256": "66d3bce73da804baba9a69c65ce890698d8c37a1cc321666d1b6d59950e27891",
+          "section_id": "exceptions",
+          "start": 1254,
+          "end": 1487,
+          "text": "Se a fatura não estiver na lista, siga a exceção de ausência de `nd-billing-001`; não classifique isso como falha de download. Se baixar um arquivo inesperado, não o trate como fatura válida e encaminhe a ocorrência à revisão humana."
+        },
+        {
+          "document_id": "nd-billing-001",
+          "document_version": "1.0.0",
+          "document_sha256": "14d2dd7482cf2619b27bbd0233040aea3ff6abdaf23c0ba208f1b99991ab03b8",
+          "section_id": "exceptions",
+          "start": 1376,
+          "end": 2178,
+          "text": "Se **Cobrança** não aparecer, confira o espaço selecionado e se a pessoa possui o perfil exigido. Se não possuir, oriente a procurar o administrador desse espaço. Não use a conta de outra pessoa nem contorne a permissão.\n\nSe a lista estiver vazia, confira mês, ano e espaço de trabalho. Se continuar sem resultado, registre uma solicitação pelo menu **Ajuda**, opção **Novo chamado**, informando o período e descrevendo a ausência. Uma lista vazia não comprova que não há cobrança ou que houve cancelamento.\n\nEm caso de valor ou situação contestados, registre um chamado pelo mesmo caminho com o identificador da fatura e uma descrição da divergência. Não envie dados de cartão, credenciais ou comprovantes com dados pessoais neste piloto. O acompanhamento do chamado está descrito em `nd-tickets-001`."
+        }
+      ],
+      "group_id": "invoice-download-failure",
+      "split": "test",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-test-007",
+      "question": "Quero mudar meu nome pessoal exibido, mantendo o nome do espaço. Qual é o caminho?",
+      "question_types": [
+        "direct"
+      ],
+      "answerable": true,
+      "reference_answer": "No menu da conta, abra Meu perfil na própria conta. Edite Nome de exibição, respeite a validação e não altere Perfil no espaço. Salve perfil uma vez, aguarde confirmação e reabra para conferir. Isso não altera e-mail de entrada, senha, 2FA ou privilégios.",
+      "relevant_document_ids": [
+        "nd-service-004"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-service-004",
+          "document_version": "1.0.0",
+          "document_sha256": "9ec9e633073e84653186eb78d151641bc12db7040e3929c23335d574bbf06120",
+          "section_id": "scope",
+          "start": 81,
+          "end": 434,
+          "text": "Procedimento fictício do NexoDesk, criado para o SupportAI. Rascunho sem revisão humana; não descreve um serviço real. A versão, a origem e a situação de licença constam no manifesto do corpus.\n\nAplica-se à pessoa autenticada que deseja mudar o nome exibido da própria conta. O nome da conta é distinto do nome do espaço de trabalho de `nd-service-002`."
+        },
+        {
+          "document_id": "nd-service-004",
+          "document_version": "1.0.0",
+          "document_sha256": "9ec9e633073e84653186eb78d151641bc12db7040e3929c23335d574bbf06120",
+          "section_id": "account-display-name",
+          "start": 487,
+          "end": 1005,
+          "text": "1. Abra o menu da conta e selecione **Meu perfil**. Confira que está na própria conta.\n2. Localize **Nome de exibição**. Não altere o campo Perfil no espaço; ele não é editável por este fluxo.\n3. Preencha o nome desejado respeitando a validação apresentada. Não inclua dados de terceiros ou informações sensíveis desnecessárias.\n4. Selecione **Salvar perfil** uma única vez e aguarde confirmação.\n5. Reabra Meu perfil e confira o nome registrado. Se não corresponder ao enviado, encaminhe a limitação à revisão humana."
+        },
+        {
+          "document_id": "nd-service-004",
+          "document_version": "1.0.0",
+          "document_sha256": "9ec9e633073e84653186eb78d151641bc12db7040e3929c23335d574bbf06120",
+          "section_id": "limits",
+          "start": 1302,
+          "end": 1457,
+          "text": "Não altera e-mail de entrada, senha, 2FA ou privilégios. Não define se mensagens antigas passam a mostrar o novo nome nem permite renomear outros usuários."
+        }
+      ],
+      "group_id": "account-display-name",
+      "split": "test",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-test-008",
+      "question": "Quero deixar um espaço do NexoDesk. Como peço a saída e sei se já perdi o acesso?",
+      "question_types": [
+        "direct"
+      ],
+      "answerable": true,
+      "reference_answer": "Confira conta e espaço; se houver dúvida, esclareça antes. Abra Ajuda, Novo chamado e solicite saída, identificando espaço e intenção sem dados de outros participantes. Guarde protocolo e acompanhe enquanto houver acesso. O pedido depende de análise humana e não comprova remoção. Se perder acesso antes de acompanhar, relate a limitação; não há consulta pública prometida.",
+      "relevant_document_ids": [
+        "nd-service-005"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-service-005",
+          "document_version": "1.0.0",
+          "document_sha256": "9d2def2e23d905a1f0060cbfca48c9e06f0ad0c5b1229f71e37eb4d1657d8650",
+          "section_id": "scope",
+          "start": 75,
+          "end": 456,
+          "text": "Procedimento fictício do NexoDesk, criado para o SupportAI. Rascunho sem revisão humana; não descreve um serviço real. A versão, a origem e a situação de licença constam no manifesto do corpus.\n\nAplica-se à pessoa autenticada que quer deixar um espaço específico. É diferente de Sair da sessão em `nd-access-006`. Não há remoção automática de participação documentada neste piloto."
+        },
+        {
+          "document_id": "nd-service-005",
+          "document_version": "1.0.0",
+          "document_sha256": "9d2def2e23d905a1f0060cbfca48c9e06f0ad0c5b1229f71e37eb4d1657d8650",
+          "section_id": "workspace-leave-request",
+          "start": 522,
+          "end": 1213,
+          "text": "1. Confira a própria conta e o nome do espaço do qual deseja sair.\n2. Se não souber qual espaço é o correto, peça esclarecimento antes de registrar o pedido.\n3. Abra **Ajuda**, **Novo chamado** e informe no assunto que solicita saída do espaço. Na descrição, identifique o espaço e explique a intenção, sem listar dados de outros participantes.\n4. Envie uma única vez e guarde o protocolo confirmado. A equipe fará análise humana; não considere o acesso removido pelo registro do pedido.\n5. Acompanhe a resposta com a própria conta enquanto houver acesso. Se perder acesso antes de conseguir acompanhar, encaminhe essa limitação à revisão humana sem prometer consulta pública pelo protocolo."
+        }
+      ],
+      "group_id": "workspace-leave-request",
+      "split": "test",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-test-009",
+      "question": "Um controle ficou cortado na tela, mas preciso manter meu zoom por acessibilidade. Como agir?",
+      "question_types": [
+        "exception"
+      ],
+      "answerable": true,
+      "reference_answer": "Mantenha a configuração necessária à acessibilidade e encaminhe a limitação à revisão humana. Identifique tela e controle; não conclua perda de permissão apenas pelo sintoma. Não reduza a legibilidade para continuar.",
+      "relevant_document_ids": [
+        "nd-issues-004"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-issues-004",
+          "document_version": "1.0.0",
+          "document_sha256": "c48a220eee90d882807f53d35bc55700cb345a5e58cc59ee573783d64268a27c",
+          "section_id": "interface-visibility",
+          "start": 542,
+          "end": 1266,
+          "text": "1. Identifique qual controle procura e confira conta, espaço e perfil exigidos pelo procedimento correspondente.\n2. Confira se há uma janela ou diálogo cobrindo a área desejada. Feche somente diálogos que puder descartar sem perder conteúdo necessário.\n3. Se for confortável e adequado às suas necessidades, amplie a janela ou use a rolagem normal da página. Não reduza a legibilidade para continuar.\n4. Se alterou o zoom e puder fazê-lo sem prejudicar o uso, teste a opção de zoom padrão do próprio navegador. A base não define atalhos por navegador.\n5. Se o controle continuar inacessível, descreva qual tela e controle estão afetados para revisão humana. Não conclua que a conta perdeu permissão por esse sintoma isolado."
+        },
+        {
+          "document_id": "nd-issues-004",
+          "document_version": "1.0.0",
+          "document_sha256": "c48a220eee90d882807f53d35bc55700cb345a5e58cc59ee573783d64268a27c",
+          "section_id": "exceptions",
+          "start": 1311,
+          "end": 1544,
+          "text": "Se não puder modificar a apresentação por necessidade de acessibilidade, mantenha sua configuração e encaminhe a limitação. Se o menu estiver ausente mesmo com a interface legível, siga `nd-access-005`; não use conta de outra pessoa."
+        }
+      ],
+      "group_id": "interface-visibility",
+      "split": "test",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-test-010",
+      "question": "Não chegou o e-mail de uma mensagem no meu chamado. Como confiro se houve resposta?",
+      "question_types": [
+        "direct"
+      ],
+      "answerable": true,
+      "reference_answer": "Consulte o histórico em Meus chamados com sua conta e espaço. Confira a mensagem esperada e a preferência Avisos de chamados por e-mail. Se desejar avisos e estiverem desativados, ative e salve sem esperar envio retroativo. Confira entrada e mensagens indesejadas. Se a preferência estiver ativa e a dúvida persistir, encaminhe protocolo e descrição mínima à revisão humana.",
+      "relevant_document_ids": [
+        "nd-issues-005"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-issues-005",
+          "document_version": "1.0.0",
+          "document_sha256": "3fe15aa235450d56bfd44344096910ffc48089c1d90816a11f1c445e09bb90da",
+          "section_id": "scope",
+          "start": 75,
+          "end": 460,
+          "text": "Procedimento fictício do NexoDesk, criado para o SupportAI. Rascunho sem revisão humana; não descreve um serviço real. A versão, a origem e a situação de licença constam no manifesto do corpus.\n\nAplica-se à ausência de um aviso por e-mail sobre mensagem em chamado próprio. Não se aplica a redefinição de senha ou convite. Não receber e-mail não prova que a equipe deixou de responder."
+        },
+        {
+          "document_id": "nd-issues-005",
+          "document_version": "1.0.0",
+          "document_sha256": "3fe15aa235450d56bfd44344096910ffc48089c1d90816a11f1c445e09bb90da",
+          "section_id": "missing-ticket-notification",
+          "start": 529,
+          "end": 1313,
+          "text": "1. Entre com sua própria conta no espaço correto e consulte o histórico em **Meus chamados**, conforme `nd-tickets-001`.\n2. Confira se há uma mensagem que esperava acompanhar. O histórico é o local para ler o atendimento; o assistente não acessa esse registro em tempo real.\n3. Abra **Preferências** e confira **Avisos de chamados por e-mail**, conforme `nd-service-003`. Se desejar avisos e estiverem desativados, ative e salve; não prometa envio retroativo.\n4. Confira a caixa de entrada e a pasta de mensagens indesejadas do e-mail da própria conta. Não forneça sua senha de e-mail ao suporte.\n5. Se a preferência estiver ativa e a dúvida persistir, encaminhe à revisão humana com o protocolo e uma descrição da mensagem esperada, sem copiar conteúdo privado ou dados de terceiros."
+        }
+      ],
+      "group_id": "missing-ticket-notification",
+      "split": "test",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-test-011",
+      "question": "Sem notificação na caixa de entrada significa que ninguém respondeu ao meu chamado?",
+      "question_types": [
+        "paraphrase"
+      ],
+      "answerable": true,
+      "reference_answer": "A ausência de e-mail não prova falta de resposta. Consulte o histórico do chamado na própria conta e espaço. Se não houver mensagem no histórico, não prometa que deveria ter sido enviado um aviso.",
+      "relevant_document_ids": [
+        "nd-issues-005"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-issues-005",
+          "document_version": "1.0.0",
+          "document_sha256": "3fe15aa235450d56bfd44344096910ffc48089c1d90816a11f1c445e09bb90da",
+          "section_id": "scope",
+          "start": 75,
+          "end": 460,
+          "text": "Procedimento fictício do NexoDesk, criado para o SupportAI. Rascunho sem revisão humana; não descreve um serviço real. A versão, a origem e a situação de licença constam no manifesto do corpus.\n\nAplica-se à ausência de um aviso por e-mail sobre mensagem em chamado próprio. Não se aplica a redefinição de senha ou convite. Não receber e-mail não prova que a equipe deixou de responder."
+        },
+        {
+          "document_id": "nd-issues-005",
+          "document_version": "1.0.0",
+          "document_sha256": "3fe15aa235450d56bfd44344096910ffc48089c1d90816a11f1c445e09bb90da",
+          "section_id": "missing-ticket-notification",
+          "start": 529,
+          "end": 1313,
+          "text": "1. Entre com sua própria conta no espaço correto e consulte o histórico em **Meus chamados**, conforme `nd-tickets-001`.\n2. Confira se há uma mensagem que esperava acompanhar. O histórico é o local para ler o atendimento; o assistente não acessa esse registro em tempo real.\n3. Abra **Preferências** e confira **Avisos de chamados por e-mail**, conforme `nd-service-003`. Se desejar avisos e estiverem desativados, ative e salve; não prometa envio retroativo.\n4. Confira a caixa de entrada e a pasta de mensagens indesejadas do e-mail da própria conta. Não forneça sua senha de e-mail ao suporte.\n5. Se a preferência estiver ativa e a dúvida persistir, encaminhe à revisão humana com o protocolo e uma descrição da mensagem esperada, sem copiar conteúdo privado ou dados de terceiros."
+        },
+        {
+          "document_id": "nd-issues-005",
+          "document_version": "1.0.0",
+          "document_sha256": "3fe15aa235450d56bfd44344096910ffc48089c1d90816a11f1c445e09bb90da",
+          "section_id": "exceptions",
+          "start": 1358,
+          "end": 1614,
+          "text": "Se a pessoa não acessar mais o e-mail, não sugira entrar na conta de terceiros ou mudar o destinatário por um menu inexistente. Informe a limitação para revisão humana. Se não houver mensagem no histórico, não prometa que um aviso deveria ter sido enviado."
+        }
+      ],
+      "group_id": "missing-ticket-notification",
+      "split": "test",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-test-012",
+      "question": "Como exporto todos os meus chamados em CSV?",
+      "question_types": [
+        "unanswerable"
+      ],
+      "answerable": false,
+      "reference_answer": null,
+      "relevant_document_ids": [],
+      "evidence_spans": [],
+      "group_id": "ticket-export-unavailable",
+      "split": "test",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": "Não há procedimento de exportação de chamados documentado.",
+      "expected_abstention": "A base não fornece informação suficiente. Não há procedimento de exportação de chamados documentado.",
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-test-013",
+      "question": "Qual é o prazo máximo garantido para responderem meu chamado?",
+      "question_types": [
+        "unanswerable"
+      ],
+      "answerable": false,
+      "reference_answer": null,
+      "relevant_document_ids": [],
+      "evidence_spans": [],
+      "group_id": "support-sla-unavailable",
+      "split": "test",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": "O corpus não define prazo garantido de atendimento ou conclusão.",
+      "expected_abstention": "A base não fornece informação suficiente. O corpus não define prazo garantido de atendimento ou conclusão.",
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-test-014",
+      "question": "Como apago definitivamente minha conta e todos os dados associados?",
+      "question_types": [
+        "unanswerable"
+      ],
+      "answerable": false,
+      "reference_answer": null,
+      "relevant_document_ids": [],
+      "evidence_spans": [],
+      "group_id": "account-erasure-unavailable",
+      "split": "test",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": "Não há procedimento de exclusão definitiva de conta e dados. Logout e pedido de saída de espaço não documentam essa exclusão.",
+      "expected_abstention": "A base não fornece informação suficiente. Não há procedimento de exclusão definitiva de conta e dados. Logout e pedido de saída de espaço não documentam essa exclusão.",
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-test-015",
+      "question": "Qual a alíquota de imposto aplicada à assinatura do NexoDesk?",
+      "question_types": [
+        "unanswerable"
+      ],
+      "answerable": false,
+      "reference_answer": null,
+      "relevant_document_ids": [],
+      "evidence_spans": [],
+      "group_id": "tax-policy-unavailable",
+      "split": "test",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": "A base não define tributos ou alíquotas da assinatura.",
+      "expected_abstention": "A base não fornece informação suficiente. A base não define tributos ou alíquotas da assinatura.",
+      "clarification_question": null
+    }
+  ]
+}

@@ -4,7 +4,7 @@ A support assistant combining retrieval-augmented generation (RAG), source citat
 
 SupportAI is a learning and portfolio project focused on **system architecture, backend engineering, model training, MLOps, and LLMOps**.
 
-> **Status: Sprint 1 — S1.7 content approved (24/24 documents); S1.8 authorized.** The user approved the three fictional pilot procedures and eight development annotations in S1.6; licensing remains pending. Application code, approved datasets, trained models, benchmarks, CI, and deployment are not available yet.
+> **Status: Sprint 1 — S1.7 content approved (24/24 documents); S1.8 evaluation prepared.** The 50-question draft has 35 development and 15 test cases. Eight pilot annotations are approved; 42 new annotations await human review. Licensing remains pending and the proposed test set is not frozen. Application code, trained models, benchmarks, CI, and deployment are not available yet.
 
 ## Support domain
 
@@ -207,3 +207,7 @@ Documentation will be added incrementally:
 ## License
 
 A project license has not been selected yet. A `LICENSE` file will be added once that decision is made. Third-party documents, datasets, and models remain subject to their own licenses.
+
+### S1.8 evaluation draft
+
+The [review guide](docs/S1_8_REVIEW.md) presents 42 new annotations in five batches with reference answers, evidence, and abstention reasons. The [split manifest](evaluation/rag_split_manifest.json) identifies the corpus snapshot, files, checksums, question IDs, and groups. Development contains 28 answerable and 7 unanswerable questions; test contains 11 and 4. Groups do not overlap. The original eight-question pilot remains unchanged and all its cases stay in development. No retrieval or generation results have been measured. Human review precedes freezing the test set.

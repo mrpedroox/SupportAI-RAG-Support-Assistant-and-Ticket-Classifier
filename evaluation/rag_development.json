@@ -1,0 +1,1313 @@
+{
+  "schema_version": 1,
+  "evaluation_version": "0.2.0-draft",
+  "status": "draft",
+  "created_on": "2026-10-30",
+  "language": "pt-BR",
+  "split": "development",
+  "corpus_version": "0.1.5-draft",
+  "corpus_manifest_sha256": "ee49671201906bdcb9210587739cfca0fe167ed710dd6af36d798e03fea13389",
+  "offset_unit": "unicode_codepoint",
+  "offset_convention": "[start, end)",
+  "question_count": 35,
+  "questions": [
+    {
+      "question_id": "rag-dev-001",
+      "question": "Perdi o autenticador do NexoDesk, mas ainda acesso meu e-mail cadastrado. Como solicito a recuperação da conta?",
+      "question_types": [
+        "direct"
+      ],
+      "answerable": true,
+      "reference_answer": "Na tela de entrada do NexoDesk, abra Preciso de ajuda com o acesso, sem precisar fazer login, e escolha Perdi o autenticador. Informe o e-mail cadastrado e o espaço de trabalho, descrevendo a perda sem enviar senhas ou códigos. Envie uma única solicitação e guarde o protocolo: ele confirma o registro, não a aprovação da recuperação. Se ainda acessar o e-mail cadastrado, aguarde nesse endereço o contato da equipe de acesso. A análise é humana e não há prazo de conclusão definido na base.",
+      "relevant_document_ids": [
+        "nd-access-001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-access-001",
+          "document_version": "1.0.0",
+          "document_sha256": "04105f6d6267e2ce49eaf65cef127855809592e547680a9174c4b66e8aaa0937",
+          "section_id": "recovery-request",
+          "start": 592,
+          "end": 1259,
+          "text": "1. Na tela de entrada do NexoDesk, selecione **Preciso de ajuda com o acesso**. Essa opção não exige uma sessão autenticada.\n2. Escolha **Perdi o autenticador**.\n3. Informe o e-mail cadastrado e o nome do espaço de trabalho. Descreva apenas que perdeu acesso ao autenticador; não inclua senhas, códigos temporários ou códigos de recuperação.\n4. Envie a solicitação uma única vez e guarde o protocolo exibido na confirmação. O protocolo comprova o registro da solicitação; não significa que a recuperação foi aprovada.\n5. Se ainda tiver acesso ao e-mail cadastrado, aguarde nesse endereço o contato da equipe de acesso. Não há prazo de conclusão definido neste piloto."
+        },
+        {
+          "document_id": "nd-access-001",
+          "document_version": "1.0.0",
+          "document_sha256": "04105f6d6267e2ce49eaf65cef127855809592e547680a9174c4b66e8aaa0937",
+          "section_id": "recovery-request",
+          "start": 1261,
+          "end": 1505,
+          "text": "A equipe de acesso faz a análise humana antes de qualquer alteração de autenticação. Os critérios de validação de identidade e as etapas posteriores à aprovação não estão documentados nesta base; o atendente não deve completá-los por suposição."
+        }
+      ],
+      "group_id": "access-recovery-request",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T15:53:10Z"
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-dev-002",
+      "question": "Troquei de cel. e fiquei sem o 2FA do NexoDesk. Ainda entro no e-mail da conta; como peço ajuda pra voltar a acessar?",
+      "question_types": [
+        "paraphrase",
+        "abbreviation"
+      ],
+      "answerable": true,
+      "reference_answer": "Na tela de entrada do NexoDesk, abra Preciso de ajuda com o acesso, sem precisar fazer login, e escolha Perdi o autenticador. Informe o e-mail cadastrado e o espaço de trabalho, descrevendo a perda sem enviar senhas ou códigos. Envie uma única solicitação e guarde o protocolo: ele confirma o registro, não a aprovação da recuperação. Se ainda acessar o e-mail cadastrado, aguarde nesse endereço o contato da equipe de acesso. A análise é humana e não há prazo de conclusão definido na base.",
+      "relevant_document_ids": [
+        "nd-access-001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-access-001",
+          "document_version": "1.0.0",
+          "document_sha256": "04105f6d6267e2ce49eaf65cef127855809592e547680a9174c4b66e8aaa0937",
+          "section_id": "recovery-request",
+          "start": 592,
+          "end": 1259,
+          "text": "1. Na tela de entrada do NexoDesk, selecione **Preciso de ajuda com o acesso**. Essa opção não exige uma sessão autenticada.\n2. Escolha **Perdi o autenticador**.\n3. Informe o e-mail cadastrado e o nome do espaço de trabalho. Descreva apenas que perdeu acesso ao autenticador; não inclua senhas, códigos temporários ou códigos de recuperação.\n4. Envie a solicitação uma única vez e guarde o protocolo exibido na confirmação. O protocolo comprova o registro da solicitação; não significa que a recuperação foi aprovada.\n5. Se ainda tiver acesso ao e-mail cadastrado, aguarde nesse endereço o contato da equipe de acesso. Não há prazo de conclusão definido neste piloto."
+        },
+        {
+          "document_id": "nd-access-001",
+          "document_version": "1.0.0",
+          "document_sha256": "04105f6d6267e2ce49eaf65cef127855809592e547680a9174c4b66e8aaa0937",
+          "section_id": "recovery-request",
+          "start": 1261,
+          "end": 1505,
+          "text": "A equipe de acesso faz a análise humana antes de qualquer alteração de autenticação. Os critérios de validação de identidade e as etapas posteriores à aprovação não estão documentados nesta base; o atendente não deve completá-los por suposição."
+        }
+      ],
+      "group_id": "access-recovery-request",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T15:53:10Z"
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-dev-003",
+      "question": "Sou administrador do meu espaço de trabalho no NexoDesk. Como consulto e baixo a fatura de um mês específico?",
+      "question_types": [
+        "direct"
+      ],
+      "answerable": true,
+      "reference_answer": "Com a conta autenticada e o perfil Administrador do espaço de trabalho, confira o espaço selecionado. Abra Configurações, Cobrança e Faturas; escolha o mês e o ano e selecione a fatura desejada. Use Baixar fatura na tela dessa fatura para guardar uma cópia. O download não emite uma nova cobrança.",
+      "relevant_document_ids": [
+        "nd-billing-001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-billing-001",
+          "document_version": "1.0.0",
+          "document_sha256": "14d2dd7482cf2619b27bbd0233040aea3ff6abdaf23c0ba208f1b99991ab03b8",
+          "section_id": "scope",
+          "start": 278,
+          "end": 531,
+          "text": "Aplica-se à consulta de faturas do espaço de trabalho selecionado. É necessário estar autenticado e possuir o perfil **Administrador do espaço de trabalho**. O perfil de atendente, por si só, não concede acesso às faturas de outra pessoa ou organização."
+        },
+        {
+          "document_id": "nd-billing-001",
+          "document_version": "1.0.0",
+          "document_sha256": "14d2dd7482cf2619b27bbd0233040aea3ff6abdaf23c0ba208f1b99991ab03b8",
+          "section_id": "invoice-lookup",
+          "start": 587,
+          "end": 1064,
+          "text": "1. Entre no NexoDesk e confira o nome do espaço de trabalho selecionado.\n2. No menu lateral, abra **Configurações** e selecione **Cobrança**.\n3. Abra **Faturas** e escolha o mês e o ano de referência.\n4. Na lista, selecione a fatura desejada para consultar o identificador, o período, o valor e a situação exibidos.\n5. Se precisar guardar uma cópia, use **Baixar fatura** na tela da fatura selecionada. O download é uma cópia do registro existente; não emite uma nova cobrança."
+        }
+      ],
+      "group_id": "invoice-lookup",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T15:53:10Z"
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-dev-004",
+      "question": "O menu Cobrança não aparece para mim no NexoDesk. Posso usar a conta de um colega para ver a fatura?",
+      "question_types": [
+        "exception"
+      ],
+      "answerable": true,
+      "reference_answer": "Não use a conta de outra pessoa nem contorne a permissão. Confira o espaço de trabalho selecionado e se possui o perfil Administrador do espaço de trabalho. Se não possuir esse perfil, procure o administrador desse espaço.",
+      "relevant_document_ids": [
+        "nd-billing-001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-billing-001",
+          "document_version": "1.0.0",
+          "document_sha256": "14d2dd7482cf2619b27bbd0233040aea3ff6abdaf23c0ba208f1b99991ab03b8",
+          "section_id": "scope",
+          "start": 278,
+          "end": 531,
+          "text": "Aplica-se à consulta de faturas do espaço de trabalho selecionado. É necessário estar autenticado e possuir o perfil **Administrador do espaço de trabalho**. O perfil de atendente, por si só, não concede acesso às faturas de outra pessoa ou organização."
+        },
+        {
+          "document_id": "nd-billing-001",
+          "document_version": "1.0.0",
+          "document_sha256": "14d2dd7482cf2619b27bbd0233040aea3ff6abdaf23c0ba208f1b99991ab03b8",
+          "section_id": "exceptions",
+          "start": 1376,
+          "end": 1596,
+          "text": "Se **Cobrança** não aparecer, confira o espaço selecionado e se a pessoa possui o perfil exigido. Se não possuir, oriente a procurar o administrador desse espaço. Não use a conta de outra pessoa nem contorne a permissão."
+        }
+      ],
+      "group_id": "invoice-access-permission",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T15:53:10Z"
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-dev-005",
+      "question": "Estou autenticado no NexoDesk. Onde acompanho um chamado que eu abri?",
+      "question_types": [
+        "direct"
+      ],
+      "answerable": true,
+      "reference_answer": "Confira o espaço de trabalho em que abriu o chamado e use a mesma conta solicitante. Abra Ajuda e Meus chamados, pesquise o protocolo completo ou localize a solicitação na lista da própria conta. Abra o chamado para consultar a situação e o histórico de mensagens. Esse fluxo não permite consultar chamados de outra pessoa apenas por conhecer seu protocolo.",
+      "relevant_document_ids": [
+        "nd-tickets-001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-tickets-001",
+          "document_version": "1.0.0",
+          "document_sha256": "98f5cb7568a754f5b27631dc02e4d241bbd573a8cb531bc46c3515490db6a47e",
+          "section_id": "scope",
+          "start": 280,
+          "end": 522,
+          "text": "É necessário estar autenticado no espaço de trabalho em que o chamado foi registrado. **Meus chamados** mostra somente chamados vinculados à conta solicitante nesse espaço; conhecer um protocolo não permite consultar chamados de outra pessoa."
+        },
+        {
+          "document_id": "nd-tickets-001",
+          "document_version": "1.0.0",
+          "document_sha256": "98f5cb7568a754f5b27631dc02e4d241bbd573a8cb531bc46c3515490db6a47e",
+          "section_id": "ticket-tracking",
+          "start": 568,
+          "end": 961,
+          "text": "1. Entre no NexoDesk e confira o espaço de trabalho selecionado.\n2. No menu lateral, abra **Ajuda** e selecione **Meus chamados**.\n3. Pesquise pelo protocolo completo ou localize a solicitação na lista da própria conta.\n4. Abra o chamado e consulte a situação e o histórico de mensagens. A situação deve ser lida conforme os significados abaixo; não estime uma data de conclusão a partir dela."
+        }
+      ],
+      "group_id": "own-ticket-tracking",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T15:53:10Z"
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-dev-006",
+      "question": "Meu chamado ficou Concluído no NexoDesk. Isso quer dizer que aprovaram meu pedido?",
+      "question_types": [
+        "ambiguous_outcome"
+      ],
+      "answerable": true,
+      "reference_answer": "Não necessariamente. Concluído significa que a equipe encerrou o atendimento com uma resposta no histórico; não significa que uma alteração ou reembolso foi aprovado. Leia a resposta final para saber qual foi a decisão no seu caso.",
+      "relevant_document_ids": [
+        "nd-tickets-001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-tickets-001",
+          "document_version": "1.0.0",
+          "document_sha256": "98f5cb7568a754f5b27631dc02e4d241bbd573a8cb531bc46c3515490db6a47e",
+          "section_id": "ticket-statuses",
+          "start": 1545,
+          "end": 1720,
+          "text": "- **Concluído:** equipe encerrou o atendimento com uma resposta no histórico. Não significa necessariamente que uma alteração ou reembolso foi aprovado; leia a resposta final."
+        }
+      ],
+      "group_id": "ticket-completion-meaning",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T15:53:10Z"
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-dev-007",
+      "question": "Qual é o prazo de reembolso de uma cobrança do NexoDesk?",
+      "question_types": [
+        "unanswerable"
+      ],
+      "answerable": false,
+      "reference_answer": null,
+      "relevant_document_ids": [],
+      "evidence_spans": [],
+      "group_id": "refund-policy-unavailable",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T15:53:10Z"
+      },
+      "abstention_reason": "O corpus piloto não estabelece direito, procedimento ou prazo de reembolso. A orientação de registrar uma divergência não responde ao prazo solicitado.",
+      "expected_abstention": "A base não informa prazo de reembolso. Encaminhe a dúvida à revisão humana, sem prometer um prazo ou resultado.",
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-dev-008",
+      "question": "Como resolvo esse problema no NexoDesk?",
+      "question_types": [
+        "ambiguous",
+        "unanswerable"
+      ],
+      "answerable": false,
+      "reference_answer": null,
+      "relevant_document_ids": [],
+      "evidence_spans": [],
+      "group_id": "missing-problem-context",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T15:53:10Z"
+      },
+      "abstention_reason": "A pergunta não identifica o problema nem fornece contexto para escolher entre os procedimentos do piloto. Não há uma solução específica sustentada por evidências.",
+      "expected_abstention": "Preciso de mais contexto para orientar com base nos procedimentos disponíveis.",
+      "clarification_question": "O problema é de acesso à conta, consulta de fatura ou acompanhamento de chamado? Descreva o que aconteceu sem enviar senhas ou códigos."
+    },
+    {
+      "question_id": "rag-dev-009",
+      "question": "Esqueci minha senha, mas leio o e-mail da conta. Como redefino a senha do NexoDesk?",
+      "question_types": [
+        "direct"
+      ],
+      "answerable": true,
+      "reference_answer": "Na tela de entrada, use Esqueci minha senha, informe o e-mail cadastrado e solicite uma redefinição. Confira entrada e mensagens indesejadas. Se receber a mensagem solicitada e o destino for confiável, preencha Nova senha e Confirmar nova senha e salve. Após confirmação, entre com a nova senha e o segundo fator quando exigido.",
+      "relevant_document_ids": [
+        "nd-access-002"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-access-002",
+          "document_version": "1.0.0",
+          "document_sha256": "928f46e70ab01f093a5bbb62d67bfea0e428f6410ab28b6e821180ca8c763cab",
+          "section_id": "scope",
+          "start": 77,
+          "end": 487,
+          "text": "Procedimento fictício do NexoDesk, criado para o SupportAI. Rascunho sem revisão humana; não descreve um serviço real. A versão, a origem e a situação de licença constam no manifesto do corpus.\n\nAplica-se à pessoa que esqueceu a senha, conhece o e-mail cadastrado e ainda consegue ler esse e-mail. Redefinir a senha não remove a exigência do autenticador. Para perda do segundo fator, consulte `nd-access-001`."
+        },
+        {
+          "document_id": "nd-access-002",
+          "document_version": "1.0.0",
+          "document_sha256": "928f46e70ab01f093a5bbb62d67bfea0e428f6410ab28b6e821180ca8c763cab",
+          "section_id": "password-reset",
+          "start": 531,
+          "end": 1274,
+          "text": "1. Na tela de entrada, selecione **Esqueci minha senha**.\n2. Informe o e-mail cadastrado e selecione **Solicitar redefinição** uma única vez. Não envie a senha antiga ao suporte.\n3. Confira a caixa de entrada e a pasta de mensagens indesejadas. A mensagem na tela confirma a solicitação, mas não comprova a entrega do e-mail nem a existência de uma conta.\n4. Se receber a mensagem de redefinição solicitada, abra o link e preencha **Nova senha** e **Confirmar nova senha**, conforme as exigências exibidas na própria tela. Se o destino parecer suspeito, não informe credenciais e encaminhe à revisão humana.\n5. Selecione **Salvar senha**. Somente após a confirmação de alteração tente entrar com a nova senha e o segundo fator, quando exigido."
+        }
+      ],
+      "group_id": "password-reset",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-dev-010",
+      "question": "Não lembro a senha; ainda tenho meu e-mail. Qual o caminho pra trocar a senha e entrar?",
+      "question_types": [
+        "paraphrase"
+      ],
+      "answerable": true,
+      "reference_answer": "Na tela de entrada, use Esqueci minha senha, informe o e-mail cadastrado e solicite uma redefinição. Confira entrada e mensagens indesejadas. Se receber a mensagem solicitada e o destino for confiável, preencha Nova senha e Confirmar nova senha e salve. Após confirmação, entre com a nova senha e o segundo fator quando exigido.",
+      "relevant_document_ids": [
+        "nd-access-002"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-access-002",
+          "document_version": "1.0.0",
+          "document_sha256": "928f46e70ab01f093a5bbb62d67bfea0e428f6410ab28b6e821180ca8c763cab",
+          "section_id": "scope",
+          "start": 77,
+          "end": 487,
+          "text": "Procedimento fictício do NexoDesk, criado para o SupportAI. Rascunho sem revisão humana; não descreve um serviço real. A versão, a origem e a situação de licença constam no manifesto do corpus.\n\nAplica-se à pessoa que esqueceu a senha, conhece o e-mail cadastrado e ainda consegue ler esse e-mail. Redefinir a senha não remove a exigência do autenticador. Para perda do segundo fator, consulte `nd-access-001`."
+        },
+        {
+          "document_id": "nd-access-002",
+          "document_version": "1.0.0",
+          "document_sha256": "928f46e70ab01f093a5bbb62d67bfea0e428f6410ab28b6e821180ca8c763cab",
+          "section_id": "password-reset",
+          "start": 531,
+          "end": 1274,
+          "text": "1. Na tela de entrada, selecione **Esqueci minha senha**.\n2. Informe o e-mail cadastrado e selecione **Solicitar redefinição** uma única vez. Não envie a senha antiga ao suporte.\n3. Confira a caixa de entrada e a pasta de mensagens indesejadas. A mensagem na tela confirma a solicitação, mas não comprova a entrega do e-mail nem a existência de uma conta.\n4. Se receber a mensagem de redefinição solicitada, abra o link e preencha **Nova senha** e **Confirmar nova senha**, conforme as exigências exibidas na própria tela. Se o destino parecer suspeito, não informe credenciais e encaminhe à revisão humana.\n5. Selecione **Salvar senha**. Somente após a confirmação de alteração tente entrar com a nova senha e o segundo fator, quando exigido."
+        }
+      ],
+      "group_id": "password-reset",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-dev-011",
+      "question": "Esqueci a senha e perdi também o acesso ao e-mail cadastrado. A base garante recuperar minha conta?",
+      "question_types": [
+        "exception"
+      ],
+      "answerable": true,
+      "reference_answer": "Não há garantia de recuperação sem o e-mail. Encaminhe essa limitação à revisão humana e não use o endereço de outra pessoa.",
+      "relevant_document_ids": [
+        "nd-access-002"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-access-002",
+          "document_version": "1.0.0",
+          "document_sha256": "928f46e70ab01f093a5bbb62d67bfea0e428f6410ab28b6e821180ca8c763cab",
+          "section_id": "exceptions",
+          "start": 1319,
+          "end": 1583,
+          "text": "Se o link for recusado, volte à tela de entrada e solicite uma nova mensagem. Não repita pedidos sucessivos se a entrega falhar. Se não receber a mensagem ou também tiver perdido o e-mail, encaminhe a limitação à revisão humana; não use o endereço de outra pessoa."
+        },
+        {
+          "document_id": "nd-access-002",
+          "document_version": "1.0.0",
+          "document_sha256": "928f46e70ab01f093a5bbb62d67bfea0e428f6410ab28b6e821180ca8c763cab",
+          "section_id": "limits",
+          "start": 1622,
+          "end": 1822,
+          "text": "Não há prazo de entrega, duração do link ou critérios de senha definidos nesta base. Não invente esses valores. Não se garante recuperação sem e-mail, encerramento de outras sessões ou remoção de 2FA."
+        }
+      ],
+      "group_id": "password-reset",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-dev-012",
+      "question": "Recebi um convite esperado para um espaço. Como aceito sem entrar com a conta errada?",
+      "question_types": [
+        "direct"
+      ],
+      "answerable": true,
+      "reference_answer": "Confira com quem combinou o convite, o espaço e o destino do link. Abra o convite esperado, confira destinatário e espaço e entre com a conta do e-mail convidado. Aceite e aguarde confirmação; confira o seletor de espaços. Se estiver em outra conta, saia dela antes. O aceite não atribui automaticamente perfil administrativo.",
+      "relevant_document_ids": [
+        "nd-access-003"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-access-003",
+          "document_version": "1.0.0",
+          "document_sha256": "6fe55da438a01e09d491be4c4b654daa571eae9f36afe4953accbf7a7cd943db",
+          "section_id": "invitation-acceptance",
+          "start": 522,
+          "end": 1242,
+          "text": "1. Confira quem combinou o convite e o nome do espaço. Se não reconhecer a solicitação ou o destino do link, não informe credenciais; peça confirmação ao administrador por um contato já conhecido.\n2. Abra o convite esperado. Confira o e-mail destinatário e o espaço apresentados na tela.\n3. Entre com a conta correspondente ao e-mail convidado. Se a tela exigir criar uma conta que ainda não existe, siga apenas os campos e requisitos apresentados; este procedimento não define um cadastro alternativo.\n4. Confira o espaço e selecione **Aceitar convite**. Aguarde a confirmação.\n5. Confira se o espaço ficou disponível no seletor. Aceitar convite não atribui automaticamente o perfil Administrador do espaço de trabalho."
+        },
+        {
+          "document_id": "nd-access-003",
+          "document_version": "1.0.0",
+          "document_sha256": "6fe55da438a01e09d491be4c4b654daa571eae9f36afe4953accbf7a7cd943db",
+          "section_id": "exceptions",
+          "start": 1287,
+          "end": 1535,
+          "text": "Se estiver usando outra conta, saia dela conforme `nd-access-006` e entre com a conta convidada. Se o convite aparecer inválido ou não permitir o aceite, peça ao administrador para verificar seu registro conforme `nd-access-004`; não altere o link."
+        }
+      ],
+      "group_id": "invitation-acceptance",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-dev-013",
+      "question": "Me convidaram pro NexoDesk. Posso aceitar com qualquer uma das minhas contas?",
+      "question_types": [
+        "paraphrase"
+      ],
+      "answerable": true,
+      "reference_answer": "Use a conta correspondente ao e-mail destinatário do convite. Não encaminhe o convite para outra conta. Se estiver em outra conta, saia dela e entre com a conta convidada.",
+      "relevant_document_ids": [
+        "nd-access-003"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-access-003",
+          "document_version": "1.0.0",
+          "document_sha256": "6fe55da438a01e09d491be4c4b654daa571eae9f36afe4953accbf7a7cd943db",
+          "section_id": "scope",
+          "start": 76,
+          "end": 463,
+          "text": "Procedimento fictício do NexoDesk, criado para o SupportAI. Rascunho sem revisão humana; não descreve um serviço real. A versão, a origem e a situação de licença constam no manifesto do corpus.\n\nAplica-se à pessoa que recebeu um convite esperado para um espaço do NexoDesk. O convite destina-se ao endereço informado pelo administrador; não deve ser encaminhado para uso por outra conta."
+        },
+        {
+          "document_id": "nd-access-003",
+          "document_version": "1.0.0",
+          "document_sha256": "6fe55da438a01e09d491be4c4b654daa571eae9f36afe4953accbf7a7cd943db",
+          "section_id": "invitation-acceptance",
+          "start": 522,
+          "end": 1242,
+          "text": "1. Confira quem combinou o convite e o nome do espaço. Se não reconhecer a solicitação ou o destino do link, não informe credenciais; peça confirmação ao administrador por um contato já conhecido.\n2. Abra o convite esperado. Confira o e-mail destinatário e o espaço apresentados na tela.\n3. Entre com a conta correspondente ao e-mail convidado. Se a tela exigir criar uma conta que ainda não existe, siga apenas os campos e requisitos apresentados; este procedimento não define um cadastro alternativo.\n4. Confira o espaço e selecione **Aceitar convite**. Aguarde a confirmação.\n5. Confira se o espaço ficou disponível no seletor. Aceitar convite não atribui automaticamente o perfil Administrador do espaço de trabalho."
+        },
+        {
+          "document_id": "nd-access-003",
+          "document_version": "1.0.0",
+          "document_sha256": "6fe55da438a01e09d491be4c4b654daa571eae9f36afe4953accbf7a7cd943db",
+          "section_id": "exceptions",
+          "start": 1287,
+          "end": 1535,
+          "text": "Se estiver usando outra conta, saia dela conforme `nd-access-006` e entre com a conta convidada. Se o convite aparecer inválido ou não permitir o aceite, peça ao administrador para verificar seu registro conforme `nd-access-004`; não altere o link."
+        }
+      ],
+      "group_id": "invitation-acceptance",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-dev-014",
+      "question": "Sou administrador. Como convido um membro comum para meu espaço?",
+      "question_types": [
+        "direct"
+      ],
+      "answerable": true,
+      "reference_answer": "Confira o espaço e abra Configurações, Pessoas, Convites. Confira se o endereço já consta antes de criar outro convite. Se não houver, selecione Convidar pessoa, confira o e-mail autorizado e envie uma única vez. Confira a entrada na lista e oriente o destinatário a aceitar. O registro não comprova entrega ou aceite nem concede perfil administrativo.",
+      "relevant_document_ids": [
+        "nd-access-004"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-access-004",
+          "document_version": "1.0.0",
+          "document_sha256": "e8781c633a2622e9273a83ccd6b964c3b8ed6de927ce3b3408d936db53c0f6fc",
+          "section_id": "scope",
+          "start": 82,
+          "end": 499,
+          "text": "Procedimento fictício do NexoDesk, criado para o SupportAI. Rascunho sem revisão humana; não descreve um serviço real. A versão, a origem e a situação de licença constam no manifesto do corpus.\n\nExige conta autenticada com perfil Administrador do espaço de trabalho selecionado. Convidar uma pessoa não autoriza compartilhar credenciais. Este fluxo permite convite de membro comum, sem conceder perfil administrativo."
+        },
+        {
+          "document_id": "nd-access-004",
+          "document_version": "1.0.0",
+          "document_sha256": "e8781c633a2622e9273a83ccd6b964c3b8ed6de927ce3b3408d936db53c0f6fc",
+          "section_id": "workspace-invitation",
+          "start": 548,
+          "end": 1237,
+          "text": "1. Confira o espaço de trabalho e abra **Configurações**, **Pessoas**, **Convites**.\n2. Antes de criar outro convite, confira se o e-mail esperado já aparece na lista de convites. Use apenas dados necessários da pessoa que autorizou o convite.\n3. Se não houver convite para esse endereço, selecione **Convidar pessoa** e preencha **E-mail**. Confira cuidadosamente o destinatário; não use um endereço de teste pertencente a terceiros.\n4. Selecione **Enviar convite** uma única vez. Aguarde a confirmação e confira a entrada na lista.\n5. Oriente a pessoa destinatária a seguir `nd-access-003`. A presença na lista confirma o registro do convite; não comprova entrega da mensagem nem aceite."
+        }
+      ],
+      "group_id": "workspace-invitation",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-dev-015",
+      "question": "Já existe um convite pro mesmo e-mail, mas a pessoa não consegue aceitar. Envio outro?",
+      "question_types": [
+        "exception"
+      ],
+      "answerable": true,
+      "reference_answer": "Não crie duplicatas. Confira a situação exibida e peça revisão humana se a pessoa não puder aceitar. A base não define reenvio, cancelamento ou edição do destinatário.",
+      "relevant_document_ids": [
+        "nd-access-004"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-access-004",
+          "document_version": "1.0.0",
+          "document_sha256": "e8781c633a2622e9273a83ccd6b964c3b8ed6de927ce3b3408d936db53c0f6fc",
+          "section_id": "exceptions",
+          "start": 1282,
+          "end": 1567,
+          "text": "Se já houver um convite para o endereço, não crie duplicatas. Confira a situação exibida e peça revisão humana se a pessoa não puder aceitar. Esta base não define reenvio, cancelamento ou edição do destinatário. Se o menu não aparecer, confira o perfil e o espaço sem usar outra conta."
+        }
+      ],
+      "group_id": "workspace-invitation",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-dev-016",
+      "question": "Como descubro meu perfil no espaço e peço a permissão que falta?",
+      "question_types": [
+        "direct"
+      ],
+      "answerable": true,
+      "reference_answer": "Confira o espaço, abra o menu da conta e Meu perfil e leia Perfil no espaço. Compare com o requisito do procedimento. Se faltar permissão, procure o administrador e explique a finalidade sem compartilhar credenciais. Aguarde a decisão e confira o perfil antes de tentar novamente; o pedido não muda o acesso sozinho.",
+      "relevant_document_ids": [
+        "nd-access-005"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-access-005",
+          "document_version": "1.0.0",
+          "document_sha256": "e2ddd2003631ec0438187d25278a8e9a8a5b2b5cdb0e8b906c7c251c295f1d61",
+          "section_id": "permission-request",
+          "start": 559,
+          "end": 1235,
+          "text": "1. Confira o espaço selecionado. Abra o menu da conta e selecione **Meu perfil**.\n2. Leia o campo **Perfil no espaço**. Ele informa o perfil da própria conta no espaço atual, sem listar permissões de outras pessoas.\n3. Compare o requisito do procedimento pretendido com o perfil exibido. Para faturas, `nd-billing-001` exige Administrador do espaço de trabalho.\n4. Se faltar a permissão exigida, procure o administrador do espaço e descreva o menu necessário e a finalidade, sem compartilhar senha ou códigos.\n5. Aguarde a decisão do responsável. Um pedido registrado ou uma descrição de cargo não alteram o perfil; confirme novamente o campo antes de tentar o fluxo restrito."
+        }
+      ],
+      "group_id": "invoice-access-permission",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-dev-017",
+      "question": "Estou autenticado. Como abro um chamado comum no NexoDesk?",
+      "question_types": [
+        "direct"
+      ],
+      "answerable": true,
+      "reference_answer": "Confira o espaço, abra Ajuda e Novo chamado. Preencha Assunto e Descrição com o que tentou, o resultado e o esperado, removendo segredos e dados pessoais. Revise e envie uma única vez; aguarde confirmação. Guarde o protocolo e acompanhe com a mesma conta e espaço. Registro não equivale a aprovação ou prazo.",
+      "relevant_document_ids": [
+        "nd-tickets-002"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-tickets-002",
+          "document_version": "1.0.0",
+          "document_sha256": "4256792faf41a9956d75f0494d2b2345bca5cdbd074b69201f074b291b26243d",
+          "section_id": "scope",
+          "start": 71,
+          "end": 557,
+          "text": "Procedimento fictício do NexoDesk, criado para o SupportAI. Rascunho sem revisão humana; não descreve um serviço real. A versão, a origem e a situação de licença constam no manifesto do corpus.\n\nAplica-se à abertura de um chamado comum por uma pessoa autenticada no espaço de trabalho correto. Não substitui a solicitação de recuperação de acesso de `nd-access-001`, que começa na tela de entrada sem login. O assistente pode explicar os passos, mas não envia a solicitação pela pessoa."
+        },
+        {
+          "document_id": "nd-tickets-002",
+          "document_version": "1.0.0",
+          "document_sha256": "4256792faf41a9956d75f0494d2b2345bca5cdbd074b69201f074b291b26243d",
+          "section_id": "ticket-creation",
+          "start": 605,
+          "end": 1682,
+          "text": "1. Entre no NexoDesk e confira o nome do espaço de trabalho em que precisa de suporte. Se não souber qual selecionar, peça esclarecimento antes de continuar.\n2. No menu lateral, abra **Ajuda** e selecione **Novo chamado**.\n3. Preencha **Assunto** com um resumo e **Descrição** com o que tentou fazer, o que aconteceu e o que esperava. Inclua a mensagem de erro, se houver, após remover dados pessoais e segredos. Não envie senhas, códigos de autenticação, dados de cartão ou dados de outras pessoas.\n4. Confira o espaço de trabalho e o texto e selecione **Enviar** uma única vez. Aguarde a confirmação antes de tentar novamente.\n5. Se a confirmação exibir um protocolo, guarde-o. Ele comprova o registro do chamado; não representa aprovação do pedido nem prazo de atendimento. Acompanhe a situação pelo procedimento `nd-tickets-001`, com a mesma conta solicitante e no mesmo espaço.\n\nO registro de uma divergência de fatura segue esse caminho. Nesse caso, informe o identificador da fatura e a divergência, conforme `nd-billing-001`; não inclua comprovantes com dados pessoais."
+        }
+      ],
+      "group_id": "ticket-creation",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-dev-018",
+      "question": "Preciso mandar uma solicitação de suporte pela minha conta. Onde preencho e confirmo o chamado?",
+      "question_types": [
+        "paraphrase"
+      ],
+      "answerable": true,
+      "reference_answer": "Confira o espaço, abra Ajuda e Novo chamado. Preencha Assunto e Descrição com o que tentou, o resultado e o esperado, removendo segredos e dados pessoais. Revise e envie uma única vez; aguarde confirmação. Guarde o protocolo e acompanhe com a mesma conta e espaço. Registro não equivale a aprovação ou prazo.",
+      "relevant_document_ids": [
+        "nd-tickets-002"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-tickets-002",
+          "document_version": "1.0.0",
+          "document_sha256": "4256792faf41a9956d75f0494d2b2345bca5cdbd074b69201f074b291b26243d",
+          "section_id": "scope",
+          "start": 71,
+          "end": 557,
+          "text": "Procedimento fictício do NexoDesk, criado para o SupportAI. Rascunho sem revisão humana; não descreve um serviço real. A versão, a origem e a situação de licença constam no manifesto do corpus.\n\nAplica-se à abertura de um chamado comum por uma pessoa autenticada no espaço de trabalho correto. Não substitui a solicitação de recuperação de acesso de `nd-access-001`, que começa na tela de entrada sem login. O assistente pode explicar os passos, mas não envia a solicitação pela pessoa."
+        },
+        {
+          "document_id": "nd-tickets-002",
+          "document_version": "1.0.0",
+          "document_sha256": "4256792faf41a9956d75f0494d2b2345bca5cdbd074b69201f074b291b26243d",
+          "section_id": "ticket-creation",
+          "start": 605,
+          "end": 1682,
+          "text": "1. Entre no NexoDesk e confira o nome do espaço de trabalho em que precisa de suporte. Se não souber qual selecionar, peça esclarecimento antes de continuar.\n2. No menu lateral, abra **Ajuda** e selecione **Novo chamado**.\n3. Preencha **Assunto** com um resumo e **Descrição** com o que tentou fazer, o que aconteceu e o que esperava. Inclua a mensagem de erro, se houver, após remover dados pessoais e segredos. Não envie senhas, códigos de autenticação, dados de cartão ou dados de outras pessoas.\n4. Confira o espaço de trabalho e o texto e selecione **Enviar** uma única vez. Aguarde a confirmação antes de tentar novamente.\n5. Se a confirmação exibir um protocolo, guarde-o. Ele comprova o registro do chamado; não representa aprovação do pedido nem prazo de atendimento. Acompanhe a situação pelo procedimento `nd-tickets-001`, com a mesma conta solicitante e no mesmo espaço.\n\nO registro de uma divergência de fatura segue esse caminho. Nesse caso, informe o identificador da fatura e a divergência, conforme `nd-billing-001`; não inclua comprovantes com dados pessoais."
+        }
+      ],
+      "group_id": "ticket-creation",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-dev-019",
+      "question": "Cliquei em Enviar no novo chamado, mas não vi protocolo. Devo mandar tudo de novo?",
+      "question_types": [
+        "exception"
+      ],
+      "answerable": true,
+      "reference_answer": "Não afirme que foi registrado nem reenvie repetidamente. Confira Meus chamados com a mesma conta e espaço. Se localizar, acompanhe; se não localizar ou não conseguir conferir, encaminhe à revisão humana antes de novo envio. Ausência na lista não prova falha do registro.",
+      "relevant_document_ids": [
+        "nd-tickets-002"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-tickets-002",
+          "document_version": "1.0.0",
+          "document_sha256": "4256792faf41a9956d75f0494d2b2345bca5cdbd074b69201f074b291b26243d",
+          "section_id": "exceptions",
+          "start": 1730,
+          "end": 2343,
+          "text": "Se **Novo chamado** não aparecer, confira se está autenticado e no espaço esperado. Se continuar ausente, registre a limitação para revisão humana; não use a conta de outra pessoa. Este procedimento não documenta alteração de permissões.\n\nSe ocorrer erro ou não houver protocolo, não afirme que o envio foi registrado nem reenvie repetidamente. Confira **Meus chamados** com a mesma conta e no mesmo espaço. Se localizar o chamado, acompanhe-o; se não localizar ou não conseguir conferir, encaminhe a limitação à revisão humana antes de novo envio. A ausência na lista não prova, por si só, que o registro falhou."
+        }
+      ],
+      "group_id": "ticket-creation",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-dev-020",
+      "question": "Meu chamado está Aguardando solicitante e pediram mais informações. Como respondo?",
+      "question_types": [
+        "direct"
+      ],
+      "answerable": true,
+      "reference_answer": "Abra Ajuda e Meus chamados na conta e espaço corretos, localize seu chamado e leia o pedido no histórico. Use Adicionar resposta, informe somente o necessário sem segredos, revise e envie uma vez. Confira a mensagem no histórico. Registro não comprova aprovação nem permite estimar prazo.",
+      "relevant_document_ids": [
+        "nd-tickets-003"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-tickets-003",
+          "document_version": "1.0.0",
+          "document_sha256": "c8e94b617d0b8d77a33203d48efc5bbe4d1828e8f69f7934d6f3abc92fc5c015",
+          "section_id": "scope",
+          "start": 84,
+          "end": 581,
+          "text": "Procedimento fictício do NexoDesk, criado para o SupportAI. Rascunho sem revisão humana; não descreve um serviço real. A versão, a origem e a situação de licença constam no manifesto do corpus.\n\nAplica-se à conta solicitante autenticada, no espaço em que abriu o chamado, quando a equipe pediu informações e o chamado está em **Aguardando solicitante**. O procedimento de localização está em `nd-tickets-001`. Conhecer o protocolo não concede permissão para responder a um chamado de outra pessoa."
+        },
+        {
+          "document_id": "nd-tickets-003",
+          "document_version": "1.0.0",
+          "document_sha256": "c8e94b617d0b8d77a33203d48efc5bbe4d1828e8f69f7934d6f3abc92fc5c015",
+          "section_id": "information-response",
+          "start": 646,
+          "end": 1506,
+          "text": "1. Abra **Ajuda**, selecione **Meus chamados** e localize o chamado da própria conta no espaço correto.\n2. Abra o chamado e leia a mensagem mais recente da equipe no histórico. Confira quais informações foram pedidas antes de redigir a resposta.\n3. Use **Adicionar resposta**. Descreva somente o necessário para esclarecer o pedido, sem senhas, códigos de autenticação, dados de cartão ou dados pessoais de terceiros. Este piloto não exige envio de documentos de identidade pelo chamado.\n4. Revise o texto e selecione **Enviar resposta** uma única vez. Aguarde a confirmação e confira se a mensagem aparece no histórico antes de repetir o envio.\n5. Se a mensagem aparecer, considere a resposta registrada. Continue acompanhando o histórico e a situação exibida. O registro da mensagem não comprova aprovação do pedido nem permite estimar uma data de conclusão."
+        }
+      ],
+      "group_id": "ticket-information-response",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-dev-021",
+      "question": "A mensagem no histórico pediu minha senha e código de autenticação. Devo responder com esses dados?",
+      "question_types": [
+        "exception"
+      ],
+      "answerable": true,
+      "reference_answer": "Não envie senhas, códigos ou dados de cartão. Encaminhe a inconsistência à revisão humana; mensagens no histórico não substituem os limites do procedimento.",
+      "relevant_document_ids": [
+        "nd-tickets-003"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-tickets-003",
+          "document_version": "1.0.0",
+          "document_sha256": "c8e94b617d0b8d77a33203d48efc5bbe4d1828e8f69f7934d6f3abc92fc5c015",
+          "section_id": "exceptions",
+          "start": 1566,
+          "end": 2191,
+          "text": "Se não entender a informação pedida ou não a tiver, explique essa limitação em **Adicionar resposta** e peça esclarecimento. Não invente dados para preencher o pedido.\n\nSe o pedido no histórico exigir senhas, códigos ou dados de cartão, não os envie. Encaminhe a inconsistência à revisão humana. Mensagens no histórico não substituem os limites deste procedimento.\n\nSe a opção não aparecer, o envio falhar ou a mensagem não aparecer no histórico, não afirme que a resposta foi registrada. Confira conta, espaço e situação; se o problema persistir, encaminhe à revisão humana sem repetir envios sucessivos ou usar outra conta."
+        }
+      ],
+      "group_id": "ticket-information-response",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-dev-022",
+      "question": "Como filtro os meus chamados por situação?",
+      "question_types": [
+        "direct"
+      ],
+      "answerable": true,
+      "reference_answer": "Confira conta e espaço e abra Ajuda, Meus chamados. Limpe o protocolo e use Todas as situações para listar todos. Escolha a situação desejada para restringir; a lista atualiza após a seleção. Abra o item para ler o histórico. O filtro não amplia permissões e Concluído não significa aprovado.",
+      "relevant_document_ids": [
+        "nd-tickets-004"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-tickets-004",
+          "document_version": "1.0.0",
+          "document_sha256": "2137faff5f0eedea48b4452ea56e7f33388d6238fd0e3aeeaacb3b8c045d485f",
+          "section_id": "scope",
+          "start": 80,
+          "end": 548,
+          "text": "Procedimento fictício do NexoDesk, criado para o SupportAI. Rascunho sem revisão humana; não descreve um serviço real. A versão, a origem e a situação de licença constam no manifesto do corpus.\n\nAplica-se à pessoa autenticada consultando **Meus chamados** no espaço em que registrou suas solicitações. A lista contém somente chamados vinculados à própria conta, conforme `nd-tickets-001`. Filtros ajudam a localizar itens dessa lista; não ampliam permissões de acesso."
+        },
+        {
+          "document_id": "nd-tickets-004",
+          "document_version": "1.0.0",
+          "document_sha256": "2137faff5f0eedea48b4452ea56e7f33388d6238fd0e3aeeaacb3b8c045d485f",
+          "section_id": "status-filter",
+          "start": 591,
+          "end": 1691,
+          "text": "1. Confira a conta e o espaço de trabalho selecionados. No menu lateral, abra **Ajuda** e selecione **Meus chamados**.\n2. Para listar todos os chamados da própria conta nesse espaço, limpe o campo de protocolo e selecione **Todas as situações** no filtro **Situação**.\n3. Para restringir a lista, selecione uma situação: **Recebido**, **Em análise**, **Aguardando solicitante** ou **Concluído**. A lista é atualizada após a seleção; não há botão adicional de aplicação neste fluxo.\n4. Abra um item da lista para consultar o histórico. Interprete o estado conforme `nd-tickets-001`; um filtro por **Concluído** não identifica pedidos aprovados.\n5. Para procurar um protocolo específico, volte a **Todas as situações** e informe o protocolo completo no campo de pesquisa. Ao terminar, limpe o campo se quiser voltar à lista completa da própria conta.\n\nQuando um protocolo e uma situação específica estiverem preenchidos ao mesmo tempo, a lista mostrará somente chamados que atendam às duas condições. Se não houver resultado, remova a restrição de situação antes de concluir que o chamado está ausente."
+        }
+      ],
+      "group_id": "own-ticket-filters",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-dev-023",
+      "question": "Busquei um protocolo com o filtro Em análise e não apareceu. Isso prova que foi excluído?",
+      "question_types": [
+        "exception"
+      ],
+      "answerable": true,
+      "reference_answer": "Não. Protocolo e situação são condições combinadas. Selecione Todas as situações, confira o protocolo completo, a conta e o espaço. Se continuar ausente, siga a revisão humana; lista vazia não comprova exclusão.",
+      "relevant_document_ids": [
+        "nd-tickets-004"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-tickets-004",
+          "document_version": "1.0.0",
+          "document_sha256": "2137faff5f0eedea48b4452ea56e7f33388d6238fd0e3aeeaacb3b8c045d485f",
+          "section_id": "status-filter",
+          "start": 591,
+          "end": 1691,
+          "text": "1. Confira a conta e o espaço de trabalho selecionados. No menu lateral, abra **Ajuda** e selecione **Meus chamados**.\n2. Para listar todos os chamados da própria conta nesse espaço, limpe o campo de protocolo e selecione **Todas as situações** no filtro **Situação**.\n3. Para restringir a lista, selecione uma situação: **Recebido**, **Em análise**, **Aguardando solicitante** ou **Concluído**. A lista é atualizada após a seleção; não há botão adicional de aplicação neste fluxo.\n4. Abra um item da lista para consultar o histórico. Interprete o estado conforme `nd-tickets-001`; um filtro por **Concluído** não identifica pedidos aprovados.\n5. Para procurar um protocolo específico, volte a **Todas as situações** e informe o protocolo completo no campo de pesquisa. Ao terminar, limpe o campo se quiser voltar à lista completa da própria conta.\n\nQuando um protocolo e uma situação específica estiverem preenchidos ao mesmo tempo, a lista mostrará somente chamados que atendam às duas condições. Se não houver resultado, remova a restrição de situação antes de concluir que o chamado está ausente."
+        },
+        {
+          "document_id": "nd-tickets-004",
+          "document_version": "1.0.0",
+          "document_sha256": "2137faff5f0eedea48b4452ea56e7f33388d6238fd0e3aeeaacb3b8c045d485f",
+          "section_id": "exceptions",
+          "start": 1744,
+          "end": 2122,
+          "text": "Se não houver resultados, limpe a pesquisa, selecione **Todas as situações** e confira conta e espaço. Se o chamado continuar ausente, siga a orientação de revisão humana de `nd-tickets-001`; não conclua que foi excluído.\n\nSe o filtro ou o campo de pesquisa não aparecer, registre a limitação para revisão humana. Não invente outro menu ou prometa acesso por um endereço direto."
+        }
+      ],
+      "group_id": "own-ticket-filters",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-dev-024",
+      "question": "O campo Período da fatura é o vencimento? O protocolo do chamado serve como identificador da fatura?",
+      "question_types": [
+        "direct"
+      ],
+      "answerable": true,
+      "reference_answer": "Período identifica a referência do registro e não deve ser tratado como prazo de pagamento. Use o Identificador da própria fatura ao relatar divergência, sem substituí-lo pelo protocolo do chamado.",
+      "relevant_document_ids": [
+        "nd-billing-002"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-billing-002",
+          "document_version": "1.0.0",
+          "document_sha256": "1c7f3f9dd73ce276b8b8461831969591548902ef065eb685c4db7526a175c674",
+          "section_id": "invoice-fields",
+          "start": 503,
+          "end": 1187,
+          "text": "1. Localize a fatura pelo mês e ano em **Configurações**, **Cobrança**, **Faturas**, conforme `nd-billing-001`.\n2. Confira o **Identificador** da fatura. Use esse identificador ao relatar uma divergência; não o substitua pelo protocolo de um chamado.\n3. Leia o **Período** exibido para identificar a referência do registro. Não o trate como prazo de pagamento.\n4. Leia **Valor** e **Situação** exatamente como apresentados. O download é uma cópia do registro; não comprova pagamento ou ausência de débitos.\n5. Se houver uma divergência, abra um chamado com identificador e descrição conforme `nd-billing-001` e `nd-tickets-002`, sem dados de cartão ou comprovantes com dados pessoais."
+        }
+      ],
+      "group_id": "invoice-field-interpretation",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-dev-025",
+      "question": "Sou administrador e quero mudar de plano. Posso efetivar a mudança pelo assistente?",
+      "question_types": [
+        "direct"
+      ],
+      "answerable": true,
+      "reference_answer": "O assistente não aprova a proposta. Confira espaço e perfil e abra Ajuda, Novo chamado com assunto Solicitação de alteração de plano. Descreva objetivo e funcionalidades necessárias sem inventar um plano. Envie uma vez, guarde protocolo e acompanhe. É um pedido para análise humana; não comprova contratação, cancelamento ou mudança efetivada.",
+      "relevant_document_ids": [
+        "nd-service-001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-service-001",
+          "document_version": "1.0.0",
+          "document_sha256": "261dece59babb87adb64d823a534114dfe50c570b3a4cd2fad83b89181a425d6",
+          "section_id": "scope",
+          "start": 68,
+          "end": 444,
+          "text": "Procedimento fictício do NexoDesk, criado para o SupportAI. Rascunho sem revisão humana; não descreve um serviço real. A versão, a origem e a situação de licença constam no manifesto do corpus.\n\nAplica-se ao Administrador do espaço de trabalho autenticado que quer solicitar análise de mudança de plano. O piloto não contém catálogo de planos, preços ou condições contratuais."
+        },
+        {
+          "document_id": "nd-service-001",
+          "document_version": "1.0.0",
+          "document_sha256": "261dece59babb87adb64d823a534114dfe50c570b3a4cd2fad83b89181a425d6",
+          "section_id": "plan-change-request",
+          "start": 502,
+          "end": 1120,
+          "text": "1. Confira o espaço de trabalho e o perfil da própria conta.\n2. Abra **Ajuda**, **Novo chamado**, conforme `nd-tickets-002`.\n3. No assunto, indique **Solicitação de alteração de plano**. Na descrição, informe o objetivo da mudança e as funcionalidades de que precisa. Não invente o nome de um plano se não o souber.\n4. Envie uma única solicitação e guarde o protocolo confirmado. Solicitação registrada não significa contratação, cancelamento ou mudança efetivada.\n5. Acompanhe a resposta em **Meus chamados**. Condições e eventual autorização da mudança dependem de análise humana; o assistente não aprova a proposta."
+        }
+      ],
+      "group_id": "plan-change-request",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-dev-026",
+      "question": "Sou administrador. Como altero somente o nome exibido do espaço?",
+      "question_types": [
+        "direct"
+      ],
+      "answerable": true,
+      "reference_answer": "Confira o espaço, abra Configurações, Espaço de trabalho e o campo Nome de exibição. Informe um nome sem dados sensíveis, respeitando a validação. Salve uma vez, aguarde confirmação e reabra para conferir. Isso não altera identificador interno, endereço ou titularidade.",
+      "relevant_document_ids": [
+        "nd-service-002"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-service-002",
+          "document_version": "1.0.0",
+          "document_sha256": "f7827f9f936c8420e305346e267010fcffce7651ce6cee891479210f2e3ef591",
+          "section_id": "scope",
+          "start": 82,
+          "end": 464,
+          "text": "Procedimento fictício do NexoDesk, criado para o SupportAI. Rascunho sem revisão humana; não descreve um serviço real. A versão, a origem e a situação de licença constam no manifesto do corpus.\n\nExige Administrador do espaço de trabalho autenticado. Altera somente o nome de exibição do espaço selecionado; não altera o identificador interno, o endereço de acesso ou a titularidade."
+        },
+        {
+          "document_id": "nd-service-002",
+          "document_version": "1.0.0",
+          "document_sha256": "f7827f9f936c8420e305346e267010fcffce7651ce6cee891479210f2e3ef591",
+          "section_id": "workspace-name-change",
+          "start": 518,
+          "end": 1093,
+          "text": "1. Confira cuidadosamente o espaço que deseja alterar e abra **Configurações**, **Espaço de trabalho**.\n2. Localize o campo **Nome de exibição** e confira o nome atual.\n3. Informe um nome que identifique o espaço, sem dados pessoais sensíveis ou segredos. Respeite os limites apresentados no formulário.\n4. Selecione **Salvar** uma única vez e aguarde confirmação. Não considere o novo nome persistido apenas porque aparece no campo de edição.\n5. Reabra a página de configuração e confira o nome exibido. Se a alteração não aparecer, registre a limitação para revisão humana."
+        }
+      ],
+      "group_id": "workspace-name-change",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-dev-027",
+      "question": "Quero desativar e-mails sobre mensagens dos meus chamados. Onde configuro?",
+      "question_types": [
+        "direct"
+      ],
+      "answerable": true,
+      "reference_answer": "Confira conta e espaço, abra Preferências no menu da conta e localize Avisos de chamados por e-mail. Escolha Desativados, salve e reabra para conferir. Continue consultando Meus chamados. A opção é pessoal, por espaço, e não controla senha, convites ou avisos administrativos.",
+      "relevant_document_ids": [
+        "nd-service-003"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-service-003",
+          "document_version": "1.0.0",
+          "document_sha256": "664d00c373be02ca64628e7d03c6b0765b6e980bf8684fa3009b5825d92b6336",
+          "section_id": "scope",
+          "start": 75,
+          "end": 532,
+          "text": "Procedimento fictício do NexoDesk, criado para o SupportAI. Rascunho sem revisão humana; não descreve um serviço real. A versão, a origem e a situação de licença constam no manifesto do corpus.\n\nAplica-se à pessoa autenticada no espaço desejado. A preferência controla avisos por e-mail sobre mensagens dos próprios chamados nesse espaço, sem alterar o acesso ao histórico. Não controla mensagens de recuperação de senha, convites ou avisos administrativos."
+        },
+        {
+          "document_id": "nd-service-003",
+          "document_version": "1.0.0",
+          "document_sha256": "664d00c373be02ca64628e7d03c6b0765b6e980bf8684fa3009b5825d92b6336",
+          "section_id": "email-notification-preference",
+          "start": 600,
+          "end": 1161,
+          "text": "1. Confira a conta e o espaço selecionados. Abra o menu da conta e selecione **Preferências**.\n2. Localize **Avisos de chamados por e-mail** e confira a opção atual.\n3. Escolha **Ativados** para solicitar esses avisos ou **Desativados** para deixar de solicitá-los. A escolha é pessoal e não muda a preferência de colegas.\n4. Selecione **Salvar** e aguarde a confirmação. Reabra Preferências para conferir se a opção ficou registrada.\n5. Continue consultando **Meus chamados** conforme `nd-tickets-001`; a entrega de e-mail não substitui a leitura do histórico."
+        }
+      ],
+      "group_id": "ticket-email-preference",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-dev-028",
+      "question": "A página do NexoDesk não termina de carregar. O que posso conferir com segurança?",
+      "question_types": [
+        "direct"
+      ],
+      "answerable": true,
+      "reference_answer": "Identifique a página e eventual texto não enviado; se necessário e permitido, preserve anotação mínima sem segredos. Confira o endereço conhecido e faça uma tentativa de recarregar. Se pedir login, siga o procedimento de sessão expirada. Se carregar, confira conta, espaço e histórico antes de reenviar. Se persistir, relate tela e erro sanitizado à revisão humana; use Ajuda se acessível. Não há canal alternativo documentado.",
+      "relevant_document_ids": [
+        "nd-issues-001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-issues-001",
+          "document_version": "1.0.0",
+          "document_sha256": "6309e9a47ee9a473c84401dc3f6ffc6a6399cef3d9e86255b06e5250d0693a4c",
+          "section_id": "page-load-troubleshooting",
+          "start": 519,
+          "end": 1341,
+          "text": "1. Identifique qual página tentou abrir e se há texto não enviado na tela. Antes de recarregar, preserve apenas uma anotação local mínima sem segredos, se necessário e permitido; não copie conteúdo privado para serviços externos.\n2. Confira se o endereço é o acesso conhecido do NexoDesk. Não siga links desconhecidos nem forneça credenciais a páginas suspeitas.\n3. Faça uma única tentativa de recarregar a página. Se aparecer a tela de entrada, siga `nd-issues-002`.\n4. Se carregar, confira a conta, o espaço e o histórico antes de repetir qualquer envio que estava em andamento.\n5. Se continuar falhando, registre qual tela falhou e a mensagem de erro sanitizada para revisão humana. Se conseguir usar Ajuda, abra um chamado conforme `nd-tickets-002`; caso contrário, informe que a base não oferece um canal alternativo."
+        }
+      ],
+      "group_id": "page-load-troubleshooting",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-dev-029",
+      "question": "Minha sessão expirou enquanto enviava um chamado. Como evito duplicar o envio?",
+      "question_types": [
+        "direct"
+      ],
+      "answerable": true,
+      "reference_answer": "Interrompa envios na tela antiga e anote somente a ação, sem credenciais ou conteúdo sensível. Entre novamente pela tela conhecida com a própria conta e confira espaço e conta. Consulte Meus chamados e o histórico. Se o registro estiver lá, não reenvie. Se não conseguir determinar o resultado, peça revisão humana antes de repetir.",
+      "relevant_document_ids": [
+        "nd-issues-002"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-issues-002",
+          "document_version": "1.0.0",
+          "document_sha256": "26b69a2573ec7eecd62e7536d2d0e83edfd698cbb2787058e375cf9689b1cc92",
+          "section_id": "expired-session",
+          "start": 494,
+          "end": 1246,
+          "text": "1. Interrompa novos envios na tela antiga. Anote apenas a ação que estava tentando realizar, sem guardar credenciais ou copiar conteúdo sensível.\n2. Volte à tela de entrada conhecida e autentique com sua própria conta. Se perdeu o autenticador, siga `nd-access-001`; não contorne o segundo fator.\n3. Confira a conta e o espaço de trabalho após entrar.\n4. Se estava enviando um chamado ou resposta, consulte Meus chamados e o histórico conforme `nd-tickets-001`. Se o registro aparecer, não reenvie a mesma solicitação.\n5. Se não conseguir determinar se o envio foi registrado, encaminhe a limitação à revisão humana antes de repetir. Para alterações de preferências ou perfil, reabra a configuração e confira o valor persistido antes de nova tentativa."
+        }
+      ],
+      "group_id": "expired-session",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-dev-030",
+      "question": "No formulário Novo chamado, o botão Enviar está desabilitado. O que verifico?",
+      "question_types": [
+        "direct"
+      ],
+      "answerable": true,
+      "reference_answer": "Confira conta, espaço e formulário. Assunto e Descrição devem conter texto útil, não apenas espaços. Leia validações e ajuste os campos indicados. Quando habilitar, revise e envie uma vez, aguardando protocolo. Se continuar indisponível sem orientação suficiente, encaminhe erro sanitizado à revisão humana; não force controles pelo navegador.",
+      "relevant_document_ids": [
+        "nd-issues-003"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-issues-003",
+          "document_version": "1.0.0",
+          "document_sha256": "3ef2daf95e5a9aa29f0e9609aad1e46c4101f6710151e341df17ed90e27e75ea",
+          "section_id": "scope",
+          "start": 87,
+          "end": 516,
+          "text": "Procedimento fictício do NexoDesk, criado para o SupportAI. Rascunho sem revisão humana; não descreve um serviço real. A versão, a origem e a situação de licença constam no manifesto do corpus.\n\nAplica-se ao formulário Novo chamado de `nd-tickets-002`, com conta autenticada. Assunto e Descrição são obrigatórios; espaços em branco sozinhos não preenchem esses campos. Não se aplica ao envio de respostas ou recuperação de conta."
+        },
+        {
+          "document_id": "nd-issues-003",
+          "document_version": "1.0.0",
+          "document_sha256": "3ef2daf95e5a9aa29f0e9609aad1e46c4101f6710151e341df17ed90e27e75ea",
+          "section_id": "ticket-form-validation",
+          "start": 576,
+          "end": 1273,
+          "text": "1. Confira que está em **Ajuda**, **Novo chamado**, na conta e no espaço corretos.\n2. Verifique se **Assunto** e **Descrição** têm texto útil. Preencha o resumo e os detalhes necessários sem senhas, códigos ou dados pessoais de terceiros.\n3. Leia mensagens de validação próximas aos campos e ajuste apenas os valores indicados, respeitando os limites exibidos.\n4. Se **Enviar** ficar disponível, confira o conteúdo e envie uma única vez, aguardando protocolo conforme `nd-tickets-002`.\n5. Se continuar indisponível sem mensagem que permita corrigir o formulário, registre a limitação e o texto do erro sanitizado para revisão humana. Não altere controles internos do navegador para forçar o envio."
+        }
+      ],
+      "group_id": "ticket-form-validation",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-dev-031",
+      "question": "Quantos minutos dura o link para redefinir a senha?",
+      "question_types": [
+        "unanswerable"
+      ],
+      "answerable": false,
+      "reference_answer": null,
+      "relevant_document_ids": [],
+      "evidence_spans": [],
+      "group_id": "password-reset",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": "O corpus não define duração do link de redefinição.",
+      "expected_abstention": "A base não fornece informação suficiente. O corpus não define duração do link de redefinição.",
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-dev-032",
+      "question": "Em quantos dias expira um convite para o espaço?",
+      "question_types": [
+        "unanswerable"
+      ],
+      "answerable": false,
+      "reference_answer": null,
+      "relevant_document_ids": [],
+      "evidence_spans": [],
+      "group_id": "invitation-acceptance",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": "O corpus não define prazo de validade de convites.",
+      "expected_abstention": "A base não fornece informação suficiente. O corpus não define prazo de validade de convites.",
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-dev-033",
+      "question": "Qual botão cancela um chamado já aberto?",
+      "question_types": [
+        "unanswerable"
+      ],
+      "answerable": false,
+      "reference_answer": null,
+      "relevant_document_ids": [],
+      "evidence_spans": [],
+      "group_id": "ticket-cancellation-unavailable",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": "Não há procedimento de cancelamento de chamado na base.",
+      "expected_abstention": "A base não fornece informação suficiente. Não há procedimento de cancelamento de chamado na base.",
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-dev-034",
+      "question": "Quanto estou devendo na minha fatura de outubro agora?",
+      "question_types": [
+        "unanswerable"
+      ],
+      "answerable": false,
+      "reference_answer": null,
+      "relevant_document_ids": [],
+      "evidence_spans": [],
+      "group_id": "live-financial-data-unavailable",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": "Os documentos são estáticos e o assistente não consulta o registro financeiro em tempo real.",
+      "expected_abstention": "A base não fornece informação suficiente. Os documentos são estáticos e o assistente não consulta o registro financeiro em tempo real.",
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-dev-035",
+      "question": "Não consigo fazer aquilo no sistema. Como conserto?",
+      "question_types": [
+        "ambiguous",
+        "unanswerable"
+      ],
+      "answerable": false,
+      "reference_answer": null,
+      "relevant_document_ids": [],
+      "evidence_spans": [],
+      "group_id": "missing-problem-context",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": "Faltam a ação pretendida e o sintoma para selecionar um procedimento.",
+      "expected_abstention": "A base não fornece informação suficiente. Faltam a ação pretendida e o sintoma para selecionar um procedimento.",
+      "clarification_question": "O que tentou fazer e qual mensagem ou comportamento apareceu?"
+    }
+  ]
+}

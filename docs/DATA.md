@@ -1,8 +1,8 @@
 # SupportAI — Domínio e dados
 
-Atualizado em: 30/10/2026. Etapas: S1.1–S1.6 concluídas; S1.7 concluída por aceite explícito do usuário; S1.8 autorizada.
+Atualizado em: 30/10/2026. Etapas: S1.1–S1.6 concluídas; S1.7 concluída por aceite explícito do usuário; S1.8 preparada, com revisão humana das novas anotações pendente.
 
-O plano foi aprovado pelo usuário. Este documento define o domínio, os contratos e as políticas de dados. O corpus atual tem 24 procedimentos fictícios em knowledge/, listados no manifesto 0.1.4-draft com checksums reais: três do piloto aprovados e 21 de expansão com revisão humana pendente. Oito perguntas e gabaritos iniciais estão em evaluation/rag_dev_pilot.json, exclusivamente em desenvolvimento. O usuário aprovou o conteúdo dos três documentos e das oito anotações na S1.6, sob a identificação project-user. A licença permanece pendente; nenhuma fonte está autorizada para ingestão. As validações de ingestão descritas abaixo são requisitos para a Sprint 2, ainda sem implementação.
+O plano foi aprovado pelo usuário. O corpus atual tem 24 procedimentos fictícios em knowledge/, listados no manifesto 0.1.5-draft, todos com conteúdo aprovado por decisão explícita do usuário. A licença permanece pendente; nenhuma fonte está autorizada para ingestão. A S1.8 prepara 50 perguntas: 35 desenvolvimento e 15 teste, oito aprovadas no piloto e 42 novas pending. O piloto histórico está preservado em evaluation/rag_dev_pilot.json. Os novos arquivos e o manifesto de partições estão em evaluation/; nunca devem ser indexados. As validações de ingestão descritas abaixo são requisitos para a Sprint 2, ainda sem implementação.
 
 ## Produto e público
 
@@ -193,9 +193,9 @@ São 8 perguntas em 7 grupos: 6 respondíveis e 2 sem resposta, todas com split 
 
 ### Separação e uso futuro
 
-O manifesto de ingestão continua listando somente os três Markdown de knowledge/. Nunca enviar reference_answer, evidence_spans ou expected_abstention como entrada da busca ou contexto de geração; a busca recebe a pergunta, e o contexto futuro contém somente os trechos recuperados. Os gabaritos ficam do lado do avaliador.
+No snapshot do piloto, o manifesto de ingestão listava somente os três Markdown de knowledge/; no atual, são 24. Nenhum arquivo de avaliação é fonte de ingestão. Nunca enviar reference_answer, evidence_spans ou expected_abstention como entrada da busca ou contexto de geração; a busca recebe a pergunta, e o contexto futuro contém somente os trechos recuperados. Os gabaritos ficam do lado do avaliador.
 
-rag-dev-001 e rag-dev-002 permanecem no mesmo grupo e partição. Como as oito perguntas já foram usadas neste piloto e serão discutidas na revisão, elas não podem ser promovidas a teste reservado. A divisão final e seus manifestos serão preparados na S1.8; não há expectativa de 15 perguntas de teste nesta etapa.
+rag-dev-001 e rag-dev-002 permanecem no mesmo grupo e partição. Como as oito perguntas já foram usadas neste piloto e serão discutidas na revisão, elas não podem ser promovidas a teste reservado. A proposta de divisão da S1.8 está descrita ao final; o piloto histórico não possui partição de teste.
 
 Para recuperação, o denominador inicial será de 6 perguntas respondíveis; perguntas sem resposta não entram no Recall@k. As unidades de evidência são as passagens anotadas, a mapear para chunks na Sprint 2. A regra de correspondência e o tratamento de sobreposições ainda precisam ser documentados antes de calcular métricas; não contar cada paráfrase como grupo independente nem tratar 6 casos como evidência estatística ampla.
 
@@ -278,3 +278,13 @@ Os 21 documentos novos permanecem com revisão humana pending e os três do pilo
 ## Aceite explícito da S1.7 — 30/10/2026
 
 A aprovação dos 21 documentos de expansão foi solicitada explicitamente pelo usuário após o resultado das verificações locais. Registro `project-user`, `2026-10-30T16:09:45Z`. Conteúdo dos 24 documentos aprovado; snapshot `0.1.5-draft`, licença pendente e nenhuma ingestão/publicação. O Markdown não mudou; avisos de preparação nos arquivos são históricos, e a revisão vigente consta no manifesto. Não houve segundo revisor humano independente. A S1.8 foi autorizada.
+
+## S1.8 — Avaliação expandida para revisão
+
+Versão `0.2.0-draft`, ligada explicitamente ao corpus `0.1.5-draft` e SHA-256 do manifesto. `evaluation/rag_development.json` contém 35 perguntas, 28 respondíveis e 7 sem resposta, em 22 grupos. `evaluation/rag_test.json` contém 15 perguntas, 11 respondíveis e 4 sem resposta, em 11 grupos. `evaluation/rag_split_manifest.json` registra checksums dos dois arquivos, IDs, grupos, contagens e vínculo com o corpus. Todos os 24 documentos aparecem como evidência no conjunto completo; isso não garante cobertura de todas as suas regras.
+
+As oito anotações originais foram copiadas sem alteração para desenvolvimento; seu arquivo e snapshot de origem permanecem preservados. Sua respondibilidade foi reavaliada editorialmente diante dos 24 documentos: seis continuam sustentadas e as duas abstenções continuam adequadas. Não se atribuiu nova revisão humana a essa conferência. As 42 novas anotações são llm_assisted e human_review pending; aceite dos documentos não aprova perguntas ainda não apresentadas. A revisão está organizada em cinco lotes (9/9/9/8/7) em [S1_8_REVIEW.md](S1_8_REVIEW.md).
+
+A divisão é manual por grupos de intenção, definidos antes de atribuir partições, sem sorteio/seed. Paráfrases e variações do mesmo procedimento ficam juntas. Não há grupos compartilhados; compartilhar documentos é permitido na avaliação sobre uma base fixa. O teste está proposto, não congelado (`test_frozen=false`). Foi lido para anotação/conferência, sem executar modelo ou ajustar configurações por seus resultados. Congelar apenas após revisão humana; não usar suas perguntas para escolher retrieval, prompts ou limiares. Qualquer uso que influencie decisões deve ser registrado e exigir revisão da reserva.
+
+Passagens usam caracteres Unicode `[start, end)` e seções/documentos versionados. Foram conferidos checksums, contagens, unicidade, grupos, passagens literais e limites de seção, contratos de abstenção/revisão, links e preservação dos arquivos de origem. Os denominadores propostos de recuperação são 28 e 11 perguntas respondíveis, respectivamente; não há métricas calculadas. A correspondência de passagens com chunks será definida na Sprint 2. Corpus fictício, ausência de segundo anotador e amostra pequena limitam a interpretação futura. S1.8 aguarda revisão humana e congelamento do teste; S1.9 não iniciada.

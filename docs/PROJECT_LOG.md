@@ -94,3 +94,12 @@
 - Usuário solicitou aprovação dos 21 documentos após verificações bem-sucedidas e autorizou S1.8. Aceite registrado como project-user em 2026-10-30T16:09:45Z; nenhuma revisão independente atribuída.
 - Corpus 0.1.5-draft: 24 conteúdos approved, licenças pending; manifesto draft, sem ingestão/publicação. Markdown preservado.
 - Verificações: 24 hashes/títulos/caminhos únicos, 95 seções, 44 referências resolvidas; sem teste de aplicação ou modelo.
+
+## Sprint 1 — S1.8: preparação da avaliação expandida — 2026-10-30
+
+- Entrega: avaliação 0.2.0-draft vinculada ao corpus 0.1.5-draft; 50 perguntas em 35 desenvolvimento (28 respondíveis/7 sem resposta, 22 grupos) e 15 teste (11/4, 11 grupos). Manifesto de partições com IDs, checksums e contagens; cinco lotes de revisão em docs/S1_8_REVIEW.md.
+- Decisões: grupos manuais por intenção, sem interseção; oito anotações aprovadas preservadas em desenvolvimento e arquivo piloto inalterado. Respondibilidade revalidada editorialmente no novo corpus, sem atribuir nova revisão humana. As 42 novas anotações permanecem pending. Todos os 24 documentos aparecem como evidência, sem alegar cobertura integral das regras.
+- Conceito: corpus é conhecimento recuperável; avaliação contém perguntas, gabaritos e evidências para medir o sistema e nunca entra no índice. Teste proposto, ainda não congelado: agente leu para anotação, sem execução de modelo ou ajuste de configurações. Congelar após revisão humana e registrar qualquer uso que influencie decisões.
+- Verificações executadas: JSON sem chaves duplicadas; 50 IDs/textos únicos; 33 grupos sem interseção entre partições; hashes dos manifestos, arquivos e documentos; offsets Unicode e limites de seção de cada passagem; contratos de resposta/abstenção/revisão; links locais; piloto e 24 Markdown preservados byte a byte. git diff --check sem problemas.
+- Limitações: 8 anotações aprovadas, 42 novas pendentes; dados fictícios, sem segundo anotador independente, licença pendente. Nenhuma avaliação de busca/geração, teste de aplicação, chamada paga, ingestão, push ou publicação. Sem novas dependências.
+- Próximo checkpoint: usuário revisar as 42 novas anotações por ID, depois registrar a decisão real e congelar teste. S1.8 preparada, ainda não aceita integralmente; S1.9 não iniciada. Edição preexistente da explicação S1.3 preservada fora dos commits.

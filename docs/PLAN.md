@@ -2,7 +2,7 @@
 
 Data: 28/10/2026. Referência: AGENTS.md v2.0, lido integralmente.
 
-**Status: plano aprovado; Sprint 1 em andamento.** S1.1–S1.6 concluídas. S1.7: expansão e conferência editorial concluídas, com 24 documentos e 95 seções; conteúdo dos 24 documentos aprovado pelo usuário; S1.8 autorizada. Três documentos e oito anotações do piloto aprovados. Licença pendente, manifesto draft. S1.8–S1.9 não iniciadas; sem aplicação ou modelo treinado.
+**Status: plano aprovado; Sprint 1 em andamento.** S1.1–S1.7 concluídas quanto ao conteúdo. Corpus com 24 documentos aprovados pelo usuário; licença pendente, manifesto draft. S1.8 preparada: 50 perguntas em 35 desenvolvimento/15 teste, oito aprovadas no piloto e 42 novas aguardando revisão humana; teste ainda não congelado. S1.9 não iniciada; sem aplicação ou modelo treinado.
 
 ## 1. Objetivo e ponto de partida
 
@@ -79,7 +79,7 @@ Branch da Sprint 1: `feature/s1-knowledge-foundation`, criada no início da exec
 
 ### 4.2 Tarefas pequenas, em ordem
 
-**S1.1 e S1.2 concluídas em 28/10/2026; S1.3 em 29/10/2026; S1.4 e S1.5 em 30/10/2026. S1.6 concluída por aprovação explícita do usuário em 30/10/2026, licença mantida pendente; S1.7: 24/24 documentos aprovados por decisão explícita do usuário; S1.8–S1.9 não iniciadas.** Dependências indicam o que deve ser revisado antes de avançar.
+**S1.1 e S1.2 concluídas em 28/10/2026; S1.3 em 29/10/2026; S1.4 e S1.5 em 30/10/2026. S1.6 concluída por aprovação explícita do usuário em 30/10/2026, licença mantida pendente; S1.7: 24/24 documentos aprovados por decisão explícita do usuário; S1.8 preparada com revisão humana pendente; S1.9 não iniciada.** Dependências indicam o que deve ser revisado antes de avançar.
 
 | ID | Problema e ação proposta | Entrega prevista | Como verificar |
 | --- | --- | --- | --- |
@@ -90,7 +90,7 @@ Branch da Sprint 1: `feature/s1-knowledge-foundation`, criada no início da exec
 | S1.5 | Testar a anotação: criar 8 perguntas de desenvolvimento sobre o piloto. | Piloto em evaluation/, com evidências ou motivo de abstenção. | Proposta: 6 respondíveis e 2 sem resposta; incluir paráfrase, abreviação e ambiguidade. Nenhuma referência pode exigir informação ausente. Depende de S1.4. |
 | S1.6 | Corrigir ambiguidades do próprio conjunto: revisar documentos e perguntas com o usuário. Concluída: aprovação explícita do usuário registrada em docs/PILOT_REVIEW.md; licença pendente. | Piloto revisado e decisões registradas. | Percorrer manualmente pergunta, documento/versão, passagem e resposta. Material gerado por LLM permanece pendente até revisão humana. Depende de S1.5. |
 | S1.7 | Expansão concluída: 24 documentos; conferência editorial por lotes, índice em docs/S1_7_REVIEW.md. Aceite explícito dos 21 novos documentos registrado em 30/10/2026. | Meta de 24 documentos; manifesto com caminhos e checksums, versão do corpus e contagens. | Todos com metadados completos, sem duplicatas contraditórias; manter entre 20 e 40. Depende do aceite do piloto S1.6. |
-| S1.8 | Completar a avaliação: ampliar as perguntas em lotes de 5–10 e separar grupos antes de atribuir partições. | Cerca de 50 perguntas revisadas; manifestos de desenvolvimento/teste com IDs, grupos, versões e checksums. | Nenhum grupo em ambas as partições; perguntas respondíveis e sem resposta nas duas; evidências localizáveis. As 8 perguntas já usadas no piloto ficam em desenvolvimento. Depende de S1.7. |
+| S1.8 | Preparação concluída: 50 perguntas (35 desenvolvimento/15 teste), cinco lotes de revisão, 42 novas anotações pending. Roteiro em docs/S1_8_REVIEW.md; teste não congelado. | Cerca de 50 perguntas revisadas; manifestos de desenvolvimento/teste com IDs, grupos, versões e checksums. | Nenhum grupo em ambas as partições; perguntas respondíveis e sem resposta nas duas; evidências localizáveis. As 8 perguntas já usadas no piloto ficam em desenvolvimento. Depende de S1.7. |
 | S1.9 | Registrar limites e preparar o próximo passo: auditar os dados e explicar o que ficou pronto. | README atualizado, entrada em docs/PROJECT_LOG.md e status neste plano. | Apresentar contagens, pendências, orçamento e exercício manual; encerrar a sprint apenas com todos os critérios atendidos. Depende de S1.8 e S1.2. |
 
 Após cada unidade, explicar o que mudou, por que foi escolhido, o conceito aprendido, como foi verificado e o resultado observado. Revisar o piloto antes da expansão e fazer checkpoint no fim da sprint. Aceite da S1.7 registrado; próximo checkpoint: revisão das novas anotações S1.8. Preferência do usuário registrada em 29/10/2026: concluir cada unidade coesa com verificações e commit local em inglês no formato Conventional Commits; não deixar entregas sem commit. Push e merge continuam dependentes de autorização específica.
@@ -121,25 +121,29 @@ docs/PILOT_REVIEW.md         # roteiro do piloto e aprovação explícita do usu
 docs/S1_7_BATCH_REVIEW.md    # registro histórico do primeiro lote
 docs/S1_7_REVIEW.md          # índice e conferência de toda a expansão
 knowledge/                   # 24 procedimentos com conteúdo aprovado
-configs/corpus_manifest.json # 24 entradas em draft, com checksums reais
-evaluation/rag_dev_pilot.json # oito anotações aprovadas, snapshot do piloto; nunca indexar
+configs/corpus_manifest.json # 24 revisões aprovadas; draft por licença pendente
+evaluation/rag_dev_pilot.json # oito anotações aprovadas; snapshot histórico preservado
+evaluation/rag_development.json # 35 perguntas, incluindo as oito do piloto
+evaluation/rag_test.json     # 15 perguntas propostas; não congeladas
+evaluation/rag_split_manifest.json # checksums, IDs, grupos e contagens
+docs/S1_8_REVIEW.md          # cinco lotes para revisão das 42 anotações novas
 pyproject.toml               # dependências e configuração mínima
 uv.lock                      # único lock de dependências
 .python-version              # CPython 3.12.16
 ```
 
-A árvore representa a estrutura incremental. Documentação, ambiente, manifesto, 24 documentos e oito perguntas existem; 24 documentos aprovados pelo usuário. Os documentos não estão aprovados para ingestão. Usar caminhos relativos ao repositório nos manifestos para permitir reprodução em outra máquina. Criar módulos de aplicação apenas quando tiverem responsabilidade executável nas próximas sprints.
+A árvore representa a estrutura incremental. Documentação, ambiente, manifesto, 24 documentos e 50 perguntas existem; 24 documentos aprovados pelo usuário. Os documentos não estão aprovados para ingestão. Usar caminhos relativos ao repositório nos manifestos para permitir reprodução em outra máquina. Criar módulos de aplicação apenas quando tiverem responsabilidade executável nas próximas sprints.
 
 ### 4.5 Critérios de aceite da Sprint 1
 
 - [x] Domínio, usuário, cobertura, exclusões e orçamento inicial registrados e revisados conforme o plano aprovado.
 - [x] Ambiente mínimo reproduzível, versão de Python fixada e um único lock; recriação offline em ambiente vazio com versões idênticas verificada na S1.2.
-- [ ] 20–40 documentos revisados, com origem/licença ou caráter fictício identificados e situação de redistribuição documentada.
+- [x] 20–40 documentos revisados, com origem/licença ou caráter fictício identificados e situação de redistribuição documentada (24 aprovados por decisão do usuário; licença pendente e sem publicação).
 - [ ] Manifesto delimita fontes autorizadas e registra IDs, versões, checksums e contagens.
 - [ ] Cerca de 50 perguntas com revisão humana, grupos e partições persistidos.
-- [ ] Desenvolvimento e teste incluem perguntas respondíveis e sem resposta, com contagens por tipo.
+- [x] Desenvolvimento e teste propostos incluem perguntas respondíveis e sem resposta: 28/7 e 11/4; revisão das novas anotações pendente.
 - [ ] Toda resposta de referência é sustentada por passagens localizáveis; abstenções têm motivo.
-- [ ] Nenhum grupo compartilhado entre partições; gabaritos separados do corpus e excluídos do manifesto.
+- [x] Nenhum grupo compartilhado entre partições propostas; gabaritos separados do corpus e excluídos do manifesto de ingestão.
 - [ ] Teste congelado após anotação; uso prévio e limitação de revisão individual declarados.
 - [ ] README e diário descrevem apenas verificações realizadas e pendências reais.
 - [ ] Usuário consegue explicar corpus versus avaliação, retrieval versus geração e RAG versus treinamento supervisionado usando o piloto.
@@ -150,7 +154,7 @@ As metas de qualidade do AGENTS.md serão medidas nas sprints de avaliação: re
 
 | Sprint | Entrega e aprendizado central | Estado |
 | --- | --- | --- |
-| 1 — Domínio, corpus e avaliação | Dados autorizados, perguntas revisadas, evidências e ambiente mínimo. | S1.1–S1.5 concluídas; S1.6 aprovada; S1.7 concluída, 24/24 conteúdos aprovados |
+| 1 — Domínio, corpus e avaliação | Dados autorizados, perguntas revisadas, evidências e ambiente mínimo. | S1.1–S1.5 concluídas; S1.6 aprovada; S1.7 concluída, 24/24 conteúdos aprovados; S1.8 preparada, revisão pendente |
 | 2 — Ingestão e busca | PostgreSQL/pgvector, migrations, chunking, coleção idempotente e publicação atômica; comparar busca textual e vetorial no desenvolvimento, com MLflow inicial. | Não iniciada |
 | 3 — Geração e API RAG | LLM, contexto limitado, fontes validadas, abstenção, persistência, autenticação e health checks. | Não iniciada |
 | 4 — Revisão e avaliação | Histórico autenticado e concorrência, avaliação humana, segurança, tracing sanitizado, tokens e custo. | Não iniciada |
@@ -187,3 +191,7 @@ Três documentos complementares sobre chamados preparados; total 6/24. Piloto pr
 ## Entrega da expansão S1.7 — 30/10/2026
 
 A instrução “termine a s1.7” autorizou preparar e conferir os lotes restantes sem interromper a redação entre lotes. Meta de 24 documentos atingida, com 95 seções, corpus 0.1.4-draft. Isso não foi tratado como aprovação antecipada dos novos textos: 21 revisões humanas continuam pendentes; licença não escolhida. [Índice e conferência dos sete lotes](S1_7_REVIEW.md). Critérios de expansão atendidos; aceite integral depende da revisão humana. S1.8 não iniciada.
+
+## Atualização S1.7/S1.8 — 30/10/2026
+
+Aceite explícito do usuário para os 21 novos documentos registrado em project-user, 2026-10-30T16:09:45Z. Corpus 0.1.5-draft, 24 conteúdos approved e licenças pending. S1.7 concluída. S1.8 preparada em avaliação 0.2.0-draft: 35 desenvolvimento, 15 teste, 33 grupos sem interseção. Oito anotações aprovadas preservadas, 42 novas pending. Roteiro em [S1_8_REVIEW.md](S1_8_REVIEW.md). Integridade local verificada, sem avaliação de modelo. Falta revisão humana das novas perguntas e congelamento explícito do teste para concluir S1.8; S1.9 não iniciada. Os registros de preparação acima são históricos.
