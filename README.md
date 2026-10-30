@@ -4,7 +4,7 @@ A support assistant combining retrieval-augmented generation (RAG), source citat
 
 SupportAI is a learning and portfolio project focused on **system architecture, backend engineering, model training, MLOps, and LLMOps**.
 
-> **Status: Sprint 1 — pilot approved; S1.7 expansion prepared (24/24 documents), human acceptance pending.** The user approved the three fictional pilot procedures and eight development annotations in S1.6; licensing remains pending. Application code, approved datasets, trained models, benchmarks, CI, and deployment are not available yet.
+> **Status: Sprint 1 — S1.7 content approved (24/24 documents); S1.8 authorized.** The user approved the three fictional pilot procedures and eight development annotations in S1.6; licensing remains pending. Application code, approved datasets, trained models, benchmarks, CI, and deployment are not available yet.
 
 ## Support domain
 

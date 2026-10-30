@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "corpus_version": "0.1.4-draft",
+  "corpus_version": "0.1.5-draft",
   "status": "draft",
   "language": "pt-BR",
   "document_count": 24,
@@ -154,9 +154,9 @@
       },
       "updated_on": "2026-10-30",
       "review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
       },
       "sections": [
         {
@@ -198,9 +198,9 @@
       },
       "updated_on": "2026-10-30",
       "review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
       },
       "sections": [
         {
@@ -242,9 +242,9 @@
       },
       "updated_on": "2026-10-30",
       "review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
       },
       "sections": [
         {
@@ -286,9 +286,9 @@
       },
       "updated_on": "2026-10-30",
       "review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
       },
       "sections": [
         {
@@ -330,9 +330,9 @@
       },
       "updated_on": "2026-10-30",
       "review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
       },
       "sections": [
         {
@@ -374,9 +374,9 @@
       },
       "updated_on": "2026-10-30",
       "review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
       },
       "sections": [
         {
@@ -418,9 +418,9 @@
       },
       "updated_on": "2026-10-30",
       "review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
       },
       "sections": [
         {
@@ -462,9 +462,9 @@
       },
       "updated_on": "2026-10-30",
       "review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
       },
       "sections": [
         {
@@ -506,9 +506,9 @@
       },
       "updated_on": "2026-10-30",
       "review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
       },
       "sections": [
         {
@@ -550,9 +550,9 @@
       },
       "updated_on": "2026-10-30",
       "review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
       },
       "sections": [
         {
@@ -594,9 +594,9 @@
       },
       "updated_on": "2026-10-30",
       "review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
       },
       "sections": [
         {
@@ -638,9 +638,9 @@
       },
       "updated_on": "2026-10-30",
       "review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
       },
       "sections": [
         {
@@ -682,9 +682,9 @@
       },
       "updated_on": "2026-10-30",
       "review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
       },
       "sections": [
         {
@@ -726,9 +726,9 @@
       },
       "updated_on": "2026-10-30",
       "review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
       },
       "sections": [
         {
@@ -770,9 +770,9 @@
       },
       "updated_on": "2026-10-30",
       "review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
       },
       "sections": [
         {
@@ -814,9 +814,9 @@
       },
       "updated_on": "2026-10-30",
       "review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
       },
       "sections": [
         {
@@ -858,9 +858,9 @@
       },
       "updated_on": "2026-10-30",
       "review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
       },
       "sections": [
         {
@@ -902,9 +902,9 @@
       },
       "updated_on": "2026-10-30",
       "review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
       },
       "sections": [
         {
@@ -946,9 +946,9 @@
       },
       "updated_on": "2026-10-30",
       "review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
       },
       "sections": [
         {
@@ -990,9 +990,9 @@
       },
       "updated_on": "2026-10-30",
       "review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
       },
       "sections": [
         {
@@ -1034,9 +1034,9 @@
       },
       "updated_on": "2026-10-30",
       "review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T16:09:45Z"
       },
       "sections": [
         {

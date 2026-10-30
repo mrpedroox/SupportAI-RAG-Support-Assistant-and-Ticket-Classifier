@@ -2,7 +2,7 @@
 
 Data: 28/10/2026. Referência: AGENTS.md v2.0, lido integralmente.
 
-**Status: plano aprovado; Sprint 1 em andamento.** S1.1–S1.6 concluídas. S1.7: expansão e conferência editorial concluídas, com 24 documentos e 95 seções; aceite humano de 21 documentos novos pendente. Três documentos e oito anotações do piloto aprovados. Licença pendente, manifesto draft. S1.8–S1.9 não iniciadas; sem aplicação ou modelo treinado.
+**Status: plano aprovado; Sprint 1 em andamento.** S1.1–S1.6 concluídas. S1.7: expansão e conferência editorial concluídas, com 24 documentos e 95 seções; conteúdo dos 24 documentos aprovado pelo usuário; S1.8 autorizada. Três documentos e oito anotações do piloto aprovados. Licença pendente, manifesto draft. S1.8–S1.9 não iniciadas; sem aplicação ou modelo treinado.
 
 ## 1. Objetivo e ponto de partida
 
@@ -79,7 +79,7 @@ Branch da Sprint 1: `feature/s1-knowledge-foundation`, criada no início da exec
 
 ### 4.2 Tarefas pequenas, em ordem
 
-**S1.1 e S1.2 concluídas em 28/10/2026; S1.3 em 29/10/2026; S1.4 e S1.5 em 30/10/2026. S1.6 concluída por aprovação explícita do usuário em 30/10/2026, licença mantida pendente; S1.7: 24/24 documentos preparados e conferidos pelo agente, 21 aguardando revisão humana; S1.8–S1.9 não iniciadas.** Dependências indicam o que deve ser revisado antes de avançar.
+**S1.1 e S1.2 concluídas em 28/10/2026; S1.3 em 29/10/2026; S1.4 e S1.5 em 30/10/2026. S1.6 concluída por aprovação explícita do usuário em 30/10/2026, licença mantida pendente; S1.7: 24/24 documentos aprovados por decisão explícita do usuário; S1.8–S1.9 não iniciadas.** Dependências indicam o que deve ser revisado antes de avançar.
 
 | ID | Problema e ação proposta | Entrega prevista | Como verificar |
 | --- | --- | --- | --- |
@@ -89,11 +89,11 @@ Branch da Sprint 1: `feature/s1-knowledge-foundation`, criada no início da exec
 | S1.4 | Testar a coerência antes de escalar: redigir 3 procedimentos curtos com passos, condições e exceções. | Piloto em knowledge/ e entradas no manifesto. | Revisar manualmente contradições, integridade de passos e rastreabilidade; distinguir metadados do checksum calculado sobre o arquivo final. Depende de S1.3. |
 | S1.5 | Testar a anotação: criar 8 perguntas de desenvolvimento sobre o piloto. | Piloto em evaluation/, com evidências ou motivo de abstenção. | Proposta: 6 respondíveis e 2 sem resposta; incluir paráfrase, abreviação e ambiguidade. Nenhuma referência pode exigir informação ausente. Depende de S1.4. |
 | S1.6 | Corrigir ambiguidades do próprio conjunto: revisar documentos e perguntas com o usuário. Concluída: aprovação explícita do usuário registrada em docs/PILOT_REVIEW.md; licença pendente. | Piloto revisado e decisões registradas. | Percorrer manualmente pergunta, documento/versão, passagem e resposta. Material gerado por LLM permanece pendente até revisão humana. Depende de S1.5. |
-| S1.7 | Expansão concluída: 24 documentos; conferência editorial por lotes, índice em docs/S1_7_REVIEW.md. Aceite humano dos 21 novos documentos pendente. | Meta de 24 documentos; manifesto com caminhos e checksums, versão do corpus e contagens. | Todos com metadados completos, sem duplicatas contraditórias; manter entre 20 e 40. Depende do aceite do piloto S1.6. |
+| S1.7 | Expansão concluída: 24 documentos; conferência editorial por lotes, índice em docs/S1_7_REVIEW.md. Aceite explícito dos 21 novos documentos registrado em 30/10/2026. | Meta de 24 documentos; manifesto com caminhos e checksums, versão do corpus e contagens. | Todos com metadados completos, sem duplicatas contraditórias; manter entre 20 e 40. Depende do aceite do piloto S1.6. |
 | S1.8 | Completar a avaliação: ampliar as perguntas em lotes de 5–10 e separar grupos antes de atribuir partições. | Cerca de 50 perguntas revisadas; manifestos de desenvolvimento/teste com IDs, grupos, versões e checksums. | Nenhum grupo em ambas as partições; perguntas respondíveis e sem resposta nas duas; evidências localizáveis. As 8 perguntas já usadas no piloto ficam em desenvolvimento. Depende de S1.7. |
 | S1.9 | Registrar limites e preparar o próximo passo: auditar os dados e explicar o que ficou pronto. | README atualizado, entrada em docs/PROJECT_LOG.md e status neste plano. | Apresentar contagens, pendências, orçamento e exercício manual; encerrar a sprint apenas com todos os critérios atendidos. Depende de S1.8 e S1.2. |
 
-Após cada unidade, explicar o que mudou, por que foi escolhido, o conceito aprendido, como foi verificado e o resultado observado. Revisar o piloto antes da expansão e fazer checkpoint no fim da sprint. O próximo checkpoint é o aceite humano da expansão S1.7; depois, S1.8. Preferência do usuário registrada em 29/10/2026: concluir cada unidade coesa com verificações e commit local em inglês no formato Conventional Commits; não deixar entregas sem commit. Push e merge continuam dependentes de autorização específica.
+Após cada unidade, explicar o que mudou, por que foi escolhido, o conceito aprendido, como foi verificado e o resultado observado. Revisar o piloto antes da expansão e fazer checkpoint no fim da sprint. Aceite da S1.7 registrado; próximo checkpoint: revisão das novas anotações S1.8. Preferência do usuário registrada em 29/10/2026: concluir cada unidade coesa com verificações e commit local em inglês no formato Conventional Commits; não deixar entregas sem commit. Push e merge continuam dependentes de autorização específica.
 
 ### 4.3 Contratos de dados propostos
 
@@ -120,7 +120,7 @@ docs/PROJECT_LOG.md          # decisões, aprendizado e verificações
 docs/PILOT_REVIEW.md         # roteiro do piloto e aprovação explícita do usuário
 docs/S1_7_BATCH_REVIEW.md    # registro histórico do primeiro lote
 docs/S1_7_REVIEW.md          # índice e conferência de toda a expansão
-knowledge/                   # 24 procedimentos: três aprovados, 21 pendentes
+knowledge/                   # 24 procedimentos com conteúdo aprovado
 configs/corpus_manifest.json # 24 entradas em draft, com checksums reais
 evaluation/rag_dev_pilot.json # oito anotações aprovadas, snapshot do piloto; nunca indexar
 pyproject.toml               # dependências e configuração mínima
@@ -128,7 +128,7 @@ uv.lock                      # único lock de dependências
 .python-version              # CPython 3.12.16
 ```
 
-A árvore representa a estrutura incremental. Documentação, ambiente, manifesto, 24 documentos e oito perguntas existem; piloto aprovado pelo usuário e 21 documentos novos aguardando revisão humana. Os documentos não estão aprovados para ingestão. Usar caminhos relativos ao repositório nos manifestos para permitir reprodução em outra máquina. Criar módulos de aplicação apenas quando tiverem responsabilidade executável nas próximas sprints.
+A árvore representa a estrutura incremental. Documentação, ambiente, manifesto, 24 documentos e oito perguntas existem; 24 documentos aprovados pelo usuário. Os documentos não estão aprovados para ingestão. Usar caminhos relativos ao repositório nos manifestos para permitir reprodução em outra máquina. Criar módulos de aplicação apenas quando tiverem responsabilidade executável nas próximas sprints.
 
 ### 4.5 Critérios de aceite da Sprint 1
 
@@ -150,7 +150,7 @@ As metas de qualidade do AGENTS.md serão medidas nas sprints de avaliação: re
 
 | Sprint | Entrega e aprendizado central | Estado |
 | --- | --- | --- |
-| 1 — Domínio, corpus e avaliação | Dados autorizados, perguntas revisadas, evidências e ambiente mínimo. | S1.1–S1.5 concluídas; S1.6 aprovada; S1.7 expansão 24/24, aceite humano pendente |
+| 1 — Domínio, corpus e avaliação | Dados autorizados, perguntas revisadas, evidências e ambiente mínimo. | S1.1–S1.5 concluídas; S1.6 aprovada; S1.7 concluída, 24/24 conteúdos aprovados |
 | 2 — Ingestão e busca | PostgreSQL/pgvector, migrations, chunking, coleção idempotente e publicação atômica; comparar busca textual e vetorial no desenvolvimento, com MLflow inicial. | Não iniciada |
 | 3 — Geração e API RAG | LLM, contexto limitado, fontes validadas, abstenção, persistência, autenticação e health checks. | Não iniciada |
 | 4 — Revisão e avaliação | Histórico autenticado e concorrência, avaliação humana, segurança, tracing sanitizado, tokens e custo. | Não iniciada |

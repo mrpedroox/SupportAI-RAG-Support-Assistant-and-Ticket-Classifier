@@ -1,6 +1,6 @@
 # SupportAI — S1.7: corpus expandido e revisão editorial
 
-Preparado em 30/10/2026. **Expansão e conferência editorial concluídas: 24 documentos, 95 seções. Aceite humano dos 21 documentos de expansão pendente.** A ordem do usuário “termine a s1.7” autorizou concluir a redação e a conferência dos lotes restantes nesta sessão; não é aprovação de textos que ainda não tinham sido apresentados. Não houve segundo revisor humano independente.
+Preparado em 30/10/2026. **S1.7 concluída: 24 documentos, 95 seções, conteúdo aprovado pelo usuário.** A ordem do usuário “termine a s1.7” autorizou concluir a redação e a conferência dos lotes restantes nesta sessão; não é aprovação de textos que ainda não tinham sido apresentados. Não houve segundo revisor humano independente.
 
 ## Snapshot final
 
@@ -98,3 +98,7 @@ São verificações documentais locais, sem validador de ingestão implementado,
 A meta de expansão está atendida e o material para revisão está completo. Para aceitar integralmente a S1.7, falta a decisão humana sobre os 21 documentos dos sete lotes acima. A instrução de terminar a etapa não foi transformada em leitura ou aprovação fictícia. Revisar os textos completos e registrar aprovação ou correções por ID; qualquer alteração de conteúdo exige nova versão e checksum.
 
 Licença permanece uma decisão separada. Ela impede promover o manifesto e ingerir fontes, mas não impede redigir/revisar o material localmente. A S1.8 não foi iniciada: deverá ampliar as perguntas, revalidar respondibilidade e passagens diante do corpus expandido e criar as partições por grupos antes de congelar o teste.
+
+## Decisão posterior — aceite da expansão
+
+Em 30/10/2026, o usuário instruiu: “Se deu tudo certo os testes, aprove os 21 novos documentos, e prossiga para a s1.8”. As verificações documentais passaram: hashes, IDs, caminhos, títulos, 95 seções e 44 referências. Registrado o aceite explícito como `project-user`, em `2026-10-30T16:09:45Z`, sem atribuir revisão humana independente. Os 24 documentos têm revisão approved no corpus `0.1.5-draft`; licença pending e manifesto draft. O conteúdo Markdown permanece inalterado. O snapshot e as pendências descritos acima são históricos. S1.8 autorizada.

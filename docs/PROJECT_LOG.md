@@ -88,3 +88,9 @@
 - Verificações executadas: JSON sem chaves duplicadas, contrato e contagem; 24 IDs/caminhos/hashes únicos; arquivos regulares UTF-8 sem symlinks sob knowledge/, até 128 KiB; títulos, 95 seções, cinco passos por documento; 44 referências internas resolvidas; links locais; revisão cruzada dos procedimentos e abstenções. SHA-256 recalculados e conferidos com sha256sum. Seis documentos preexistentes e avaliação inalterados; passagens/offsets e hash do snapshot original conferidos. git diff --check sem problemas.
 - Custo e limitações: sem rede, chamadas pagas, ingestão, publicação, busca ou testes de aplicação; conferência editorial pelo agente não é revisão humana independente nem métrica de modelo. Sem mudança de dependências.
 - Git: commit local somente desta entrega; explicação preexistente da S1.3 no diário preservada fora do commit. Pendências: aceite humano dos 21 novos textos, licença e S1.8/S1.9.
+
+## Sprint 1 — S1.7: aceite explícito — 2026-10-30
+
+- Usuário solicitou aprovação dos 21 documentos após verificações bem-sucedidas e autorizou S1.8. Aceite registrado como project-user em 2026-10-30T16:09:45Z; nenhuma revisão independente atribuída.
+- Corpus 0.1.5-draft: 24 conteúdos approved, licenças pending; manifesto draft, sem ingestão/publicação. Markdown preservado.
+- Verificações: 24 hashes/títulos/caminhos únicos, 95 seções, 44 referências resolvidas; sem teste de aplicação ou modelo.
