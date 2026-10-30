@@ -4,7 +4,7 @@ A support assistant combining retrieval-augmented generation (RAG), source citat
 
 SupportAI is a learning and portfolio project focused on **system architecture, backend engineering, model training, MLOps, and LLMOps**.
 
-> **Status: Sprint 1 — pilot approved; S1.7 batch 1 prepared (6/24 documents).** The user approved the three fictional pilot procedures and eight development annotations in S1.6; licensing remains pending. Application code, approved datasets, trained models, benchmarks, CI, and deployment are not available yet.
+> **Status: Sprint 1 — pilot approved; S1.7 expansion prepared (24/24 documents), human acceptance pending.** The user approved the three fictional pilot procedures and eight development annotations in S1.6; licensing remains pending. Application code, approved datasets, trained models, benchmarks, CI, and deployment are not available yet.
 
 ## Support domain
 
@@ -164,7 +164,7 @@ The project is configured with `package = false`: it manages an environment with
 
 [The data documentation](docs/DATA.md) defines document IDs, versions, sections, checksums, provenance, license and human review, along with retention and deletion policies. Metadata lives in JSON; procedures live in Markdown. A checksum detects content changes; it does not establish correctness or permission to use a source.
 
-The [corpus manifest](configs/corpus_manifest.json) contains six documents in snapshot `0.1.3-draft`, with actual SHA-256 checksums and `status: draft`. Three pilot documents have user approval; three expansion documents await human review, and all licenses remain pending; it authorizes no ingestion. A future approved snapshot must have an approved license and recorded human review for every listed source. The ingestion validator will be implemented in Sprint 2; these contracts are not an existing security mechanism.
+The [corpus manifest](configs/corpus_manifest.json) contains 24 documents in snapshot `0.1.4-draft`, with actual SHA-256 checksums and `status: draft`. Three pilot documents have user approval; 21 expansion documents await human review, and all licenses remain pending; it authorizes no ingestion. A future approved snapshot must have an approved license and recorded human review for every listed source. The ingestion validator will be implemented in Sprint 2; these contracts are not an existing security mechanism.
 
 ### Fictional document pilot (S1.4)
 
@@ -186,9 +186,11 @@ The [review guide](docs/PILOT_REVIEW.md) brings together the three source docume
 
 The user explicitly approved the three pilot documents and eight annotations and authorized S1.7 on 2026-10-30. The decision is recorded as project-user; no second independent human reviewer is claimed. Procedure bodies, questions and evidence remain unchanged. Licensing remains pending and keeps the manifest in draft. S1.7 will expand in small reviewable batches.
 
-### Corpus expansion (S1.7 — batch 1)
+### Corpus expansion (S1.7 — editorial work complete)
 
-Three new fictional procedures cover [ticket creation](knowledge/nd-tickets-002.md), [replying to an information request](knowledge/nd-tickets-003.md), and [filtering your own tickets](knowledge/nd-tickets-004.md). The corpus now has six documents and 23 sections. The [batch review guide](docs/S1_7_BATCH_REVIEW.md) records proposed rules, limits and consistency checks; these new documents await human review. S1.7 remains in progress toward 24 documents.
+The corpus now has 24 fictional Portuguese procedures and 95 sections: six access, four ticket, four billing, five service-request and five interface troubleshooting documents. The [complete review index](docs/S1_7_REVIEW.md) links all seven expansion batches and records editorial decisions, consistency checks and limits. The six previously existing procedures remain unchanged.
+
+The expansion target is met. Human acceptance of the 21 expansion documents is still pending; the user's instruction to complete S1.7 is not recorded as approval of unseen content. All licenses remain pending and the manifest stays in draft. Eight development annotations remain bound to their original three-document snapshot; S1.8 will revalidate evidence and expand the question set. No model evaluation has been run.
 
 Database migrations, ingestion, training, and application commands will be documented when implemented and verified. Do not expect a running application yet.
 

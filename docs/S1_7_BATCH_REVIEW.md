@@ -1,5 +1,7 @@
 # SupportAI — S1.7, lote 1 para revisão
 
+Registro histórico do primeiro lote. O corpus final e os sete lotes estão em [S1_7_REVIEW.md](S1_7_REVIEW.md).
+
 Preparado em 30/10/2026. Status: conferência editorial do agente concluída; revisão humana dos três novos documentos pendente. A aprovação da S1.6 abrange somente o piloto original.
 
 ## Conteúdo do lote
@@ -24,6 +26,6 @@ São escolhas fictícias reversíveis: nomes dos campos Assunto e Descrição, b
 
 A avaliação `0.1.1-draft` permanece ligada ao snapshot de três documentos `0.1.2-draft`, preservado no commit `7acb503`. Não foi associada silenciosamente ao corpus expandido. Antes de avaliar o novo corpus, será preciso revisar a respondibilidade e evidências e versionar esse vínculo explicitamente. Não há teste reservado ou métricas de desempenho.
 
-O corpus agora tem 6 documentos (3 aprovados no piloto, 3 novos pendentes), com meta de 24. A S1.7 permanece em andamento. Após a revisão deste lote, preparar o próximo lote de 3–5, ampliando a cobertura para conta/acesso e solicitações de serviço. Não preencher 24 documentos repetindo o mesmo procedimento.
+Na preparação deste lote, o corpus tinha 6 documentos (3 aprovados no piloto, 3 novos pendentes), com meta de 24. A expansão restante foi autorizada na instrução posterior “termine a s1.7”; os lotes foram preparados e conferidos editorialmente, sem atribuir aprovação humana aos novos textos. Não preencher 24 documentos repetindo o mesmo procedimento.
 
 Para revisar, leia os três documentos completos e informe aprovação ou correções pelos IDs. Licença permanece pendente; nenhum documento está autorizado para ingestão ou publicação.
