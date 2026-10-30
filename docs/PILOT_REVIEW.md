@@ -200,7 +200,7 @@ Não necessariamente. Concluído significa que a equipe encerrou o atendimento c
 
 ## Critérios de encerramento da S1.6
 
-- [x] Usuário revisou os três documentos e as oito perguntas/gabaritos, aprovando ou solicitando ajustes por ID.
+- [x] Usuário autorizou explicitamente o registro de aprovação dos três documentos e das oito perguntas/gabaritos, sem solicitar ajustes. A decisão não comprova leitura independente de cada passagem.
 - [x] Nenhuma correção de conteúdo solicitada; somente metadados de revisão e vínculos de snapshot atualizados.
 - [x] Identificação do revisor e timestamp real da decisão registrados; sem atribuir revisão independente quando só houver uma pessoa.
 - [x] Situação da licença decidida explicitamente: licença indicada pelo usuário ou manutenção da pendência, sem publicação nem promoção do manifesto.

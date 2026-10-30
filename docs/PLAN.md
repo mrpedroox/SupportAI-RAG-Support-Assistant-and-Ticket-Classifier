@@ -2,7 +2,7 @@
 
 Data: 28/10/2026. Referência: AGENTS.md v2.0, lido integralmente.
 
-**Status: plano aprovado; Sprint 1 em andamento.** S1.1–S1.5 concluídas. S1.6 iniciada: roteiro em docs/PILOT_REVIEW.md preparado, aguardando revisão e decisão do usuário. Três documentos e oito perguntas continuam em draft, com licença e revisão humana pendentes. S1.7–S1.9 não iniciadas; não expandir antes do aceite do piloto. Não há aplicação, corpus/avaliação aprovados ou modelo treinado.
+**Status: plano aprovado; Sprint 1 em andamento.** S1.1–S1.6 concluídas, com aprovação explícita do conteúdo do piloto pelo usuário. S1.7 em andamento: primeiro lote de três novos documentos preparado, total 6/24; novos documentos aguardam revisão humana. Oito anotações do piloto aprovadas, licença pendente e manifesto draft. S1.8–S1.9 não iniciadas. Não há aplicação, ingestão autorizada ou modelo treinado.
 
 ## 1. Objetivo e ponto de partida
 
@@ -79,7 +79,7 @@ Branch da Sprint 1: `feature/s1-knowledge-foundation`, criada no início da exec
 
 ### 4.2 Tarefas pequenas, em ordem
 
-**S1.1 e S1.2 concluídas em 28/10/2026; S1.3 em 29/10/2026; S1.4 e S1.5 em 30/10/2026. S1.6 concluída por aprovação explícita do usuário em 30/10/2026, licença mantida pendente; S1.7 autorizada; S1.8–S1.9 não iniciadas.** Dependências indicam o que deve ser revisado antes de avançar.
+**S1.1 e S1.2 concluídas em 28/10/2026; S1.3 em 29/10/2026; S1.4 e S1.5 em 30/10/2026. S1.6 concluída por aprovação explícita do usuário em 30/10/2026, licença mantida pendente; S1.7 em andamento: lote 1 preparado, 6/24 documentos, 3 novos aguardando revisão humana; S1.8–S1.9 não iniciadas.** Dependências indicam o que deve ser revisado antes de avançar.
 
 | ID | Problema e ação proposta | Entrega prevista | Como verificar |
 | --- | --- | --- | --- |
@@ -88,8 +88,8 @@ Branch da Sprint 1: `feature/s1-knowledge-foundation`, criada no início da exec
 | S1.3 | Tornar fontes auditáveis: definir metadados, manifesto autorizado e política de dados. | docs/DATA.md com origem, autoria, licença, idioma, caráter fictício, obtenção, atualização, retenção/exclusão e limitações; formato do manifesto. | Um documento deve ser identificável por ID, título, versão, fonte, checksum e seções; apenas caminhos autorizados entram no manifesto. Depende de S1.1. |
 | S1.4 | Testar a coerência antes de escalar: redigir 3 procedimentos curtos com passos, condições e exceções. | Piloto em knowledge/ e entradas no manifesto. | Revisar manualmente contradições, integridade de passos e rastreabilidade; distinguir metadados do checksum calculado sobre o arquivo final. Depende de S1.3. |
 | S1.5 | Testar a anotação: criar 8 perguntas de desenvolvimento sobre o piloto. | Piloto em evaluation/, com evidências ou motivo de abstenção. | Proposta: 6 respondíveis e 2 sem resposta; incluir paráfrase, abreviação e ambiguidade. Nenhuma referência pode exigir informação ausente. Depende de S1.4. |
-| S1.6 | Corrigir ambiguidades do próprio conjunto: revisar documentos e perguntas com o usuário. Em andamento: roteiro preparado em docs/PILOT_REVIEW.md, sem aceite humano ainda. | Piloto revisado e decisões registradas. | Percorrer manualmente pergunta, documento/versão, passagem e resposta. Material gerado por LLM permanece pendente até revisão humana. Depende de S1.5. |
-| S1.7 | Ampliar mantendo coerência: adicionar documentos em lotes de 3–5, revisando cada lote. | Meta de 24 documentos; manifesto com caminhos e checksums, versão do corpus e contagens. | Todos com metadados completos, sem duplicatas contraditórias; manter entre 20 e 40. Depende do aceite do piloto S1.6. |
+| S1.6 | Corrigir ambiguidades do próprio conjunto: revisar documentos e perguntas com o usuário. Concluída: aprovação explícita do usuário registrada em docs/PILOT_REVIEW.md; licença pendente. | Piloto revisado e decisões registradas. | Percorrer manualmente pergunta, documento/versão, passagem e resposta. Material gerado por LLM permanece pendente até revisão humana. Depende de S1.5. |
+| S1.7 | Em andamento: lote 1 com 3 novos documentos (6/24), roteiro em docs/S1_7_BATCH_REVIEW.md. Ampliar em lotes de 3–5, revisando cada lote. | Meta de 24 documentos; manifesto com caminhos e checksums, versão do corpus e contagens. | Todos com metadados completos, sem duplicatas contraditórias; manter entre 20 e 40. Depende do aceite do piloto S1.6. |
 | S1.8 | Completar a avaliação: ampliar as perguntas em lotes de 5–10 e separar grupos antes de atribuir partições. | Cerca de 50 perguntas revisadas; manifestos de desenvolvimento/teste com IDs, grupos, versões e checksums. | Nenhum grupo em ambas as partições; perguntas respondíveis e sem resposta nas duas; evidências localizáveis. As 8 perguntas já usadas no piloto ficam em desenvolvimento. Depende de S1.7. |
 | S1.9 | Registrar limites e preparar o próximo passo: auditar os dados e explicar o que ficou pronto. | README atualizado, entrada em docs/PROJECT_LOG.md e status neste plano. | Apresentar contagens, pendências, orçamento e exercício manual; encerrar a sprint apenas com todos os critérios atendidos. Depende de S1.8 e S1.2. |
 
@@ -117,16 +117,17 @@ Para perguntas sem resposta, evidências ficam vazias e o motivo esperado de abs
 docs/PLAN.md                 # criado nesta sessão
 docs/DATA.md                 # política e contratos dos dados
 docs/PROJECT_LOG.md          # decisões, aprendizado e verificações
-docs/PILOT_REVIEW.md         # roteiro com documentos/perguntas; revisão pendente
-knowledge/                   # três procedimentos fictícios, revisão pendente
-configs/corpus_manifest.json # três entradas em draft, com checksums reais
-evaluation/rag_dev_pilot.json # oito perguntas, evidências/abstenção; nunca indexar
+docs/PILOT_REVIEW.md         # roteiro do piloto e aprovação explícita do usuário
+docs/S1_7_BATCH_REVIEW.md    # lote 1 de expansão para revisão humana
+knowledge/                   # seis procedimentos: três aprovados, três pendentes
+configs/corpus_manifest.json # seis entradas em draft, com checksums reais
+evaluation/rag_dev_pilot.json # oito anotações aprovadas, snapshot do piloto; nunca indexar
 pyproject.toml               # dependências e configuração mínima
 uv.lock                      # único lock de dependências
 .python-version              # CPython 3.12.16
 ```
 
-A árvore representa a estrutura incremental. Documentação, ambiente, manifesto, três documentos e oito perguntas do piloto já existem; corpus e anotações continuam sem revisão humana. Os documentos não estão aprovados para ingestão. Usar caminhos relativos ao repositório nos manifestos para permitir reprodução em outra máquina. Criar módulos de aplicação apenas quando tiverem responsabilidade executável nas próximas sprints.
+A árvore representa a estrutura incremental. Documentação, ambiente, manifesto, seis documentos e oito perguntas existem; piloto aprovado pelo usuário e três novos documentos aguardando revisão humana. Os documentos não estão aprovados para ingestão. Usar caminhos relativos ao repositório nos manifestos para permitir reprodução em outra máquina. Criar módulos de aplicação apenas quando tiverem responsabilidade executável nas próximas sprints.
 
 ### 4.5 Critérios de aceite da Sprint 1
 
@@ -148,7 +149,7 @@ As metas de qualidade do AGENTS.md serão medidas nas sprints de avaliação: re
 
 | Sprint | Entrega e aprendizado central | Estado |
 | --- | --- | --- |
-| 1 — Domínio, corpus e avaliação | Dados autorizados, perguntas revisadas, evidências e ambiente mínimo. | S1.1–S1.5 concluídas; S1.6 aprovada; S1.7 autorizada |
+| 1 — Domínio, corpus e avaliação | Dados autorizados, perguntas revisadas, evidências e ambiente mínimo. | S1.1–S1.5 concluídas; S1.6 aprovada; S1.7 lote 1 preparado (6/24) |
 | 2 — Ingestão e busca | PostgreSQL/pgvector, migrations, chunking, coleção idempotente e publicação atômica; comparar busca textual e vetorial no desenvolvimento, com MLflow inicial. | Não iniciada |
 | 3 — Geração e API RAG | LLM, contexto limitado, fontes validadas, abstenção, persistência, autenticação e health checks. | Não iniciada |
 | 4 — Revisão e avaliação | Histórico autenticado e concorrência, avaliação humana, segurança, tracing sanitizado, tokens e custo. | Não iniciada |
@@ -177,3 +178,7 @@ O projeto completo exige os dois marcos. Resultados insuficientes devem ser publ
 ## Decisão S1.6 — 30/10/2026
 
 Usuário aprovou os três documentos e as oito anotações e autorizou prosseguir para S1.7. Identificação operacional project-user; registro 2026-10-30T15:53:10Z. Licença mantida pendente, manifesto draft; sem segundo revisor humano independente. As descrições anteriores de preparação são históricas. Não houve alteração de procedimentos, perguntas ou evidências.
+
+## Progresso S1.7 — lote 1 — 30/10/2026
+
+Três documentos complementares sobre chamados preparados; total 6/24. Piloto preservado, licença pendente, novos textos ainda sem aprovação humana. Revisar docs/S1_7_BATCH_REVIEW.md antes do próximo lote. A avaliação mantém o snapshot de origem do commit 7acb503; S1.8 não iniciada.

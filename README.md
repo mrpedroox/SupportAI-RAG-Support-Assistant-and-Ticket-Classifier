@@ -4,7 +4,7 @@ A support assistant combining retrieval-augmented generation (RAG), source citat
 
 SupportAI is a learning and portfolio project focused on **system architecture, backend engineering, model training, MLOps, and LLMOps**.
 
-> **Status: Sprint 1 — document and question pilot drafted (S1.1–S1.5).** The user approved the three fictional pilot procedures and eight development annotations in S1.6; licensing remains pending. Application code, approved datasets, trained models, benchmarks, CI, and deployment are not available yet.
+> **Status: Sprint 1 — pilot approved; S1.7 batch 1 prepared (6/24 documents).** The user approved the three fictional pilot procedures and eight development annotations in S1.6; licensing remains pending. Application code, approved datasets, trained models, benchmarks, CI, and deployment are not available yet.
 
 ## Support domain
 
@@ -164,7 +164,7 @@ The project is configured with `package = false`: it manages an environment with
 
 [The data documentation](docs/DATA.md) defines document IDs, versions, sections, checksums, provenance, license and human review, along with retention and deletion policies. Metadata lives in JSON; procedures live in Markdown. A checksum detects content changes; it does not establish correctness or permission to use a source.
 
-The [corpus manifest](configs/corpus_manifest.json) contains three documents in snapshot `0.1.2-draft`, with actual SHA-256 checksums and `status: draft`. The pilot content has user approval; licensing remains pending; it authorizes no ingestion. A future approved snapshot must have an approved license and recorded human review for every listed source. The ingestion validator will be implemented in Sprint 2; these contracts are not an existing security mechanism.
+The [corpus manifest](configs/corpus_manifest.json) contains six documents in snapshot `0.1.3-draft`, with actual SHA-256 checksums and `status: draft`. Three pilot documents have user approval; three expansion documents await human review, and all licenses remain pending; it authorizes no ingestion. A future approved snapshot must have an approved license and recorded human review for every listed source. The ingestion validator will be implemented in Sprint 2; these contracts are not an existing security mechanism.
 
 ### Fictional document pilot (S1.4)
 
@@ -172,19 +172,23 @@ The [corpus manifest](configs/corpus_manifest.json) contains three documents in 
 - [Workspace invoice lookup](knowledge/nd-billing-001.md): administrator access, lookup, download and discrepancies; no refund or discount rules.
 - [Tracking your own support tickets](knowledge/nd-tickets-001.md): authenticated lookup, four documented statuses and missing-ticket exceptions; no completion-time promises.
 
-All three documents are in Portuguese and marked as fictional drafts. Their 11 sections have stable IDs. Editorial consistency checks by the agent do not replace the human pilot review planned for S1.6.
+The three pilot documents are in Portuguese; their original draft notices describe their preparation. The manifest records the user approval from S1.6. Their 11 sections have stable IDs.
 
 ### Development question pilot (S1.5)
 
 [The draft evaluation](evaluation/rag_dev_pilot.json) contains eight Portuguese questions: six answerable and two unanswerable, across seven groups. It includes a paraphrase pair with abbreviations, an ambiguous outcome explained by the corpus, and a missing-context question requiring clarification. All entries stay in development; no reserved test set has been created or used.
 
-Answers reference literal evidence spans with document versions, checksums, section IDs and Unicode character offsets. Unanswerable cases have no fabricated evidence, only an abstention reason and expected response. The evaluation is linked to the exact corpus manifest checksum and must never be indexed or supplied as generation context. These LLM-assisted annotations have explicit user approval recorded in S1.6; they are not model performance results or classifier training data.
+Answers reference literal evidence spans with document versions, checksums, section IDs and Unicode character offsets. Unanswerable cases have no fabricated evidence, only an abstention reason and expected response. The evaluation remains linked to the three-document snapshot 0.1.2-draft in commit 7acb503 by its exact manifest checksum and must never be indexed or supplied as generation context. These LLM-assisted annotations have explicit user approval recorded in S1.6; they are not model performance results or classifier training data.
 
 ### Human pilot review (S1.6 — content approved)
 
 The [review guide](docs/PILOT_REVIEW.md) brings together the three source documents, all eight questions, expected answers, evidence passages, snapshot checksums and a decision checklist. The agent's editorial check identified no contradiction requiring a change before human review. This is not human approval or a model evaluation.
 
 The user explicitly approved the three pilot documents and eight annotations and authorized S1.7 on 2026-10-30. The decision is recorded as project-user; no second independent human reviewer is claimed. Procedure bodies, questions and evidence remain unchanged. Licensing remains pending and keeps the manifest in draft. S1.7 will expand in small reviewable batches.
+
+### Corpus expansion (S1.7 — batch 1)
+
+Three new fictional procedures cover [ticket creation](knowledge/nd-tickets-002.md), [replying to an information request](knowledge/nd-tickets-003.md), and [filtering your own tickets](knowledge/nd-tickets-004.md). The corpus now has six documents and 23 sections. The [batch review guide](docs/S1_7_BATCH_REVIEW.md) records proposed rules, limits and consistency checks; these new documents await human review. S1.7 remains in progress toward 24 documents.
 
 Database migrations, ingestion, training, and application commands will be documented when implemented and verified. Do not expect a running application yet.
 

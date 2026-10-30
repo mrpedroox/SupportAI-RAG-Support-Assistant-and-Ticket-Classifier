@@ -70,3 +70,11 @@
 - Decisão explícita no chat: “entao aprove por mim e prossiga para a s1.7”. Aprovação dos três documentos e oito anotações, registrada como project-user em 2026-10-30T15:53:10Z; sem revisão humana independente adicional. Licença mantida pendente conforme recomendação aceita; sem publicação ou ingestão.
 - Somente metadados alterados: corpus 0.1.2-draft e avaliação 0.1.1-draft, com vínculo pelo novo hash. Conteúdo e evidências preservados. Os avisos originais de rascunho são históricos; revisão vigente no manifesto.
 - Próxima etapa autorizada: S1.7 em lotes de 3–5 documentos.
+
+## Sprint 1 — S1.7: expansão, lote 1 — 2026-10-30
+
+- Entrega: três novos procedimentos (nd-tickets-002 a nd-tickets-004), abertura, resposta a pedido de informação e filtros. Corpus 0.1.3-draft com 6 documentos e 23 seções; meta de 24, S1.7 em andamento. Roteiro em docs/S1_7_BATCH_REVIEW.md.
+- Decisões: novos menus/campos são regras fictícias reversíveis, sem implementar interface. Preservados autenticação, conta solicitante, espaço e significado dos estados do piloto. Novos textos llm_assisted, revisão e licença pending; aprovação do piloto não estendida a conteúdo novo.
+- Conceito: adicionar fontes também muda a avaliação; gabaritos podem perder validade. A avaliação aprovada continua vinculada ao corpus de três documentos do commit 7acb503, sem mudar silenciosamente o snapshot. Conferência editorial das duas abstenções sem identificar nova resposta no lote.
+- Verificações: integridade de JSON e metadados, caminhos, títulos/seções, hashes, referências internas e passagens do piloto; leitura cruzada dos seis procedimentos e git diff --check. Sem avaliação de modelo, testes de aplicação ou chamadas pagas.
+- Pendências: revisão humana do lote 1 antes do próximo lote, licença e expansão até 20–40 documentos (meta 24). S1.8 não iniciada. Alteração preexistente da explicação S1.3 no diário preservada fora dos commits. Sem push ou publicação.

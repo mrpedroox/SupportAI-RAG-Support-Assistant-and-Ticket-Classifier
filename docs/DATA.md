@@ -1,8 +1,8 @@
 # SupportAI — Domínio e dados
 
-Atualizado em: 30/10/2026. Etapas: S1.1 — domínio; S1.3 — contratos; S1.4 — documentos; S1.5 — perguntas do piloto.
+Atualizado em: 30/10/2026. Etapas: S1.1–S1.6 concluídas; S1.7 em andamento, lote 1 preparado.
 
-O plano foi aprovado pelo usuário. Este documento define o domínio, os contratos e as políticas de dados. O corpus piloto tem três procedimentos fictícios em knowledge/, listados no manifesto 0.1.2-draft com checksums reais. Oito perguntas e gabaritos iniciais estão em evaluation/rag_dev_pilot.json, exclusivamente em desenvolvimento. O usuário aprovou o conteúdo dos três documentos e das oito anotações na S1.6, sob a identificação project-user. A licença permanece pendente; nenhuma fonte está autorizada para ingestão. As validações de ingestão descritas abaixo são requisitos para a Sprint 2, ainda sem implementação.
+O plano foi aprovado pelo usuário. Este documento define o domínio, os contratos e as políticas de dados. O corpus atual tem seis procedimentos fictícios em knowledge/, listados no manifesto 0.1.3-draft com checksums reais: três do piloto aprovados e três do primeiro lote de expansão com revisão pendente. Oito perguntas e gabaritos iniciais estão em evaluation/rag_dev_pilot.json, exclusivamente em desenvolvimento. O usuário aprovou o conteúdo dos três documentos e das oito anotações na S1.6, sob a identificação project-user. A licença permanece pendente; nenhuma fonte está autorizada para ingestão. As validações de ingestão descritas abaixo são requisitos para a Sprint 2, ainda sem implementação.
 
 ## Produto e público
 
@@ -42,7 +42,7 @@ Falta de evidência e falha técnica serão tratadas separadamente na API futura
 
 ## Fontes e separação dos dados
 
-- Corpus atual: 3 documentos fictícios do piloto; meta final de 24, dentro da faixa de 20–40. Piloto aprovado na S1.6; expansão em lotes na S1.7.
+- Corpus atual: 6 documentos fictícios (3 do piloto aprovados, 3 do lote 1 pendentes); meta final de 24, dentro da faixa de 20–40. Piloto aprovado na S1.6; expansão em lotes na S1.7.
 - Origem do piloto: redação assistida por LLM para este projeto em 30/10/2026, sem fontes externas ou dados de clientes. Autoria declarada como SupportAI project; conteúdo do piloto aprovado pelo usuário na S1.6. Nenhum texto gerado está automaticamente aprovado.
 - Avaliação atual: 8 perguntas do piloto em desenvolvimento, anotadas com assistência de LLM e aprovadas pelo usuário na S1.6. Meta final: cerca de 50 revisadas, aproximadamente 35 de desenvolvimento e 15 de teste, com grupos de paráfrases preservados. As 8 perguntas do piloto permanecerão em desenvolvimento; nenhum teste reservado foi criado ou usado.
 - `knowledge/` conterá procedimentos; `evaluation/`, perguntas e gabaritos. Somente documentos autorizados por manifesto poderão ser indexados. Este documento de escopo também não é fonte de procedimentos para ingestão.
@@ -126,7 +126,7 @@ Arquivo: `configs/corpus_manifest.json`. Ele lista explicitamente os arquivos ca
 | `document_count` | Inteiro igual ao tamanho de documents. Snapshot aprovado tem entre 1 e 40 entradas; o piloto pode ter 3, mas o aceite final da Sprint 1 continua exigindo 20–40. |
 | `documents` | Lista de entradas com o contrato acima. Snapshot vazio é permitido apenas como draft. |
 
-**Estado atual:** 3 documentos em 0.1.2-draft, status draft, conteúdo aprovado pelo usuário e licença pendente, nenhuma fonte autorizada para ingestão. O snapshot vazio anterior era 0.1.0-draft, preservado no histórico do Git. Não é uma coleção pronta e não satisfaz readiness da API. A revisão do corpus é distinta dos estados building/ready da coleção futura.
+**Estado atual:** 6 documentos em 0.1.3-draft, status draft, 3 revisões aprovadas e 3 pendentes, todas as licenças pendentes, nenhuma fonte autorizada para ingestão. O snapshot vazio anterior era 0.1.0-draft, preservado no histórico do Git. Não é uma coleção pronta e não satisfaz readiness da API. A revisão do corpus é distinta dos estados building/ready da coleção futura.
 
 ### Requisitos de validação para a ingestão futura
 
@@ -262,3 +262,9 @@ Na conferência editorial do agente, não foi identificada uma contradição que
 Para encerrar a etapa, o usuário deve avaliar o material, aprovar ou solicitar correções por ID e informar a identificação a registrar como revisor. Aprovação de conteúdo é distinta de permissão de publicação: a licença pode permanecer pendente por decisão explícita, mantendo o manifesto em draft. Se houver apenas uma pessoa revisando, declarar a ausência de segundo anotador independente; não inferir revisão de compreensão do usuário por resultados automáticos.
 
 **Decisão vigente:** usuário aprovou os três documentos e oito anotações em 30/10/2026 e autorizou a S1.7. Registro project-user, timestamp 2026-10-30T15:53:10Z. Licença mantida pendente. A descrição acima preserva o histórico da preparação; não há segundo revisor humano independente. Revisão de conteúdo não autoriza ingestão ou publicação. Os avisos de rascunho nos arquivos originais permanecem como histórico de preparação; o manifesto registra a revisão vigente.
+
+## S1.7 — Expansão, lote 1
+
+Adicionados nd-tickets-002 (abrir chamado), nd-tickets-003 (responder a pedido de informação) e nd-tickets-004 (filtrar os próprios chamados), versão 1.0.0, criação assistida por LLM em 30/10/2026. Revisão humana e licença pendentes. O roteiro completo está em docs/S1_7_BATCH_REVIEW.md. O corpus tem 6 documentos e 23 seções, rumo à meta de 24 documentos; a etapa não está concluída.
+
+A avaliação 0.1.1-draft continua vinculada ao corpus 0.1.2-draft de três documentos do commit 7acb503. Não atualizar seu hash para o corpus expandido sem revisar as anotações: a adição de fontes pode tornar uma pergunta antes sem resposta respondível. Neste lote, a conferência editorial preservou as duas abstenções, sem executar modelo.
