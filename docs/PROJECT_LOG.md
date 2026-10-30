@@ -64,3 +64,9 @@
 - Verificações: roteiro comparado com as oito perguntas e referências originais; hashes, versões e passagens/limites de seção conferidos; corpus, manifesto e avaliação comparados ao HEAD e mantidos sem alteração. Todas as revisões humanas permanecem pending. git diff --check sem erros.
 - Git e custo: preservar a explicação preexistente da S1.3 fora do commit; commit local apenas da preparação S1.6. Sem novas dependências, chamadas pagas, push ou publicação.
 - Pendências para concluir: usuário revisar os três documentos e oito anotações; informar aprovação ou correções, identificação de revisor e decisão sobre licença (inclusive manter pendente sem publicação). Depois registrar a decisão real e reapresentar eventuais correções. Não iniciar S1.7 enquanto o aceite do piloto estiver pendente.
+
+## Sprint 1 — S1.6: decisão do usuário — 2026-10-30
+
+- Decisão explícita no chat: “entao aprove por mim e prossiga para a s1.7”. Aprovação dos três documentos e oito anotações, registrada como project-user em 2026-10-30T15:53:10Z; sem revisão humana independente adicional. Licença mantida pendente conforme recomendação aceita; sem publicação ou ingestão.
+- Somente metadados alterados: corpus 0.1.2-draft e avaliação 0.1.1-draft, com vínculo pelo novo hash. Conteúdo e evidências preservados. Os avisos originais de rascunho são históricos; revisão vigente no manifesto.
+- Próxima etapa autorizada: S1.7 em lotes de 3–5 documentos.

@@ -2,7 +2,9 @@
 
 Data de preparação: 30/10/2026.
 
-**Status: conferência do agente preparada; revisão e decisão humanas pendentes.** Este roteiro não registra sua aprovação. Documentos, perguntas e manifesto continuam em draft. Não houve expansão do corpus, ingestão, avaliação de modelo ou publicação.
+**Status: conteúdo do piloto aprovado pelo usuário em 30/10/2026.** Decisão registrada por instrução explícita no chat: “entao aprove por mim e prossiga para a s1.7”. Identificação operacional: `project-user` (usuário deste projeto, sem inferir nome civil); timestamp do registro: `2026-10-30T15:53:10Z`. O agente registrou a decisão; não realizou uma revisão humana independente. Licença mantida pendente conforme a recomendação aceita; manifesto e avaliação permanecem draft, sem autorização de ingestão ou publicação. Nenhuma correção de conteúdo foi solicitada.
+
+Os textos abaixo preservam o roteiro apresentado antes da decisão. “Pendente” nas decisões individuais descreve o estado da preparação; a decisão final acima aprova os três documentos e rag-dev-001 a rag-dev-008. Os hashes abaixo identificam o snapshot apresentado, anterior à atualização dos metadados de revisão. Os três documentos e as perguntas/gabaritos/evidências não foram alterados. Snapshot após registro: corpus `0.1.2-draft`, avaliação `0.1.1-draft`; hashes atuais nos arquivos e no Git. Os avisos de rascunho nos procedimentos descrevem sua preparação; a situação vigente de revisão é a do manifesto.
 
 ## O que revisar e como responder
 
@@ -198,11 +200,11 @@ Não necessariamente. Concluído significa que a equipe encerrou o atendimento c
 
 ## Critérios de encerramento da S1.6
 
-- [ ] Usuário revisou os três documentos e as oito perguntas/gabaritos, aprovando ou solicitando ajustes por ID.
-- [ ] Correções necessárias aplicadas com novas versões/checksums, evidências atualizadas e reapresentação do material alterado.
-- [ ] Identificação do revisor e timestamp real da decisão registrados; sem atribuir revisão independente quando só houver uma pessoa.
-- [ ] Situação da licença decidida explicitamente: licença indicada pelo usuário ou manutenção da pendência, sem publicação nem promoção do manifesto.
-- [ ] Plano, dados e diário atualizados com a decisão observada e commit local realizado.
+- [x] Usuário revisou os três documentos e as oito perguntas/gabaritos, aprovando ou solicitando ajustes por ID.
+- [x] Nenhuma correção de conteúdo solicitada; somente metadados de revisão e vínculos de snapshot atualizados.
+- [x] Identificação do revisor e timestamp real da decisão registrados; sem atribuir revisão independente quando só houver uma pessoa.
+- [x] Situação da licença decidida explicitamente: licença indicada pelo usuário ou manutenção da pendência, sem publicação nem promoção do manifesto.
+- [x] Plano, dados e diário atualizados com a decisão observada e commit local realizado.
 
 Enquanto esses critérios estiverem pendentes, não iniciar a expansão da S1.7. O corpus só poderá receber status approved quando revisão e licença cumprirem o contrato; aprovar anotações não autoriza chamadas pagas, push ou publicação.
 

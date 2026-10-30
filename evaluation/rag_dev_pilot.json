@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "evaluation_version": "0.1.0-draft",
+  "evaluation_version": "0.1.1-draft",
   "status": "draft",
   "created_on": "2026-10-30",
   "language": "pt-BR",
   "split": "development",
-  "corpus_version": "0.1.1-draft",
-  "corpus_manifest_sha256": "730500268ef66cc15390b4104e6d89340a1aa2704125c0ffb18c66e66578a2a7",
+  "corpus_version": "0.1.2-draft",
+  "corpus_manifest_sha256": "4dbaf772d42359504a63c7b5a878d0ec8f4824bf44235719880db68382836ffa",
   "offset_unit": "unicode_codepoint",
   "offset_convention": "[start, end)",
   "question_count": 8,
@@ -46,9 +46,9 @@
       "split": "development",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T15:53:10Z"
       },
       "abstention_reason": null,
       "expected_abstention": null,
@@ -90,9 +90,9 @@
       "split": "development",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T15:53:10Z"
       },
       "abstention_reason": null,
       "expected_abstention": null,
@@ -133,9 +133,9 @@
       "split": "development",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T15:53:10Z"
       },
       "abstention_reason": null,
       "expected_abstention": null,
@@ -176,9 +176,9 @@
       "split": "development",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T15:53:10Z"
       },
       "abstention_reason": null,
       "expected_abstention": null,
@@ -219,9 +219,9 @@
       "split": "development",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T15:53:10Z"
       },
       "abstention_reason": null,
       "expected_abstention": null,
@@ -253,9 +253,9 @@
       "split": "development",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T15:53:10Z"
       },
       "abstention_reason": null,
       "expected_abstention": null,
@@ -275,9 +275,9 @@
       "split": "development",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T15:53:10Z"
       },
       "abstention_reason": "O corpus piloto não estabelece direito, procedimento ou prazo de reembolso. A orientação de registrar uma divergência não responde ao prazo solicitado.",
       "expected_abstention": "A base não informa prazo de reembolso. Encaminhe a dúvida à revisão humana, sem prometer um prazo ou resultado.",
@@ -298,9 +298,9 @@
       "split": "development",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T15:53:10Z"
       },
       "abstention_reason": "A pergunta não identifica o problema nem fornece contexto para escolher entre os procedimentos do piloto. Não há uma solução específica sustentada por evidências.",
       "expected_abstention": "Preciso de mais contexto para orientar com base nos procedimentos disponíveis.",

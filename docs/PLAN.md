@@ -79,7 +79,7 @@ Branch da Sprint 1: `feature/s1-knowledge-foundation`, criada no início da exec
 
 ### 4.2 Tarefas pequenas, em ordem
 
-**S1.1 e S1.2 concluídas em 28/10/2026; S1.3 em 29/10/2026; S1.4 e S1.5 em 30/10/2026. S1.6 em andamento, com revisão humana pendente; S1.7–S1.9 não iniciadas.** Dependências indicam o que deve ser revisado antes de avançar.
+**S1.1 e S1.2 concluídas em 28/10/2026; S1.3 em 29/10/2026; S1.4 e S1.5 em 30/10/2026. S1.6 concluída por aprovação explícita do usuário em 30/10/2026, licença mantida pendente; S1.7 autorizada; S1.8–S1.9 não iniciadas.** Dependências indicam o que deve ser revisado antes de avançar.
 
 | ID | Problema e ação proposta | Entrega prevista | Como verificar |
 | --- | --- | --- | --- |
@@ -93,7 +93,7 @@ Branch da Sprint 1: `feature/s1-knowledge-foundation`, criada no início da exec
 | S1.8 | Completar a avaliação: ampliar as perguntas em lotes de 5–10 e separar grupos antes de atribuir partições. | Cerca de 50 perguntas revisadas; manifestos de desenvolvimento/teste com IDs, grupos, versões e checksums. | Nenhum grupo em ambas as partições; perguntas respondíveis e sem resposta nas duas; evidências localizáveis. As 8 perguntas já usadas no piloto ficam em desenvolvimento. Depende de S1.7. |
 | S1.9 | Registrar limites e preparar o próximo passo: auditar os dados e explicar o que ficou pronto. | README atualizado, entrada em docs/PROJECT_LOG.md e status neste plano. | Apresentar contagens, pendências, orçamento e exercício manual; encerrar a sprint apenas com todos os critérios atendidos. Depende de S1.8 e S1.2. |
 
-Após cada unidade, explicar o que mudou, por que foi escolhido, o conceito aprendido, como foi verificado e o resultado observado. Revisar o piloto antes da expansão e fazer checkpoint no fim da sprint. A próxima unidade é S1.6. Preferência do usuário registrada em 29/10/2026: concluir cada unidade coesa com verificações e commit local em inglês no formato Conventional Commits; não deixar entregas sem commit. Push e merge continuam dependentes de autorização específica.
+Após cada unidade, explicar o que mudou, por que foi escolhido, o conceito aprendido, como foi verificado e o resultado observado. Revisar o piloto antes da expansão e fazer checkpoint no fim da sprint. A próxima unidade é S1.7. Preferência do usuário registrada em 29/10/2026: concluir cada unidade coesa com verificações e commit local em inglês no formato Conventional Commits; não deixar entregas sem commit. Push e merge continuam dependentes de autorização específica.
 
 ### 4.3 Contratos de dados propostos
 
@@ -148,7 +148,7 @@ As metas de qualidade do AGENTS.md serão medidas nas sprints de avaliação: re
 
 | Sprint | Entrega e aprendizado central | Estado |
 | --- | --- | --- |
-| 1 — Domínio, corpus e avaliação | Dados autorizados, perguntas revisadas, evidências e ambiente mínimo. | S1.1–S1.5 concluídas; S1.6 aguarda revisão humana |
+| 1 — Domínio, corpus e avaliação | Dados autorizados, perguntas revisadas, evidências e ambiente mínimo. | S1.1–S1.5 concluídas; S1.6 aprovada; S1.7 autorizada |
 | 2 — Ingestão e busca | PostgreSQL/pgvector, migrations, chunking, coleção idempotente e publicação atômica; comparar busca textual e vetorial no desenvolvimento, com MLflow inicial. | Não iniciada |
 | 3 — Geração e API RAG | LLM, contexto limitado, fontes validadas, abstenção, persistência, autenticação e health checks. | Não iniciada |
 | 4 — Revisão e avaliação | Histórico autenticado e concorrência, avaliação humana, segurança, tracing sanitizado, tokens e custo. | Não iniciada |
@@ -173,3 +173,7 @@ O projeto completo exige os dois marcos. Resultados insuficientes devem ser publ
 - Atualização S1.5: evaluation/rag_dev_pilot.json contém oito perguntas (6 respondíveis e 2 sem resposta), em sete grupos, todas em desenvolvimento; evidências por passagem literal, versão, checksum, seção e offsets Unicode. Avaliação 0.1.0-draft, criada com assistência de LLM e revisão humana pendente. Nenhum teste reservado criado ou resultado de modelo alegado.
 - Preparação S1.6: docs/PILOT_REVIEW.md reúne documentos completos por links, perguntas, gabaritos, passagens, interpretação das abstenções e snapshots com SHA-256. Conferência editorial do agente sem correção obrigatória identificada; isso não constitui aceite humano. Corpus, manifesto e avaliação não alterados.
 - Para concluir S1.6: usuário revisa o material, informa aprovação ou correções por ID e identificação de revisor; registra-se também a decisão sobre licença, inclusive mantê-la pendente sem publicação. Só após a decisão real atualizar revisão e status; não iniciar S1.7 enquanto o aceite estiver pendente.
+
+## Decisão S1.6 — 30/10/2026
+
+Usuário aprovou os três documentos e as oito anotações e autorizou prosseguir para S1.7. Identificação operacional project-user; registro 2026-10-30T15:53:10Z. Licença mantida pendente, manifesto draft; sem segundo revisor humano independente. As descrições anteriores de preparação são históricas. Não houve alteração de procedimentos, perguntas ou evidências.

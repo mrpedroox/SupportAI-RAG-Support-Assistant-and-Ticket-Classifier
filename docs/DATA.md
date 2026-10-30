@@ -2,7 +2,7 @@
 
 Atualizado em: 30/10/2026. Etapas: S1.1 — domínio; S1.3 — contratos; S1.4 — documentos; S1.5 — perguntas do piloto.
 
-O plano foi aprovado pelo usuário. Este documento define o domínio, os contratos e as políticas de dados. O corpus piloto tem três procedimentos fictícios em knowledge/, listados no manifesto 0.1.1-draft com checksums reais. Oito perguntas e gabaritos iniciais estão em evaluation/rag_dev_pilot.json, exclusivamente em desenvolvimento e com revisão humana pendente. Licença e revisão do corpus também permanecem pendentes; nenhuma fonte está autorizada para ingestão. As validações de ingestão descritas abaixo são requisitos para a Sprint 2, ainda sem implementação.
+O plano foi aprovado pelo usuário. Este documento define o domínio, os contratos e as políticas de dados. O corpus piloto tem três procedimentos fictícios em knowledge/, listados no manifesto 0.1.2-draft com checksums reais. Oito perguntas e gabaritos iniciais estão em evaluation/rag_dev_pilot.json, exclusivamente em desenvolvimento. O usuário aprovou o conteúdo dos três documentos e das oito anotações na S1.6, sob a identificação project-user. A licença permanece pendente; nenhuma fonte está autorizada para ingestão. As validações de ingestão descritas abaixo são requisitos para a Sprint 2, ainda sem implementação.
 
 ## Produto e público
 
@@ -42,9 +42,9 @@ Falta de evidência e falha técnica serão tratadas separadamente na API futura
 
 ## Fontes e separação dos dados
 
-- Corpus atual: 3 documentos fictícios do piloto; meta final de 24, dentro da faixa de 20–40. Não expandir antes da revisão do piloto na S1.6.
-- Origem do piloto: redação assistida por LLM para este projeto em 30/10/2026, sem fontes externas ou dados de clientes. Autoria declarada como SupportAI project; revisão humana pendente. Nenhum texto gerado está automaticamente aprovado.
-- Avaliação atual: 8 perguntas do piloto em desenvolvimento, anotadas com assistência de LLM e revisão humana pendente. Meta final: cerca de 50 revisadas, aproximadamente 35 de desenvolvimento e 15 de teste, com grupos de paráfrases preservados. As 8 perguntas do piloto permanecerão em desenvolvimento; nenhum teste reservado foi criado ou usado.
+- Corpus atual: 3 documentos fictícios do piloto; meta final de 24, dentro da faixa de 20–40. Piloto aprovado na S1.6; expansão em lotes na S1.7.
+- Origem do piloto: redação assistida por LLM para este projeto em 30/10/2026, sem fontes externas ou dados de clientes. Autoria declarada como SupportAI project; conteúdo do piloto aprovado pelo usuário na S1.6. Nenhum texto gerado está automaticamente aprovado.
+- Avaliação atual: 8 perguntas do piloto em desenvolvimento, anotadas com assistência de LLM e aprovadas pelo usuário na S1.6. Meta final: cerca de 50 revisadas, aproximadamente 35 de desenvolvimento e 15 de teste, com grupos de paráfrases preservados. As 8 perguntas do piloto permanecerão em desenvolvimento; nenhum teste reservado foi criado ou usado.
 - `knowledge/` conterá procedimentos; `evaluation/`, perguntas e gabaritos. Somente documentos autorizados por manifesto poderão ser indexados. Este documento de escopo também não é fonte de procedimentos para ingestão.
 - Chamados supervisionados terão conjunto próprio na Sprint 7; perguntas RAG não substituem exemplos rotulados de classificação.
 - Não coletar dados reais de clientes, credenciais ou documentos privados nesta etapa. Nenhum conteúdo será enviado a fornecedores externos na Sprint 1.
@@ -126,7 +126,7 @@ Arquivo: `configs/corpus_manifest.json`. Ele lista explicitamente os arquivos ca
 | `document_count` | Inteiro igual ao tamanho de documents. Snapshot aprovado tem entre 1 e 40 entradas; o piloto pode ter 3, mas o aceite final da Sprint 1 continua exigindo 20–40. |
 | `documents` | Lista de entradas com o contrato acima. Snapshot vazio é permitido apenas como draft. |
 
-**Estado atual:** 3 documentos em 0.1.1-draft, status draft, licença e revisão pendentes, nenhuma fonte autorizada para ingestão. O snapshot vazio anterior era 0.1.0-draft, preservado no histórico do Git. Não é uma coleção pronta e não satisfaz readiness da API. A revisão do corpus é distinta dos estados building/ready da coleção futura.
+**Estado atual:** 3 documentos em 0.1.2-draft, status draft, conteúdo aprovado pelo usuário e licença pendente, nenhuma fonte autorizada para ingestão. O snapshot vazio anterior era 0.1.0-draft, preservado no histórico do Git. Não é uma coleção pronta e não satisfaz readiness da API. A revisão do corpus é distinta dos estados building/ready da coleção futura.
 
 ### Requisitos de validação para a ingestão futura
 
@@ -168,9 +168,9 @@ As lacunas foram usadas para preparar perguntas sem resposta na S1.5. Elas não 
 
 ## Perguntas de desenvolvimento — S1.5
 
-Arquivo: `evaluation/rag_dev_pilot.json`. Formato JSON versão 1, evaluation_version 0.1.0-draft e status draft. O envelope registra idioma, data, split, corpus_version e SHA-256 do manifesto de origem. Esse vínculo identifica o snapshot exato; alterar o corpus exige revisar as anotações e publicar outra versão da avaliação, sem atualizar hashes silenciosamente.
+Arquivo: `evaluation/rag_dev_pilot.json`. Formato JSON versão 1, evaluation_version 0.1.1-draft e status draft (licença pendente), com as oito revisões de conteúdo aprovadas. O envelope registra idioma, data, split, corpus_version e SHA-256 do manifesto de origem. Esse vínculo identifica o snapshot exato; alterar o corpus exige revisar as anotações e publicar outra versão da avaliação, sem atualizar hashes silenciosamente.
 
-São 8 perguntas em 7 grupos: 6 respondíveis e 2 sem resposta, todas com split development. Perguntas e gabaritos foram redigidos com assistência de LLM a partir dos três documentos fictícios, sem fontes externas. Nenhuma anotação está aprovada por uma pessoa; a revisão da S1.6 continua necessária. O arquivo não é um dataset de treinamento do classificador.
+São 8 perguntas em 7 grupos: 6 respondíveis e 2 sem resposta, todas com split development. Perguntas e gabaritos foram redigidos com assistência de LLM a partir dos três documentos fictícios, sem fontes externas. As oito anotações foram aprovadas por decisão explícita do usuário na S1.6; não há segundo anotador independente. O arquivo não é um dataset de treinamento do classificador.
 
 | ID | Caso avaliado | Grupo | Respondível |
 | --- | --- | --- | --- |
@@ -253,7 +253,7 @@ Três procedimentos fictícios redigidos; manifesto com contagem 3, caminhos rea
 
 Conferidos JSON, IDs, contagens (6 respondíveis, 2 sem resposta, 7 grupos), split único development, checksums do snapshot e documentos, correspondência literal das passagens e seus limites de seção. Os exemplos sem resposta não têm evidências inventadas; todas as revisões humanas permanecem pending. Corpus e manifesto de ingestão foram mantidos sem alteração.
 
-## S1.6 — Revisão humana em preparação
+## S1.6 — Histórico de preparação e decisão
 
 O roteiro docs/PILOT_REVIEW.md apresenta os três documentos por links, as oito perguntas com gabaritos/passagens e decisões pendentes. Ele identifica por checksum os snapshots apresentados ao revisor e destaca a distinção entre explicar o estado Concluído e afirmar uma decisão de um chamado real.
 
@@ -261,4 +261,4 @@ Na conferência editorial do agente, não foi identificada uma contradição que
 
 Para encerrar a etapa, o usuário deve avaliar o material, aprovar ou solicitar correções por ID e informar a identificação a registrar como revisor. Aprovação de conteúdo é distinta de permissão de publicação: a licença pode permanecer pendente por decisão explícita, mantendo o manifesto em draft. Se houver apenas uma pessoa revisando, declarar a ausência de segundo anotador independente; não inferir revisão de compreensão do usuário por resultados automáticos.
 
-**Estado atual:** revisão e decisão humanas pendentes. Não ampliar o corpus nem considerar anotações aprovadas antes desse checkpoint.
+**Decisão vigente:** usuário aprovou os três documentos e oito anotações em 30/10/2026 e autorizou a S1.7. Registro project-user, timestamp 2026-10-30T15:53:10Z. Licença mantida pendente. A descrição acima preserva o histórico da preparação; não há segundo revisor humano independente. Revisão de conteúdo não autoriza ingestão ou publicação. Os avisos de rascunho nos arquivos originais permanecem como histórico de preparação; o manifesto registra a revisão vigente.
