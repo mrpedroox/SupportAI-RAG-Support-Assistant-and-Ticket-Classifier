@@ -1,39 +1,57 @@
-# Python environments and generated files
-.venv/
-.venv-*/
-__pycache__/
-*.py[cod]
-.pytest_cache/
-.ruff_cache/
-*.egg-info/
-build/
-dist/
+# Secrets and local environment configuration
 .env
 .env.*
 !.env.example
+!.env.*.example
+*.pem
+*.key
+
+# Python environments and generated files
+.venv/
+.venv-*/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Test, lint, type-checking, and coverage caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.pytype/
+.tox/
+.nox/
 .coverage
 .coverage.*
 coverage.xml
 htmlcov/
 junit*.xml
+
 # Notebook checkpoints
 .ipynb_checkpoints/
-# Local datasets: retain only safe documentation and manifests
+
+# Local datasets
 /data/*
 !/data/README.md
 !/data/manifests/
-# Only publish manifests after checking they contain no private information
-# Generated model artifacts: keep safe release metadata separately
+
+# Generated model artifacts
 /models/
 /artifacts/
 /checkpoints/
 /embeddings/
 /indexes/
+
 # Local MLflow tracking and artifact stores
 mlruns/
 mlartifacts/
 mlflow.db
 mlflow.db-*
+
 # Local databases, volumes, and backups
 *.sqlite
 *.sqlite3
@@ -43,6 +61,7 @@ mlflow.db-*
 /postgres-data/
 /volumes/
 /backups/
+
 # Logs, generated evaluation reports, and temporary work
 *.log
 /logs/
@@ -50,6 +69,7 @@ mlflow.db-*
 /tmp/
 /work/
 .cache/
+
 # IDE and operating system files
 .idea/
 .vscode/
@@ -58,6 +78,3 @@ Thumbs.db
 *~
 *.swp
 *.swo
-# Public/fictional knowledge, evaluation fixtures, prompts, configs,
-# migrations, dependency lockfiles, and documentation remain trackable.
-# Keep private material in ignored locations; review files before staging.
