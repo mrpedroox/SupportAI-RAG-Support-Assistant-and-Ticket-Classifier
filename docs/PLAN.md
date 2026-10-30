@@ -2,7 +2,7 @@
 
 Data: 28/10/2026. Referência: AGENTS.md v2.0, lido integralmente.
 
-**Status: plano aprovado; Sprint 1 em andamento.** S1.1–S1.5 concluídas: três documentos fictícios e oito perguntas de desenvolvimento anotadas em draft. Manifesto 0.1.1-draft e avaliação 0.1.0-draft vinculados por checksum; licença e revisão humana pendentes, nenhuma fonte autorizada para ingestão. S1.6–S1.9 pendentes. Não há aplicação, corpus/avaliação aprovados ou modelo treinado. Execução de uma unidade por vez, conforme solicitado.
+**Status: plano aprovado; Sprint 1 em andamento.** S1.1–S1.5 concluídas. S1.6 iniciada: roteiro em docs/PILOT_REVIEW.md preparado, aguardando revisão e decisão do usuário. Três documentos e oito perguntas continuam em draft, com licença e revisão humana pendentes. S1.7–S1.9 não iniciadas; não expandir antes do aceite do piloto. Não há aplicação, corpus/avaliação aprovados ou modelo treinado.
 
 ## 1. Objetivo e ponto de partida
 
@@ -79,7 +79,7 @@ Branch da Sprint 1: `feature/s1-knowledge-foundation`, criada no início da exec
 
 ### 4.2 Tarefas pequenas, em ordem
 
-**S1.1 e S1.2 concluídas em 28/10/2026; S1.3 em 29/10/2026; S1.4 e S1.5 em 30/10/2026; S1.6–S1.9 pendentes.** Dependências indicam o que deve ser revisado antes de avançar.
+**S1.1 e S1.2 concluídas em 28/10/2026; S1.3 em 29/10/2026; S1.4 e S1.5 em 30/10/2026. S1.6 em andamento, com revisão humana pendente; S1.7–S1.9 não iniciadas.** Dependências indicam o que deve ser revisado antes de avançar.
 
 | ID | Problema e ação proposta | Entrega prevista | Como verificar |
 | --- | --- | --- | --- |
@@ -88,7 +88,7 @@ Branch da Sprint 1: `feature/s1-knowledge-foundation`, criada no início da exec
 | S1.3 | Tornar fontes auditáveis: definir metadados, manifesto autorizado e política de dados. | docs/DATA.md com origem, autoria, licença, idioma, caráter fictício, obtenção, atualização, retenção/exclusão e limitações; formato do manifesto. | Um documento deve ser identificável por ID, título, versão, fonte, checksum e seções; apenas caminhos autorizados entram no manifesto. Depende de S1.1. |
 | S1.4 | Testar a coerência antes de escalar: redigir 3 procedimentos curtos com passos, condições e exceções. | Piloto em knowledge/ e entradas no manifesto. | Revisar manualmente contradições, integridade de passos e rastreabilidade; distinguir metadados do checksum calculado sobre o arquivo final. Depende de S1.3. |
 | S1.5 | Testar a anotação: criar 8 perguntas de desenvolvimento sobre o piloto. | Piloto em evaluation/, com evidências ou motivo de abstenção. | Proposta: 6 respondíveis e 2 sem resposta; incluir paráfrase, abreviação e ambiguidade. Nenhuma referência pode exigir informação ausente. Depende de S1.4. |
-| S1.6 | Corrigir ambiguidades do próprio conjunto: revisar documentos e perguntas com o usuário. | Piloto revisado e decisões registradas. | Percorrer manualmente pergunta, documento/versão, passagem e resposta. Material gerado por LLM permanece pendente até revisão humana. Depende de S1.5. |
+| S1.6 | Corrigir ambiguidades do próprio conjunto: revisar documentos e perguntas com o usuário. Em andamento: roteiro preparado em docs/PILOT_REVIEW.md, sem aceite humano ainda. | Piloto revisado e decisões registradas. | Percorrer manualmente pergunta, documento/versão, passagem e resposta. Material gerado por LLM permanece pendente até revisão humana. Depende de S1.5. |
 | S1.7 | Ampliar mantendo coerência: adicionar documentos em lotes de 3–5, revisando cada lote. | Meta de 24 documentos; manifesto com caminhos e checksums, versão do corpus e contagens. | Todos com metadados completos, sem duplicatas contraditórias; manter entre 20 e 40. Depende do aceite do piloto S1.6. |
 | S1.8 | Completar a avaliação: ampliar as perguntas em lotes de 5–10 e separar grupos antes de atribuir partições. | Cerca de 50 perguntas revisadas; manifestos de desenvolvimento/teste com IDs, grupos, versões e checksums. | Nenhum grupo em ambas as partições; perguntas respondíveis e sem resposta nas duas; evidências localizáveis. As 8 perguntas já usadas no piloto ficam em desenvolvimento. Depende de S1.7. |
 | S1.9 | Registrar limites e preparar o próximo passo: auditar os dados e explicar o que ficou pronto. | README atualizado, entrada em docs/PROJECT_LOG.md e status neste plano. | Apresentar contagens, pendências, orçamento e exercício manual; encerrar a sprint apenas com todos os critérios atendidos. Depende de S1.8 e S1.2. |
@@ -117,6 +117,7 @@ Para perguntas sem resposta, evidências ficam vazias e o motivo esperado de abs
 docs/PLAN.md                 # criado nesta sessão
 docs/DATA.md                 # política e contratos dos dados
 docs/PROJECT_LOG.md          # decisões, aprendizado e verificações
+docs/PILOT_REVIEW.md         # roteiro com documentos/perguntas; revisão pendente
 knowledge/                   # três procedimentos fictícios, revisão pendente
 configs/corpus_manifest.json # três entradas em draft, com checksums reais
 evaluation/rag_dev_pilot.json # oito perguntas, evidências/abstenção; nunca indexar
@@ -147,7 +148,7 @@ As metas de qualidade do AGENTS.md serão medidas nas sprints de avaliação: re
 
 | Sprint | Entrega e aprendizado central | Estado |
 | --- | --- | --- |
-| 1 — Domínio, corpus e avaliação | Dados autorizados, perguntas revisadas, evidências e ambiente mínimo. | Em andamento; S1.1–S1.5 concluídas |
+| 1 — Domínio, corpus e avaliação | Dados autorizados, perguntas revisadas, evidências e ambiente mínimo. | S1.1–S1.5 concluídas; S1.6 aguarda revisão humana |
 | 2 — Ingestão e busca | PostgreSQL/pgvector, migrations, chunking, coleção idempotente e publicação atômica; comparar busca textual e vetorial no desenvolvimento, com MLflow inicial. | Não iniciada |
 | 3 — Geração e API RAG | LLM, contexto limitado, fontes validadas, abstenção, persistência, autenticação e health checks. | Não iniciada |
 | 4 — Revisão e avaliação | Histórico autenticado e concorrência, avaliação humana, segurança, tracing sanitizado, tokens e custo. | Não iniciada |
@@ -170,4 +171,5 @@ O projeto completo exige os dois marcos. Resultados insuficientes devem ser publ
 - Atualização S1.3: contrato de metadados e manifesto versão 1, formato de seções Markdown, regras de autorização e caminhos, atualização e retenção/exclusão documentados em DATA.md. Manifesto criado em draft com zero documentos; validação de ingestão fica para Sprint 2. Licença dos materiais e revisão humana permanecem pendentes.
 - Atualização S1.4: três procedimentos fictícios em knowledge/ (recuperação de acesso, consulta de faturas e acompanhamento de chamados); manifesto 0.1.1-draft com checksums dos bytes finais, seções e datas reais. Condições e exceções revisadas pelo agente; licença e revisão humana continuam pendentes. Nenhum sistema foi implementado e nenhuma fonte está autorizada para ingestão.
 - Atualização S1.5: evaluation/rag_dev_pilot.json contém oito perguntas (6 respondíveis e 2 sem resposta), em sete grupos, todas em desenvolvimento; evidências por passagem literal, versão, checksum, seção e offsets Unicode. Avaliação 0.1.0-draft, criada com assistência de LLM e revisão humana pendente. Nenhum teste reservado criado ou resultado de modelo alegado.
-- Próxima unidade: S1.6 — revisão humana do piloto documental e das perguntas.
+- Preparação S1.6: docs/PILOT_REVIEW.md reúne documentos completos por links, perguntas, gabaritos, passagens, interpretação das abstenções e snapshots com SHA-256. Conferência editorial do agente sem correção obrigatória identificada; isso não constitui aceite humano. Corpus, manifesto e avaliação não alterados.
+- Para concluir S1.6: usuário revisa o material, informa aprovação ou correções por ID e identificação de revisor; registra-se também a decisão sobre licença, inclusive mantê-la pendente sem publicação. Só após a decisão real atualizar revisão e status; não iniciar S1.7 enquanto o aceite estiver pendente.

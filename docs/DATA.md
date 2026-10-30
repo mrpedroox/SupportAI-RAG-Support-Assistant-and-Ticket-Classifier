@@ -253,4 +253,12 @@ Três procedimentos fictícios redigidos; manifesto com contagem 3, caminhos rea
 
 Conferidos JSON, IDs, contagens (6 respondíveis, 2 sem resposta, 7 grupos), split único development, checksums do snapshot e documentos, correspondência literal das passagens e seus limites de seção. Os exemplos sem resposta não têm evidências inventadas; todas as revisões humanas permanecem pending. Corpus e manifesto de ingestão foram mantidos sem alteração.
 
-Próxima unidade: S1.6 — revisar documentos e perguntas com o usuário, incluindo a licença antes de aprovação/publicação. Não ampliar o corpus nem considerar anotações aprovadas antes desse checkpoint.
+## S1.6 — Revisão humana em preparação
+
+O roteiro docs/PILOT_REVIEW.md apresenta os três documentos por links, as oito perguntas com gabaritos/passagens e decisões pendentes. Ele identifica por checksum os snapshots apresentados ao revisor e destaca a distinção entre explicar o estado Concluído e afirmar uma decisão de um chamado real.
+
+Na conferência editorial do agente, não foi identificada uma contradição que exigisse alteração antes da revisão humana. Foram preservados corpus 0.1.1-draft, avaliação 0.1.0-draft, offsets, grupos e checksums. Nenhum campo de revisão humana ou licença foi aprovado automaticamente.
+
+Para encerrar a etapa, o usuário deve avaliar o material, aprovar ou solicitar correções por ID e informar a identificação a registrar como revisor. Aprovação de conteúdo é distinta de permissão de publicação: a licença pode permanecer pendente por decisão explícita, mantendo o manifesto em draft. Se houver apenas uma pessoa revisando, declarar a ausência de segundo anotador independente; não inferir revisão de compreensão do usuário por resultados automáticos.
+
+**Estado atual:** revisão e decisão humanas pendentes. Não ampliar o corpus nem considerar anotações aprovadas antes desse checkpoint.

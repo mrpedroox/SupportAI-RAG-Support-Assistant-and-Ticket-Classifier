@@ -55,3 +55,12 @@
 - Limites e custo: nenhum resultado de modelo, busca, geração ou treinamento foi medido. Sem implementação de avaliador, novas dependências ou chamadas pagas. Anotações sintéticas e ainda não revisadas não demonstram qualidade em chamados reais; perguntas e gabaritos nunca entram no manifesto de ingestão.
 - Git: explicação preexistente da S1.3 preservada fora do commit; incluir apenas esta nova entrada e os arquivos da S1.5. Sem push ou merge.
 - Próxima unidade: S1.6 — revisar o piloto documental e as oito anotações com o usuário; registrar correções e licença antes de aprovação/publicação ou expansão. Sprint 1 em andamento.
+
+## Sprint 1 — S1.6: preparação da revisão humana — 2026-10-30
+
+- Entrega parcial: docs/PILOT_REVIEW.md reúne links para os três procedimentos completos, as oito perguntas/gabaritos, passagens literais, offsets, identificação dos snapshots por SHA-256 e checklist de decisão. DATA, PLAN e README registram S1.6 em andamento, sem marcar aceite humano.
+- Conferência editorial do agente: respostas sustentadas pelas passagens do piloto; distinção entre Concluído e aprovação de um pedido concreto; recuperação sem login versus acompanhamento autenticado; faturas restritas ao administrador; abstenção por prazo ausente e por contexto insuficiente. Nenhuma contradição que exigisse alteração antes da revisão humana identificada. Não se trata de avaliação independente ou de resultado de modelo.
+- Conceito: conferência estrutural, revisão semântica e decisão de promoção são etapas distintas. Hash/offset válido não comprova que a afirmação seja sustentada; uma revisão do agente não equivale à leitura e decisão do usuário. Aprovação de conteúdo também não escolhe licença automaticamente.
+- Verificações: roteiro comparado com as oito perguntas e referências originais; hashes, versões e passagens/limites de seção conferidos; corpus, manifesto e avaliação comparados ao HEAD e mantidos sem alteração. Todas as revisões humanas permanecem pending. git diff --check sem erros.
+- Git e custo: preservar a explicação preexistente da S1.3 fora do commit; commit local apenas da preparação S1.6. Sem novas dependências, chamadas pagas, push ou publicação.
+- Pendências para concluir: usuário revisar os três documentos e oito anotações; informar aprovação ou correções, identificação de revisor e decisão sobre licença (inclusive manter pendente sem publicação). Depois registrar a decisão real e reapresentar eventuais correções. Não iniciar S1.7 enquanto o aceite do piloto estiver pendente.

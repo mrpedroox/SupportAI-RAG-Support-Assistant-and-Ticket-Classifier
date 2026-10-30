@@ -180,7 +180,13 @@ All three documents are in Portuguese and marked as fictional drafts. Their 11 s
 
 Answers reference literal evidence spans with document versions, checksums, section IDs and Unicode character offsets. Unanswerable cases have no fabricated evidence, only an abstention reason and expected response. The evaluation is linked to the exact corpus manifest checksum and must never be indexed or supplied as generation context. These LLM-assisted annotations remain pending human review; they are not model performance results or classifier training data.
 
-The next unit is human review of the document-and-question pilot (S1.6), including the license decision before approval/publication. Database migrations, ingestion, training, and application commands will be documented when implemented and verified. Do not expect a running application yet.
+### Human pilot review (S1.6 — in progress)
+
+The [review guide](docs/PILOT_REVIEW.md) brings together the three source documents, all eight questions, expected answers, evidence passages, snapshot checksums and a decision checklist. The agent's editorial check identified no contradiction requiring a change before human review. This is not human approval or a model evaluation.
+
+The user's review and decision are still pending. Corpus and question data remain unchanged in draft. Content approval and licensing are separate decisions; a pending license keeps the ingestion manifest in draft. Do not expand the pilot before the human checkpoint is complete.
+
+Database migrations, ingestion, training, and application commands will be documented when implemented and verified. Do not expect a running application yet.
 
 ## Planned documentation
 
