@@ -1,8 +1,8 @@
 # SupportAI — Domínio e dados
 
-Atualizado em: 30/10/2026. Etapas: S1.1 — domínio; S1.3 — contratos; S1.4 — piloto documental.
+Atualizado em: 30/10/2026. Etapas: S1.1 — domínio; S1.3 — contratos; S1.4 — documentos; S1.5 — perguntas do piloto.
 
-O plano foi aprovado pelo usuário. Este documento define o domínio, os contratos e as políticas de dados; não contém procedimentos operacionais nem gabaritos. O corpus piloto tem três procedimentos fictícios em knowledge/, listados no manifesto 0.1.1-draft com checksums reais. Licença e revisão humana permanecem pendentes; nenhuma fonte está autorizada para ingestão. As perguntas ainda não foram criadas. As validações de ingestão descritas abaixo são requisitos para a Sprint 2, ainda sem implementação.
+O plano foi aprovado pelo usuário. Este documento define o domínio, os contratos e as políticas de dados. O corpus piloto tem três procedimentos fictícios em knowledge/, listados no manifesto 0.1.1-draft com checksums reais. Oito perguntas e gabaritos iniciais estão em evaluation/rag_dev_pilot.json, exclusivamente em desenvolvimento e com revisão humana pendente. Licença e revisão do corpus também permanecem pendentes; nenhuma fonte está autorizada para ingestão. As validações de ingestão descritas abaixo são requisitos para a Sprint 2, ainda sem implementação.
 
 ## Produto e público
 
@@ -44,7 +44,7 @@ Falta de evidência e falha técnica serão tratadas separadamente na API futura
 
 - Corpus atual: 3 documentos fictícios do piloto; meta final de 24, dentro da faixa de 20–40. Não expandir antes da revisão do piloto na S1.6.
 - Origem do piloto: redação assistida por LLM para este projeto em 30/10/2026, sem fontes externas ou dados de clientes. Autoria declarada como SupportAI project; revisão humana pendente. Nenhum texto gerado está automaticamente aprovado.
-- Avaliação planejada: cerca de 50 perguntas revisadas, aproximadamente 35 de desenvolvimento e 15 de teste, com grupos de paráfrases preservados. As 8 perguntas do piloto ficarão em desenvolvimento.
+- Avaliação atual: 8 perguntas do piloto em desenvolvimento, anotadas com assistência de LLM e revisão humana pendente. Meta final: cerca de 50 revisadas, aproximadamente 35 de desenvolvimento e 15 de teste, com grupos de paráfrases preservados. As 8 perguntas do piloto permanecerão em desenvolvimento; nenhum teste reservado foi criado ou usado.
 - `knowledge/` conterá procedimentos; `evaluation/`, perguntas e gabaritos. Somente documentos autorizados por manifesto poderão ser indexados. Este documento de escopo também não é fonte de procedimentos para ingestão.
 - Chamados supervisionados terão conjunto próprio na Sprint 7; perguntas RAG não substituem exemplos rotulados de classificação.
 - Não coletar dados reais de clientes, credenciais ou documentos privados nesta etapa. Nenhum conteúdo será enviado a fornecedores externos na Sprint 1.
@@ -164,7 +164,42 @@ Revisão de coerência pelo agente: recuperação começa sem login, mas acompan
 
 Os três rascunhos têm passos ordenados, condições e exceções, com 11 seções estáveis no total. Não usam referências a procedimentos inexistentes; os IDs citados entre documentos pertencem ao próprio piloto. Isso é uma revisão editorial do agente, sem substituir a revisão humana da S1.6 ou uma avaliação do sistema.
 
-As lacunas são úteis para preparar perguntas sem resposta na S1.5. Elas não autorizam completar regras com conhecimento externo. Ainda não há perguntas anotadas, métricas de recuperação, embeddings ou chamadas a modelos de geração no fluxo do produto.
+As lacunas foram usadas para preparar perguntas sem resposta na S1.5. Elas não autorizam completar regras com conhecimento externo. Não há métricas de recuperação, embeddings ou chamadas a modelos de geração no fluxo do produto.
+
+## Perguntas de desenvolvimento — S1.5
+
+Arquivo: `evaluation/rag_dev_pilot.json`. Formato JSON versão 1, evaluation_version 0.1.0-draft e status draft. O envelope registra idioma, data, split, corpus_version e SHA-256 do manifesto de origem. Esse vínculo identifica o snapshot exato; alterar o corpus exige revisar as anotações e publicar outra versão da avaliação, sem atualizar hashes silenciosamente.
+
+São 8 perguntas em 7 grupos: 6 respondíveis e 2 sem resposta, todas com split development. Perguntas e gabaritos foram redigidos com assistência de LLM a partir dos três documentos fictícios, sem fontes externas. Nenhuma anotação está aprovada por uma pessoa; a revisão da S1.6 continua necessária. O arquivo não é um dataset de treinamento do classificador.
+
+| ID | Caso avaliado | Grupo | Respondível |
+| --- | --- | --- | --- |
+| rag-dev-001 | Solicitação de recuperação após perda do autenticador, com e-mail disponível. | access-recovery-request | Sim |
+| rag-dev-002 | Paráfrase da anterior com abreviações cel. e 2FA. | access-recovery-request | Sim |
+| rag-dev-003 | Consultar e baixar fatura de um mês. | invoice-lookup | Sim |
+| rag-dev-004 | Menu Cobrança ausente e limite de permissões. | invoice-access-permission | Sim |
+| rag-dev-005 | Acompanhar um chamado da própria conta. | own-ticket-tracking | Sim |
+| rag-dev-006 | Ambiguidade sobre Concluído e aprovação do pedido. | ticket-completion-meaning | Sim, para explicar o significado; não para afirmar a decisão do caso real. |
+| rag-dev-007 | Prazo de reembolso não documentado. | refund-policy-unavailable | Não |
+| rag-dev-008 | Problema não identificado na pergunta; precisa de contexto. | missing-problem-context | Não |
+
+### Contrato das anotações
+
+- `question_id`, `question`, `question_types`, `group_id` e `split` identificam texto, cobertura e agrupamento. Os tipos são marcadores de curadoria e podem se sobrepor; não são categorias previstas pelo classificador.
+- `answerable=true` exige reference_answer não vazia e ao menos uma evidence_span. O gabarito resume apenas afirmações sustentadas pelas passagens, sem exigir correspondência literal com uma futura resposta do sistema. `relevant_document_ids` corresponde aos documentos das evidências.
+- Cada evidence_span registra document_id, document_version, document_sha256, section_id, start, end e text. Os offsets são relativos ao documento Markdown completo decodificado como UTF-8, em caracteres Unicode, intervalo `[start, end)`, incluindo a sintaxe Markdown original e sem normalização. Conferir `document_text[start:end] == text`; os limites devem ficar dentro da seção declarada. Não são offsets de bytes ou tokens.
+- `answerable=false` tem reference_answer null, relevant_document_ids e evidence_spans vazios, abstention_reason e expected_abstention preenchidos. Mesmo quando o documento declara que uma regra não está definida, não fabricar uma evidência positiva ou uma resposta para a regra ausente. `clarification_question` contém a pergunta de esclarecimento quando útil, como em rag-dev-008.
+- Em casos respondíveis, abstention_reason, expected_abstention e clarification_question são null. Em todos os casos, annotation_source é llm_assisted e human_review começa pending, com reviewed_by e reviewed_at nulos. Revisão pelo agente não vira revisão humana.
+
+### Separação e uso futuro
+
+O manifesto de ingestão continua listando somente os três Markdown de knowledge/. Nunca enviar reference_answer, evidence_spans ou expected_abstention como entrada da busca ou contexto de geração; a busca recebe a pergunta, e o contexto futuro contém somente os trechos recuperados. Os gabaritos ficam do lado do avaliador.
+
+rag-dev-001 e rag-dev-002 permanecem no mesmo grupo e partição. Como as oito perguntas já foram usadas neste piloto e serão discutidas na revisão, elas não podem ser promovidas a teste reservado. A divisão final e seus manifestos serão preparados na S1.8; não há expectativa de 15 perguntas de teste nesta etapa.
+
+Para recuperação, o denominador inicial será de 6 perguntas respondíveis; perguntas sem resposta não entram no Recall@k. As unidades de evidência são as passagens anotadas, a mapear para chunks na Sprint 2. A regra de correspondência e o tratamento de sobreposições ainda precisam ser documentados antes de calcular métricas; não contar cada paráfrase como grupo independente nem tratar 6 casos como evidência estatística ampla.
+
+A rubrica humana deve conferir cobertura e sustentação da resposta de referência, pertinência das passagens e motivo da abstenção. As oito perguntas ainda não foram executadas contra um sistema; contagens de anotações não são resultados de desempenho. Prompt injection terá suíte específica nas etapas de segurança.
 
 ## Atualização, revisão e licença
 
@@ -214,4 +249,8 @@ Contrato, molde e manifesto vazio definidos; validação de JSON, contagem e est
 
 Três procedimentos fictícios redigidos; manifesto com contagem 3, caminhos reais, IDs e hashes únicos, metadados, datas reais de criação e 11 seções correspondentes ao Markdown. SHA-256 conferido sobre os bytes finais de cada arquivo; nenhum hash inserido no próprio documento. Licença pending, revisão pending e campos de revisor/timestamp nulos em todas as entradas.
 
-Próxima unidade: S1.5 — preparar oito perguntas de desenvolvimento com evidências ou motivo de abstenção. A revisão humana do piloto permanece na S1.6. Nenhum corpus está aprovado para ingestão nesta etapa.
+## Verificação da S1.5
+
+Conferidos JSON, IDs, contagens (6 respondíveis, 2 sem resposta, 7 grupos), split único development, checksums do snapshot e documentos, correspondência literal das passagens e seus limites de seção. Os exemplos sem resposta não têm evidências inventadas; todas as revisões humanas permanecem pending. Corpus e manifesto de ingestão foram mantidos sem alteração.
+
+Próxima unidade: S1.6 — revisar documentos e perguntas com o usuário, incluindo a licença antes de aprovação/publicação. Não ampliar o corpus nem considerar anotações aprovadas antes desse checkpoint.

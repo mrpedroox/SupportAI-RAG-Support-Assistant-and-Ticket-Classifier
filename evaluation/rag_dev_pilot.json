@@ -1,0 +1,310 @@
+{
+  "schema_version": 1,
+  "evaluation_version": "0.1.0-draft",
+  "status": "draft",
+  "created_on": "2026-10-30",
+  "language": "pt-BR",
+  "split": "development",
+  "corpus_version": "0.1.1-draft",
+  "corpus_manifest_sha256": "730500268ef66cc15390b4104e6d89340a1aa2704125c0ffb18c66e66578a2a7",
+  "offset_unit": "unicode_codepoint",
+  "offset_convention": "[start, end)",
+  "question_count": 8,
+  "questions": [
+    {
+      "question_id": "rag-dev-001",
+      "question": "Perdi o autenticador do NexoDesk, mas ainda acesso meu e-mail cadastrado. Como solicito a recuperação da conta?",
+      "question_types": [
+        "direct"
+      ],
+      "answerable": true,
+      "reference_answer": "Na tela de entrada do NexoDesk, abra Preciso de ajuda com o acesso, sem precisar fazer login, e escolha Perdi o autenticador. Informe o e-mail cadastrado e o espaço de trabalho, descrevendo a perda sem enviar senhas ou códigos. Envie uma única solicitação e guarde o protocolo: ele confirma o registro, não a aprovação da recuperação. Se ainda acessar o e-mail cadastrado, aguarde nesse endereço o contato da equipe de acesso. A análise é humana e não há prazo de conclusão definido na base.",
+      "relevant_document_ids": [
+        "nd-access-001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-access-001",
+          "document_version": "1.0.0",
+          "document_sha256": "04105f6d6267e2ce49eaf65cef127855809592e547680a9174c4b66e8aaa0937",
+          "section_id": "recovery-request",
+          "start": 592,
+          "end": 1259,
+          "text": "1. Na tela de entrada do NexoDesk, selecione **Preciso de ajuda com o acesso**. Essa opção não exige uma sessão autenticada.\n2. Escolha **Perdi o autenticador**.\n3. Informe o e-mail cadastrado e o nome do espaço de trabalho. Descreva apenas que perdeu acesso ao autenticador; não inclua senhas, códigos temporários ou códigos de recuperação.\n4. Envie a solicitação uma única vez e guarde o protocolo exibido na confirmação. O protocolo comprova o registro da solicitação; não significa que a recuperação foi aprovada.\n5. Se ainda tiver acesso ao e-mail cadastrado, aguarde nesse endereço o contato da equipe de acesso. Não há prazo de conclusão definido neste piloto."
+        },
+        {
+          "document_id": "nd-access-001",
+          "document_version": "1.0.0",
+          "document_sha256": "04105f6d6267e2ce49eaf65cef127855809592e547680a9174c4b66e8aaa0937",
+          "section_id": "recovery-request",
+          "start": 1261,
+          "end": 1505,
+          "text": "A equipe de acesso faz a análise humana antes de qualquer alteração de autenticação. Os critérios de validação de identidade e as etapas posteriores à aprovação não estão documentados nesta base; o atendente não deve completá-los por suposição."
+        }
+      ],
+      "group_id": "access-recovery-request",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-dev-002",
+      "question": "Troquei de cel. e fiquei sem o 2FA do NexoDesk. Ainda entro no e-mail da conta; como peço ajuda pra voltar a acessar?",
+      "question_types": [
+        "paraphrase",
+        "abbreviation"
+      ],
+      "answerable": true,
+      "reference_answer": "Na tela de entrada do NexoDesk, abra Preciso de ajuda com o acesso, sem precisar fazer login, e escolha Perdi o autenticador. Informe o e-mail cadastrado e o espaço de trabalho, descrevendo a perda sem enviar senhas ou códigos. Envie uma única solicitação e guarde o protocolo: ele confirma o registro, não a aprovação da recuperação. Se ainda acessar o e-mail cadastrado, aguarde nesse endereço o contato da equipe de acesso. A análise é humana e não há prazo de conclusão definido na base.",
+      "relevant_document_ids": [
+        "nd-access-001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-access-001",
+          "document_version": "1.0.0",
+          "document_sha256": "04105f6d6267e2ce49eaf65cef127855809592e547680a9174c4b66e8aaa0937",
+          "section_id": "recovery-request",
+          "start": 592,
+          "end": 1259,
+          "text": "1. Na tela de entrada do NexoDesk, selecione **Preciso de ajuda com o acesso**. Essa opção não exige uma sessão autenticada.\n2. Escolha **Perdi o autenticador**.\n3. Informe o e-mail cadastrado e o nome do espaço de trabalho. Descreva apenas que perdeu acesso ao autenticador; não inclua senhas, códigos temporários ou códigos de recuperação.\n4. Envie a solicitação uma única vez e guarde o protocolo exibido na confirmação. O protocolo comprova o registro da solicitação; não significa que a recuperação foi aprovada.\n5. Se ainda tiver acesso ao e-mail cadastrado, aguarde nesse endereço o contato da equipe de acesso. Não há prazo de conclusão definido neste piloto."
+        },
+        {
+          "document_id": "nd-access-001",
+          "document_version": "1.0.0",
+          "document_sha256": "04105f6d6267e2ce49eaf65cef127855809592e547680a9174c4b66e8aaa0937",
+          "section_id": "recovery-request",
+          "start": 1261,
+          "end": 1505,
+          "text": "A equipe de acesso faz a análise humana antes de qualquer alteração de autenticação. Os critérios de validação de identidade e as etapas posteriores à aprovação não estão documentados nesta base; o atendente não deve completá-los por suposição."
+        }
+      ],
+      "group_id": "access-recovery-request",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-dev-003",
+      "question": "Sou administrador do meu espaço de trabalho no NexoDesk. Como consulto e baixo a fatura de um mês específico?",
+      "question_types": [
+        "direct"
+      ],
+      "answerable": true,
+      "reference_answer": "Com a conta autenticada e o perfil Administrador do espaço de trabalho, confira o espaço selecionado. Abra Configurações, Cobrança e Faturas; escolha o mês e o ano e selecione a fatura desejada. Use Baixar fatura na tela dessa fatura para guardar uma cópia. O download não emite uma nova cobrança.",
+      "relevant_document_ids": [
+        "nd-billing-001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-billing-001",
+          "document_version": "1.0.0",
+          "document_sha256": "14d2dd7482cf2619b27bbd0233040aea3ff6abdaf23c0ba208f1b99991ab03b8",
+          "section_id": "scope",
+          "start": 278,
+          "end": 531,
+          "text": "Aplica-se à consulta de faturas do espaço de trabalho selecionado. É necessário estar autenticado e possuir o perfil **Administrador do espaço de trabalho**. O perfil de atendente, por si só, não concede acesso às faturas de outra pessoa ou organização."
+        },
+        {
+          "document_id": "nd-billing-001",
+          "document_version": "1.0.0",
+          "document_sha256": "14d2dd7482cf2619b27bbd0233040aea3ff6abdaf23c0ba208f1b99991ab03b8",
+          "section_id": "invoice-lookup",
+          "start": 587,
+          "end": 1064,
+          "text": "1. Entre no NexoDesk e confira o nome do espaço de trabalho selecionado.\n2. No menu lateral, abra **Configurações** e selecione **Cobrança**.\n3. Abra **Faturas** e escolha o mês e o ano de referência.\n4. Na lista, selecione a fatura desejada para consultar o identificador, o período, o valor e a situação exibidos.\n5. Se precisar guardar uma cópia, use **Baixar fatura** na tela da fatura selecionada. O download é uma cópia do registro existente; não emite uma nova cobrança."
+        }
+      ],
+      "group_id": "invoice-lookup",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-dev-004",
+      "question": "O menu Cobrança não aparece para mim no NexoDesk. Posso usar a conta de um colega para ver a fatura?",
+      "question_types": [
+        "exception"
+      ],
+      "answerable": true,
+      "reference_answer": "Não use a conta de outra pessoa nem contorne a permissão. Confira o espaço de trabalho selecionado e se possui o perfil Administrador do espaço de trabalho. Se não possuir esse perfil, procure o administrador desse espaço.",
+      "relevant_document_ids": [
+        "nd-billing-001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-billing-001",
+          "document_version": "1.0.0",
+          "document_sha256": "14d2dd7482cf2619b27bbd0233040aea3ff6abdaf23c0ba208f1b99991ab03b8",
+          "section_id": "scope",
+          "start": 278,
+          "end": 531,
+          "text": "Aplica-se à consulta de faturas do espaço de trabalho selecionado. É necessário estar autenticado e possuir o perfil **Administrador do espaço de trabalho**. O perfil de atendente, por si só, não concede acesso às faturas de outra pessoa ou organização."
+        },
+        {
+          "document_id": "nd-billing-001",
+          "document_version": "1.0.0",
+          "document_sha256": "14d2dd7482cf2619b27bbd0233040aea3ff6abdaf23c0ba208f1b99991ab03b8",
+          "section_id": "exceptions",
+          "start": 1376,
+          "end": 1596,
+          "text": "Se **Cobrança** não aparecer, confira o espaço selecionado e se a pessoa possui o perfil exigido. Se não possuir, oriente a procurar o administrador desse espaço. Não use a conta de outra pessoa nem contorne a permissão."
+        }
+      ],
+      "group_id": "invoice-access-permission",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-dev-005",
+      "question": "Estou autenticado no NexoDesk. Onde acompanho um chamado que eu abri?",
+      "question_types": [
+        "direct"
+      ],
+      "answerable": true,
+      "reference_answer": "Confira o espaço de trabalho em que abriu o chamado e use a mesma conta solicitante. Abra Ajuda e Meus chamados, pesquise o protocolo completo ou localize a solicitação na lista da própria conta. Abra o chamado para consultar a situação e o histórico de mensagens. Esse fluxo não permite consultar chamados de outra pessoa apenas por conhecer seu protocolo.",
+      "relevant_document_ids": [
+        "nd-tickets-001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-tickets-001",
+          "document_version": "1.0.0",
+          "document_sha256": "98f5cb7568a754f5b27631dc02e4d241bbd573a8cb531bc46c3515490db6a47e",
+          "section_id": "scope",
+          "start": 280,
+          "end": 522,
+          "text": "É necessário estar autenticado no espaço de trabalho em que o chamado foi registrado. **Meus chamados** mostra somente chamados vinculados à conta solicitante nesse espaço; conhecer um protocolo não permite consultar chamados de outra pessoa."
+        },
+        {
+          "document_id": "nd-tickets-001",
+          "document_version": "1.0.0",
+          "document_sha256": "98f5cb7568a754f5b27631dc02e4d241bbd573a8cb531bc46c3515490db6a47e",
+          "section_id": "ticket-tracking",
+          "start": 568,
+          "end": 961,
+          "text": "1. Entre no NexoDesk e confira o espaço de trabalho selecionado.\n2. No menu lateral, abra **Ajuda** e selecione **Meus chamados**.\n3. Pesquise pelo protocolo completo ou localize a solicitação na lista da própria conta.\n4. Abra o chamado e consulte a situação e o histórico de mensagens. A situação deve ser lida conforme os significados abaixo; não estime uma data de conclusão a partir dela."
+        }
+      ],
+      "group_id": "own-ticket-tracking",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-dev-006",
+      "question": "Meu chamado ficou Concluído no NexoDesk. Isso quer dizer que aprovaram meu pedido?",
+      "question_types": [
+        "ambiguous_outcome"
+      ],
+      "answerable": true,
+      "reference_answer": "Não necessariamente. Concluído significa que a equipe encerrou o atendimento com uma resposta no histórico; não significa que uma alteração ou reembolso foi aprovado. Leia a resposta final para saber qual foi a decisão no seu caso.",
+      "relevant_document_ids": [
+        "nd-tickets-001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "nd-tickets-001",
+          "document_version": "1.0.0",
+          "document_sha256": "98f5cb7568a754f5b27631dc02e4d241bbd573a8cb531bc46c3515490db6a47e",
+          "section_id": "ticket-statuses",
+          "start": 1545,
+          "end": 1720,
+          "text": "- **Concluído:** equipe encerrou o atendimento com uma resposta no histórico. Não significa necessariamente que uma alteração ou reembolso foi aprovado; leia a resposta final."
+        }
+      ],
+      "group_id": "ticket-completion-meaning",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": null,
+      "expected_abstention": null,
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-dev-007",
+      "question": "Qual é o prazo de reembolso de uma cobrança do NexoDesk?",
+      "question_types": [
+        "unanswerable"
+      ],
+      "answerable": false,
+      "reference_answer": null,
+      "relevant_document_ids": [],
+      "evidence_spans": [],
+      "group_id": "refund-policy-unavailable",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": "O corpus piloto não estabelece direito, procedimento ou prazo de reembolso. A orientação de registrar uma divergência não responde ao prazo solicitado.",
+      "expected_abstention": "A base não informa prazo de reembolso. Encaminhe a dúvida à revisão humana, sem prometer um prazo ou resultado.",
+      "clarification_question": null
+    },
+    {
+      "question_id": "rag-dev-008",
+      "question": "Como resolvo esse problema no NexoDesk?",
+      "question_types": [
+        "ambiguous",
+        "unanswerable"
+      ],
+      "answerable": false,
+      "reference_answer": null,
+      "relevant_document_ids": [],
+      "evidence_spans": [],
+      "group_id": "missing-problem-context",
+      "split": "development",
+      "annotation_source": "llm_assisted",
+      "human_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "reviewed_at": null
+      },
+      "abstention_reason": "A pergunta não identifica o problema nem fornece contexto para escolher entre os procedimentos do piloto. Não há uma solução específica sustentada por evidências.",
+      "expected_abstention": "Preciso de mais contexto para orientar com base nos procedimentos disponíveis.",
+      "clarification_question": "O problema é de acesso à conta, consulta de fatura ou acompanhamento de chamado? Descreva o que aconteceu sem enviar senhas ou códigos."
+    }
+  ]
+}

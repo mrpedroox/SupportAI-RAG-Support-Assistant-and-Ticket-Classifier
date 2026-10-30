@@ -2,7 +2,7 @@
 
 Data: 28/10/2026. Referência: AGENTS.md v2.0, lido integralmente.
 
-**Status: plano aprovado; Sprint 1 em andamento.** S1.1–S1.4 concluídas: domínio, ambiente mínimo, contratos e piloto de três documentos fictícios definidos. Manifesto 0.1.1-draft com checksums reais; licença e revisão humana pendentes, nenhuma fonte autorizada para ingestão. S1.5–S1.9 pendentes. Não há aplicação, corpus aprovado, conjunto de avaliação ou modelo treinado. Execução de uma unidade por vez, conforme solicitado.
+**Status: plano aprovado; Sprint 1 em andamento.** S1.1–S1.5 concluídas: três documentos fictícios e oito perguntas de desenvolvimento anotadas em draft. Manifesto 0.1.1-draft e avaliação 0.1.0-draft vinculados por checksum; licença e revisão humana pendentes, nenhuma fonte autorizada para ingestão. S1.6–S1.9 pendentes. Não há aplicação, corpus/avaliação aprovados ou modelo treinado. Execução de uma unidade por vez, conforme solicitado.
 
 ## 1. Objetivo e ponto de partida
 
@@ -79,7 +79,7 @@ Branch da Sprint 1: `feature/s1-knowledge-foundation`, criada no início da exec
 
 ### 4.2 Tarefas pequenas, em ordem
 
-**S1.1 e S1.2 concluídas em 28/10/2026; S1.3 em 29/10/2026; S1.4 em 30/10/2026; S1.5–S1.9 pendentes.** Dependências indicam o que deve ser revisado antes de avançar.
+**S1.1 e S1.2 concluídas em 28/10/2026; S1.3 em 29/10/2026; S1.4 e S1.5 em 30/10/2026; S1.6–S1.9 pendentes.** Dependências indicam o que deve ser revisado antes de avançar.
 
 | ID | Problema e ação proposta | Entrega prevista | Como verificar |
 | --- | --- | --- | --- |
@@ -93,7 +93,7 @@ Branch da Sprint 1: `feature/s1-knowledge-foundation`, criada no início da exec
 | S1.8 | Completar a avaliação: ampliar as perguntas em lotes de 5–10 e separar grupos antes de atribuir partições. | Cerca de 50 perguntas revisadas; manifestos de desenvolvimento/teste com IDs, grupos, versões e checksums. | Nenhum grupo em ambas as partições; perguntas respondíveis e sem resposta nas duas; evidências localizáveis. As 8 perguntas já usadas no piloto ficam em desenvolvimento. Depende de S1.7. |
 | S1.9 | Registrar limites e preparar o próximo passo: auditar os dados e explicar o que ficou pronto. | README atualizado, entrada em docs/PROJECT_LOG.md e status neste plano. | Apresentar contagens, pendências, orçamento e exercício manual; encerrar a sprint apenas com todos os critérios atendidos. Depende de S1.8 e S1.2. |
 
-Após cada unidade, explicar o que mudou, por que foi escolhido, o conceito aprendido, como foi verificado e o resultado observado. Revisar o piloto antes da expansão e fazer checkpoint no fim da sprint. A próxima unidade é S1.5. Preferência do usuário registrada em 29/10/2026: concluir cada unidade coesa com verificações e commit local em inglês no formato Conventional Commits; não deixar entregas sem commit. Push e merge continuam dependentes de autorização específica.
+Após cada unidade, explicar o que mudou, por que foi escolhido, o conceito aprendido, como foi verificado e o resultado observado. Revisar o piloto antes da expansão e fazer checkpoint no fim da sprint. A próxima unidade é S1.6. Preferência do usuário registrada em 29/10/2026: concluir cada unidade coesa com verificações e commit local em inglês no formato Conventional Commits; não deixar entregas sem commit. Push e merge continuam dependentes de autorização específica.
 
 ### 4.3 Contratos de dados propostos
 
@@ -119,13 +119,13 @@ docs/DATA.md                 # política e contratos dos dados
 docs/PROJECT_LOG.md          # decisões, aprendizado e verificações
 knowledge/                   # três procedimentos fictícios, revisão pendente
 configs/corpus_manifest.json # três entradas em draft, com checksums reais
-evaluation/                  # perguntas e evidências; nunca indexar
+evaluation/rag_dev_pilot.json # oito perguntas, evidências/abstenção; nunca indexar
 pyproject.toml               # dependências e configuração mínima
 uv.lock                      # único lock de dependências
 .python-version              # CPython 3.12.16
 ```
 
-A árvore representa a estrutura incremental. Documentação, ambiente, manifesto e três documentos do piloto já existem; a avaliação ainda não foi criada. Os documentos continuam sem aprovação para ingestão. Usar caminhos relativos ao repositório nos manifestos para permitir reprodução em outra máquina. Criar módulos de aplicação apenas quando tiverem responsabilidade executável nas próximas sprints.
+A árvore representa a estrutura incremental. Documentação, ambiente, manifesto, três documentos e oito perguntas do piloto já existem; corpus e anotações continuam sem revisão humana. Os documentos não estão aprovados para ingestão. Usar caminhos relativos ao repositório nos manifestos para permitir reprodução em outra máquina. Criar módulos de aplicação apenas quando tiverem responsabilidade executável nas próximas sprints.
 
 ### 4.5 Critérios de aceite da Sprint 1
 
@@ -147,7 +147,7 @@ As metas de qualidade do AGENTS.md serão medidas nas sprints de avaliação: re
 
 | Sprint | Entrega e aprendizado central | Estado |
 | --- | --- | --- |
-| 1 — Domínio, corpus e avaliação | Dados autorizados, perguntas revisadas, evidências e ambiente mínimo. | Em andamento; S1.1–S1.4 concluídas |
+| 1 — Domínio, corpus e avaliação | Dados autorizados, perguntas revisadas, evidências e ambiente mínimo. | Em andamento; S1.1–S1.5 concluídas |
 | 2 — Ingestão e busca | PostgreSQL/pgvector, migrations, chunking, coleção idempotente e publicação atômica; comparar busca textual e vetorial no desenvolvimento, com MLflow inicial. | Não iniciada |
 | 3 — Geração e API RAG | LLM, contexto limitado, fontes validadas, abstenção, persistência, autenticação e health checks. | Não iniciada |
 | 4 — Revisão e avaliação | Histórico autenticado e concorrência, avaliação humana, segurança, tracing sanitizado, tokens e custo. | Não iniciada |
@@ -169,4 +169,5 @@ O projeto completo exige os dois marcos. Resultados insuficientes devem ser publ
 - Atualização S1.2: Python e uv fixados, dependências mínimas com lock, exclusões de arquivos locais e instruções verificadas no README. Um segundo ambiente vazio foi criado offline com versões idênticas, sem modificar uv.lock. Não há testes de aplicação a executar.
 - Atualização S1.3: contrato de metadados e manifesto versão 1, formato de seções Markdown, regras de autorização e caminhos, atualização e retenção/exclusão documentados em DATA.md. Manifesto criado em draft com zero documentos; validação de ingestão fica para Sprint 2. Licença dos materiais e revisão humana permanecem pendentes.
 - Atualização S1.4: três procedimentos fictícios em knowledge/ (recuperação de acesso, consulta de faturas e acompanhamento de chamados); manifesto 0.1.1-draft com checksums dos bytes finais, seções e datas reais. Condições e exceções revisadas pelo agente; licença e revisão humana continuam pendentes. Nenhum sistema foi implementado e nenhuma fonte está autorizada para ingestão.
-- Próxima unidade: S1.5 — oito perguntas de desenvolvimento com evidências ou abstenção.
+- Atualização S1.5: evaluation/rag_dev_pilot.json contém oito perguntas (6 respondíveis e 2 sem resposta), em sete grupos, todas em desenvolvimento; evidências por passagem literal, versão, checksum, seção e offsets Unicode. Avaliação 0.1.0-draft, criada com assistência de LLM e revisão humana pendente. Nenhum teste reservado criado ou resultado de modelo alegado.
+- Próxima unidade: S1.6 — revisão humana do piloto documental e das perguntas.

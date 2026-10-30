@@ -4,7 +4,7 @@ A support assistant combining retrieval-augmented generation (RAG), source citat
 
 SupportAI is a learning and portfolio project focused on **system architecture, backend engineering, model training, MLOps, and LLMOps**.
 
-> **Status: Sprint 1 — three-document pilot drafted (S1.1–S1.4).** Fictional procedures and their metadata are available for review. Application code, an approved corpus, annotated evaluation data, trained models, benchmarks, CI, and deployment are not available yet.
+> **Status: Sprint 1 — document and question pilot drafted (S1.1–S1.5).** Three fictional procedures and eight development questions are available for human review. Application code, approved datasets, trained models, benchmarks, CI, and deployment are not available yet.
 
 ## Support domain
 
@@ -174,7 +174,13 @@ The [corpus manifest](configs/corpus_manifest.json) contains three documents in 
 
 All three documents are in Portuguese and marked as fictional drafts. Their 11 sections have stable IDs. Editorial consistency checks by the agent do not replace the human pilot review planned for S1.6.
 
-The next unit is eight development questions with evidence or abstention reasons (S1.5). Database migrations, ingestion, training, and application commands will be documented when implemented and verified. Do not expect a running application yet.
+### Development question pilot (S1.5)
+
+[The draft evaluation](evaluation/rag_dev_pilot.json) contains eight Portuguese questions: six answerable and two unanswerable, across seven groups. It includes a paraphrase pair with abbreviations, an ambiguous outcome explained by the corpus, and a missing-context question requiring clarification. All entries stay in development; no reserved test set has been created or used.
+
+Answers reference literal evidence spans with document versions, checksums, section IDs and Unicode character offsets. Unanswerable cases have no fabricated evidence, only an abstention reason and expected response. The evaluation is linked to the exact corpus manifest checksum and must never be indexed or supplied as generation context. These LLM-assisted annotations remain pending human review; they are not model performance results or classifier training data.
+
+The next unit is human review of the document-and-question pilot (S1.6), including the license decision before approval/publication. Database migrations, ingestion, training, and application commands will be documented when implemented and verified. Do not expect a running application yet.
 
 ## Planned documentation
 
