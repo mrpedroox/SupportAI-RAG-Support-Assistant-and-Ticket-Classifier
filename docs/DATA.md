@@ -1,6 +1,6 @@
 # SupportAI — Domínio e dados
 
-Atualizado em: 30/10/2026. S1.1–S1.8 concluídas; auditoria e explicação da S1.9 concluídas. Sprint 1 aberta pela demonstração de compreensão; licença e autorização do manifesto resolvidas por decisão explícita do usuário. [Checkpoint S1.9](S1_9_CHECKPOINT.md).
+Atualizado em: 30/10/2026. S1.1–S1.8 concluídas; auditoria e explicação da S1.9 concluídas. Sprint 1 concluída: exercício de compreensão confirmado pelo usuário em 30/10/2026; licença e autorização do manifesto resolvidas por decisão explícita do usuário. [Checkpoint S1.9](S1_9_CHECKPOINT.md).
 
 O plano foi aprovado pelo usuário. O corpus atual tem 24 procedimentos fictícios em knowledge/, listados no manifesto 0.1.6, todos com conteúdo e licença CC BY 4.0 aprovados por decisão explícita do usuário. Os 24 são fontes autorizadas para futura ingestão administrativa, ainda não executada. A avaliação 0.2.1-draft tem 50 anotações aprovadas: 35 desenvolvimento e 15 teste congelado; as 42 novas foram revisadas/aprovadas pelo agente por autorização do usuário, sem revisão humana independente. O piloto histórico está preservado em evaluation/rag_dev_pilot.json. Os novos arquivos e o manifesto de partições estão em evaluation/; nunca devem ser indexados. As validações de ingestão descritas abaixo são requisitos para a Sprint 2, ainda sem implementação.
 
@@ -299,4 +299,4 @@ O contrato adicional de [configs/rag_data_release.json](../configs/rag_data_rele
 
 A avaliação `0.2.1-draft` e seu manifesto permanecem imutáveis, inclusive seu vínculo interno com corpus `0.1.5-draft`. O arquivo original desse corpus foi preservado byte a byte em [configs/corpus_snapshots/corpus-0.1.5-draft.json](../configs/corpus_snapshots/corpus-0.1.5-draft.json). O release vincula explicitamente os mesmos conteúdos ao corpus licenciado, sem reescrever o teste. Os registros anteriores de licença pendente são históricos; a concessão atual alcança os materiais autorais preservados, conforme LICENSE-CONTENT.md.
 
-Licença dos documentos e verificação dos dados não medem desempenho nem autorizam gastos. Sem chamadas pagas, ingestão, push ou publicação nesta etapa. A Sprint 1 ainda aguarda a demonstração de compreensão registrada no plano.
+Licença dos documentos e verificação dos dados não medem desempenho nem autorizam gastos. Sem chamadas pagas, ingestão, push ou publicação nesta etapa. A Sprint 1 foi encerrada após confirmação do usuário de que concluiu o exercício de compreensão; decisão registrada no plano. Os registros anteriores de pendências são históricos.

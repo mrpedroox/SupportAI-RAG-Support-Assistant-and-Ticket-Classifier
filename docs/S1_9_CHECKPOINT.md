@@ -1,8 +1,8 @@
 # SupportAI — S1.9: auditoria e checkpoint da Sprint 1
 
-> **Atualização posterior à auditoria:** o usuário aprovou MIT para código e CC BY 4.0 para documentação/dados fictícios. Corpus 0.1.6 aprovado; o vínculo com a avaliação imutável está em [rag_data_release.json](../configs/rag_data_release.json). A pendência de licença abaixo é histórica. Resta o critério de compreensão para encerrar a Sprint 1.
+> **Atualização posterior à auditoria:** o usuário aprovou MIT para código e CC BY 4.0 para documentação/dados fictícios. Corpus 0.1.6 aprovado; o vínculo com a avaliação imutável está em [rag_data_release.json](../configs/rag_data_release.json). Em 30/10/2026, o usuário também confirmou a conclusão do exercício de compreensão. **Sprint 1 concluída.** As pendências de licença e compreensão descritas na auditoria abaixo são históricas.
 
-Data: 30/10/2026. Snapshot auditado: dados registrados até o commit `de9931a`; a S1.9 altera somente documentação. Auditoria local e explicação concluídas. **Sprint 1 permanece aberta:** licença pendente impede autorizar o manifesto de ingestão; a compreensão do usuário ainda precisa ser demonstrada. Não há aplicação ou modelo avaliado.
+Data: 30/10/2026. Snapshot auditado: dados registrados até o commit `de9931a`; a S1.9 altera somente documentação. Auditoria local e explicação concluídas. **Estado na auditoria original:** Sprint 1 aberta por licença e compreensão pendentes; ambas resolvidas posteriormente, conforme a atualização acima. Não há aplicação ou modelo avaliado.
 
 ## O que ficou pronto
 
@@ -46,7 +46,7 @@ sha256sum configs/corpus_manifest.json evaluation/rag_split_manifest.json evalua
 git diff --check
 ```
 
-As versões devem coincidir com a tabela; os hashes, com os registrados acima. Lock, compatibilidade e espaços em branco foram verificados com sucesso. A recriação offline de um ambiente vazio pertence à S1.2 e não foi repetida nesta etapa. Não há suíte de aplicação: consultar a versão do pytest não equivale a executar testes. As conferências dos dados foram locais, com biblioteca padrão do Python e ferramentas do sistema; o validador de ingestão de produção ainda será implementado na Sprint 2.
+As versões devem coincidir com a tabela. Os hashes acima pertencem ao snapshot auditado; o hash atual de configs/corpus_manifest.json deve coincidir com configs/rag_data_release.json, e o hash histórico corresponde a configs/corpus_snapshots/corpus-0.1.5-draft.json. Os hashes da avaliação permanecem os mesmos. Lock, compatibilidade e espaços em branco foram verificados com sucesso. A recriação offline de um ambiente vazio pertence à S1.2 e não foi repetida nesta etapa. Não há suíte de aplicação: consultar a versão do pytest não equivale a executar testes. As conferências dos dados foram locais, com biblioteca padrão do Python e ferramentas do sistema; o validador de ingestão de produção ainda será implementado na Sprint 2.
 
 ## Explicação e exercício manual
 
@@ -60,12 +60,12 @@ Exercício usando apenas desenvolvimento, sem abrir o teste reservado:
 2. Explique com suas palavras quais arquivos são conhecimento consultável e quais guardam o gabarito; o que faria a recuperação e o que faria a geração; e por que esse fluxo não treina o classificador.
 3. Compare com `rag-dev-007`: justifique a abstenção sobre prazo de reembolso sem inventar uma regra ausente.
 
-O agente conferiu as relações de evidência, mas não atribui ao usuário a execução do exercício. A explicação do usuário será registrada quando recebida; até lá, o critério de compreensão permanece aberto.
+O agente conferiu as relações de evidência. Em 30/10/2026, o usuário confirmou no chat que concluiu o exercício. O critério de compreensão está atendido com base nessa confirmação; não há transcrição da resposta nem avaliação independente registrada.
 
 ## Orçamento, limites e próximo passo
 
 Orçamento da Sprint 1: **R$ 0 em APIs e hospedagem**. Nenhuma chamada paga ou contratação foi realizada nas etapas registradas; não se contabilizam assinatura da ferramenta, equipamento, energia ou tempo de trabalho. Não houve ingestão, embeddings, busca executada, geração pelo produto, treinamento, MLflow em execução, banco, API, Docker, CI ou deploy. Métricas de qualidade, latência, tokens e custo operacional permanecem não medidas.
 
-Há **zero fontes autorizadas para ingestão**: o manifesto continua `draft` e as licenças continuam `pending`. A S1.9 documenta essa pendência e não escolhe licença nem promove um snapshot. A aprovação editorial é distinta da autorização de uso/publicação. Após decisão explícita de licença, a promoção deverá produzir outro snapshot e tratar o vínculo da avaliação de modo explícito; não se deve reescrever o teste congelado ou trocar seu hash silenciosamente.
+Na auditoria original havia **zero fontes autorizadas para ingestão**: o manifesto estava `draft` e as licenças estavam `pending`. Esse estado foi superado pelo corpus 0.1.6 aprovado, com 24 fontes autorizadas para futura ingestão. A S1.9 documenta essa pendência e não escolhe licença nem promove um snapshot. A aprovação editorial é distinta da autorização de uso/publicação. Após decisão explícita de licença, a promoção deverá produzir outro snapshot e tratar o vínculo da avaliação de modo explícito; não se deve reescrever o teste congelado ou trocar seu hash silenciosamente.
 
-O próximo marco técnico é a Sprint 2, começando pela validação administrativa local dos dados e pela preparação incremental do PostgreSQL/pgvector. Embeddings externos dependem também de fornecedor, política de dados e teto de gasto definidos antes de chamadas pagas. A Sprint 2 não foi iniciada. O checkpoint não encerra a Sprint 1 enquanto faltarem autorização do manifesto e demonstração de compreensão conforme [os critérios do plano](PLAN.md#45-critérios-de-aceite-da-sprint-1).
+O próximo marco técnico é a Sprint 2, começando pela validação administrativa local dos dados e pela preparação incremental do PostgreSQL/pgvector. Embeddings externos dependem também de fornecedor, política de dados e teto de gasto definidos antes de chamadas pagas. A Sprint 2 não foi iniciada. A autorização do manifesto e o exercício de compreensão foram concluídos conforme [os critérios do plano](PLAN.md#45-critérios-de-aceite-da-sprint-1), encerrando a Sprint 1. Os resultados da auditoria original permanecem registrados como histórico.

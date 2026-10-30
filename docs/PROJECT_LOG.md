@@ -168,3 +168,10 @@ As evidências da avaliação apontarão para passagens do documento original, c
 - Conceito: licença permite usos definidos, aprovação editorial atesta conteúdo no cenário, manifesto autoriza fontes e ingestão executa processamento; são decisões distintas. A escolha de licença não publica o repositório nem demonstra qualidade.
 - Verificação: comparados documentos/metadados entre snapshots, com alterações limitadas a versão/estado do manifesto e licença; hashes da avaliação e teste preservados, referências locais e contratos de licença conferidos. Lock verificado offline após metadado MIT no pyproject; sem mudança de dependências. git diff --check sem problemas.
 - Resultado: pendência de licença/autorização do manifesto resolvida; 24 fontes elegíveis para futura ingestão administrativa, ainda não executada. Sprint 1 aberta apenas pela demonstração de compreensão. Sem chamadas pagas, push, merge ou publicação; edição anterior da explicação S1.3 preservada fora do commit.
+
+## Sprint 1 — Revisão final e encerramento — 2026-10-30
+
+- Decisão: usuário confirmou no chat que o exercício de compreensão foi concluído. Critério atendido por confirmação do usuário, sem inventar resposta ou revisão independente; Sprint 1 encerrada.
+- Entrega: README atualizado para corpus 0.1.6 approved, 24 conteúdos/licenças aprovados e 50 perguntas em partições 35/15. Estados históricos de S1.5–S1.7 esclarecidos; plano, documentação dos dados e checkpoint alinhados ao encerramento. Explicação preexistente da S1.3 registrada separadamente no commit 2b9b5db.
+- Verificações da revisão final: hashes do release e documentos, 95 seções, 44 referências internas, 73 passagens literais, 33 grupos sem interseção e preservação do piloto; lock offline, compatibilidade das dependências, Ruff e git diff --check aprovados. Busca por padrões comuns de credenciais nos arquivos rastreados sem achados; não equivale a uma varredura completa. Nenhum teste de aplicação ou benchmark de modelo executado; ambiente vazio não recriado nesta revisão.
+- Limites e próximo passo: dados e teste congelado preservados; sem ingestão, chamadas pagas, push ou merge. Sprint 2 não iniciada.

@@ -4,7 +4,7 @@ A support assistant combining retrieval-augmented generation (RAG), source citat
 
 SupportAI is a learning and portfolio project focused on **system architecture, backend engineering, model training, MLOps, and LLMOps**.
 
-> **Status: Sprint 1 — S1.9 audit and explanation completed; sprint closure pending.** All 50 annotations have content approval: 35 development and 15 frozen test cases, evaluation `0.2.1-draft`. The user authorized the agent to review and approve the 42 remaining annotations; no independent human review is claimed. The 24 document texts remain unchanged. Corpus `0.1.6` is approved for future administrative ingestion with CC BY 4.0 licensing; ingestion has not run. The learner comprehension checkpoint remains open. See the [S1.9 audit](docs/S1_9_CHECKPOINT.md). Application code, trained models, benchmarks, CI, and deployment are not available yet.
+> **Status: Sprint 1 completed.** All 50 annotations have content approval: 35 development and 15 frozen test cases, evaluation `0.2.1-draft`. The user authorized the agent to review and approve the 42 remaining annotations; no independent human review is claimed. The 24 document texts remain unchanged. Corpus `0.1.6` is approved for future administrative ingestion with CC BY 4.0 licensing; ingestion has not run. The user confirmed completion of the learner comprehension exercise on 2026-10-30. Sprint 2 has not started. See the [S1.9 audit](docs/S1_9_CHECKPOINT.md). Application code, trained models, benchmarks, CI, and deployment are not available yet.
 
 ## Support domain
 
@@ -90,7 +90,7 @@ Only the development tools pytest and Ruff are installed at this stage. Applicat
 
 All eight milestones are required for the complete project. The first RAG deployment is an intermediate delivery.
 
-- [ ] **1. Knowledge and evaluation foundation:** define the domain, curate documents, and annotate evaluation questions and evidence.
+- [x] **1. Knowledge and evaluation foundation:** define the domain, curate documents, and annotate evaluation questions and evidence.
 - [ ] **2. Ingestion and retrieval:** implement versioned ingestion and compare lexical and vector search.
 - [ ] **3. RAG API:** generate source-grounded drafts, abstain when appropriate, and persist query history.
 - [ ] **4. Human review and evaluation:** add review history, safety tests, response evaluation, tracing, and cost measurements.
@@ -109,7 +109,7 @@ All eight milestones are required for the complete project. The first RAG deploy
 
 **Operations:** measure latency, failures, token usage, estimated cost, and model/collection versions under documented conditions.
 
-Development and reserved test sets will be separated. Related examples and duplicates must stay within the same supervised data partition. Evaluation questions and reference answers must never be indexed into the RAG knowledge base.
+RAG development and reserved test sets are separated; classifier partitions will be prepared with the supervised dataset. Related examples and duplicates must stay within the same supervised data partition. Evaluation questions and reference answers must never be indexed into the RAG knowledge base.
 
 No performance results are claimed yet. Metrics and limitations will be published after experiments are run.
 
@@ -164,7 +164,7 @@ The project is configured with `package = false`: it manages an environment with
 
 [The data documentation](docs/DATA.md) defines document IDs, versions, sections, checksums, provenance, license and human review, along with retention and deletion policies. Metadata lives in JSON; procedures live in Markdown. A checksum detects content changes; it does not establish correctness or permission to use a source.
 
-The [corpus manifest](configs/corpus_manifest.json) contains 24 documents in snapshot `0.1.4-draft`, with actual SHA-256 checksums and `status: draft`. Three pilot documents have user approval; 21 expansion documents await human review, and all licenses remain pending; it authorizes no ingestion. A future approved snapshot must have an approved license and recorded human review for every listed source. The ingestion validator will be implemented in Sprint 2; these contracts are not an existing security mechanism.
+The [corpus manifest](configs/corpus_manifest.json) contains 24 documents in snapshot `0.1.6`, with actual SHA-256 checksums and `status: approved`. All document contents and CC BY 4.0 licenses have user approval. The manifest authorizes these sources for future administrative ingestion; ingestion has not run. The [data release binding](configs/rag_data_release.json) connects this approved corpus to the unchanged evaluation snapshot. The ingestion validator will be implemented in Sprint 2; these contracts are not an existing security mechanism.
 
 ### Fictional document pilot (S1.4)
 
@@ -176,21 +176,21 @@ The three pilot documents are in Portuguese; their original draft notices descri
 
 ### Development question pilot (S1.5)
 
-[The draft evaluation](evaluation/rag_dev_pilot.json) contains eight Portuguese questions: six answerable and two unanswerable, across seven groups. It includes a paraphrase pair with abbreviations, an ambiguous outcome explained by the corpus, and a missing-context question requiring clarification. All entries stay in development; no reserved test set has been created or used.
+[The draft evaluation](evaluation/rag_dev_pilot.json) contains eight Portuguese questions: six answerable and two unanswerable, across seven groups. It includes a paraphrase pair with abbreviations, an ambiguous outcome explained by the corpus, and a missing-context question requiring clarification. All pilot entries stay in development. No reserved test set existed at S1.5; S1.8 later created and froze the 15-case test partition without running a model evaluation.
 
-Answers reference literal evidence spans with document versions, checksums, section IDs and Unicode character offsets. Unanswerable cases have no fabricated evidence, only an abstention reason and expected response. The evaluation remains linked to the three-document snapshot 0.1.2-draft in commit 7acb503 by its exact manifest checksum and must never be indexed or supplied as generation context. These LLM-assisted annotations have explicit user approval recorded in S1.6; they are not model performance results or classifier training data.
+Answers reference literal evidence spans with document versions, checksums, section IDs and Unicode character offsets. Unanswerable cases have no fabricated evidence, only an abstention reason and expected response. The historical pilot evaluation remains linked to the three-document snapshot 0.1.2-draft in commit 7acb503 by its exact manifest checksum and must never be indexed or supplied as generation context. These LLM-assisted annotations have explicit user approval recorded in S1.6; they are not model performance results or classifier training data.
 
 ### Human pilot review (S1.6 — content approved)
 
-The [review guide](docs/PILOT_REVIEW.md) brings together the three source documents, all eight questions, expected answers, evidence passages, snapshot checksums and a decision checklist. The agent's editorial check identified no contradiction requiring a change before human review. This is not human approval or a model evaluation.
+The [review guide](docs/PILOT_REVIEW.md) brings together the three source documents, all eight questions, expected answers, evidence passages, snapshot checksums and a decision checklist. The agent's editorial check identified no contradiction requiring a change before human review. The subsequent user approval is recorded below; no model evaluation was performed.
 
-The user explicitly approved the three pilot documents and eight annotations and authorized S1.7 on 2026-10-30. The decision is recorded as project-user; no second independent human reviewer is claimed. Procedure bodies, questions and evidence remain unchanged. Licensing remains pending and keeps the manifest in draft. S1.7 will expand in small reviewable batches.
+The user explicitly approved the three pilot documents and eight annotations and authorized S1.7 on 2026-10-30. The decision is recorded as project-user; no second independent human reviewer is claimed. Procedure bodies, questions and evidence remain unchanged. Licensing was pending at S1.6. It was subsequently approved, and the current corpus manifest is `0.1.6`, `approved`. S1.7 completed the expansion in small reviewable batches.
 
-### Corpus expansion (S1.7 — editorial work complete)
+### Corpus expansion (S1.7 — content approved)
 
 The corpus now has 24 fictional Portuguese procedures and 95 sections: six access, four ticket, four billing, five service-request and five interface troubleshooting documents. The [complete review index](docs/S1_7_REVIEW.md) links all seven expansion batches and records editorial decisions, consistency checks and limits. The six previously existing procedures remain unchanged.
 
-The expansion target is met. Human acceptance of the 21 expansion documents is still pending; the user's instruction to complete S1.7 is not recorded as approval of unseen content. All licenses remain pending and the manifest stays in draft. Eight development annotations remain bound to their original three-document snapshot; S1.8 will revalidate evidence and expand the question set. No model evaluation has been run.
+The expansion target is met. The user explicitly approved the 21 expansion documents on 2026-10-30, completing content approval for all 24 documents. All licenses are now approved in corpus `0.1.6`. The historical eight-question pilot remains bound to its original three-document snapshot; S1.8 revalidated the evidence against the expanded corpus and completed the 50-question evaluation. Original draft notices in the Markdown describe preparation history; the manifest records current approval. No model evaluation has been run.
 
 Database migrations, ingestion, training, and application commands will be documented when implemented and verified. Do not expect a running application yet.
 
@@ -218,6 +218,6 @@ The [review guide](docs/S1_8_REVIEW.md) presents 42 new annotations in five batc
 
 ### S1.9 foundation checkpoint
 
-The [audit and learning checkpoint](docs/S1_9_CHECKPOINT.md) records verified counts, snapshot checksums, environment checks, remaining acceptance criteria, and a manual exercise using development cases only. The audit confirmed 24 documents, 95 sections, 44 internal references, 50 annotations, 73 literal evidence spans, and 33 groups with no overlap between partitions. Data snapshots and the frozen test remain unchanged.
+The [audit and learning checkpoint](docs/S1_9_CHECKPOINT.md) records verified counts, snapshot checksums, environment checks, acceptance criteria, and a manual exercise using development cases only. The audit confirmed 24 documents, 95 sections, 44 internal references, 50 annotations, 73 literal evidence spans, and 33 groups with no overlap between partitions. Data snapshots and the frozen test remain unchanged.
 
-The local environment matches the pinned versions; offline lock and installed-dependency checks passed. No application tests or model benchmarks were run. The Sprint 1 budget for APIs and hosting is R$0; no paid API calls or hosting purchases were made in the recorded steps. The licensing decision and manifest authorization are now recorded. Sprint 1 remains open for the learner comprehension checkpoint. Sprint 2 has not started.
+The local environment matches the pinned versions; offline lock and installed-dependency checks passed. No application tests or model benchmarks were run. The Sprint 1 budget for APIs and hosting is R$0; no paid API calls or hosting purchases were made in the recorded steps. The licensing decision and manifest authorization are now recorded. The user confirmed completion of the comprehension exercise on 2026-10-30, satisfying the final Sprint 1 acceptance criterion. Sprint 1 is complete; Sprint 2 has not started.
