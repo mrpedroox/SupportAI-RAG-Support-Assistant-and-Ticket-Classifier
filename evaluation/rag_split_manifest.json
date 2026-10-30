@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "evaluation_version": "0.2.0-draft",
+  "evaluation_version": "0.2.1-draft",
   "status": "draft",
   "created_on": "2026-10-30",
   "corpus_version": "0.1.5-draft",
@@ -8,13 +8,13 @@
   "split_method": "manual_group_assignment_before_partitioning",
   "seed": null,
   "question_count": 50,
-  "human_review_status": "partial",
-  "test_frozen": false,
+  "human_review_status": "approved",
+  "test_frozen": true,
   "partitions": [
     {
       "split": "development",
       "path": "evaluation/rag_development.json",
-      "sha256": "490bdf1a2c862c1d5b65501ce3da8b7a59e2e7318799930be8c1ef9f32cdf07b",
+      "sha256": "7e5c49063586adaec2059a674e42cd19973bfa0fac1b069e2e709ca8a80ee5f9",
       "question_count": 35,
       "answerable_count": 28,
       "unanswerable_count": 7,
@@ -83,7 +83,7 @@
     {
       "split": "test",
       "path": "evaluation/rag_test.json",
-      "sha256": "f83e2a0b9a2e2054f10767f601deb6119be46c6c956e13d30640208dc9470a98",
+      "sha256": "7586e2c45c3d681b938f23a331846c5b15cf71b0c5eb3bfcacd23b67a7eb662c",
       "question_count": 15,
       "answerable_count": 11,
       "unanswerable_count": 4,
@@ -118,5 +118,66 @@
         "workspace-leave-request"
       ]
     }
-  ]
+  ],
+  "approval": {
+    "approved_by": "project-user",
+    "approved_at": "2026-10-30T20:21:57Z",
+    "mode": "user_authorized_agent_review",
+    "user_instruction": "termine a s1.8, revisando e aprovando o que resta ainda",
+    "review_performed_by": "codex-agent",
+    "independent_human_review": false,
+    "newly_approved_question_ids": [
+      "rag-dev-009",
+      "rag-dev-010",
+      "rag-dev-011",
+      "rag-dev-012",
+      "rag-dev-013",
+      "rag-dev-014",
+      "rag-dev-015",
+      "rag-dev-016",
+      "rag-dev-017",
+      "rag-dev-018",
+      "rag-dev-019",
+      "rag-dev-020",
+      "rag-dev-021",
+      "rag-dev-022",
+      "rag-dev-023",
+      "rag-dev-024",
+      "rag-dev-025",
+      "rag-dev-026",
+      "rag-dev-027",
+      "rag-dev-028",
+      "rag-dev-029",
+      "rag-dev-030",
+      "rag-dev-031",
+      "rag-dev-032",
+      "rag-dev-033",
+      "rag-dev-034",
+      "rag-dev-035",
+      "rag-test-001",
+      "rag-test-002",
+      "rag-test-003",
+      "rag-test-004",
+      "rag-test-005",
+      "rag-test-006",
+      "rag-test-007",
+      "rag-test-008",
+      "rag-test-009",
+      "rag-test-010",
+      "rag-test-011",
+      "rag-test-012",
+      "rag-test-013",
+      "rag-test-014",
+      "rag-test-015"
+    ]
+  },
+  "test_freeze": {
+    "frozen_at": "2026-10-30T20:21:57Z",
+    "authorized_by": "project-user",
+    "evaluation_version": "0.2.1-draft",
+    "path": "evaluation/rag_test.json",
+    "sha256": "7586e2c45c3d681b938f23a331846c5b15cf71b0c5eb3bfcacd23b67a7eb662c",
+    "prior_exposure": "Read by the agent for annotation and editorial review only; no model evaluation or system configuration tuning.",
+    "usage_policy": "Reserved for the final candidate; do not use for retrieval, prompt, chunking, top-k or threshold selection. Record any exposure that influences decisions and reassess the reserve."
+  }
 }

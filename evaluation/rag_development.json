@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "evaluation_version": "0.2.0-draft",
+  "evaluation_version": "0.2.1-draft",
   "status": "draft",
   "created_on": "2026-10-30",
   "language": "pt-BR",
@@ -341,9 +341,9 @@
       "split": "development",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": null,
       "expected_abstention": null,
@@ -384,9 +384,9 @@
       "split": "development",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": null,
       "expected_abstention": null,
@@ -427,9 +427,9 @@
       "split": "development",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": null,
       "expected_abstention": null,
@@ -470,9 +470,9 @@
       "split": "development",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": null,
       "expected_abstention": null,
@@ -522,9 +522,9 @@
       "split": "development",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": null,
       "expected_abstention": null,
@@ -565,9 +565,9 @@
       "split": "development",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": null,
       "expected_abstention": null,
@@ -599,9 +599,9 @@
       "split": "development",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": null,
       "expected_abstention": null,
@@ -633,9 +633,9 @@
       "split": "development",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": null,
       "expected_abstention": null,
@@ -676,9 +676,9 @@
       "split": "development",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": null,
       "expected_abstention": null,
@@ -719,9 +719,9 @@
       "split": "development",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": null,
       "expected_abstention": null,
@@ -753,9 +753,9 @@
       "split": "development",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": null,
       "expected_abstention": null,
@@ -796,9 +796,9 @@
       "split": "development",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": null,
       "expected_abstention": null,
@@ -830,9 +830,9 @@
       "split": "development",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": null,
       "expected_abstention": null,
@@ -873,9 +873,9 @@
       "split": "development",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": null,
       "expected_abstention": null,
@@ -916,9 +916,9 @@
       "split": "development",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": null,
       "expected_abstention": null,
@@ -950,9 +950,9 @@
       "split": "development",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": null,
       "expected_abstention": null,
@@ -993,9 +993,9 @@
       "split": "development",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": null,
       "expected_abstention": null,
@@ -1036,9 +1036,9 @@
       "split": "development",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": null,
       "expected_abstention": null,
@@ -1079,9 +1079,9 @@
       "split": "development",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": null,
       "expected_abstention": null,
@@ -1113,9 +1113,9 @@
       "split": "development",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": null,
       "expected_abstention": null,
@@ -1147,9 +1147,9 @@
       "split": "development",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": null,
       "expected_abstention": null,
@@ -1190,9 +1190,9 @@
       "split": "development",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": null,
       "expected_abstention": null,
@@ -1212,9 +1212,9 @@
       "split": "development",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": "O corpus não define duração do link de redefinição.",
       "expected_abstention": "A base não fornece informação suficiente. O corpus não define duração do link de redefinição.",
@@ -1234,9 +1234,9 @@
       "split": "development",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": "O corpus não define prazo de validade de convites.",
       "expected_abstention": "A base não fornece informação suficiente. O corpus não define prazo de validade de convites.",
@@ -1256,9 +1256,9 @@
       "split": "development",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": "Não há procedimento de cancelamento de chamado na base.",
       "expected_abstention": "A base não fornece informação suficiente. Não há procedimento de cancelamento de chamado na base.",
@@ -1278,9 +1278,9 @@
       "split": "development",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": "Os documentos são estáticos e o assistente não consulta o registro financeiro em tempo real.",
       "expected_abstention": "A base não fornece informação suficiente. Os documentos são estáticos e o assistente não consulta o registro financeiro em tempo real.",
@@ -1301,9 +1301,9 @@
       "split": "development",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": "Faltam a ação pretendida e o sintoma para selecionar um procedimento.",
       "expected_abstention": "A base não fornece informação suficiente. Faltam a ação pretendida e o sintoma para selecionar um procedimento.",

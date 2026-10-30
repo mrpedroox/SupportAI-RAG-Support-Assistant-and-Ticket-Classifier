@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "evaluation_version": "0.2.0-draft",
+  "evaluation_version": "0.2.1-draft",
   "status": "draft",
   "created_on": "2026-10-30",
   "language": "pt-BR",
@@ -37,9 +37,9 @@
       "split": "test",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": null,
       "expected_abstention": null,
@@ -81,9 +81,9 @@
       "split": "test",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": null,
       "expected_abstention": null,
@@ -124,9 +124,9 @@
       "split": "test",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": null,
       "expected_abstention": null,
@@ -176,9 +176,9 @@
       "split": "test",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": null,
       "expected_abstention": null,
@@ -219,9 +219,9 @@
       "split": "test",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": null,
       "expected_abstention": null,
@@ -263,9 +263,9 @@
       "split": "test",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": null,
       "expected_abstention": null,
@@ -315,9 +315,9 @@
       "split": "test",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": null,
       "expected_abstention": null,
@@ -358,9 +358,9 @@
       "split": "test",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": null,
       "expected_abstention": null,
@@ -401,9 +401,9 @@
       "split": "test",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": null,
       "expected_abstention": null,
@@ -444,9 +444,9 @@
       "split": "test",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": null,
       "expected_abstention": null,
@@ -496,9 +496,9 @@
       "split": "test",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": null,
       "expected_abstention": null,
@@ -518,9 +518,9 @@
       "split": "test",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": "Não há procedimento de exportação de chamados documentado.",
       "expected_abstention": "A base não fornece informação suficiente. Não há procedimento de exportação de chamados documentado.",
@@ -540,9 +540,9 @@
       "split": "test",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": "O corpus não define prazo garantido de atendimento ou conclusão.",
       "expected_abstention": "A base não fornece informação suficiente. O corpus não define prazo garantido de atendimento ou conclusão.",
@@ -562,9 +562,9 @@
       "split": "test",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": "Não há procedimento de exclusão definitiva de conta e dados. Logout e pedido de saída de espaço não documentam essa exclusão.",
       "expected_abstention": "A base não fornece informação suficiente. Não há procedimento de exclusão definitiva de conta e dados. Logout e pedido de saída de espaço não documentam essa exclusão.",
@@ -584,9 +584,9 @@
       "split": "test",
       "annotation_source": "llm_assisted",
       "human_review": {
-        "status": "pending",
-        "reviewed_by": null,
-        "reviewed_at": null
+        "status": "approved",
+        "reviewed_by": "project-user",
+        "reviewed_at": "2026-10-30T20:21:57Z"
       },
       "abstention_reason": "A base não define tributos ou alíquotas da assinatura.",
       "expected_abstention": "A base não fornece informação suficiente. A base não define tributos ou alíquotas da assinatura.",

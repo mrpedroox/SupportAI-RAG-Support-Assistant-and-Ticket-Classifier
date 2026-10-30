@@ -4,7 +4,7 @@ A support assistant combining retrieval-augmented generation (RAG), source citat
 
 SupportAI is a learning and portfolio project focused on **system architecture, backend engineering, model training, MLOps, and LLMOps**.
 
-> **Status: Sprint 1 — S1.7 content approved (24/24 documents); S1.8 evaluation prepared.** The 50-question draft has 35 development and 15 test cases. Eight pilot annotations are approved; 42 new annotations await human review. Licensing remains pending and the proposed test set is not frozen. Application code, trained models, benchmarks, CI, and deployment are not available yet.
+> **Status: Sprint 1 — S1.8 completed; S1.9 pending.** All 50 annotations have content approval: 35 development and 15 frozen test cases, evaluation `0.2.1-draft`. The user authorized the agent to review and approve the 42 remaining annotations; no independent human review is claimed. The 24-document corpus remains unchanged. Licensing remains pending. Application code, trained models, benchmarks, CI, and deployment are not available yet.
 
 ## Support domain
 
@@ -208,6 +208,6 @@ Documentation will be added incrementally:
 
 A project license has not been selected yet. A `LICENSE` file will be added once that decision is made. Third-party documents, datasets, and models remain subject to their own licenses.
 
-### S1.8 evaluation draft
+### S1.8 approved annotations and frozen test
 
-The [review guide](docs/S1_8_REVIEW.md) presents 42 new annotations in five batches with reference answers, evidence, and abstention reasons. The [split manifest](evaluation/rag_split_manifest.json) identifies the corpus snapshot, files, checksums, question IDs, and groups. Development contains 28 answerable and 7 unanswerable questions; test contains 11 and 4. Groups do not overlap. The original eight-question pilot remains unchanged and all its cases stay in development. No retrieval or generation results have been measured. Human review precedes freezing the test set.
+The [review guide](docs/S1_8_REVIEW.md) presents 42 new annotations in five batches with reference answers, evidence, and abstention reasons. The [split manifest](evaluation/rag_split_manifest.json) identifies the corpus snapshot, files, checksums, question IDs, and groups. Development contains 28 answerable and 7 unanswerable questions; test contains 11 and 4. Groups do not overlap. The original eight-question pilot remains unchanged and all its cases stay in development. All annotations have content approval; the 42 new cases were reviewed by the agent under explicit user authorization. The manifest records this decision, its timestamp, prior test exposure, and the frozen test checksum. No independent human review or retrieval/generation results are claimed. Use development for system choices and reserve test for the final candidate. The `draft` suffix reflects pending licensing; it does not permit editing the frozen test snapshot.

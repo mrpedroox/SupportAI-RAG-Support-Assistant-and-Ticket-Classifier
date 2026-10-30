@@ -1,19 +1,19 @@
 # SupportAI — S1.8: perguntas, evidências e partições para revisão
 
-Preparado em 30/10/2026. **Preparação e conferência editorial concluídas; 42 novas anotações aguardam revisão humana.** As oito do piloto continuam aprovadas e em desenvolvimento. Licença pendente. Não há métricas de modelo, ingestão ou teste congelado.
+Revisão concluída em 30/10/2026. **S1.8 concluída: 50 anotações aprovadas; 15 perguntas de teste congeladas.** O usuário autorizou expressamente o agente a revisar e aprovar as 42 pendências. Aceite `project-user`, `2026-10-30T20:21:57Z`; conferência realizada pelo agente, sem atribuir leitura pessoal ao usuário ou revisão humana independente. As oito do piloto continuam intactas em desenvolvimento. Licença pendente; sem métricas de modelo ou ingestão.
 
 ## Decisões e rastreabilidade
 
-- Avaliação `0.2.0-draft`, vinculada explicitamente ao corpus `0.1.5-draft` pelo SHA-256 do manifesto.
+- Avaliação `0.2.1-draft`, vinculada explicitamente ao corpus `0.1.5-draft` pelo SHA-256 do manifesto.
 - `evaluation/rag_split_manifest.json` registra caminhos, checksums, IDs, grupos e contagens. Arquivos: `rag_development.json` (35) e `rag_test.json` (15).
 - O piloto `rag_dev_pilot.json` fica preservado, ligado ao snapshot original. Suas oito anotações foram copiadas sem mudar IDs, textos, gabaritos, passagens ou aprovações. Conferência editorial diante dos 24 documentos: as seis respostas continuam sustentadas; não foi criado prazo de reembolso e a pergunta vaga continua sem contexto. Motivos que mencionam o piloto mantêm sua redação de origem.
 - Atribuição manual de grupos antes das partições, sem sorteio ou seed. Grupos representam famílias de intenção, incluindo paráfrases e exceções do mesmo procedimento. Nenhum grupo aparece nas duas partições. Compartilhar documento entre partições é permitido para consultas sobre base fixa; não alegamos generalização para documentos novos.
 - Desenvolvimento: 28 respondíveis, 7 sem resposta. Teste: 11 respondíveis, 4 sem resposta. Total: 39 respondíveis e 11 sem resposta. Desenvolvimento tem 22 grupos; teste tem 11 grupos.
 - Novos casos em lotes de 9, 9, 9, 8 e 7. As evidências são passagens de seções originais com offsets Unicode `[start, end)` e checksum do documento. Algumas incluem contexto além do mínimo; a revisão deve conferir a pertinência e a cobertura de cada afirmação. A correspondência com chunks fica para a Sprint 2.
-- Teste proposto e ainda não congelado: o agente o leu para anotação/conferência, sem usar resultados de modelo ou ajustar prompts, top-k, chunking e limiares. Após revisão humana, congelar versão/checksum. Antes disso, não apresentar o conjunto como teste final intocado. Não usar suas perguntas para desenvolvimento do sistema; se influenciar decisões, registrar exposição e revisar a reserva.
-- Origem fictícia e assistência de LLM declaradas. Aceite dos documentos não aprova estas perguntas novas. Não há segundo anotador humano independente. Nenhuma chamada paga ou publicação.
+- Teste congelado após o aceite delegado, com versão, data e SHA-256 em `test_freeze` no manifesto. O agente leu os casos para anotação/conferência, sem resultados de modelo ou ajuste de prompts, top-k, chunking e limiares. Essa exposição está registrada; não apresentar como teste final intocado. Usar somente desenvolvimento para escolher configurações; qualquer exposição que influencie decisões exige registro e revisão da reserva. O status draft indica licença pendente, sem permitir edição do teste congelado.
+- Origem fictícia e assistência de LLM declaradas. O aceite das perguntas decorre da instrução atual do usuário, registrada em `approval` no manifesto. Não há segundo anotador humano independente. Nenhuma chamada paga ou publicação. A revisão não exigiu correções em perguntas, gabaritos, evidências ou grupos.
 
-## Como revisar
+## Critérios usados na revisão
 
 Leia pergunta, gabarito e passagens em conjunto. Para respondíveis, confira se cada afirmação está sustentada e se falta algum passo necessário. Para não respondíveis, confira se a resposta realmente está ausente em todo o corpus ou se falta contexto. Registre correções ou aceite pelos IDs após leitura. Não completar regras ausentes com conhecimento externo. A suíte de prompt injection continua separada.
 
@@ -39,7 +39,7 @@ Leia pergunta, gabarito e passagens em conjunto. Para respondíveis, confira se 
 > 4. Se receber a mensagem de redefinição solicitada, abra o link e preencha **Nova senha** e **Confirmar nova senha**, conforme as exigências exibidas na própria tela. Se o destino parecer suspeito, não informe credenciais e encaminhe à revisão humana.
 > 5. Selecione **Salvar senha**. Somente após a confirmação de alteração tente entrar com a nova senha e o segundo fator, quando exigido.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ### rag-dev-010 — development — grupo `password-reset`
 
@@ -61,7 +61,7 @@ Revisão humana: **pending**.
 > 4. Se receber a mensagem de redefinição solicitada, abra o link e preencha **Nova senha** e **Confirmar nova senha**, conforme as exigências exibidas na própria tela. Se o destino parecer suspeito, não informe credenciais e encaminhe à revisão humana.
 > 5. Selecione **Salvar senha**. Somente após a confirmação de alteração tente entrar com a nova senha e o segundo fator, quando exigido.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ### rag-dev-011 — development — grupo `password-reset`
 
@@ -77,7 +77,7 @@ Revisão humana: **pending**.
 
 > Não há prazo de entrega, duração do link ou critérios de senha definidos nesta base. Não invente esses valores. Não se garante recuperação sem e-mail, encerramento de outras sessões ou remoção de 2FA.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ### rag-dev-012 — development — grupo `invitation-acceptance`
 
@@ -97,7 +97,7 @@ Revisão humana: **pending**.
 
 > Se estiver usando outra conta, saia dela conforme `nd-access-006` e entre com a conta convidada. Se o convite aparecer inválido ou não permitir o aceite, peça ao administrador para verificar seu registro conforme `nd-access-004`; não altere o link.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ### rag-dev-013 — development — grupo `invitation-acceptance`
 
@@ -123,7 +123,7 @@ Revisão humana: **pending**.
 
 > Se estiver usando outra conta, saia dela conforme `nd-access-006` e entre com a conta convidada. Se o convite aparecer inválido ou não permitir o aceite, peça ao administrador para verificar seu registro conforme `nd-access-004`; não altere o link.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ### rag-dev-014 — development — grupo `workspace-invitation`
 
@@ -145,7 +145,7 @@ Revisão humana: **pending**.
 > 4. Selecione **Enviar convite** uma única vez. Aguarde a confirmação e confira a entrada na lista.
 > 5. Oriente a pessoa destinatária a seguir `nd-access-003`. A presença na lista confirma o registro do convite; não comprova entrega da mensagem nem aceite.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ### rag-dev-015 — development — grupo `workspace-invitation`
 
@@ -157,7 +157,7 @@ Revisão humana: **pending**.
 
 > Se já houver um convite para o endereço, não crie duplicatas. Confira a situação exibida e peça revisão humana se a pessoa não puder aceitar. Esta base não define reenvio, cancelamento ou edição do destinatário. Se o menu não aparecer, confira o perfil e o espaço sem usar outra conta.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ### rag-dev-016 — development — grupo `invoice-access-permission`
 
@@ -173,7 +173,7 @@ Revisão humana: **pending**.
 > 4. Se faltar a permissão exigida, procure o administrador do espaço e descreva o menu necessário e a finalidade, sem compartilhar senha ou códigos.
 > 5. Aguarde a decisão do responsável. Um pedido registrado ou uma descrição de cargo não alteram o perfil; confirme novamente o campo antes de tentar o fluxo restrito.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ### rag-dev-017 — development — grupo `ticket-creation`
 
@@ -197,7 +197,7 @@ Revisão humana: **pending**.
 >
 > O registro de uma divergência de fatura segue esse caminho. Nesse caso, informe o identificador da fatura e a divergência, conforme `nd-billing-001`; não inclua comprovantes com dados pessoais.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ## Lote 2 — 9 anotações novas
 
@@ -223,7 +223,7 @@ Revisão humana: **pending**.
 >
 > O registro de uma divergência de fatura segue esse caminho. Nesse caso, informe o identificador da fatura e a divergência, conforme `nd-billing-001`; não inclua comprovantes com dados pessoais.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ### rag-dev-019 — development — grupo `ticket-creation`
 
@@ -237,7 +237,7 @@ Revisão humana: **pending**.
 >
 > Se ocorrer erro ou não houver protocolo, não afirme que o envio foi registrado nem reenvie repetidamente. Confira **Meus chamados** com a mesma conta e no mesmo espaço. Se localizar o chamado, acompanhe-o; se não localizar ou não conseguir conferir, encaminhe a limitação à revisão humana antes de novo envio. A ausência na lista não prova, por si só, que o registro falhou.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ### rag-dev-020 — development — grupo `ticket-information-response`
 
@@ -259,7 +259,7 @@ Revisão humana: **pending**.
 > 4. Revise o texto e selecione **Enviar resposta** uma única vez. Aguarde a confirmação e confira se a mensagem aparece no histórico antes de repetir o envio.
 > 5. Se a mensagem aparecer, considere a resposta registrada. Continue acompanhando o histórico e a situação exibida. O registro da mensagem não comprova aprovação do pedido nem permite estimar uma data de conclusão.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ### rag-dev-021 — development — grupo `ticket-information-response`
 
@@ -275,7 +275,7 @@ Revisão humana: **pending**.
 >
 > Se a opção não aparecer, o envio falhar ou a mensagem não aparecer no histórico, não afirme que a resposta foi registrada. Confira conta, espaço e situação; se o problema persistir, encaminhe à revisão humana sem repetir envios sucessivos ou usar outra conta.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ### rag-dev-022 — development — grupo `own-ticket-filters`
 
@@ -299,7 +299,7 @@ Revisão humana: **pending**.
 >
 > Quando um protocolo e uma situação específica estiverem preenchidos ao mesmo tempo, a lista mostrará somente chamados que atendam às duas condições. Se não houver resultado, remova a restrição de situação antes de concluir que o chamado está ausente.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ### rag-dev-023 — development — grupo `own-ticket-filters`
 
@@ -323,7 +323,7 @@ Revisão humana: **pending**.
 >
 > Se o filtro ou o campo de pesquisa não aparecer, registre a limitação para revisão humana. Não invente outro menu ou prometa acesso por um endereço direto.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ### rag-dev-024 — development — grupo `invoice-field-interpretation`
 
@@ -339,7 +339,7 @@ Revisão humana: **pending**.
 > 4. Leia **Valor** e **Situação** exatamente como apresentados. O download é uma cópia do registro; não comprova pagamento ou ausência de débitos.
 > 5. Se houver uma divergência, abra um chamado com identificador e descrição conforme `nd-billing-001` e `nd-tickets-002`, sem dados de cartão ou comprovantes com dados pessoais.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ### rag-dev-025 — development — grupo `plan-change-request`
 
@@ -361,7 +361,7 @@ Revisão humana: **pending**.
 > 4. Envie uma única solicitação e guarde o protocolo confirmado. Solicitação registrada não significa contratação, cancelamento ou mudança efetivada.
 > 5. Acompanhe a resposta em **Meus chamados**. Condições e eventual autorização da mudança dependem de análise humana; o assistente não aprova a proposta.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ### rag-dev-026 — development — grupo `workspace-name-change`
 
@@ -383,7 +383,7 @@ Revisão humana: **pending**.
 > 4. Selecione **Salvar** uma única vez e aguarde confirmação. Não considere o novo nome persistido apenas porque aparece no campo de edição.
 > 5. Reabra a página de configuração e confira o nome exibido. Se a alteração não aparecer, registre a limitação para revisão humana.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ## Lote 3 — 9 anotações novas
 
@@ -407,7 +407,7 @@ Revisão humana: **pending**.
 > 4. Selecione **Salvar** e aguarde a confirmação. Reabra Preferências para conferir se a opção ficou registrada.
 > 5. Continue consultando **Meus chamados** conforme `nd-tickets-001`; a entrega de e-mail não substitui a leitura do histórico.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ### rag-dev-028 — development — grupo `page-load-troubleshooting`
 
@@ -423,7 +423,7 @@ Revisão humana: **pending**.
 > 4. Se carregar, confira a conta, o espaço e o histórico antes de repetir qualquer envio que estava em andamento.
 > 5. Se continuar falhando, registre qual tela falhou e a mensagem de erro sanitizada para revisão humana. Se conseguir usar Ajuda, abra um chamado conforme `nd-tickets-002`; caso contrário, informe que a base não oferece um canal alternativo.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ### rag-dev-029 — development — grupo `expired-session`
 
@@ -439,7 +439,7 @@ Revisão humana: **pending**.
 > 4. Se estava enviando um chamado ou resposta, consulte Meus chamados e o histórico conforme `nd-tickets-001`. Se o registro aparecer, não reenvie a mesma solicitação.
 > 5. Se não conseguir determinar se o envio foi registrado, encaminhe a limitação à revisão humana antes de repetir. Para alterações de preferências ou perfil, reabra a configuração e confira o valor persistido antes de nova tentativa.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ### rag-dev-030 — development — grupo `ticket-form-validation`
 
@@ -461,7 +461,7 @@ Revisão humana: **pending**.
 > 4. Se **Enviar** ficar disponível, confira o conteúdo e envie uma única vez, aguardando protocolo conforme `nd-tickets-002`.
 > 5. Se continuar indisponível sem mensagem que permita corrigir o formulário, registre a limitação e o texto do erro sanitizado para revisão humana. Não altere controles internos do navegador para forçar o envio.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ### rag-dev-031 — development — grupo `password-reset`
 
@@ -471,7 +471,7 @@ Revisão humana: **pending**.
 
 **Resposta esperada:** A base não fornece informação suficiente. O corpus não define duração do link de redefinição.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ### rag-dev-032 — development — grupo `invitation-acceptance`
 
@@ -481,7 +481,7 @@ Revisão humana: **pending**.
 
 **Resposta esperada:** A base não fornece informação suficiente. O corpus não define prazo de validade de convites.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ### rag-dev-033 — development — grupo `ticket-cancellation-unavailable`
 
@@ -491,7 +491,7 @@ Revisão humana: **pending**.
 
 **Resposta esperada:** A base não fornece informação suficiente. Não há procedimento de cancelamento de chamado na base.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ### rag-dev-034 — development — grupo `live-financial-data-unavailable`
 
@@ -501,7 +501,7 @@ Revisão humana: **pending**.
 
 **Resposta esperada:** A base não fornece informação suficiente. Os documentos são estáticos e o assistente não consulta o registro financeiro em tempo real.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ### rag-dev-035 — development — grupo `missing-problem-context`
 
@@ -513,7 +513,7 @@ Revisão humana: **pending**.
 
 **Esclarecimento:** O que tentou fazer e qual mensagem ou comportamento apareceu?
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ## Lote 4 — 8 anotações novas
 
@@ -531,7 +531,7 @@ Revisão humana: **pending**.
 > 4. Para usar outra conta própria, entre pela tela de entrada com as credenciais dessa conta e confira o espaço selecionado.
 > 5. Em equipamento compartilhado, não deixe credenciais ou códigos visíveis. Não entre com conta de colega para obter permissões que sua conta não possui.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ### rag-test-002 — test — grupo `session-signout`
 
@@ -551,7 +551,7 @@ Revisão humana: **pending**.
 
 > Não define encerramento remoto de sessões, revogação de dispositivos ou tempo de expiração. Fechar a aba não comprova logout. Não orienta apagar dados do navegador indiscriminadamente.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ### rag-test-003 — test — grupo `billing-contact-request`
 
@@ -573,7 +573,7 @@ Revisão humana: **pending**.
 > 4. Envie uma única vez e guarde o protocolo confirmado. A equipe deverá orientar a coleta dos dados necessários em revisão humana; este piloto não documenta esse canal posterior.
 > 5. Acompanhe o chamado com a própria conta. Não considere o contato alterado por ter enviado o pedido; aguarde a resposta da equipe.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ### rag-test-004 — test — grupo `billing-contact-request`
 
@@ -599,7 +599,7 @@ Revisão humana: **pending**.
 
 > Não define prazo, cobrança pelo serviço ou validação do novo endereço. Não promete atualização retroativa de faturas nem que o contato receberá privilégios administrativos.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ### rag-test-005 — test — grupo `invoice-download-failure`
 
@@ -621,7 +621,7 @@ Revisão humana: **pending**.
 > 4. Se a sessão tiver expirado, siga `nd-issues-002` e tente localizar novamente a mesma fatura após autenticar.
 > 5. Se a falha persistir, registre um chamado com o identificador e a mensagem de erro sanitizada, conforme `nd-tickets-002`. Não envie o conteúdo financeiro completo ou dados de cartão.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ### rag-test-006 — test — grupo `invoice-download-failure`
 
@@ -641,7 +641,7 @@ Revisão humana: **pending**.
 >
 > Em caso de valor ou situação contestados, registre um chamado pelo mesmo caminho com o identificador da fatura e uma descrição da divergência. Não envie dados de cartão, credenciais ou comprovantes com dados pessoais neste piloto. O acompanhamento do chamado está descrito em `nd-tickets-001`.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ### rag-test-007 — test — grupo `account-display-name`
 
@@ -667,7 +667,7 @@ Revisão humana: **pending**.
 
 > Não altera e-mail de entrada, senha, 2FA ou privilégios. Não define se mensagens antigas passam a mostrar o novo nome nem permite renomear outros usuários.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ### rag-test-008 — test — grupo `workspace-leave-request`
 
@@ -689,7 +689,7 @@ Revisão humana: **pending**.
 > 4. Envie uma única vez e guarde o protocolo confirmado. A equipe fará análise humana; não considere o acesso removido pelo registro do pedido.
 > 5. Acompanhe a resposta com a própria conta enquanto houver acesso. Se perder acesso antes de conseguir acompanhar, encaminhe essa limitação à revisão humana sem prometer consulta pública pelo protocolo.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ## Lote 5 — 7 anotações novas
 
@@ -711,7 +711,7 @@ Revisão humana: **pending**.
 
 > Se não puder modificar a apresentação por necessidade de acessibilidade, mantenha sua configuração e encaminhe a limitação. Se o menu estiver ausente mesmo com a interface legível, siga `nd-access-005`; não use conta de outra pessoa.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ### rag-test-010 — test — grupo `missing-ticket-notification`
 
@@ -733,7 +733,7 @@ Revisão humana: **pending**.
 > 4. Confira a caixa de entrada e a pasta de mensagens indesejadas do e-mail da própria conta. Não forneça sua senha de e-mail ao suporte.
 > 5. Se a preferência estiver ativa e a dúvida persistir, encaminhe à revisão humana com o protocolo e uma descrição da mensagem esperada, sem copiar conteúdo privado ou dados de terceiros.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ### rag-test-011 — test — grupo `missing-ticket-notification`
 
@@ -759,7 +759,7 @@ Revisão humana: **pending**.
 
 > Se a pessoa não acessar mais o e-mail, não sugira entrar na conta de terceiros ou mudar o destinatário por um menu inexistente. Informe a limitação para revisão humana. Se não houver mensagem no histórico, não prometa que um aviso deveria ter sido enviado.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ### rag-test-012 — test — grupo `ticket-export-unavailable`
 
@@ -769,7 +769,7 @@ Revisão humana: **pending**.
 
 **Resposta esperada:** A base não fornece informação suficiente. Não há procedimento de exportação de chamados documentado.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ### rag-test-013 — test — grupo `support-sla-unavailable`
 
@@ -779,7 +779,7 @@ Revisão humana: **pending**.
 
 **Resposta esperada:** A base não fornece informação suficiente. O corpus não define prazo garantido de atendimento ou conclusão.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ### rag-test-014 — test — grupo `account-erasure-unavailable`
 
@@ -789,7 +789,7 @@ Revisão humana: **pending**.
 
 **Resposta esperada:** A base não fornece informação suficiente. Não há procedimento de exclusão definitiva de conta e dados. Logout e pedido de saída de espaço não documentam essa exclusão.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ### rag-test-015 — test — grupo `tax-policy-unavailable`
 
@@ -799,7 +799,7 @@ Revisão humana: **pending**.
 
 **Resposta esperada:** A base não fornece informação suficiente. A base não define tributos ou alíquotas da assinatura.
 
-Revisão humana: **pending**.
+Aceite: **approved**, por autorização do usuário para revisão e aprovação pelo agente; sem revisão humana independente.
 
 ## Verificação e pendências
 
